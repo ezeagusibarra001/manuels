@@ -1,0 +1,135 @@
+.ContainerFondo{
+    height: 200px;
+    width: 100%;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------------------------CONTAINER----------------------------------------------*/
+.Container{
+
+
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+
+
+}
+.Container>div{
+    border: solid black;
+}
+/*----------------------------------------------IMG----------------------------------------------*/
+.ContainerImg{
+
+
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+Img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/*----------------------------------------------TEXTO----------------------------------------------*/
+.ContainerTexto{
+
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Texto{
+    color: #a06ab4;
+}
+/*----------------------------------------------INSTAGRAM----------------------------------------------*/
+.ContainerInstagram{
+
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* ME PERMITE DAR SEPARACION ENTRE LOS ELEMENTOS BAJO EL DISPLAY FLEX*/
+
+}
+.ButtonInsta{
+
+    background-color: #a06ab4 !important;
+    border: solid #a06ab4 !important;
+    border-radius: 60px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center  !important;
+    height: auto !important;
+    width: auto !important;
+}
+.ButtonInsta:hover{
+
+    background-color: white!important;
+    color: #a06ab4 !important;
+
+}
+.LeyandaInsta{
+
+    color: #a06ab4;
+    font-family: "dukecharming regular";
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+
+.Pibitexto{
+
+    color: #a06ab4;
+}
+
+
+.Pibicreditos{
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    text-align: center;
+    color: #a06ab4;
+}
+.Pibicreditos:hover{
+
+    color: #a06ab4;
+    
+}
