@@ -1,0 +1,501 @@
+/*----------------------------------------------EXPERIENCIA----------------------------------------------*/
+.ContenedorPadre{
+
+
+
+    height:600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ContenedorSubPadre{
+
+    
+    height: 450px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin: 10%;
+   
+
+    background-color: #a06ab4;
+}
+.ContenedorSubPadre>div{
+
+    height:auto;
+    width: 100%;
+
+    color: white;
+}
+
+.ContenedorTexto1{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+.Texto1{
+    font-family: "dukecharming regular";
+    font-size: 75px;
+    font-weight: 800;
+}
+
+
+.ContenedorTexto2{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.Texto2{
+    font-family: "dukecharming regular";
+    font-size: 75px;
+    font-weight: 800;
+}
+
+.ContenedorTexto3{
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.Texto3{
+    font-size: 20px;
+}
+
+.ContenedorTexto4{
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.Texto4{
+    font-size: 20px;
+}
+
+
+/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+
+
+@media screen and (max-width: 1000px){
+
+    .ContenedorSubPadre{
+    
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+        grid-template-rows: auto auto auto;
+        grid-gap:10px;
+    
+    }
+
+    .ContenedorTexto1{
+
+        grid-column-start: 2;
+        grid-column-end: 3;
+    
+        grid-row-start: 1;
+        grid-row-end: 2;
+    
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    
+    }
+
+    .ContenedorTexto2{
+
+        grid-column-start: 3;
+        grid-column-end: 4;
+    
+        grid-row-start: 1;
+        grid-row-end: 2;
+    
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    
+    }
+
+    .ContenedorTexto3{
+
+        grid-column-start: 2;
+        grid-column-end: 4;
+    
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    
+    }
+    .ContenedorTexto4{
+
+        grid-column-start: 2;
+        grid-column-end: 4;
+    
+        grid-row-start: 3;
+        grid-row-end: 4;
+    
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+
+    .Texto1{
+
+        font-size: 60px;
+    }
+
+    .Texto2{
+
+        font-size: 60px;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 700px){
+
+    .ContenedorPadre{
+
+
+
+        height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    .ContenedorSubPadre{
+
+    
+        height: 300px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+    .Texto1{
+
+        font-size: 50px;
+    }
+
+    .Texto2{
+
+        font-size: 50px;
+    }
+
+    .Texto3{
+
+        font-size: 15px;
+    }
+
+    .Texto4{
+
+        font-size: 15px;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 600px){
+
+    .ContenedorPadre{
+
+
+
+        height: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    .ContenedorSubPadre{
+
+    
+        height: 300px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+
+    .Texto1{
+
+        font-size: 40px;
+    }
+
+    .Texto2{
+
+        font-size: 40px;
+    }
+
+    .Texto3{
+
+        font-size: 14px;
+    }
+
+    .Texto4{
+
+        font-size: 14px;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 500px){
+
+    .ContenedorPadre{
+
+
+
+        height: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .ContenedorSubPadre{
+
+    
+        height: 250px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+
+    .Texto1{
+
+        font-size: 40px;
+    }
+
+    .Texto2{
+
+        font-size: 40px;
+    }
+
+    .Texto3{
+
+        font-size: 12px;
+    }
+
+    .Texto4{
+
+        font-size: 12px;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 450px){
+
+    .ContenedorPadre{
+
+
+
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .ContenedorSubPadre{
+
+    
+        height: 300px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+    .ContenedorSubPadre{
+
+    
+        height: 250px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+
+    .Texto1{
+
+        font-size: 35px;
+    }
+
+    .Texto2{
+
+        font-size: 35px;
+    }
+
+    .Texto3{
+
+        font-size: 12px;
+    }
+
+    .Texto4{
+
+        font-size: 12px;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 400px){
+
+    .ContenedorPadre{
+
+
+
+        height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .ContenedorSubPadre{
+
+    
+        height: 300px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+    .ContenedorSubPadre{
+
+    
+        height: 200px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+
+    .Texto1{
+
+        font-size: 30px;
+    }
+
+    .Texto2{
+
+        font-size: 30px;
+    }
+
+    .Texto3{
+
+        font-size: 10px;
+    }
+
+    .Texto4{
+
+        font-size: 10px;
+    }
+
+  
+   
+}
+
+
+@media screen and (max-width: 350px){
+
+    .ContenedorSubPadre{
+
+    
+        height: 200px;
+        width: 100%;
+    
+        margin: 5%;
+       
+    }
+
+
+    .Texto1{
+
+        font-size: 25px;
+    }
+
+    .Texto2{
+
+        font-size: 25px;
+    }
+
+    .Texto3{
+
+        font-size: 9px;
+    }
+
+    .Texto4{
+
+        font-size: 9px;
+    }
+
+  
+   
+}
+
+
+
+
+

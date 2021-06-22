@@ -1,27 +1,34 @@
-.ContainerFondo{
-    height: 200px;
+.ContainerFondoFooter{
+    height: auto;
     width: 100%;
-    border: solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid black;
+    
 }
 /*----------------------------------------------CONTAINER----------------------------------------------*/
-.Container{
+.ContainerFooter{
 
 
     width: 100%;
     height: auto;
+    margin: 5%;
 
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2.5fr 1fr;
     grid-template-rows: auto auto;
+    
+    border: solid black;
 
 
 }
+
+/*
 .Container>div{
     border: solid black;
-}
+} */
+
 /*----------------------------------------------IMG----------------------------------------------*/
 .ContainerImg{
 
@@ -79,10 +86,10 @@ Img{
     grid-row-start: 1;
     grid-row-end: 2;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* ME PERMITE DAR SEPARACION ENTRE LOS ELEMENTOS BAJO EL DISPLAY FLEX*/
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important; /* ME PERMITE DAR SEPARACION ENTRE LOS ELEMENTOS BAJO EL DISPLAY FLEX*/
 
 }
 .ButtonInsta{
@@ -90,18 +97,20 @@ Img{
     background-color: #a06ab4 !important;
     border: solid #a06ab4 !important;
     border-radius: 60px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center  !important;
+   
     height: auto !important;
     width: auto !important;
-}
-.ButtonInsta:hover{
 
-    background-color: white!important;
-    color: #a06ab4 !important;
-
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
+
+.InstaIcono{
+    height: 30px !important;
+    width: 30px !important;
+}
+
 .LeyandaInsta{
 
     color: #a06ab4;
@@ -110,6 +119,9 @@ Img{
     font-size: 30px;
     
 }
+
+
+/*----------------------------------------------PIBI CREDITOS----------------------------------------------*/
 
 .Pibitexto{
 
@@ -132,4 +144,228 @@ Img{
 
     color: #a06ab4;
     
+}
+
+/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+
+
+@media screen and (max-width: 1000px){
+
+    .Texto{
+
+        font-size: 15px;
+    }
+
+    .InstaIcono{
+        height: 25px !important;
+        width: 25px !important;
+    }
+
+    .LeyandaInsta{
+
+        font-size: 24px;
+        
+    }
+
+    .Pibitexto{
+
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+
+    .Texto{
+
+        font-size: 12px;
+    }
+
+    .ButtonInsta{
+        height: 40px !important;
+        width: 40px !important;
+
+        
+    }
+
+    .InstaIcono{
+        height: 20px !important;
+        width: 20px !important;
+    }
+
+    .LeyandaInsta{
+
+        font-size: 20px;
+        
+    }
+
+    .Pibitexto{
+
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .Texto{
+
+        font-size: 10px;
+    }
+
+    .ButtonInsta{
+        height: 35px !important;
+        width: 35px !important;
+
+        
+    }
+
+    .InstaIcono{
+        height: 24px;
+        width: 24px;
+
+    }
+
+    .LeyandaInsta{
+
+        font-size: 15px;
+        
+    }
+
+    .Pibitexto{
+
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .Texto{
+
+        font-size: 9px;
+    }
+
+    .InstaIcono{
+        height: 22px !important;
+        width: 22px !important;
+    }
+
+    .LeyandaInsta{
+
+        display: none;
+        
+    }
+
+    .Pibitexto{
+
+        font-size: 8px;
+    }
+
+    .ButtonInsta{
+        height: 38px !important;
+        width: 38px !important;
+
+    }
+
+    .ContainerInstagram{
+    
+        display: flex !important;
+        justify-content: center!important;
+        align-items: center !important;
+    
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .Texto{
+
+        font-size: 8px;
+    }
+
+    .InstaIcono{
+        height: 25px !important;
+        width: 25px !important;
+    }
+
+
+    .Pibitexto{
+
+        font-size: 8px;
+    }
+
+    .ButtonInsta{
+        height: 35px !important;
+        width: 35px !important;
+
+        
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    .Texto{
+
+        font-size: 7px;
+    }
+
+    .InstaIcono{
+        height: 18px !important;
+        width: 18px !important;
+    }
+
+
+    .Pibitexto{
+
+        font-size: 8px;
+    }
+
+    .ButtonInsta{
+        height: 30px !important;
+        width: 30px !important;
+
+        
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .InstaIcono{
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .Texto{
+
+        font-size: 6px;
+    }
+
+    .Pibitexto{
+
+        font-size: 8px;
+    }
+
+    .ButtonInsta{
+        height: 28px !important;
+        width: 28px !important;
+
+        
+    }
+}
+
+@media screen and (max-width: 350px){
+
+
+    .Texto{
+
+        font-size: 5.5px;
+    }
+
+    .Pibitexto{
+
+        font-size: 7px;
+    }
+
 }
