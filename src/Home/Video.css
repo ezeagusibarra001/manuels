@@ -17,7 +17,7 @@
 .ContainerVideos{
 
     width: 100%;
-    height: auto;
+    height: 60%;
 
     border: solid red;
     display: grid;
