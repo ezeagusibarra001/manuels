@@ -3,7 +3,6 @@
     display: block;
     height: 450px;
     width: 100%;
-    border: solid black;
 
     background-image: url("../assetsSrc/fondovideos1.png");
     background-position: center;
@@ -17,9 +16,8 @@
 .ContainerVideos{
 
     width: 100%;
-    height: 60%;
+    height: 50%;
 
-    border: solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -28,11 +26,9 @@
     margin: 0% 10%;
 }
 
-.ContainerVideos>iframe{
-    border: solid red;
-}
 
-.Video1{
+
+.ContainerVideo1{
     width: 100%;
     height: 100%;
 
@@ -42,7 +38,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
 }
-.Video2{
+.ContainerVideo2{
     width: 100%;
     height: 100%;
 
@@ -53,7 +49,7 @@
     grid-row-end: 1;
 }
 
-.Video3{
+.ContainerVideo3{
     width: 100%;
     height: 100%;
 
@@ -64,6 +60,18 @@
     grid-row-end: 1;
 }
 
+.Video1{
+    height: 100%;
+    width: 100%;
+}
+.Video2{
+    height: 100%;
+    width: 100%;
+}
+.Video3{
+    height: 100%;
+    width: 100%;
+}
 
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 
@@ -71,7 +79,7 @@
 
     .ContainerFondoVideo{
 
-        height: auto;
+        height: 1400px;
 
         background-image: url("../assetsSrc/fondovideos2.png");
         background-position: center;
@@ -80,48 +88,102 @@
 
     .ContainerVideos{
 
-        width: 50%;
-        height: 70%;
+        width: 70%;
+        height: 85%;
     
-        border: solid red;
+     
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
         grid-gap: 5%;
-    
-        margin: 10% 10%;
+
+        margin: 0%;
+
     }
 
-    .Video1{
+    .ContainerVideo1{
         width: 100%;
-        height: 100%;
+        height: 90%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
     
         grid-row-start: 1;
         grid-row-end: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .Video2{
+    .ContainerVideo2{
+
         width: 100%;
-        height: 100%;
+        height: 90%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
     
         grid-row-start: 2;
         grid-row-end: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     
-    .Video3{
+    .ContainerVideo3{
         width: 100%;
-        height: 100%;
+        height: 90%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
     
         grid-row-start: 3;
         grid-row-end: 4;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
+}
+
+@media screen and (max-width: 600px){
+
+    .ContainerFondoVideo{
+
+        height: 1000px;
+
+        
+    }
+
+
+}
+
+@media screen and (max-width: 500px){
+
+    .ContainerFondoVideo{
+
+        height: 800px;
+
+        
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    .ContainerFondoVideo{
+
+        height: 600px;
+    }
+
+    .ContainerVideos{
+
+        width: 80%;
+        height: 90%;
+        margin: 0%;
+
+    }
 }

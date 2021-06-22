@@ -3,10 +3,6 @@ import "./Video.css"
 
 function Video(props) {
 
-    const alerts=()=>{
-        alert("hola")
-    }
-
     return(
 
         <div className="ContainerFondoVideo">
@@ -14,9 +10,17 @@ function Video(props) {
 
             <div className="ContainerVideos">
 
-            <iframe className="Video1" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
-            <iframe className="Video2" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
-            <iframe className="Video3" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
+                <div className="ContainerVideo1">
+                <iframe className="Video1" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
+                </div> 
+
+                <div className="ContainerVideo2"> 
+                <iframe className="Video2" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
+                </div>
+
+                <div className="ContainerVideo3"> 
+                <iframe className="Video3" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="YouTube video player?controls=1" frameborder="0" allow="fullscreen;"></iframe>
+                </div>
 
             </div>
 
