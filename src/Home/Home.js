@@ -1,8 +1,9 @@
-import React,{useState} from "react"
+import React from "react"
 import Layout from "../Layout";
 import Presentacion from "./Presentacion";
 import Experiencia from "./Experiencia";
 import Video from "./Video";
+import Servicios from "./Servicios";
 
 
 function Home(props) {
@@ -14,6 +15,7 @@ function Home(props) {
            <Presentacion/>
            <Experiencia/>
            <Video/>
+           <Servicios/>
         </Layout>
     )
     
