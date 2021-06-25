@@ -12,59 +12,11 @@ function Servicios() {
     return(
 
         <div className="ContainerPadreServicios">
-
-        <Carousel className="ContainerCarrusel">
-
-            <Carousel.Item>
-                <Card className="ContainerCard">
-                    <div className="ContainerImg"> 
-                    <Card.Img className="Img"  src="../assets/logo1.png" />
-                    </div>
-                    <Card.Body>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Carousel.Item>
-
-
-
-
-
-
-
-            <Carousel.Item>
-                <Card className="ContainerCard">
-                    <div className="ContainerImg">
-                    <Card.Img className="Img"  src="../assets/logo1.png" />
-                    </div>
-                    <Card.Body>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Carousel.Item>
-
-
-            <Carousel.Item>
-                <Card className="ContainerCard">
-                    <div className="ContainerImg">
-                    <Card.Img className="Img"  src="../assets/logo1.png" />
-                    </div>
-                    <Card.Body>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Carousel.Item>
-
-        </Carousel>
+            <h1>COMPONENTE...</h1>
+            <h2>PILAR LA CONCHA DE TU MADREEEE</h2>
+            <h3>LA PROXIMA SIGO CON EL NAVBAR</h3>
+            <h4>CHAU ME FUI A DORMIR</h4>
+            <h5 className="dormir">Z <h6>z</h6> <p>z</p></h5>
 
         </div>
     )
