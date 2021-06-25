@@ -9,6 +9,8 @@
     "3d-react-carousal": "^3.1.0",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.5.0",
+    "css-what": "^5.0.1",
+    "normalize-url": "^6.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
