@@ -9,31 +9,7 @@ function Clasesonline(props) {
 
         <div>
             <Layout>
-
-
-
-            <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="../assets/marca1.png"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="../assets/marca2.png"
-      
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="../assets/marca3.png"
-    />
-  </Carousel.Item>
-</Carousel>
-
+              CLASES ONLINE
             </Layout>
         </div>
     )

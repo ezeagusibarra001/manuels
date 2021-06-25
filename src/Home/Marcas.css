@@ -135,7 +135,22 @@
     justify-content: center;
     align-items: center;
 }
-
+.Img1{
+    height: auto;
+    width: 100%;
+}
+.Img2{
+    height: auto;
+    width: 100%;
+}
+.Img3{
+    height: auto;
+    width: 100%;
+}
+.Img4{
+    height: auto;
+    width: 100%;
+}
 
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 

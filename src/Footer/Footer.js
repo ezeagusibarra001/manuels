@@ -3,7 +3,7 @@ import "./Footer.css"
 import Button from 'react-bootstrap/Button'
 
 
-function Footer(props) {
+function Footer() {
 
 
     return(
@@ -12,8 +12,8 @@ function Footer(props) {
 
             <div className="ContainerFooter">
 
-                <div className="ContainerImg">
-                    <img src="./assets/logo1.png" className="Img"></img>
+                <div className="ContainerImgFooter">
+                    <img src="./assets/logo1.png" className="ImgFooter"></img>
                 </div>
 
                 <div className="ContainerTexto">

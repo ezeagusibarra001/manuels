@@ -87,7 +87,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg4">
                         <img
-                            className="Img"
+                            className="Img4"
                             src="../assets/marca8.png"
                          
                         />
