@@ -1,18 +1,48 @@
 import {Carousel} from '3d-react-carousal';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
-function CarruselSlides(){
-    let slides = [
-        <img  src="https://picsum.photos/800/300/?random" alt="1" />,
-        <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
-        <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
-        <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
-        <img src="https://picsum.photos/800/304/?random" alt="5" />   ];
-    return(
-        <Carousel slides={slides} autoplay={true} interval={5000}/>
-    )
+function CarruselServicios(){
+  let slides = [
+    <Card style={{ width: '50%' }} alt="1">
+      <Card.Img variant="top" src="https://picsum.photos/800/301/?random" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>,
+     <Card style={{ width: '50%' }}  alt="2">
+     <Card.Img variant="top" src="https://picsum.photos/800/301/?random" />
+     <Card.Body>
+       <Card.Title>Card Title</Card.Title>
+       <Card.Text>
+         Some quick example text to build on the card title and make up the
+         bulk of the card's content.
+       </Card.Text>
+       <Button variant="primary">Go somewhere</Button>
+     </Card.Body>
+   </Card>,
+     <Card  style={{ width: '50%' }} alt="3">
+     <Card.Img variant="top" src="https://picsum.photos/800/301/?random" />
+     <Card.Body>
+       <Card.Title>Card Title</Card.Title>
+       <Card.Text>
+         Some quick example text to build on the card title and make up the
+         bulk of the card's content.
+       </Card.Text>
+       <Button variant="primary">Go somewhere</Button>
+     </Card.Body>
+   </Card>,
+
+  ];
+  return <Carousel slides={slides} autoplay={true} interval={10000} />;
 }
 
-export default CarruselSlides;
+export default CarruselServicios;
 
 
     

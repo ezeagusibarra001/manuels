@@ -4,26 +4,19 @@ import Presentacion from "./Presentacion";
 import Experiencia from "./Experiencia";
 import Video from "./Video";
 import Servicios from "./Servicios";
-<<<<<<< HEAD
+import CarruselServicios from "./CarruselServicios";
 import Marcas from "./Marcas";
-=======
->>>>>>> parent of 1d0b203 (BANNER 3D)
 
 
 function Home(props) {
-
-
     return(
 
         <Layout>
            <Presentacion/>
            <Experiencia/>
            <Video/>
-           <Servicios/>
-<<<<<<< HEAD
+           <CarruselServicios/>
            <Marcas/>
-=======
->>>>>>> parent of 1d0b203 (BANNER 3D)
         </Layout>
     )
     
