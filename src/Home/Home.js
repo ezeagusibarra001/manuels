@@ -3,7 +3,7 @@ import Layout from "../Layout";
 import Presentacion from "./Presentacion";
 import Experiencia from "./Experiencia";
 import Video from "./Video";
-import CarruselServicios from "./CarruselServicios";
+import DesktopMobile from "./DesktopMobile";
 import Marcas from "./Marcas";
 
 
@@ -14,7 +14,7 @@ function Home(props) {
            <Presentacion/>
            <Experiencia/>
            <Video/>
-           <CarruselServicios/>
+           <DesktopMobile/>
            <Marcas/>
         </Layout>
     )
