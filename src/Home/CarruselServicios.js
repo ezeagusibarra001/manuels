@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React from "react"
+=======
+import React from 'react';
+>>>>>>> Stashed changes
 import { Carousel } from '3d-react-carousal';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
