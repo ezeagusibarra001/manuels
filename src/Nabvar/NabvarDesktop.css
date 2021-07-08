@@ -1,0 +1,77 @@
+/*--------------------------------------CONTAINER PADRE--------------------------------------*/
+.ContainerPadreNabvarDesktop{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    padding: 4% 0%;
+}
+/*--------------------------------------LOGO MANUELS--------------------------------------*/
+.ContainerImgNabvarDesktop{
+
+    height: auto;
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: auto;
+    grid-row-end: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.Img{
+
+    height: auto;
+    width: 50%;
+
+
+}
+/*--------------------------------------INSTAGRAM--------------------------------------*/
+.ButtonInstaNabvarDesktop{
+
+    border: solid  #a06ab4 !important;
+    background-color:  #a06ab4 !important;
+    border-radius: 60px !important;
+    height: 50px;
+    width: 50px;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.InstaIconoNabvarDesktop{
+
+    color: white !important;
+    height: 30px;
+    width: 30px;
+}
+/*--------------------------------------ContainerLinksNabvarDesktop--------------------------------------*/
+.ContainerLinksNabvarDesktop{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: auto;
+    grid-row-end: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    gap: 5%;
+
+}
+.NabvarLink{
+
+    color: #a06ab4;
+
+}

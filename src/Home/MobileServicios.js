@@ -3,7 +3,7 @@ import { Carousel } from "3d-react-carousal";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function CarruselServicios() {
+function MobileServicios() {
   var slides = [
     <Card style={{ width: "50%" }} alt="1">
       <Card.Img variant="top" />
@@ -54,4 +54,4 @@ function CarruselServicios() {
   );
 }
 
-export default CarruselServicios;
+export default MobileServicios;

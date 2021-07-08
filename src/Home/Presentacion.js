@@ -3,11 +3,12 @@ import "./Presentacion.css"
 
 function Presentacion() {
 
-
     return(
 
         <div className="ContainerPresentacionFondo">
+
             <img className="ImgPresentacion" src="./assets/portada.png"></img>
+
         </div>
     )
     

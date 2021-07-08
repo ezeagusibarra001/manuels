@@ -1,9 +1,12 @@
 import React from "react";
-import "./Servicios.css";
-import Card from "react-bootstrap/Card";
-import Carousel from "react-bootstrap/Carousel";
+import MobileServicios from "./MobileServicios";
+import DesktopServicios from "./DesktopServicios";
 
-function Servicios() {
-  return <div className="ContainerPadreServicios">Servicios</div>;
+function DesktopMobile() {
+  if (window.innerWidth > 800) {
+    return <div className="ContainerPadreServicios"><DesktopServicios/></div>;
+  } else {
+    return <div className="ContainerPadreServicios"><MobileServicios/></div>;
+  }
 }
-export default Servicios;
+export default DesktopMobile;
