@@ -31,7 +31,6 @@
     height: auto;
     width: 50%;
 
-
 }
 /*--------------------------------------INSTAGRAM--------------------------------------*/
 .ButtonInstaNabvarDesktop{
@@ -51,8 +50,8 @@
 .InstaIconoNabvarDesktop{
 
     color: white !important;
-    height: 30px;
-    width: 30px;
+    height: 40px !important;
+    width: 40px !important;
 }
 /*--------------------------------------ContainerLinksNabvarDesktop--------------------------------------*/
 .ContainerLinksNabvarDesktop{
@@ -72,6 +71,79 @@
 }
 .NabvarLink{
 
-    color: #a06ab4;
+    color: #a06ab4 !important;
+    
+}
+.NabvarLink:hover{
 
+    color: #a06ab4 !important;
+    
+}
+
+
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------------*/
+@media screen and (max-width: 1270px){
+
+    .ContainerPadreNabvarDesktop{
+
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+    
+    }
+
+    .Img{
+
+        height: auto;
+        width: 70%;
+    
+    }
+}
+@media screen and (max-width: 1040px){
+
+    .ContainerPadreNabvarDesktop{
+
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+    
+    }
+
+    .NabvarLink{
+
+        font-size: 18px !important;
+    }
+
+    .ContainerLinksNabvarDesktop{
+
+        gap: 2%;
+    }
+    .Img{
+
+        height: auto;
+        width: 80%;
+    
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .ContainerPadreNabvarDesktop{
+
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+    
+    }
+
+    .ContainerLinksNabvarDesktop{
+
+        gap: 1%;
+    }
+
+    .NabvarLink{
+
+        font-size: 18px !important;
+        
+    }
 }

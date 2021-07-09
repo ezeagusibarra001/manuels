@@ -1,0 +1,119 @@
+/*--------------------------------------CONTAINER NAVBAR--------------------------------------*/
+.ContainerNabvarMobile{
+
+    display: grid !important;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
+}
+/*--------------------------------------LOGO MANUELS--------------------------------------*/
+.BrandMobile{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.ImgMobile{
+
+    height: auto;
+    width: 100%;
+}
+/*--------------------------------------INSTAGRAM--------------------------------------*/
+.ContenedorButtonInstaNabvarMobile{
+
+    grid-column-start: 2 !important;
+    grid-column-end: 3 !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+.ButtonInstaNabvarMobile{
+
+    border: solid  #a06ab4 !important;
+    background-color:  #a06ab4 !important;
+    border-radius: 60px !important;
+    height: 50px;
+    width: 50px;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.InstaIconoNabvarMobile{
+
+    color: white !important;
+    height: 40px !important;
+    width: 40px !important;
+}
+/*--------------------------------------CONTENEDOR NAVLINK--------------------------------------*/
+.ColapsorMobile{
+    
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+
+    grid-row-start: 2 !important;
+    grid-row-end: 3 !important;
+
+    width: 100%;
+}
+.NabvarLink{
+    font-size: 20px;
+}
+
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------------*/
+@media screen and (max-width: 550px){
+
+    .NabvarLink{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .ContainerNabvarMobile{
+
+        display: grid !important;
+        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+    .ContainerNabvarMobile{
+
+        display: grid !important;
+        grid-template-columns: 3.5fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    
+    }
+
+    
+}
+@media screen and (max-width: 400px){
+
+    .ContainerNabvarMobile{
+
+        display: grid !important;
+        grid-template-columns: 4fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    
+    }
+
+    
+}
+
+

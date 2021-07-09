@@ -1,11 +1,29 @@
 import React from "react"
 import "./NabvarDesktop.css"
 import Button from 'react-bootstrap/Button'
+import Nav from 'react-bootstrap/Nav'
 import {Link} from "react-router-dom"
+import {scroller} from "react-scroll";
+
 
 
 
 function NabvarDesktop(props) {
+
+    const ScrollServicios=()=>{
+        scroller.scrollTo('Servicios',{
+            smooth: true,
+            offset: -70,
+            duration:2500,
+        })
+    }
+    const ScrollExperiencia=()=>{
+        scroller.scrollTo('Experiencia',{
+            smooth: true,
+            offset: -70,
+            duration:2000,
+        })
+    }
 
     return(
 
@@ -20,10 +38,10 @@ function NabvarDesktop(props) {
 
             <div className="ContainerLinksNabvarDesktop">
 
-                <Link className="NabvarLink">Inicio</Link>
-                <Link className="NabvarLink">Sobre Mí</Link>
-                <Link className="NabvarLink">Servicios</Link>
-                <Link className="NabvarLink">Clases Online</Link>
+                <Link className="NabvarLink" to="/">Inicio</Link>
+                <Nav.Link href="#link" className="NabvarLink" onClick={ScrollExperiencia}>Sobre Mí</Nav.Link>
+                <Nav.Link href="#link" className="NabvarLink" onClick={ScrollServicios}>Servicios</Nav.Link>
+                <Link className="NabvarLink" className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
                 <Link className="NabvarLink">Blog</Link>
                 <Button className="ButtonInstaNabvarDesktop">
                     <svg xmlns="http://www.w3.org/2000/svg" className="InstaIconoNabvarDesktop" fill="white"   viewBox="0 0 16 16">

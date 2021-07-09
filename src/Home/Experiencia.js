@@ -7,7 +7,7 @@ function Experiencia() {
 
     return(
 
-        <div className="ContenedorExperienciaPadre">
+        <div className="ContenedorExperienciaPadre" id="Experiencia">
 
             <div className="ContenedorExperienciaSubPadre">
 
