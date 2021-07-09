@@ -7,20 +7,20 @@ function Experiencia() {
 
     return(
 
-        <div className="ContenedorPadre">
+        <div className="ContenedorExperienciaPadre">
 
-            <div className="ContenedorSubPadre">
+            <div className="ContenedorExperienciaSubPadre">
 
-                <div className="ContenedorTexto1">
-                    <p className="Texto1"> Un poco </p>
+                <div className="ContenedorExperienciaTexto1">
+                    <p className="ExperienciaTexto1"> Un poco </p>
                 </div>
 
-                <div className="ContenedorTexto2">
-                    <p className="Texto2"> sobre mí</p>
+                <div className="ContenedorExperienciaTexto2">
+                    <p className="ExperienciaTexto2"> sobre mí</p>
                 </div>
 
-                <div className="ContenedorTexto3">
-                    <p className="Texto3"> 
+                <div className="ContenedorExperienciaTexto3">
+                    <p className="ExperienciaTexto3"> 
                         Con más de 10 años de trayectoria en 
                         radio puedo afirmar que me apasiona la 
                         comunicación. Como locutora puedo ser 
@@ -28,8 +28,8 @@ function Experiencia() {
                     </p>
                 </div>
 
-                <div className="ContenedorTexto4">
-                    <p className="Texto4">
+                <div className="ContenedorExperienciaTexto4">
+                    <p className="ExperienciaTexto4">
                         Como docente me dedico a enseñar, 
                         guiar y crear herramientas lúdicas para 
                         que tu comunicación verbal y corporal 
