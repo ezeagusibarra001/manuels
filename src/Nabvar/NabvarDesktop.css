@@ -2,7 +2,7 @@
 .ContainerPadreNabvarDesktop{
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-rows: auto;
 
     padding: 2% 0%;
@@ -87,7 +87,7 @@
     .ContainerPadreNabvarDesktop{
 
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.75fr;
         grid-template-rows: auto;
     
     }
@@ -98,13 +98,18 @@
         width: 70%;
     
     }
+
+    .ContainerLinksNabvarDesktop{
+
+        gap: 2%;
+    }
 }
 @media screen and (max-width: 1040px){
 
     .ContainerPadreNabvarDesktop{
 
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
     
     }
@@ -114,36 +119,25 @@
         font-size: 18px !important;
     }
 
-    .ContainerLinksNabvarDesktop{
-
-        gap: 2%;
-    }
     .Img{
 
         height: auto;
         width: 80%;
     
     }
+
+    .ButtonInstaNabvarDesktop{
+
+        height: 45px !important;
+        width: 45px !important;
+    }
 }
 
-@media screen and (max-width: 900px){
-
-    .ContainerPadreNabvarDesktop{
-
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: auto;
-    
-    }
-
-    .ContainerLinksNabvarDesktop{
-
-        gap: 1%;
-    }
+@media screen and (max-width: 850px){
 
     .NabvarLink{
 
-        font-size: 18px !important;
-        
+        font-size: 16px !important;
     }
 }
+

@@ -2,9 +2,11 @@
 .ContainerNabvarMobile{
 
     display: grid !important;
-    grid-template-columns: 2.5fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 2.5fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto !important;
 
+    width: 100% !important;
+    margin: 0% 0% !important;
 }
 /*--------------------------------------LOGO MANUELS--------------------------------------*/
 .BrandMobile{
@@ -35,8 +37,24 @@
     justify-content: center !important;
     align-items: center !important;
 
+    gap: 4%;
+
 }
 .ButtonInstaNabvarMobile{
+
+    border: solid  #a06ab4 !important;
+    background-color:  #a06ab4 !important;
+    border-radius: 60px !important;
+    height: 50px;
+    width: 50px;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.ButtonLoginNabvarMobile{
 
     border: solid  #a06ab4 !important;
     background-color:  #a06ab4 !important;
@@ -88,6 +106,19 @@
         grid-template-rows: auto auto auto;
     
     }
+    .ButtonInstaNabvarMobile{
+
+        height: 45px;
+        width: 45px;
+    
+    }
+
+    .ButtonLoginNabvarMobile{
+
+        height: 45px;
+        width: 45px;
+    
+    }
 
 }
 
@@ -96,11 +127,9 @@
     .ContainerNabvarMobile{
 
         display: grid !important;
-        grid-template-columns: 3.5fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-    
+        grid-template-columns: 2fr 1fr 1fr !important;
+        grid-template-rows: auto auto auto !important;
     }
-
     
 }
 @media screen and (max-width: 400px){
