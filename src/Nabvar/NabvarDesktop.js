@@ -10,20 +10,10 @@ import {scroller} from "react-scroll";
 
 function NabvarDesktop(props) {
 
-    const ScrollServicios=()=>{
-        scroller.scrollTo('Servicios',{
-            smooth: true,
-            offset: -70,
-            duration:2500,
-        })
-    }
-    const ScrollExperiencia=()=>{
-        scroller.scrollTo('Experiencia',{
-            smooth: true,
-            offset: -70,
-            duration:2000,
-        })
-    }
+
+    const ScrollServicios=props.ScrollServicios
+    const ScrollExperiencia=props.ScrollExperiencia
+
 
     return(
 
