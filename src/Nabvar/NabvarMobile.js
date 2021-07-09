@@ -34,7 +34,7 @@ function NabvarMobile(props) {
                             <Nav.Link href="#link" className="NabvarLink" onClick={ScrollExperiencia}>Sobre Mí</Nav.Link>
                             <Nav.Link href="#link" className="NabvarLink" onClick={ScrollServicios}>Servicios</Nav.Link>
                             <Link className="NabvarLink" className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
-                            <Link className="NabvarLink">Blog</Link>
+                            <Link className="NabvarLink" to="/Blog" >Blog</Link>
                         </Nav>
                     </Navbar.Collapse>
                 

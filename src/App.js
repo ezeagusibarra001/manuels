@@ -2,6 +2,7 @@ import React from "react"
 import {BrowserRouter,Route} from "react-router-dom"
 import Home from "./Home/Home"
 import Clasesonline from './Clasesonline/Clasesonline';
+import Blog from "./Blog/Blog";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
 
       <Route path="/" component={Home} exact />
       <Route path="/Clasesonline" component={Clasesonline} exact />
+      <Route path="/Blog" component={Blog} />
 
       </BrowserRouter>
 
