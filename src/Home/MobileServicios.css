@@ -8,7 +8,7 @@
     
     gap: 2%;
 
-    padding: 6% 0%;
+    padding: 10% 0%;
 }
 
 
@@ -56,7 +56,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
 
     height: auto;
     width: 60%;
@@ -83,16 +83,140 @@
     width: 40%;
 }
 
-.ContainerTextoServiciosMobile{
-    
+
+/*------------------------------------------------TEXTO1---------------------------------------*/
+.ContainerTextoServiciosMobile1{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
+}
+.ContainerTextoServiciosMobile1>p{
+    color: #a06ab4;
+}
+/*------------------------------------------------TEXTO2---------------------------------------*/
+.ContainerTextoServiciosMobile2{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
+}
+.ContainerTextoServiciosMobile2>p{
+    color: #a06ab4;
+}
+/*------------------------------------------------TEXTO3---------------------------------------*/
+.ContainerTextoServiciosMobile3{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
+}
+.ContainerTextoServiciosMobile3>p{
+    color: #a06ab4;
+}
+.Texto1ServiciosMobile3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;  
+}
+.Texto2ServiciosMobile3{
     grid-column-start: 1;
     grid-column-end: 2;
 
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 4;  
+}
+.Texto2ServiciosMobile4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 4;
+    grid-row-end: 5; 
+}
+.TextoAuxilliarServiciosMobile{
+
+    color: white !important;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 4;
+    grid-row-end: 5;   
+}
+/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+
+@media screen and (max-width: 700px){
+.ContainerCardServiciosMobile{
+
+    width: 80%;
 
 }
-.TextoServiciosMobile{
-    color: #a06ab4;
-    font-size: 16px;
+}
+@media screen and (max-width: 600px){
+   
+    .ContainerTextoServiciosMobile1>p{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile2>p{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile3>p{
+        font-size: 14px;
+        font-weight: 700;
+    } 
+}
+@media screen and (max-width: 500px){
+    .ContainerCardServiciosMobile{
+    
+        width: 100%;
+    }
+    .TituloServiciosMobile{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 450px){
+    .ContainerTextoServiciosMobile1>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile2>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile3>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 400px){
+    .ContainerTextoServiciosMobile1>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile2>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile3>p{
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 350px){
+    .ContainerTextoServiciosMobile1>p{
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile2>p{
+        font-size: 11px;
+        font-weight: 700;
+    }
+    .ContainerTextoServiciosMobile3>p{
+        font-size: 11px;
+        font-weight: 700;
+    }
 }
