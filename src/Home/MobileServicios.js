@@ -6,47 +6,38 @@ import Button from "react-bootstrap/Button";
 
 function MobileServicios() {
   var slides = [
-    <Card >
-      <Card.Img variant="top" />
-      <Card.Body>
-        <Card.Text>
-          <p>
-            Talleres grupales de locución, neutro, oratoria, radio, podcast.
-          </p>
-          <p>
-            Clases personalizadas de: locución, oratoria, radio, neutro y
-            podcast.
-          </p>
-          <p>Asesorías Únicas</p>
-        </Card.Text>
-      </Card.Body>
-    </Card>,
+    
+    <div className="ContainerCardServiciosMobile">
+      <div className="ContainerImgServiciosMobile">
+        <img className="ImgServiciosMobile" src="../assets/icono1.png"/>
+      </div>
+      <div className="ContainerTextoServiciosMobile">
+        <p className="TextoServiciosMobile">Talleres grupales de Locución , Neutro , Oratoria , Radio , Podcast </p>
+        <p className="TextoServiciosMobile">Clases personalizadas de: Locución , Oratoria , Radio , Neutro y Podcast</p>
+      </div>
+    </div>,
 
-    <Card>
-      <Card.Img variant="top" />
-      <Card.Body>
-        <Card.Text>
-          <p>
-            Talleres para empresas: locución, radioteatro, radio y
-            podcast.
-          </p>
-          <p>Workshop para empresas: locución, oratoria, neutro. </p>
-          <p>Asesorías Únicas</p>
-        </Card.Text>
-      </Card.Body>
-    </Card>,
+    <div className="ContainerCardServiciosMobile">
+      <div className="ContainerImgServiciosMobile">
+        <img className="ImgServiciosMobile" src="../assets/icono2.png"/>
+      </div>
+      <div className="ContainerTextoServiciosMobile">
+        <p className="TextoServiciosMobile">Talleres grupales de Locución , Neutro , Oratoria , Radio , Podcast </p>
+        <p className="TextoServiciosMobile">Clases personalizadas de: Locución , Oratoria , Radio , Neutro y Podcast</p>
+      </div>
+    </div>,
 
-    <Card>
-      <Card.Img variant="top" />
-      <Card.Body>
-        <Card.Text>
-          <p>Locuciones comerciales castellano neutro y rioplatense</p>
-          <p>Grabaciones en homestudio propio.</p>
-          <p>Conducción de eventos: Radio, Podcast y TV </p>
-        </Card.Text>
-      </Card.Body>
-    </Card>,
+    <div className="ContainerCardServiciosMobile">
+    <div className="ContainerImgServiciosMobile">
+      <img className="ImgServiciosMobile" src="../assets/icono3.png"/>
+    </div>
+    <div className="ContainerTextoServiciosMobile">
+      <p className="TextoServiciosMobile">Talleres grupales de Locución , Neutro , Oratoria , Radio , Podcast </p>
+      <p className="TextoServiciosMobile">Clases personalizadas de: Locución , Oratoria , Radio , Neutro y Podcast</p>
+    </div>
+    </div>,
   ];
+
   return (
 
     <div className="ContainerPadreMobileServicios" >

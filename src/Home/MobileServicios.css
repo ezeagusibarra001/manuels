@@ -5,9 +5,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    
+    gap: 2%;
 
     padding: 6% 0%;
-    border: solid red;
 }
 
 
@@ -23,10 +24,15 @@
     height: auto;
     width: 100%;
 
-    border: solid black;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+.TituloServiciosMobile{
+    font-family: "dukecharming regular";
+    font-weight: 900;
+    font-size: 35px;
+    color: #a06ab4;
 }
 
 /*------------------------------------------------CARRUSEL---------------------------------------*/
@@ -39,10 +45,54 @@
     grid-row-end: 3;
 
     height: auto;
-    width: 100%;
+    width: auto;
 
     display: flex !important;
     justify-content: center !important;
     align-items: flex-start !important;
 
+}
+.ContainerCardServiciosMobile{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr ;
+
+    height: auto;
+    width: 60%;
+
+    box-shadow: 0 0 25px rgb(0,0,0) !important;
+    border-radius: 40px;
+    background-color: white;
+
+    padding: 8% 0%;
+
+    text-align: center;
+}
+
+.ContainerImgServiciosMobile{
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImgServiciosMobile{
+    height: auto;
+    width: 40%;
+}
+
+.ContainerTextoServiciosMobile{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+.TextoServiciosMobile{
+    color: #a06ab4;
+    font-size: 16px;
 }
