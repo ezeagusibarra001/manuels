@@ -35,10 +35,9 @@ function MobileServicios() {
       <img className="ImgServiciosMobile" src="../assets/icono3.png"/>
     </div>
     <div className="ContainerTextoServiciosMobile3">
-      <p className="Texto1ServiciosMobile3">Talleres grupales de:</p>
-      <p className="Texto2ServiciosMobile3">Locución ,Neutro,Oratoria,Radio,Podcast </p>
-      <p className="Texto3ServiciosMobile3">Clases personalizadas de:</p>
-      <p className="Texto4ServiciosMobile4">Locución,Oratoria,Radio, Neutro y Podcast</p>
+      <p className="Texto1ServiciosMobile3">Talleres grupales de: Locución ,Neutro,Oratoria,Radio,Podcast </p>
+      <p className="Texto2ServiciosMobile3">Clases personalizadas de:</p>
+      <p className="Texto3ServiciosMobile4">Locución,Oratoria,Radio, Neutro y Podcast</p>
     </div>
     </div>,
   ];

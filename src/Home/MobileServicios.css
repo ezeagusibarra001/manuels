@@ -92,6 +92,7 @@
     grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
 }
 .ContainerTextoServiciosMobile1>p{
+    font-weight: 700;
     color: #a06ab4;
 }
 /*------------------------------------------------TEXTO2---------------------------------------*/
@@ -102,6 +103,7 @@
     grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
 }
 .ContainerTextoServiciosMobile2>p{
+    font-weight: 700;
     color: #a06ab4;
 }
 /*------------------------------------------------TEXTO3---------------------------------------*/
@@ -112,6 +114,7 @@
     grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
 }
 .ContainerTextoServiciosMobile3>p{
+    font-weight: 700;
     color: #a06ab4;
 }
 

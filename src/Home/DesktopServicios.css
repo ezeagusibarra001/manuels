@@ -52,22 +52,23 @@
     grid-row-start: 2;
     grid-row-end: 3;
 
-    border-radius: 10%;
+    border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
+
 }
 .Card1Desktop{
 
-    height: auto;
+    height: 450px;
     width: 100%;
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto auto auto ;
     gap: 0%;
 }
 .IconoDesktop1{
     
-    width: 30%;
+    width: 40%;
     height: auto;
 }
 /*------------------------------------------------CARD2---------------------------------------*/
@@ -82,22 +83,24 @@
     grid-row-start: 2;
     grid-row-end: 3;
 
-    border-radius: 10%;
+    border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
+
 }
 .Card2Desktop{
 
-    height: auto;
+    height: 450px;
     width: 100%;
     
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto auto auto ;
     gap: 0%;
+
 }
 .IconoDesktop2{
     
-    width: 30%;
+    width: 40%;
     height: auto;
 }
 /*------------------------------------------------CARD3---------------------------------------*/
@@ -112,35 +115,39 @@
     grid-row-start: 2;
     grid-row-end: 3;
 
-    border-radius: 10%;
+    border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
 }
 .Card3Desktop{
 
-    height: auto;
+    height: 450px;
     width: 100%;
     
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto auto auto ;
     gap: 0%;
 }
 .IconoDesktop3{
     
-    width: 30%;
+    width: 40%;
     height: auto;
 }
 /*------------------------------------------------BUTTON---------------------------------------*/
 .ContainerButtonCardDesktop{
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .ButtonCardDesktop{
     background-color: #a06ab4;
     color: white;
 
-    height: auto;
+    height: 60%;
     width: 70%;
 
     border: none;
@@ -160,33 +167,57 @@
 
 @media screen and (max-width: 1240px){
 
-    .ContainerPadreServiciosDesktop>div{
+    .ContainerTextosDesktop>p{
 
         color: #a06ab4;
         font-size: 18px;
     }
+    .Card1Desktop{
+        height: 400px;
+    }
+    .Card2Desktop{
+        height: 400px;
+    }
+    .Card3Desktop{
+        height: 400px;
+    }
+    .ContainerPadreServiciosDesktop{
+        padding: 5% 5%;
+    }
 }
 @media screen and (max-width: 1120px){
 
-    .ContainerPadreServiciosDesktop>div{
+    .ContainerTextosDesktop>p{
 
         color: #a06ab4;
         font-size: 16px;
     }
+    .Card1Desktop{
+        height: 380px;
+    }
+    .Card2Desktop{
+        height: 380px;
+    }
+    .Card3Desktop{
+        height: 380px;
+    }
 }
 @media screen and (max-width: 1000px){
 
-    .ContainerPadreServiciosDesktop>div{
+    .ContainerTextosDesktop>p{
 
         color: #a06ab4;
         font-size: 14px;
     }
 }
 @media screen and (max-width: 900px){
-
-    .ContainerPadreServiciosDesktop>div{
-
-        color: #a06ab4;
-        font-size: 12px;
+    .ButtonCardDesktop{
+        background-color: #a06ab4;
+        color: white;
+    
+        height: 40%;
+        width: 70%;
+    
+        font-size: 80%;
     }
 }
