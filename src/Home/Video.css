@@ -16,14 +16,14 @@
 .ContainerVideos{
 
     width: 100%;
-    height: 50%;
+    height: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 5%;
 
-    margin: 0% 10%;
+    margin: 0% 5%;
 }
 
 
@@ -78,32 +78,32 @@
 @media screen and (max-width: 1000px){
 
     .ContainerFondoVideo{
-
-        height: 1400px;
+        width: 100%;
+        height: auto;
 
         background-image: url("../assetsSrc/fondovideos2.png");
         background-position: center;
         background-size: contain;
+
+        padding: 10% 10%;
     }
 
     .ContainerVideos{
 
-        width: 70%;
-        height: 85%;
+        width: 500px;
+        height: 900px;
     
      
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto auto;
-        grid-gap: 5%;
-
-        margin: 0%;
+        grid-gap: 10%;
 
     }
 
     .ContainerVideo1{
         width: 100%;
-        height: 90%;
+        height: 100%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -118,7 +118,7 @@
     .ContainerVideo2{
 
         width: 100%;
-        height: 90%;
+        height: 100%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -134,7 +134,7 @@
     
     .ContainerVideo3{
         width: 100%;
-        height: 90%;
+        height: 100%;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -151,39 +151,41 @@
 
 @media screen and (max-width: 600px){
 
-    .ContainerFondoVideo{
+    .ContainerVideos{
 
-        height: 1000px;
-
-        
+        width: 400px;
+        height: 800px;
+    
     }
-
 
 }
 
 @media screen and (max-width: 500px){
 
-    .ContainerFondoVideo{
+    .ContainerVideos{
 
-        height: 800px;
-
-        
+        width: 350px;
+        height: 650px;
+    
     }
 
 }
 
 @media screen and (max-width: 400px){
 
-    .ContainerFondoVideo{
+    .ContainerVideos{
 
+        width: 300px;
         height: 600px;
+    
     }
+}
+@media screen and (max-width: 400px){
 
     .ContainerVideos{
 
-        width: 80%;
-        height: 90%;
-        margin: 0%;
-
+        width: 300px;
+        height: 550px;
+    
     }
 }
