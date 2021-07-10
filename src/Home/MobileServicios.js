@@ -12,8 +12,9 @@ function MobileServicios() {
       </div>
       <div className="ContainerTextoServiciosMobile1">
         <p className="Texto1ServiciosMobile1">Talleres para empresas: Locución,Radioteatro y Podcast</p>
-        <p className="Texto2ServiciosMobile1">Workshop para empresas: Locución,Oratoria Neutro </p>
-        <p className="Texto3ServiciosMobile1">Asesorias Únicas</p>
+        <p className="Texto2ServiciosMobile1">Workshop para empresas:</p>
+        <p className="Texto3ServiciosMobile1">Locución,Oratoria Neutro </p>
+        <p className="Texto4ServiciosMobile1">Asesorias Únicas</p>
       </div>
     </div>,
 
@@ -34,10 +35,10 @@ function MobileServicios() {
       <img className="ImgServiciosMobile" src="../assets/icono3.png"/>
     </div>
     <div className="ContainerTextoServiciosMobile3">
-      <p className="Texto1ServiciosMobile3">Talleres grupales de Locución ,Neutro,Oratoria,Radio,Podcast </p>
-      <p className="Texto2ServiciosMobile3">Clases personalizadas de: Locución,Oratoria,Radio,</p>
-      <p className="Texto2ServiciosMobile4">Neutro y Podcast</p>
-      
+      <p className="Texto1ServiciosMobile3">Talleres grupales de:</p>
+      <p className="Texto2ServiciosMobile3">Locución ,Neutro,Oratoria,Radio,Podcast </p>
+      <p className="Texto3ServiciosMobile3">Clases personalizadas de:</p>
+      <p className="Texto4ServiciosMobile4">Locución,Oratoria,Radio, Neutro y Podcast</p>
     </div>
     </div>,
   ];

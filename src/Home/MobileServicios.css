@@ -58,7 +58,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr ;
 
-    height: auto;
+    height: 450px;
     width: 70%;
 
     box-shadow: 0 0 25px rgb(0,0,0) !important;
@@ -114,48 +114,18 @@
 .ContainerTextoServiciosMobile3>p{
     color: #a06ab4;
 }
-.Texto1ServiciosMobile3{
-    grid-column-start: 1;
-    grid-column-end: 2;
 
-    grid-row-start: 1;
-    grid-row-end: 2;  
-}
-.Texto2ServiciosMobile3{
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 3;
-    grid-row-end: 4;  
-}
-.Texto2ServiciosMobile4{
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 4;
-    grid-row-end: 5; 
-}
-.TextoAuxilliarServiciosMobile{
-
-    color: white !important;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 4;
-    grid-row-end: 5;   
-}
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 
 @media screen and (max-width: 700px){
 .ContainerCardServiciosMobile{
-
     width: 80%;
-
 }
 }
 @media screen and (max-width: 600px){
-   
+    .ContainerCardServiciosMobile{
+        height: 400px;    
+    }
     .ContainerTextoServiciosMobile1>p{
         font-size: 14px;
         font-weight: 700;
@@ -179,44 +149,18 @@
     }
 }
 @media screen and (max-width: 450px){
-    .ContainerTextoServiciosMobile1>p{
-        font-size: 12px;
-        font-weight: 700;
-    }
-    .ContainerTextoServiciosMobile2>p{
-        font-size: 12px;
-        font-weight: 700;
-    }
-    .ContainerTextoServiciosMobile3>p{
-        font-size: 12px;
-        font-weight: 700;
-    }
-}
-@media screen and (max-width: 400px){
-    .ContainerTextoServiciosMobile1>p{
-        font-size: 12px;
-        font-weight: 700;
-    }
-    .ContainerTextoServiciosMobile2>p{
-        font-size: 12px;
-        font-weight: 700;
-    }
-    .ContainerTextoServiciosMobile3>p{
-        font-size: 12px;
-        font-weight: 700;
+    .ContainerCardServiciosMobile{
+        height: 350px;    
     }
 }
 @media screen and (max-width: 350px){
     .ContainerTextoServiciosMobile1>p{
-        font-size: 11px;
-        font-weight: 700;
+        font-size: 12px;
     }
     .ContainerTextoServiciosMobile2>p{
-        font-size: 11px;
-        font-weight: 700;
+        font-size: 12px;
     }
     .ContainerTextoServiciosMobile3>p{
-        font-size: 11px;
-        font-weight: 700;
-    }
+        font-size: 12px;
+    } 
 }
