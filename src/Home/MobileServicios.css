@@ -1,0 +1,48 @@
+.ContainerPadreMobileServicios{
+    height: auto;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    padding: 6% 0%;
+    border: solid red;
+}
+
+
+
+/*------------------------------------------------TITULO SERVICIOS---------------------------------------*/
+.ContainerTituloServiciosMobile{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    height: auto;
+    width: 100%;
+
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*------------------------------------------------CARRUSEL---------------------------------------*/
+.ContainerCaruselServiciosMobile{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    height: auto;
+    width: 100%;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+
+}
