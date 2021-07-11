@@ -1,0 +1,10 @@
+.ContainerFondoPortada{
+    height: auto;
+    width: 100%;
+}
+
+.ImgPortada{
+    height: auto;
+    width: 100%;
+    display: block;
+}
