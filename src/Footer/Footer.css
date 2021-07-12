@@ -54,8 +54,10 @@
     grid-template-rows: auto ;
     gap: 0%;
 
+    padding: 2% 10%;
+
 }
-.ContainerTextosHijo{
+.ContainerTextosHijoFooter{
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -64,7 +66,7 @@
     grid-row-end: 2;
    
 }
-.ContainerTextosHijo>p{
+.ContainerTextosHijoFooter>p{
     color: #a06ab4;
     font-family: "varela round regular";
     font-size: 1rem;
@@ -74,7 +76,7 @@
     width: auto;
 }
 /*------------------------------------------INSTAGRAM------------------------------------------*/
-.ContainerInstagram{
+.ContainerInstagramFooter{
     
     
     grid-column-start: 3;
@@ -90,7 +92,7 @@
     gap: 5%;
 
 }
-.ButtonInsta{
+.ButtonInstaFooter{
     border: solid  #a06ab4 !important;
     background-color:  #a06ab4 !important;
     border-radius: 60px !important;
@@ -102,18 +104,18 @@
     align-items: center !important;
 
 }
-.InstaIcono{
+.InstaIconoFooter{
     color: white !important;
     height: 30px;
     width: 30px;
 }
-.LeyandaInsta{
+.LeyandaInstaFooter{
     color: #a06ab4;
     font-family: "dukecharming regular";
     font-weight: 900;
 }
 /*------------------------------------------PIBI CREDITOS------------------------------------------*/
-.ContainerPibicreditos{
+.ContainerPibicreditosFooter{
 
     height: auto;
     text-align: center;
@@ -124,35 +126,44 @@
     grid-row-start: 2;
     grid-row-end: 3;
 }
-.Pibitexto{
+.PibitextoFooter{
     color: #a06ab4;
 }
-.Pibicreditos{
+.PibicreditosFooter{
     color: #a06ab4;
 }
 
 
 
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-
+@media screen and (max-width: 1200px){
+    .ContainerTextosHijoFooter>p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .ContainerTextosHijoFooter>p{
+        font-size: 14px;
+    }
+}
 @media screen and (max-width: 1000px){
 
-    .ContainerTextosHijo>p{
+    .ContainerTextosHijoFooter>p{
         
         font-size: 12px;
        
     }
 
-    .Pibitexto{
+    .PibitextoFooter{
         color: #a06ab4;
         font-size: 12px;
     }
-    .Pibicreditos{
+    .PibicreditosFooter{
         color: #a06ab4;
         font-size: 12px;
     }
 
-    .ButtonInsta{
+    .ButtonInstaFooter{
  
         height: 40px;
         width: 40px;
@@ -162,12 +173,12 @@
         align-items: center !important;
     
     }
-    .InstaIcono{
+    .InstaIconoFooter{
         color: white !important;
         height: 25px;
         width: 25px;
     }
-    .LeyandaInsta{
+    .LeyandaInstaFooter{
         color: #a06ab4;
         font-family: "dukecharming regular";
         font-weight: 900;
@@ -180,25 +191,29 @@
        
     }
 }
-
+@media screen and (max-width: 800px){
+    .ContainerTextosHijoFooter>p{
+        font-size: 11px;
+    }
+}
 @media screen and (max-width: 700px){
 
-    .ContainerTextosHijo>p{
+    .ContainerTextosHijoFooter>p{
         
         font-size: 9px;
        
     }
 
-    .Pibitexto{
+    .PibitextoFooter{
         color: #a06ab4;
         font-size: 10px;
     }
-    .Pibicreditos{
+    .PibicreditosFooter{
         color: #a06ab4;
         font-size: 10px;
     }
 
-    .ButtonInsta{
+    .ButtonInstaFooter{
  
         height: 35px;
         width: 35px;
@@ -208,12 +223,12 @@
         align-items: center !important;
     
     }
-    .InstaIcono{
+    .InstaIconoFooter{
         color: white !important;
         height: 20px;
         width: 20px;
     }
-    .LeyandaInsta{
+    .LeyandaInstaFooter{
         color: #a06ab4;
         font-family: "dukecharming regular";
         font-weight: 900;
@@ -229,22 +244,22 @@
 
 @media screen and (max-width: 600px){
 
-    .ContainerTextosHijo>p{
+    .ContainerTextosHijoFooter>p{
         
         font-size: 9px;
        
     }
 
-    .Pibitexto{
+    .PibitextoFooter{
         color: #a06ab4;
         font-size: 9px;
     }
-    .Pibicreditos{
+    .PibicreditosFooter{
         color: #a06ab4;
         font-size: 9px;
     }
 
-    .ButtonInsta{
+    .ButtonInstaFooter{
  
         height: 32px;
         width: 32px;
@@ -254,12 +269,12 @@
         align-items: center !important;
     
     }
-    .InstaIcono{
+    .InstaIconoFooter{
         color: white !important;
         height: 20px;
         width: 20px;
     }
-    .LeyandaInsta{
+    .LeyandaInstaFooter{
         color: #a06ab4;
         font-family: "dukecharming regular";
         font-weight: 900;
@@ -275,22 +290,22 @@
 
 @media screen and (max-width: 500px){
 
-    .ContainerTextosHijo>p{
+    .ContainerTextosHijoFooter>p{
         
         font-size: 7px;
        
     }
 
-    .Pibitexto{
+    .PibitextoFooter{
         color: #a06ab4;
         font-size: 7px;
     }
-    .Pibicreditos{
+    .PibicreditosFooter{
         color: #a06ab4;
         font-size: 7px;
     }
 
-    .ButtonInsta{
+    .ButtonInstaFooter{
  
         height: 30px;
         width: 30px;
@@ -300,16 +315,16 @@
         align-items: center !important;
     
     }
-    .InstaIcono{
+    .InstaIconoFooter{
         color: white !important;
         height: 15px;
         width: 15px;
     }
-    .LeyandaInsta{
+    .LeyandaInstaFooter{
         display: none;
     }
 
-    .ContainerFooter{
+    .ContainerFooterFooter{
 
         margin: 0% 3%;
         padding: 5% 0%;
@@ -319,22 +334,22 @@
 
 @media screen and (max-width: 400px){
 
-    .ContainerTextosHijo>p{
+    .ContainerTextosHijoFooter>p{
         
         font-size: 6px;
        
     }
 
-    .Pibitexto{
+    .PibitextoFooter{
         color: #a06ab4;
         font-size: 6px;
     }
-    .Pibicreditos{
+    .PibicreditosFooter{
         color: #a06ab4;
         font-size: 7px;
     }
 
-    .ButtonInsta{
+    .ButtonInstaFooter{
  
         height: 30px;
         width: 30px;
@@ -344,12 +359,12 @@
         align-items: center !important;
     
     }
-    .InstaIcono{
+    .InstaIconoFooter{
         color: white !important;
         height: 15px;
         width: 15px;
     }
-    .LeyandaInsta{
+    .LeyandaInstaFooter{
         display: none;
     }
 
