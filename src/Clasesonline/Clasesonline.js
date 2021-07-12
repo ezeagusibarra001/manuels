@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../Layout";
-import Carousel from 'react-bootstrap/Carousel'
 import Portada from "./Portada";
+import ClasesPersonalizadas from "./ClasesPersonalizadas"
+import ClasesGrupales from "./ClasesGrupales";
 
 function Clasesonline(props) {
 
@@ -11,6 +12,8 @@ function Clasesonline(props) {
         <div>
             <Layout>
               <Portada />
+              <ClasesPersonalizadas />
+              <ClasesGrupales />
             </Layout>
         </div>
     )

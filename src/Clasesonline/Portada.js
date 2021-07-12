@@ -1,7 +1,5 @@
 import React from "react"
-import Layout from "../Layout";
-import Carousel from 'react-bootstrap/Carousel'
-import "./Portada.css"
+import "./PortadaClases.css"
 
 function Portada(props) {
 

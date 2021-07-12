@@ -1,0 +1,338 @@
+/*-----------------------------------------CONTAINER PADRE-----------------------------------------*/
+.ContainerPadreClasesPersonalizadas{
+    width: 100%;
+    height: auto;
+
+    border: solid black;
+
+    padding: 10% 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d4a9e4;
+}
+/*-----------------------------------------CONTAINER SUB-PADRE-----------------------------------------*/
+.ContainerSubPadreClasesPersonalizadas{
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    background-color: white;
+
+    box-shadow: 0 0 25px rgb(0,0,0) !important;
+}
+/*-----------------------------------------CONTAINER HIJO1-----------------------------------------*/
+.ContainerHijo1{
+    height: 100%;
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    padding: 5% 10%;
+}
+.ContainerHijo1>div{
+    color: #a06ab4;
+}
+/*-----------------------------------------TITULOS-----------------------------------------*/
+.ContainerTituloPersonalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: center;
+}
+.TituloPersonalizadas{
+    font-family: "dukecharming regular";
+    font-weight: 800;
+}
+.SubTituloPersonalizadas{
+    font-size: 11px;
+    font-weight: 700;
+}
+/*-----------------------------------------ITEM1-----------------------------------------*/
+.ContainerItem1Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 0.10fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.TextoPersonalizadas1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: left;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+.ContainerIcono1Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.iconoc1{
+    width: 100%;
+    height: auto;
+}
+
+/*-----------------------------------------ITEM2-----------------------------------------*/
+.ContainerItem2Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    display: grid;
+    grid-template-columns: 0.10fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.TextoPersonalizadas2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: left;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+.ContainerIcono2Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.iconoc2{
+    width: 100%;
+    height: auto;
+}
+/*-----------------------------------------CONTAINER HIJO2-----------------------------------------*/
+.ContainerHijo2{
+    height: 100%;
+    width: 100%;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+
+    padding: 5% 10%;
+
+}
+.ContainerHijo2>div{
+    color: #a06ab4;
+}
+/*-----------------------------------------ITEM3-----------------------------------------*/
+.ContainerItem3Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 0.10fr 1fr;
+    grid-template-rows: auto ;
+
+    height: auto;
+    width: 100%;
+
+    gap:2%;
+}
+.TextoPersonalizadas3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: left;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+.ContainerIcono3Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.iconoc3{
+    width: 100%;
+    height: auto;
+}
+/*-----------------------------------------ITEM4-----------------------------------------*/
+.ContainerItem4Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 0.10fr 1fr;
+    grid-template-rows: auto ;
+
+    height: auto;
+    width: 100%;
+
+    gap:2%;
+}
+.TextoPersonalizadas4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: left;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+.ContainerIcono4Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.iconoc4{
+    width: 100%;
+    height: auto;
+}
+/*-----------------------------------------ITEM5-----------------------------------------*/
+.ContainerItem5Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    display: grid;
+    grid-template-columns: 0.10fr 1fr;
+    grid-template-rows: auto ;
+
+    height: auto;
+    width: 100%;
+
+    gap:2%;
+}
+.TextoPersonalizadas5{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: left;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+.ContainerIcono5Personalizadas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.iconoc5{
+    width: 100%;
+    height: auto;
+}
+/*-----------------------------------------BUTTONS-----------------------------------------*/
+.ContainerButtonPersonalizadas{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ButtonPersonalizadas{
+    background-color: #ffd743;
+    color: white;
+    border: solid transparent;
+    border-radius: 10px;
+    padding: 1% 6%;
+}
+.ButtonPersonalizadas:hover{
+    background-color: white;
+    color: #ffd743;
+    border: solid #ffd743;
+    border-radius: 10px;
+    padding: 1% 6%;
+}
