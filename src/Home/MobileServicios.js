@@ -43,14 +43,13 @@ function MobileServicios() {
   ];
 
   return (
-
-    <div className="ContainerPadreMobileServicios" >
-      <div className="ContainerTituloServiciosMobile">
-        <h1 className="TituloServiciosMobile">SERVICIOS</h1>
+    <div className="ContainerGodServiciosMobile"> 
+      <div className="ContainerPadreMobileServicios" >
+        <div className="ContainerTituloServiciosMobile">
+          <h1 className="TituloServiciosMobile">SERVICIOS</h1>
+        </div>
+          <Carousel slides={slides} autoplay={true} interval={100000} className="CaruselServiciosMobile" />
       </div>
-
-    <div className="ContainerCaruselServiciosMobile"> </div>
-      <Carousel slides={slides} autoplay={true} interval={100000} className="CaruselServiciosMobile" />
     </div>
 
   );

@@ -1,12 +1,15 @@
 /*----------------------------------------------CONTAINER FONDO----------------------------------------------*/
 .ContainerFondoVideo{
     display: block;
-    height: 450px;
+    height: auto;
     width: 100%;
 
+    padding: 10% 0%;
+    
     background-image: url("../assetsSrc/fondovideos1.png");
     background-position: center;
     background-size: contain;
+    background-repeat: repeat-x;
 
     display: flex;
     justify-content: center;
@@ -15,22 +18,20 @@
 
 .ContainerVideos{
 
-    width: 100%;
+    width: 85%;
     height: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
-    grid-gap: 5%;
+    grid-gap: 2%;
 
-    margin: 0% 5%;
 }
-
 
 
 .ContainerVideo1{
     width: 100%;
-    height: 100%;
+    height: auto;
 
     grid-column-start: 1;   
     grid-column-end: 2;
@@ -40,7 +41,7 @@
 }
 .ContainerVideo2{
     width: 100%;
-    height: 100%;
+    height: auto;
 
     grid-column-start: 2;   
     grid-column-end: 3;
@@ -61,15 +62,15 @@
 }
 
 .Video1{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 .Video2{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 .Video3{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
@@ -84,26 +85,25 @@
         background-image: url("../assetsSrc/fondovideos2.png");
         background-position: center;
         background-size: contain;
-
-        padding: 10% 10%;
+        background-repeat: repeat;
+       
     }
 
     .ContainerVideos{
 
-        width: 500px;
-        height: 900px;
-    
-     
+        width: 50%;
+        height: auto;
+
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        grid-gap: 10%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0%;
 
     }
 
     .ContainerVideo1{
         width: 100%;
-        height: 100%;
+        height: auto;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -114,11 +114,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        padding: 2% 0%;
     }
     .ContainerVideo2{
 
         width: 100%;
-        height: 100%;
+        height: auto;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -130,11 +132,12 @@
         justify-content: center;
         align-items: center;
 
+        padding: 2% 0%;
     }
     
     .ContainerVideo3{
         width: 100%;
-        height: 100%;
+        height: auto;
     
         grid-column-start: 1;   
         grid-column-end: 2;
@@ -145,47 +148,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        padding: 2% 0%;
     }
     
 }
-
 @media screen and (max-width: 600px){
 
     .ContainerVideos{
-
-        width: 400px;
-        height: 800px;
-    
+        height: auto;
+        width: 65%;
     }
-
 }
-
 @media screen and (max-width: 500px){
 
     .ContainerVideos{
-
-        width: 350px;
-        height: 650px;
-    
-    }
-
-}
-
-@media screen and (max-width: 400px){
-
-    .ContainerVideos{
-
-        width: 300px;
-        height: 600px;
-    
+        height: auto;
+        width: 80%;
     }
 }
 @media screen and (max-width: 400px){
 
     .ContainerVideos{
-
-        width: 300px;
-        height: 550px;
-    
+        height: auto;
+        width: 85%;
     }
 }
+

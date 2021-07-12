@@ -12,6 +12,12 @@
 
     gap: 5%;
     padding: 5% 10%;
+
+    background-image: url("../assetsSrc/fondoservicios.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
+
 }
 .ContainerPadreServiciosDesktop>div{
 
@@ -39,6 +45,7 @@
     
     font-family: "dukecharming regular";
     font-weight: 900;
+    color: white;
 }
 /*------------------------------------------------CARD1---------------------------------------*/
 .ContainerCard1Desktop{
@@ -54,6 +61,8 @@
 
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
+
+    background-color: white;
 
 }
 .Card1Desktop{
@@ -86,6 +95,8 @@
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
 
+    background-color: white;
+
 }
 .Card2Desktop{
 
@@ -117,6 +128,8 @@
 
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
+
+    background-color: white;
 }
 .Card3Desktop{
 

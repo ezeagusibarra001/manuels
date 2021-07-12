@@ -1,3 +1,12 @@
+.ContainerGodServiciosMobile{
+    width: 100%;
+    height: fit-content;
+
+    background-image: url("../assetsSrc/fondoservicios.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .ContainerPadreMobileServicios{
     height: auto;
     width: 100%;
@@ -9,6 +18,7 @@
     gap: 2%;
 
     padding: 10% 0%;
+
 }
 
 
@@ -32,11 +42,11 @@
     font-family: "dukecharming regular";
     font-weight: 900;
     font-size: 35px;
-    color: #a06ab4;
+    color: white;
 }
 
 /*------------------------------------------------CARRUSEL---------------------------------------*/
-.ContainerCaruselServiciosMobile{
+.CaruselServiciosMobile{
 
     grid-column-start: 1;
     grid-column-end: 2;
@@ -45,12 +55,16 @@
     grid-row-end: 3;
 
     height: auto;
-    width: auto;
+    width: 100%;
 
     display: flex !important;
     justify-content: center !important;
     align-items: flex-start !important;
 
+}
+.CaruselServiciosMobile{
+    height: auto !important;
+    width: 100% !important;
 }
 .ContainerCardServiciosMobile{
 
@@ -140,7 +154,10 @@
     .ContainerTextoServiciosMobile3>p{
         font-size: 14px;
         font-weight: 700;
-    } 
+    }
+    .ContainerPadreMobileServicios{
+        padding: 8% 0%;
+    }
 }
 @media screen and (max-width: 500px){
     .ContainerCardServiciosMobile{
@@ -154,6 +171,9 @@
 @media screen and (max-width: 450px){
     .ContainerCardServiciosMobile{
         height: 350px;    
+    }
+    .ContainerPadreMobileServicios{
+        padding: 10% 0%;
     }
 }
 @media screen and (max-width: 350px){
