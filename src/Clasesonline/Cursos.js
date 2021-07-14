@@ -14,9 +14,7 @@ function Cursos(props) {
                         </div>
                         <div className="ContainerCursosTextos1">
                             <p className="CursosTextos1"> 
-                                Es el primer acercamiento con el mundo de la locución y experimentación 
-                                con la voz, abordando formatos como: informativo, publicidad y narración, como 
-                                también herramientas de articulación y oratoria
+                                {data.texto1}
                             </p>
                         </div>
                         <div className="ContainerCursosSubTitulos">
@@ -24,8 +22,7 @@ function Cursos(props) {
                         </div>
                         <div className="ContainerCursosTextos2">
                             <p className="CursosTextos2"> 
-                                Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios 
-                                y vergüenza de exposición oral
+                                {data.texto2}
                             </p>
                         </div>
                         <div className="ContainerIconosCursos">
@@ -55,10 +52,10 @@ function Cursos(props) {
                             </div>
                         </div>
                         <div className="ContainerCursostexto3">
-                            <h5 className="CursosTextos3">CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06</h5>
+                            <h5 className="CursosTextos3">{data.texto3}</h5>
                         </div>
                         <div className="ContainerCursostexto4">
-                            <h2 className="CursosTextos4"><button className="ButtonTextos4">Quiero inscribirme</button></h2>
+                            <h2 className="CursosTextos4"><button className="ButtonTextos4">{data.texto4}</button></h2>
                         </div>
                     </div>
     )

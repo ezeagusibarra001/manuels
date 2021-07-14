@@ -8,8 +8,6 @@ import "./Cursos.css"
 
 function Clasesonline(props) {
 
-     /*locales.map(locales=><Locales data={locales}/>)*/
-
     const cursos=[
         {
             id:1,
