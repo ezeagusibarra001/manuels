@@ -43,6 +43,22 @@ function Clasesonline(props) {
             texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
             texto4:"QUIERO INSCRIBIRME",
         },
+        {
+            id:5,
+            titulo:"Locución",
+            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
+            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
+            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
+            texto4:"QUIERO INSCRIBIRME",
+        },
+        {
+            id:6,
+            titulo:"Locución",
+            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
+            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
+            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
+            texto4:"QUIERO INSCRIBIRME",
+        },
     ]
     return(
 
