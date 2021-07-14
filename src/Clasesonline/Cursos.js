@@ -58,7 +58,7 @@ function Cursos(props) {
                             <h5 className="CursosTextos3">CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06</h5>
                         </div>
                         <div className="ContainerCursostexto4">
-                            <h2 className="CursosTextos4">Quiero inscribirme</h2>
+                            <h2 className="CursosTextos4"><button className="BotonTextos4">Quiero inscribirme</button></h2>
                         </div>
                     </div>
     )

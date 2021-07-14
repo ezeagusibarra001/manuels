@@ -48,7 +48,7 @@ function MobileServicios() {
         <div className="ContainerTituloServiciosMobile">
           <h1 className="TituloServiciosMobile">SERVICIOS</h1>
         </div>
-          <Carousel slides={slides} autoplay={true} interval={100000} className="CaruselServiciosMobile" />
+          <Carousel slides={slides} autoplay={true} interval={5000} className="CaruselServiciosMobile" />
       </div>
     </div>
 

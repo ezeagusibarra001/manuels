@@ -169,3 +169,13 @@
     color: white;
     text-align: center;
 }
+.BotonTextos4{
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+}
+.BotonTextos4:hover{
+    color: #ffd743;
+    font-weight: 500;
+}
