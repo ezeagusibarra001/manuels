@@ -1,0 +1,171 @@
+.ContainerPadreCursos{
+
+    height: auto;
+    width: 100%;
+}
+.ContainerHijoCursos{
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto ;
+}
+.SubContainerHijoCursos{
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto ;
+
+    padding: 5% 6%;
+
+    gap: 4%;
+}
+.ContainerItemsCursos{
+    width: 100%;
+    height: auto;
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+
+    box-shadow: 0 0 25px rgb(0,0,0) !important;
+
+    border: white;
+    border-radius: 30px;
+}
+/*
+.ContainerItemsCursos>div{
+    border: solid black;
+} */
+.ContainerCursosTitulos{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffd743;
+
+    width: 100%;
+    height: auto;
+    
+    padding: 1% 2%;
+
+    border-radius: 30px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.CursosTitulos{
+    font-family: "dukecharming regular";
+    font-weight: 600;
+    color: white;
+}
+.ContainerCursosTextos1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    width: 100%;
+    height: auto;
+
+    padding: 1% 2%;
+}
+.CursosTextos1{
+    color: #a06ab4;
+}
+.ContainerCursosSubTitulos{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    width: 100%;
+    height: auto;
+
+    padding: 1% 2%;
+}
+.CursosSubTitulos{
+    color: #a06ab4;
+}
+.ContainerCursosTextos2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    width: 100%;
+    height: auto;
+
+    padding: 1% 2%;
+}
+.CursosTextos2{
+    color: #a06ab4;
+}
+.ContainerIconosCursos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr;
+    grid-template-rows: auto;
+
+    gap:2%;
+
+    padding: 1% 2%;
+
+}
+.ContainerCursosTextitos{
+   text-align: left;
+}
+.CursosTextitos{
+    font-size: 10px;
+}
+.ContainerImgCursos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImgCursos{
+    width: 100%;
+    height: auto;
+}
+.ContainerCursosTextos3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    width: 100%;
+    height: auto;
+}
+.CursosTextos3{
+    color: #ffd743;
+    text-align: center;
+}
+.ContainerCursostexto4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+
+    width: 100%;
+    height: auto;
+
+    background-color: #a06ab4;
+
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    padding: 1% 2%;
+}
+.CursosTextos4{
+    color: white;
+    text-align: center;
+}

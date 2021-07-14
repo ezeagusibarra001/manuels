@@ -100,7 +100,7 @@ function ClasesGrupales() {
                             />
                         </div>
                         <div className="ContainerTextoItem8Grupales">
-                            <p>
+                            <p className="TextoGrupales">
                                 Son talleres sincrónicos, virtuales por la plataforma Skype de grupos reducidos, 
                                 donde la práctica es el pilar fundamental de cada encuentro
                             </p>
@@ -114,7 +114,7 @@ function ClasesGrupales() {
                             />
                         </div>
                         <div className="ContainerTextoItem9Grupales">
-                            <p>
+                            <p className="TextoGrupales">
                                 Cada taller tiene entre 4 y 8 encuentros dependiendo cuál sea.
                             </p>
                         </div>
@@ -127,7 +127,7 @@ function ClasesGrupales() {
                             />
                         </div>
                         <div className="ContainerTextoItem10Grupales">
-                            <p>
+                            <p className="TextoGrupales">
                                 Se entrega material de práctica y certificado de finalización y asistencia
                             </p>
                         </div>
@@ -140,7 +140,7 @@ function ClasesGrupales() {
                             />
                         </div>
                         <div className="ContainerTextoItem11Grupales">
-                            <p>
+                            <p className="TextoGrupales">
                                 Si queres ser el primero en enterarte de proximos talleres grupales o necesitas 
                                 hacer una consulta
                             </p>
