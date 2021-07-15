@@ -10,7 +10,7 @@ function Cursos(props) {
         
                     <div className="ContainerItemsCursos">
                         <div className="ContainerCursosTitulos">
-                            <h2 className="CursosTitulos">{data.titulo}</h2>
+                            <h1 className="CursosTitulos">{data.titulo}</h1>
                         </div>
                         <div className="ContainerCursosTextos1">
                             <p className="CursosTextos1"> 
@@ -31,7 +31,7 @@ function Cursos(props) {
                             </div>
                             <div className="ContainerCursosTextitos">
                                 <p className="CursosTextitos"> 
-                                    4 encuentros de 90min.1 clase semanal.Duración total: 1 mes
+                                    {data.textito1}
                                 </p>
                             </div>
                             <div className="ContainerImgCursos">
@@ -39,7 +39,7 @@ function Cursos(props) {
                             </div>
                             <div className="ContainerCursosTextitos">
                                 <p className="CursosTextitos"> 
-                                    4 encuentros de 90min.1 clase semanal.Duración total: 1 mes
+                                    {data.textito2}
                                 </p>
                             </div>
                             <div className="ContainerImgCursos">
@@ -47,11 +47,11 @@ function Cursos(props) {
                             </div>
                             <div className="ContainerCursosTextitos">
                                 <p className="CursosTextitos"> 
-                                    4 encuentros de 90min.1 clase semanal.Duración total: 1 mes
+                                    {data.textito3}
                                 </p>
                             </div>
                         </div>
-                        <div className="ContainerCursostexto3">
+                        <div className="ContainerCursosTextos3">
                             <h5 className="CursosTextos3">{data.texto3}</h5>
                         </div>
                         <div className="ContainerCursostexto4">
