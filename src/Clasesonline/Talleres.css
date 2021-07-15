@@ -35,6 +35,9 @@
     font-family: "dukecharming regular";
     font-weight: 800;
 }
+.TallerTexto{
+    font-size: 20px;
+}
 /*-----------------------------------------CONTAINER HIJO1-----------------------------------------*/
 .ContainerTalleresHijo1{
     grid-column-start: 1;

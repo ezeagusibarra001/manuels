@@ -23,7 +23,7 @@ function Talleres(props) {
                                 />
                             </div>
                             <div>
-                                <p style={data.texto}>{data.texto1}</p>
+                                <p style={data.texto} className="TallerTexto">{data.texto1}</p>
                             </div>
                         </div>
                         <div className="ContainerItem2talleres">
@@ -34,7 +34,7 @@ function Talleres(props) {
                                 />
                             </div>
                             <div>
-                                <p style={data.texto}>{data.texto2}</p>
+                                <p style={data.texto} className="TallerTexto">{data.texto2}</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ function Talleres(props) {
                                 />
                             </div>
                             <div>
-                                <p style={data.texto}>{data.texto3} </p>
+                                <p style={data.texto} className="TallerTexto">{data.texto3} </p>
                             </div>
                         </div>
                         <div className="ContainerItem4talleres">
@@ -58,7 +58,7 @@ function Talleres(props) {
                                 />
                             </div>
                             <div>
-                                <p style={data.texto}>{data.texto4}</p>
+                                <p style={data.texto} className="TallerTexto">{data.texto4}</p>
                             </div>
                         </div>
                         <div className="ContainerItemButtonTalleres">
