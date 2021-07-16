@@ -22,7 +22,6 @@ function AdminBlog() {
                     <Nav className="flex-column">
                         <Nav.Link><Link >Crear una publicacion</Link></Nav.Link>
                         <Nav.Link><Link >Eliminar una publicacion</Link></Nav.Link>
-                        <Nav.Link><Link >Editar una publicacion</Link></Nav.Link>
                     </Nav>
                 </div>
             </div>
