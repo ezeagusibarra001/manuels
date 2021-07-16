@@ -1,0 +1,11 @@
+.SideBar{
+    width: 25%;
+    float: left;
+}
+.Manage{
+    width: 75%;
+    float: right;
+}
+.BigDiv{
+    height: 52vh;
+}

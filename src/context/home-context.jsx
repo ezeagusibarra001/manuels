@@ -16,7 +16,7 @@ export function HomeProvider(props) {
         });
     };
     //ESTADO DEL LOGIN
-    const [login, setLogin]=useState(true)
+    const [login, setLogin]=useState(false)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases,login,setLogin

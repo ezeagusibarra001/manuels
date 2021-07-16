@@ -32,7 +32,8 @@ function Nabvar(props) {
         if(window.innerWidth>800){
 
             return(
-                <NabvarDesktop ScrollServicios={ScrollServicios} ScrollExperiencia={ScrollExperiencia}/>
+                <NabvarDesktop ScrollServicios={ScrollServicios} ScrollExperiencia={ScrollExperiencia} login={login}
+                setLogin={setLogin}/>
             )
         }
         else{
@@ -43,7 +44,10 @@ function Nabvar(props) {
     }
     else{
         return(
-            <NabvarAdmin />
+            <NabvarAdmin 
+                login={login}
+                setLogin={setLogin}
+            />
         )
     }
 
