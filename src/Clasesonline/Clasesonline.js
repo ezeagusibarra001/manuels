@@ -108,7 +108,7 @@ function Clasesonline(props) {
             texto3:"Dictado por: Manuela Sanchez Guarin, locutora nacional y docente.",
             texto4:"Se entrega material de práctica y certificado de asistencia y finalización.",
             fondo:{
-                backgroundColor:"#ffd743"
+                backgroundColor:"#ffd743",
             },
             texto:{
                 color:"#a06ab4",

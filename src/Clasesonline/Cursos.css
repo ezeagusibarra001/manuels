@@ -134,6 +134,8 @@
 }
 .CursosTextitos{
     font-size: 10px;
+    color: #a06ab4;
+    font-weight: 700;
 }
 .ContainerImgCursos{
     display: flex;

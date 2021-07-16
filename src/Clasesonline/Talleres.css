@@ -49,7 +49,7 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
 
-    padding: 4% 4%;
+    padding: 4% 8%;
 }
 .ContainerItem1talleres{
     grid-column-start: 1;
@@ -122,12 +122,122 @@
     padding: 1% 6%;
     font-size: 20px;
 }
-/*
+
 .ButtonTalleres:hover{
-    background-color: white !important;
-    color: #ffd743 !important;
-    border: solid #ffd743 !important;
-    border-radius: 10px !important;
-    padding: 1% 6% !important;
+ font-weight: 800;
+ padding: 2% 6%;
 }
-*/
+
+
+/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+@media screen and (max-width: 1000px){
+    .ContainerMapTalleres{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    
+        gap: 10px;
+
+        padding: 4% 6%;
+    }
+    .ContainerTituloTalleres{
+        text-align: center;
+    }
+    .ContainerTalleresHijo1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        padding: 0%;
+
+        gap: 20px;
+    }
+    .ContainerTalleresHijo2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        padding: 0%;
+
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .ConatinerPadreTalleres{
+        padding: 8% 6%;
+    } 
+    .TallerTexto{
+        font-size: 18px;
+    }  
+}
+@media screen and (max-width: 600px) {
+    .TallerTexto{
+        font-size: 15px;
+    } 
+    .ContainerTalleresHijo1{
+      
+        gap: 8px;
+    }
+    .ContainerTalleresHijo2{
+       
+        gap: 8px;
+    }
+    .ContainerTituloTalleres{
+        text-align: left;
+    }
+}
+@media screen and (max-width: 450px) {
+    .TallerTexto{
+        font-size: 14px;
+    } 
+    .ContainerTalleresHijo1{
+      
+        gap: 8px;
+    }
+    .ContainerTalleresHijo2{
+       
+        gap: 8px;
+    }
+    .ContainerTituloTalleres{
+        text-align: left;
+    }
+    .ButtonTalleres{
+        padding: 1% 6%;
+        font-size: 15px;
+    }
+    .TituloTalleres{
+        font-size: 30px;
+    }
+    .SubTituloTalleres{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .TallerTexto{
+        font-size: 12px;
+    } 
+    .ContainerTalleresHijo1{
+      
+        gap: 4px;
+    }
+    .ContainerTalleresHijo2{
+       
+        gap: 4px;
+    }
+    .ContainerTituloTalleres{
+        text-align: left;
+    }
+    .ButtonTalleres{
+        padding: 1% 6%;
+        font-size: 14px;
+    }
+    .TituloTalleres{
+        font-size: 30px;
+    }
+    .SubTituloTalleres{
+        font-size: 12px;
+    }
+}
+
