@@ -1,7 +1,6 @@
 import React from "react"
 import "./NabvarDesktop.css"
 import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
 import {Link, useHistory} from "react-router-dom"
 
 function NabvarAdmin(props) {
