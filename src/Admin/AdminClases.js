@@ -3,9 +3,9 @@ import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
 import "./Admin.css"
-
+import ModalClasesCrear from './Modals/ModalClasesCrear'
 function AdminClases() {
-
+    const [showCrear, setShowCrear] = useState(false)
     return (
 
         <Layout>
@@ -20,11 +20,15 @@ function AdminClases() {
                 </div>
                 <div className="Manage">
                     <Nav className="flex-column">
-                        <Nav.Link><Link >Crear una clase</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setShowCrear(true)} >Crear una clase</Link></Nav.Link>
                         <Nav.Link><Link >Eliminar una clase</Link></Nav.Link>
                     </Nav>
                 </div>
             </div>
+            <ModalClasesCrear
+                showCrear={showCrear}
+                setShowCrear={setShowCrear}
+            />
         </Layout>
     )
 
