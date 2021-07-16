@@ -22,7 +22,6 @@ function AdminClases() {
                     <Nav className="flex-column">
                         <Nav.Link><Link >Crear una clase</Link></Nav.Link>
                         <Nav.Link><Link >Eliminar una clase</Link></Nav.Link>
-                        <Nav.Link><Link >Editar una clase</Link></Nav.Link>
                     </Nav>
                 </div>
             </div>
