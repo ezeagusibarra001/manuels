@@ -7,79 +7,10 @@ import ClasesPersonalizadas from "./ClasesPersonalizadas"
 import ClasesGrupales from "./ClasesGrupales";
 import Cursos from "./Cursos";
 import Talleres from "./Talleres";
-
+import {useHome} from '../context/home-context'
 
 function Clasesonline(props) {
-
-    const cursos=[
-        {
-            id:1,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-        {
-            id:2,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-        {
-            id:3,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-        {
-            id:4,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-        {
-            id:5,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-        {
-            id:6,
-            titulo:"Locución",
-            texto1:"  Es el primer acercamiento con el mundo de la locución y experimentación con la voz, abordando formatos como: informativo, publicidad y narración, como también herramientas de articulación y oratoria",
-            texto2:"Personas que trabajen con la voz. Curiosos y aquellos que quieran trabajar sus nervios y vergüenza de exposición oral",
-            texto3:"CUPOS LIMITADOS - PRÓXIMAS FECHAS 05/06 Y 12/06",
-            texto4:"QUIERO INSCRIBIRME",
-            textito1:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito2:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes",
-            textito3:"4 encuentros de 90min.1 clase semanal.Duración total: 1 mes"
-        },
-    ]
-
+    const {clases} = useHome()
     const talleres=[
         {
             titulo:"Empresariales",
@@ -156,7 +87,7 @@ function Clasesonline(props) {
               <div className="ContainerPadreCursos">
                 <div className="ContainerHijoCursos">
                     <div className="SubContainerHijoCursos">
-                        {cursos.map(cursos=><Cursos data={cursos} />)}
+                        {clases.map(data=><Cursos data={data}/>)}
                     </div>
                 </div>
               </div>
