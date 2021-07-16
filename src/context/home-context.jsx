@@ -15,9 +15,11 @@ export function HomeProvider(props) {
             console.log(res.data);
         });
     };
+    //ESTADO DEL LOGIN
+    const [login, setLogin]=useState(false)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases
+        clases,login,setLogin
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
