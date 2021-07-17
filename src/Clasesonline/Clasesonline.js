@@ -7,6 +7,7 @@ import ClasesPersonalizadas from "./ClasesPersonalizadas"
 import ClasesGrupales from "./ClasesGrupales";
 import Cursos from "./Cursos";
 import Talleres from "./Talleres";
+import Gift from "./Gift";
 import {useHome} from '../context/home-context'
 
 function Clasesonline(props) {
@@ -72,11 +73,6 @@ function Clasesonline(props) {
         },
     ]
 
-    const styles=[
-        {
-        }
-    ]
-
     return(
 
         <div>
@@ -96,6 +92,7 @@ function Clasesonline(props) {
                     {talleres.map(talleres=><Talleres data={talleres} />)}
                 </div>
               </div>
+              <Gift />
             </Layout>
         </div>
     )

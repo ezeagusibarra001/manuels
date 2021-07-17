@@ -57,7 +57,7 @@ function Cursos(props) {
                 </div>
             </div>
             <div className="ContainerCursosTextos3">
-                <h5 className="CursosTextos3">CUPOS LIMITADOS - PRÓXIMAS FECHAS {moment(x[0].date).format("DD/MM")} Y {moment(x[1].date).format("DD/MM")} </h5>
+                <h5 className="CursosTextos3">CUPOS LIMITADOS - PRÓXIMAS FECHAS   {moment(x[0].date).format("DD/MM")} Y {moment(x[1].date).format("DD/MM")}  </h5>
             </div>
             <div className="ContainerCursostexto4">
                 <h2 className="CursosTextos4"><button className="ButtonTextos4">QUIERO INSCRIBIRME</button></h2>

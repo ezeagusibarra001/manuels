@@ -18,12 +18,12 @@ function App() {
         <BrowserRouter>
           <Route path="/" component={Home} exact />
           <Route path="/Clasesonline" component={Clasesonline} exact />
-          <Route path="/Blog" component={Blog} />
-          <Route path="/Login" component={Login} />
-          <Route path="/AdminClases" component={AdminClases}/>
-          <Route path="/AdminBlog" component={AdminBlog}/>
-          <Route path="/AdminReseñas" component={AdminReseñas}/>
-          <Route path="/AdminPagos" component={AdminPagos}/>
+          <Route path="/Blog" component={Blog} exact />
+          <Route path="/Login" component={Login} exact />
+          <Route path="/AdminClases" component={AdminClases} exact />
+          <Route path="/AdminBlog" component={AdminBlog} exact />
+          <Route path="/AdminReseñas" component={AdminReseñas} exact />
+          <Route path="/AdminPagos" component={AdminPagos} exact />
         </BrowserRouter>
       </HomeProvider>
     </div>

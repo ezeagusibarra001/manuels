@@ -7,13 +7,12 @@ function NabvarAdmin(props) {
     const {setLogin} = props;
     const history = useHistory()
     const admin = () => {
-      setLogin(true)
       history.push("/AdminClases")
     }
     const logOut = () => {
         setLogin(false)
         history.push("/")
-      }
+    }
     return(
         <div className="ContainerPadreNabvarDesktop">
             <div className="ContainerImgNabvarDesktop">

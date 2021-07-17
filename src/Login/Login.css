@@ -1,0 +1,53 @@
+.ContainerPadreLogin{
+    
+    width: 100%;
+    height: auto;
+
+    background-image: url("../assetsSrc/fondovideos1.png");
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5% 5%;
+}
+.ContainerForm{
+  
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+}
+.FormLogin{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+    gap: 40px;
+}
+.LoginInput1{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #a06ab4;
+    border: solid #a06ab4;
+    padding: 2% 0%;
+    font-size: 20px;
+}
+.LoginInput2{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #a06ab4;
+    border: solid #a06ab4;
+    padding: 2% 0%;
+    font-size: 20px;
+}
