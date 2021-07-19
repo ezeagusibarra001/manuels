@@ -9,3 +9,6 @@
 .BigDiv{
     height: 52vh;
 }
+.modal-dialog{
+   max-width: 75% !important;
+}
