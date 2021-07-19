@@ -22,7 +22,7 @@
 .ContainerPadreServiciosDesktop>div{
 
     color: #a06ab4;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 .ContainerIconoDesktop{
     display: flex;
@@ -64,16 +64,22 @@
 
     background-color: white;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .Card1Desktop{
 
-    height: 450px;
+    height: 34vw;
     width: 100%;
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto ;
+    grid-template-rows: 1fr 1fr 1fr ;
     gap: 0%;
+
+    padding: 10% 4%;
 }
 .IconoDesktop1{
     
@@ -97,16 +103,22 @@
 
     background-color: white;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .Card2Desktop{
 
-    height: 450px;
+    height: 34vw;
     width: 100%;
     
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto ;
-    gap: 0%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 1vw;
+
+    padding: 10% 4%;
 
 }
 .IconoDesktop2{
@@ -130,16 +142,22 @@
     box-shadow: 0 0 25px rgb(0,0,0) !important;
 
     background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Card3Desktop{
 
-    height: 450px;
+    height: 34vw;
     width: 100%;
     
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto ;
-    gap: 0%;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 1vw;
+
+    padding: 10% 4%;
 }
 .IconoDesktop3{
     
@@ -160,13 +178,13 @@
     background-color: #a06ab4;
     color: white;
 
-    height: 60%;
+    height: auto;
     width: 70%;
 
-    border: none;
+    border: solid transparent;
     border-radius: 40px;
 
-    font-size: 80%;
+    font-size: 1vw;
 }
 .ButtonCardDesktop:hover{
     background-color: white;
@@ -175,61 +193,3 @@
     box-shadow: 0 0 60px #a06ab4!important;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-
-
-@media screen and (max-width: 1240px){
-
-    .ContainerTextosDesktop>p{
-
-        color: #a06ab4;
-        font-size: 18px;
-    }
-    .Card1Desktop{
-        height: 400px;
-    }
-    .Card2Desktop{
-        height: 400px;
-    }
-    .Card3Desktop{
-        height: 400px;
-    }
-    .ContainerPadreServiciosDesktop{
-        padding: 5% 5%;
-    }
-}
-@media screen and (max-width: 1120px){
-
-    .ContainerTextosDesktop>p{
-
-        color: #a06ab4;
-        font-size: 16px;
-    }
-    .Card1Desktop{
-        height: 380px;
-    }
-    .Card2Desktop{
-        height: 380px;
-    }
-    .Card3Desktop{
-        height: 380px;
-    }
-}
-@media screen and (max-width: 1000px){
-
-    .ContainerTextosDesktop>p{
-
-        color: #a06ab4;
-        font-size: 14px;
-    }
-}
-@media screen and (max-width: 900px){
-    .ButtonCardDesktop{
-        background-color: #a06ab4;
-        color: white;
-    
-        height: 40%;
-        width: 70%;
-    
-        font-size: 80%;
-    }
-}

@@ -2,28 +2,29 @@
 .ContenedorExperienciaPadre{
 
 
-    height:600px;
+    height:auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 5% 10%;
 
 }
 
 .ContenedorExperienciaSubPadre{
 
     
-    height: 450px;
+    height: auto;
     width: 100%;
 
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
     grid-template-rows: 1fr 1fr;
 
-    margin: 10%;
-   
-
     background-color: #a06ab4;
+
+    padding: 4% 0%;
 }
 .ContenedorExperienciaSubPadre>div{
 
@@ -48,7 +49,7 @@
 }
 .ExperienciaTexto1{
     font-family: "dukecharming regular";
-    font-size: 75px;
+    font-size: 5vw;
     font-weight: 800;
 }
 
@@ -68,7 +69,7 @@
 }
 .ExperienciaTexto2{
     font-family: "dukecharming regular";
-    font-size: 75px;
+    font-size: 5vw;
     font-weight: 800;
 }
 
@@ -86,7 +87,7 @@
     
 }
 .ExperienciaTexto3{
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 .ContenedorExperienciaTexto4{
@@ -103,22 +104,23 @@
     
 }
 .ExperienciaTexto4{
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
 
     .ContenedorExperienciaSubPadre{
     
         display: grid;
-        grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+        grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
         grid-gap:10px;
-    
+
+        padding: 5% 6%;
     }
 
     .ContenedorExperienciaTexto1{
@@ -178,299 +180,24 @@
 
     .ExperienciaTexto1{
 
-        font-size: 60px;
+        font-size: 6vw;
     }
 
     .ExperienciaTexto2{
 
-        font-size: 60px;
+        font-size: 6vw;
+    }
+    .ExperienciaTexto3{
+
+        font-size: 2.5vw;
+    }
+    .ExperienciaTexto4{
+
+        font-size: 2.5vw;
     }
 
   
    
-}
-
-@media screen and (max-width: 700px){
-
-    .ContenedorExperienciaPadre{
-
-
-
-        height: 400px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 300px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-    .ExperienciaTexto1{
-
-        font-size: 50px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 50px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 15px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 15px;
-    }
-
-  
-   
-}
-
-@media screen and (max-width: 600px){
-
-    .ContenedorExperienciaPadre{
-
-
-
-        height: 350px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 300px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-
-    .ExperienciaTexto1{
-
-        font-size: 40px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 40px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 14px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 14px;
-    }
-
-  
-   
-}
-
-@media screen and (max-width: 500px){
-
-    .ContenedorExperienciaPadre{
-
-
-
-        height: 350px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 250px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-
-    .ExperienciaTexto1{
-
-        font-size: 40px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 40px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 12px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 12px;
-    }
-
-  
-   
-}
-
-@media screen and (max-width: 450px){
-
-    .ContenedorExperienciaPadre{
-
-
-
-        height: 300px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-  
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 250px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-
-    .ExperienciaTexto1{
-
-        font-size: 35px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 35px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 12px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 12px;
-    }
-
-  
-   
-}
-
-@media screen and (max-width: 400px){
-
-    .ContenedorExperienciaPadre{
-
-
-
-        height: 300px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-    
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 200px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-
-    .ExperienciaTexto1{
-
-        font-size: 30px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 30px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 10px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 10px;
-    }
-
-  
-   
-}
-
-
-@media screen and (max-width: 350px){
-
-    .ContenedorExperienciaSubPadre{
-
-    
-        height: 200px;
-        width: 100%;
-    
-        margin: 5%;
-       
-    }
-
-
-    .ExperienciaTexto1{
-
-        font-size: 25px;
-    }
-
-    .ExperienciaTexto2{
-
-        font-size: 25px;
-    }
-
-    .ExperienciaTexto3{
-
-        font-size: 9px;
-    }
-
-    .ExperienciaTexto4{
-
-        font-size: 9px;
-    }
 }
 
 

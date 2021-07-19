@@ -17,6 +17,7 @@ export function HomeProvider(props) {
     };
     //ESTADO DEL LOGIN
     const [login, setLogin]=useState(false)
+    console.log("Estado del login:",login)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases,login,setLogin

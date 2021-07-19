@@ -9,9 +9,9 @@ function NabvarDesktop(props) {
     const {setLogin} = props;
     const ScrollServicios = props.ScrollServicios
     const ScrollExperiencia = props.ScrollExperiencia
-/* EL METODO "LOGIN" SETEA EL ESTADO DE LOGIN A TRUE Y ENVIA CON EL HISTORY AL COMPONENTE LOGIN */
+
     const Login=()=>{
-        setLogin(true)
+
         history.push("/login")
     }
 
