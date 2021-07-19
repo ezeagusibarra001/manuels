@@ -55,9 +55,10 @@
 .TituloPersonalizadas{
     font-family: "dukecharming regular";
     font-weight: 800;
+    font-size: 3vw;
 }
 .SubTituloPersonalizadas{
-    font-size: 11px;
+    font-size: 0.8vw;
     font-weight: 700;
 }
 /*-----------------------------------------ITEM1-----------------------------------------*/
@@ -82,9 +83,10 @@
     text-align: left;
 
     width: 100%;
-    height: 100%;
+    height: auto;
 
     font-weight: 600;
+    font-size: 1.2vw;
 }
 .ContainerIcono1Personalizadas{
     grid-column-start: 1;
@@ -106,6 +108,9 @@
 
 /*-----------------------------------------ITEM2-----------------------------------------*/
 .ContainerItem2Personalizadas{
+    width: 100%;
+    height: auto;
+
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -125,10 +130,11 @@
 
     text-align: left;
 
-    width: 100%;
-    height: 100%;
+     width: 100%;
+    height: auto;
 
     font-weight: 600;
+    font-size: 1.2vw;
 }
 .ContainerIcono2Personalizadas{
     grid-column-start: 1;
@@ -192,9 +198,10 @@
     text-align: left;
 
     width: 100%;
-    height: 100%;
+    height: auto;
 
     font-weight: 600;
+    font-size: 1.2vw;
 }
 .ContainerIcono3Personalizadas{
     grid-column-start: 1;
@@ -238,9 +245,10 @@
     text-align: left;
 
     width: 100%;
-    height: 100%;
+    height: auto;
 
     font-weight: 600;
+    font-size: 1.2vw;
 }
 .ContainerIcono4Personalizadas{
     grid-column-start: 1;
@@ -284,9 +292,10 @@
     text-align: left;
 
     width: 100%;
-    height: 100%;
+    height: auto;
 
     font-weight: 600;
+    font-size: 1.2vw;
 }
 .ContainerIcono5Personalizadas{
     grid-column-start: 1;
@@ -326,6 +335,8 @@
     border: solid transparent;
     border-radius: 10px;
     padding: 1% 6%;
+
+    font-size: 1.2vw;
 }
 .ButtonPersonalizadas:hover{
     background-color: white;
@@ -336,7 +347,7 @@
 }
 
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .ContainerSubPadreClasesPersonalizadas{
       
         display: grid;
@@ -358,7 +369,7 @@
 
         padding: 2% 10%;
 
-        gap:2%;
+        gap:0px;
 
     }
     .ContainerHijo2{
@@ -370,7 +381,7 @@
 
        padding: 2% 10%;
 
-       gap:2%;
+       gap:0px;
 
    }
 .ContainerItem1Personalizadas{
@@ -413,10 +424,45 @@
 
     gap:2%;
 }
+.TituloPersonalizadas{
+    font-size: 6vw;
+}
+.SubTituloPersonalizadas{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.TextoPersonalizadas1{
+    font-weight: 600;
+    font-size: 2vw;
+}
+.TextoPersonalizadas2{
+    font-weight: 600;
+    font-size: 2vw;
+}
+.TextoPersonalizadas3{
+    font-weight: 600;
+    font-size: 2vw;
+}
+.TextoPersonalizadas4{
+    font-weight: 600;
+    font-size: 2vw;
+}
+.TextoPersonalizadas5{
+    font-weight: 600;
+    font-size: 2vw;
+}
+.ButtonPersonalizadas{
+    background-color: #ffd743;
+    color: white;
+    border: solid transparent;
+    border-radius: 10px;
+    padding: 1% 6%;
 
+    font-size: 2vw;
+}
 }
 
-
+/*
 @media screen and (max-width: 700px){
     .ContainerSubPadreClasesPersonalizadas{
       
@@ -482,3 +528,4 @@
     }
     
 }
+*/
