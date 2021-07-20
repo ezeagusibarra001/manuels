@@ -59,12 +59,10 @@ function Reseñas() {
                                     />
                                 </td>
                             </tr>
-                            <tr>
-                                <button className="ReseñaButton">ENVIAR</button>
-                            </tr>
                         </table>
                     </form>
                 </div>
+                <button className="ButtonReseñas">ENVIAR</button>
             </div>
         </div>
     )
