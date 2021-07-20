@@ -52,6 +52,7 @@
     font-family: "dukecharming regular";
     font-weight: 800;
     color: #a06ab4;
+    font-size: 3vw;
 }
 .SubTituloClasesGrupales{
     font-size: 11px;
@@ -369,6 +370,7 @@
 .Icono7clasesGrupales{
     width: 100%;
     height: auto;
+    font-size: 1.2vw;
 }
 .ContainerTextoItem7Grupales{
     grid-column-start: 2;
@@ -449,6 +451,7 @@
 .ContainerTextoItem8Grupales>p{
     font-weight: 700;
     color: #a06ab4;
+    font-size: 1.2vw;
 }
 /*-----------------------------------------ITEM9-----------------------------------------*/
 .ContainerItem9Grupales{
@@ -496,6 +499,7 @@
 .ContainerTextoItem9Grupales>p{
     font-weight: 700;
     color: #a06ab4;
+    font-size: 1.2vw;
 }
 /*-----------------------------------------ITEM10-----------------------------------------*/
 .ContainerItem10Grupales{
@@ -543,6 +547,7 @@
 .ContainerTextoItem10Grupales>p{
     font-weight: 700;
     color: #a06ab4;
+    font-size: 1.2vw;
 }
 /*-----------------------------------------ITEM11-----------------------------------------*/
 .ContainerItem11Grupales{
@@ -590,6 +595,7 @@
 .ContainerTextoItem11Grupales>p{
     font-weight: 700;
     color: #a06ab4;
+    font-size: 1.2vw;
 }
 /*-----------------------------------------BUTTONS-----------------------------------------*/
 .ContainerButtonGrupales{
@@ -612,6 +618,7 @@
     border: solid transparent;
     border-radius: 10px;
     padding: 1% 6%;
+    font-size: 1.2vw;
 }
 .ButtonGrupales:hover{
     background-color: white;
@@ -621,7 +628,7 @@
     padding: 1% 6%;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .SubContainerClasesGrupales{
         display: grid;
         grid-template-columns: auto;
@@ -676,20 +683,30 @@
         font-weight: 800;
         color: #a06ab4;
         text-align: left;
-        font-size: 50px;
+        font-size: 6.5vw;
     }
     .SubTituloClasesGrupales{
         display: none;
     }
-}
-
-@media screen and (max-width: 600px){ 
-    .TituloClasesGrupales{
-        font-size: 40px;
+    .ContainerTextoItem8Grupales>p{
+        font-weight: 500;
+        color: #a06ab4;
+        font-size: 3vw;
     }
-    .TextoGrupales{
-        font-size: 14px;
-        font-weight: 500 !important;
+    .ContainerTextoItem9Grupales>p{
+        font-weight: 500;
+        color: #a06ab4;
+        font-size: 3vw;
+    }
+    .ContainerTextoItem10Grupales>p{
+        font-weight: 500;
+        color: #a06ab4;
+        font-size: 3vw;
+    }
+    .ContainerTextoItem11Grupales>p{
+        font-weight: 500;
+        color: #a06ab4;
+        font-size: 3vw;
     }
     .ButtonGrupales{
         background-color: #ffd743;
@@ -698,20 +715,7 @@
         border-radius: 10px;
         padding: 1% 6%;
 
-        font-size: 10px;
+        font-size: 3.5vw;
     }
 }
 
-@media screen and (max-width: 500px){ 
-    .TextoGrupales{
-        font-size: 14px;
-    }
-}
-@media screen and (max-width: 400px){ 
-    .TextoGrupales{
-        font-size: 12px;
-    }
-    .TituloClasesGrupales{
-        font-size: 25px;
-    }
-}

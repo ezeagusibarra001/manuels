@@ -425,7 +425,7 @@
     gap:2%;
 }
 .TituloPersonalizadas{
-    font-size: 6vw;
+    font-size: 6.5vw;
 }
 .SubTituloPersonalizadas{
     font-size: 1.5vw;
@@ -433,23 +433,23 @@
 }
 .TextoPersonalizadas1{
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .TextoPersonalizadas2{
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .TextoPersonalizadas3{
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .TextoPersonalizadas4{
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .TextoPersonalizadas5{
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .ButtonPersonalizadas{
     background-color: #ffd743;
@@ -458,74 +458,6 @@
     border-radius: 10px;
     padding: 1% 6%;
 
-    font-size: 2vw;
+    font-size: 3.5vw;
 }
 }
-
-/*
-@media screen and (max-width: 700px){
-    .ContainerSubPadreClasesPersonalizadas{
-      
-        display: grid;
-        grid-template-columns: auto ;
-        grid-template-rows: auto auto;
-
-        gap: 0%;
-
-        padding: 5% 0%;
-    
-    }
-
-    .ContainerSubPadreClasesPersonalizadas>div{
-        font-size: 14px;
-    
-    }
-}
-
-@media screen and (max-width: 600px){
-
-    .ContainerSubPadreClasesPersonalizadas>div{
-        font-size: 11px;
-    
-    }
-}
-
-@media screen and (max-width: 500px){
-    .SubTituloPersonalizadas{
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 450px){
-    .TituloPersonalizadas{
-        font-size: 25px;
-    }
-    .SubTituloPersonalizadas{
-        font-size: 9px;
-    }
-    .ContainerSubPadreClasesPersonalizadas>div{
-        font-size: 10px;
-    
-    }
-}
-
-@media screen and (max-width: 400px){
-    .TituloPersonalizadas{
-        font-size: 22px;
-    }
-    .SubTituloPersonalizadas{
-        font-size: 8px;
-    }
-    .ContainerSubPadreClasesPersonalizadas>div{
-        font-size: 9px;
-    
-    }
-}
-@media screen and (max-width: 350px){
-    
-    .SubTituloPersonalizadas{
-        font-size: 7px;
-    }
-    
-}
-*/

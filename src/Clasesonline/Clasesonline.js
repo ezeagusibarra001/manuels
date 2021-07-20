@@ -8,6 +8,7 @@ import ClasesGrupales from "./ClasesGrupales";
 import Cursos from "./Cursos";
 import Talleres from "./Talleres";
 import Gift from "./Gift";
+import Reseñas from "./Reseñas"
 import {useHome} from '../context/home-context'
 
 function Clasesonline(props) {
@@ -40,15 +41,15 @@ function Clasesonline(props) {
             texto3:"Dictado por: Manuela Sanchez Guarin, locutora nacional y docente.",
             texto4:"Se entrega material de práctica y certificado de asistencia y finalización.",
             fondo:{
-                backgroundColor:"#ffd743",
+                backgroundColor:"#a06ab4"
             },
             texto:{
-                color:"#a06ab4",
+                color:"white",
                 fontWeight:"600",
             },
             button:{
-                backgroundColor:"white",
-                color:"#ffd743",
+                backgroundColor:"#ffd743",
+                color:"#a06ab4",
             }
         
         },
@@ -60,15 +61,15 @@ function Clasesonline(props) {
             texto3:"Dictado por: Manuela Sanchez Guarin, locutora nacional y docente.",
             texto4:"Cantidad de encuentros necesarios de 1 hora cada uno",
             fondo:{
-                backgroundColor:"#a06ab4"
+                backgroundColor:"white"
             },
             texto:{
-                color:"white",
+                color:"#a06ab4",
                 fontWeight:"600",
             },
             button:{
                 backgroundColor:"#ffd743",
-                color:"#a06ab4",
+                color:"white",
             }
         },
     ]
@@ -93,6 +94,7 @@ function Clasesonline(props) {
                 </div>
               </div>
               <Gift />
+              <Reseñas />
             </Layout>
         </div>
     )

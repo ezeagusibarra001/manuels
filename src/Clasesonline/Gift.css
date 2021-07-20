@@ -3,7 +3,7 @@
     width: 100%;
     height: auto;
 
-    padding: 1% 6%;
+    padding: 4% 6%;
 
 }
 /*----------------------------SUB-CONTAINER----------------------------*/
@@ -15,11 +15,11 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    gap: 30px;
+    gap: 2.5vw;
 
     padding: 5% 0%;
 
-    box-shadow: 0 0 25px rgb(0,0,0) !important;
+    box-shadow: 0 0 5px rgb(0,0,0) !important;
 }
 /*----------------------------IMG----------------------------*/
 .ContainerImgGift{
@@ -28,7 +28,7 @@
     align-items: center;
 }
 .ImgGift{
-    width: 8%;
+    width: 8vw;
     height: auto;
 }
 /*----------------------------TITULO----------------------------*/
@@ -39,9 +39,11 @@
     font-family: "dukecharming-regular";
     font-weight: 800;
     color: #a06ab4;
+    font-size: 4vw;
 }
 .GiftTexto2{
     color: #a06ab4;
+    font-size: 1.8vw;
 }
 .ContainerButtonGift{
     display: flex;
@@ -57,7 +59,7 @@
     border-radius: 5px;
     padding: 0% 4%;
     height: auto;
-    font-size: 25px;
+    font-size: 2.5vw;
 }
 .ButtonGift:hover{
     background-color: white;
@@ -65,63 +67,3 @@
     border: solid #ffd743 2px;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-@media screen and (max-width: 800px){
-    .ImgGift{
-        width: 12%;
-        height: auto;
-    }
-}
-@media screen and (max-width: 700px){
-    .ImgGift{
-        width: 15%;
-        height: auto;
-    }
-}
-@media screen and (max-width: 600px){
-    .ImgGift{
-        width: 20%;
-        height: auto;
-    }
-    .GiftTexto1{
-        font-size: 35px;
-    }
-    .GiftTexto2{
-        font-size: 10px;
-    }
-}
-@media screen and (max-width: 500px){
-    .ImgGift{
-        width: 20%;
-        height: auto;
-    }
-    .GiftTexto1{
-        font-size: 30px;
-    }
-    .GiftTexto2{
-        font-size: 10px;
-    }
-}
-@media screen and (max-width: 400px){
-    .ImgGift{
-        width: 22%;
-        height: auto;
-    }
-    .GiftTexto1{
-        font-size: 28px;
-    }
-    .GiftTexto2{
-        font-size: 10px;
-    }
-}
-@media screen and (max-width: 350px){
-    .ImgGift{
-        width: 22%;
-        height: auto;
-    }
-    .GiftTexto1{
-        font-size: 25px;
-    }
-    .GiftTexto2{
-        font-size: 10px;
-    }
-}
