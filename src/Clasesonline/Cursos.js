@@ -11,7 +11,7 @@ function Cursos(props) {
 
     dates.forEach(d=>{x.push(d)})
 
-    console.log(x[0].date)
+    console.log("dawda",x[1])
 
     return (
 

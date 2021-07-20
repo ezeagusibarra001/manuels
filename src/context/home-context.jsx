@@ -20,7 +20,7 @@ export function HomeProvider(props) {
     console.log("Estado del login:",login)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases,login,setLogin
+        clases,login,setLogin,obtenerClases
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
