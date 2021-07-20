@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useState} from "react";
 import "./Reseña.css"
 
 function Reseñas() {
 
+    const [reseñaform , setreseñaform]=useState({name:"",coment:""})
 
+    const handlechange=(event)=>{
+        const name=event.target.name
+        const value=event.target.value
+        setreseñaform({...reseñaform,[name]:value})
+        console.log(value,name,"Keep an eye")
+    }
     return(
 
         <div className="ContainerPadreReseña">
@@ -31,7 +38,11 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" className="InputReseña1"></input>
+                                    <input type="text" className="InputReseña1"
+                                    name="name"
+                                    value={reseñaform.name}
+                                    onChange={handlechange}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -41,8 +52,15 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" className="InputReseña2"></input>
+                                    <input type="text" className="InputReseña2" 
+                                    name="coment"
+                                    value={reseñaform.coment} 
+                                    onChange={handlechange}
+                                    />
                                 </td>
+                            </tr>
+                            <tr>
+                                <button className="ReseñaButton">ENVIAR</button>
                             </tr>
                         </table>
                     </form>
