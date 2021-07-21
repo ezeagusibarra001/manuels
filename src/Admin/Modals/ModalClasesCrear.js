@@ -66,6 +66,7 @@ function ModalClasesCrear(props) {
                 console.log("error post", err);
             });
     };
+    const [Styles , setStyles]=useState({})
     return (
         <div>
 
@@ -80,12 +81,20 @@ function ModalClasesCrear(props) {
                 </Modal.Header>
                 <Modal.Body className="row">
                     <div className="col-6">
-                        <Form.Control type="text" placeholder="Titulo" onChange={handleChange} name="title" />
+                        <Form.Control 
+                        type="text" 
+                        placeholder="Titulo" 
+                        maxLength="22"
+                        onChange={handleChange} 
+                        name="title" 
+                        style={Styles}
+                        />
                         <br></br>
                         <Form.Control
                             name="description"
                             as="textarea"
                             placeholder="Descripcion de la clase"
+                            maxLength="210"
                             style={{ height: '100px' }}
                             onChange={handleChange}
                         />
@@ -94,6 +103,7 @@ function ModalClasesCrear(props) {
                             name="forWho"
                             as="textarea"
                             placeholder="¿Quienes pueden hacerlo?"
+                            maxLength="150"
                             style={{ height: '75px' }}
                             onChange={handleChange}
                         />
@@ -103,6 +113,7 @@ function ModalClasesCrear(props) {
                             name="duration"
                             as="textarea"
                             placeholder="4 encuentros de 90min. 1 clase semanal. Duración total: 1 mes"
+                            maxLength="65"
                             style={{ height: '75px' }}
                             onChange={handleChange}
                         />
@@ -112,6 +123,7 @@ function ModalClasesCrear(props) {
                             name="teacher"
                             as="textarea"
                             placeholder="Dictado por:"
+                            maxLength="65"
                             style={{ height: '60px' }}
                             onChange={handleChange}
                         />
@@ -120,6 +132,7 @@ function ModalClasesCrear(props) {
                             name="requeriments"
                             as="textarea"
                             placeholder="Requisitos:"
+                            maxLength="65"
                             style={{ height: '60px' }}
                             onChange={handleChange}
                         />

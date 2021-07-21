@@ -59,10 +59,10 @@ function Cursos(props) {
                 </div>
             </div>
             <div className="ContainerCursosTextos3">
-                <h5 className="CursosTextos3">CUPOS LIMITADOS - PRÓXIMAS FECHAS </h5>
+                <h5 className="CursosTextos3">CUPOS LIMITADOS - FECHAS : {moment(x[0].date).format("DD/MM")} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div>  : moment(x[1].date).format("DD/MM")} </h5>
             </div>
             <div className="ContainerCursostexto4">
-                <h2 className="CursosTextos4"><button className="ButtonTextos4">QUIERO INSCRIBIRME {moment(x[0].date).format("DD/MM")} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div>  : moment(x[1].date).format("DD/MM")} </button></h2>
+                <h2 className="CursosTextos4"><button className="ButtonTextos4">QUIERO INSCRIBIRME  </button></h2>
             </div>
         </div>
     )

@@ -10,6 +10,7 @@ function Reseñas() {
         const value=event.target.value
         setreseñaform({...reseñaform,[name]:value})
         console.log(value,name,"Keep an eye")
+        console.log(reseñaform.name,reseñaform.coment,"Keep an eye")
     }
     return(
 
@@ -38,8 +39,9 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" className="InputReseña1"
+                                    <textarea type="text" className="InputReseña1"
                                     name="name"
+                                    type="text" 
                                     value={reseñaform.name}
                                     onChange={handlechange}
                                     />
@@ -52,8 +54,9 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" className="InputReseña2" 
+                                    <textarea type="text" className="InputReseña2" 
                                     name="coment"
+                                    type="text" 
                                     value={reseñaform.coment} 
                                     onChange={handlechange}
                                     />
@@ -62,7 +65,7 @@ function Reseñas() {
                         </table>
                     </form>
                 </div>
-                <button className="ButtonReseñas">ENVIAR</button>
+                <button className="ButtonReseñas" >ENVIAR</button>
             </div>
         </div>
     )
