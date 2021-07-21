@@ -20,9 +20,13 @@ function ModalClasesCrear(props) {
     const handleChange = (e) => {
         setCurrentClase({
             ...currentClase,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
         console.log(currentClase)
+        if(e.target.name.lenght==e.target.maxLength){
+            setStyles({backgroundColor:"red"})
+        }
+        
     }
     var selectDate1 = document.querySelector("div:nth-child(2) > input:nth-child(9)")
     var selectDate2 = document.querySelector("div:nth-child(2) > input:nth-child(13)")
@@ -66,7 +70,7 @@ function ModalClasesCrear(props) {
                 console.log("error post", err);
             });
     };
-    const [Styles , setStyles]=useState({})
+    const [Styles , setStyles]=useState()
     return (
         <div>
 
