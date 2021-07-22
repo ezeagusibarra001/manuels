@@ -33,11 +33,12 @@
     padding: 0% 10%;
 }
 .FeedbackCarrusel{
-    border: solid white;
     width: 100%;
     height: auto;
 
     padding: 2% 2%;
+
+    box-shadow: 0 0 15px rgb(0,0,0) !important;
 }
 .ContainerFeedbackCarruselSection{
  
