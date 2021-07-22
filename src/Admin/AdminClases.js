@@ -3,7 +3,7 @@ import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
 import "./Admin.css"
-import ModalClasesCrear from './Modals/ModalClasesCrear'
+import ModalClasesCrear from './Modals/ClasesCrear/ModalClasesCrear'
 import ModalClasesEliminar from "./Modals/ModalClasesEliminar";
 function AdminClases() {
     const [showCrear, setShowCrear] = useState(false)

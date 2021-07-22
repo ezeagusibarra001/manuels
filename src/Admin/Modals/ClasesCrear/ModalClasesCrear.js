@@ -3,9 +3,9 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
-import clienteAxios from '../../config/clienteAxios'
-import {useHome} from '../../context/home-context'
-import "../Admin.css"
+import clienteAxios from '../../../config/clienteAxios'
+import {useHome} from '../../../context/home-context'
+import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesCrear(props) {
     const { addToast } = useToasts();
@@ -13,20 +13,34 @@ function ModalClasesCrear(props) {
     const { showCrear, setShowCrear } = props;
     const [date1, setDate1] = useState({date:""})
     const [date2, setDate2] = useState({date:""})
-    const [currentClase, setCurrentClase] = useState([])
+    const [Styles , setStyles]=useState()
+    const [currentClase, setCurrentClase] = useState({
+        title:"",
+        description:"",
+        forWho:"",
+        duration:"",
+        teacher:"",
+        requeriments:"",
+        dates: [{
+            date: ""
+        }, {
+            date: "" || ""
+        }],
+        quota:""
+    })
     const handleClose = () => {
         setShowCrear(false)
     }
     const handleChange = (e) => {
-        setCurrentClase({
-            ...currentClase,
-            [e.target.name]: e.target.value,
-        })
+        setCurrentClase({...currentClase,[e.target.name]: e.target.value,})
+        const max=e.target.maxLength
         console.log(currentClase)
-        if(e.target.name.lenght==e.target.maxLength){
-            setStyles({backgroundColor:"red"})
+        if(0<(e.target.value).length && (e.target.value).length<e.target.maxLength){
+            setStyles({outlineColor:"green"})
         }
-        
+        else{
+            setStyles({outlineColor:"red"})
+        }
     }
     var selectDate1 = document.querySelector("div:nth-child(2) > input:nth-child(9)")
     var selectDate2 = document.querySelector("div:nth-child(2) > input:nth-child(13)")
@@ -70,7 +84,6 @@ function ModalClasesCrear(props) {
                 console.log("error post", err);
             });
     };
-    const [Styles , setStyles]=useState()
     return (
         <div>
 
@@ -85,60 +98,66 @@ function ModalClasesCrear(props) {
                 </Modal.Header>
                 <Modal.Body className="row">
                     <div className="col-6">
-                        <Form.Control 
+                        <textarea 
                         type="text" 
                         placeholder="Titulo" 
                         maxLength="22"
                         onChange={handleChange} 
                         name="title" 
                         style={Styles}
+                        className="CCinputTitle"
                         />
                         <br></br>
-                        <Form.Control
+                        <textarea
                             name="description"
                             as="textarea"
                             placeholder="Descripcion de la clase"
                             maxLength="210"
-                            style={{ height: '100px' }}
+                            style={Styles}
                             onChange={handleChange}
+                            className="CCinputDescription"
                         />
                         <br></br>
-                        <Form.Control
+                        <textarea
                             name="forWho"
                             as="textarea"
                             placeholder="¿Quienes pueden hacerlo?"
                             maxLength="150"
-                            style={{ height: '75px' }}
+                            style={Styles}
                             onChange={handleChange}
+                            className="CCinputForwho"
                         />
                         <br></br>
                         <Card.Title>Especificaciones</Card.Title>
-                        <Form.Control
+                        <textarea
                             name="duration"
                             as="textarea"
                             placeholder="4 encuentros de 90min. 1 clase semanal. Duración total: 1 mes"
                             maxLength="65"
-                            style={{ height: '75px' }}
+                            style={Styles}
                             onChange={handleChange}
+                            className="CCinputDuration"
                         />
                     </div>
                     <div className="col-6">
-                        <Form.Control
+                        <textarea
                             name="teacher"
                             as="textarea"
                             placeholder="Dictado por:"
                             maxLength="65"
-                            style={{ height: '60px' }}
+                            style={Styles}
                             onChange={handleChange}
+                            className="CCinputTeacher"
                         />
                         <br></br>
-                        <Form.Control
+                        <textarea
                             name="requeriments"
                             as="textarea"
                             placeholder="Requisitos:"
                             maxLength="65"
-                            style={{ height: '60px' }}
+                            style={Styles}
                             onChange={handleChange}
+                            className="CCinputRequisitos"
                         />
                         <br></br>
                         <Card.Title>Vacantes</Card.Title>
