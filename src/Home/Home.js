@@ -17,7 +17,7 @@ function Home(props) {
            <Video />
            <Servicios />
            <Marcas />
-           <Feedback />
+           <Feedback/>
         </Layout>
     )
     
