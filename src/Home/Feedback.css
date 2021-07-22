@@ -1,0 +1,94 @@
+.ContainerFeedbackFondo{
+  
+    width: 100%;
+    height: auto;
+    padding: 2% 2%;
+    background-color: #d4a9e4;
+}
+.SubContainerFeedbackFondo{
+    
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+.ContainerFeedbackTitulo{
+   
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FeedbackTitulo{
+    font-family: "dukecharming regular";
+    font-weight: 500;
+    font-size: 5vw;
+    color: white;
+}
+.ContainerFeedbackCarrusel{
+   
+    padding: 0% 10%;
+}
+.FeedbackCarrusel{
+    border: solid white;
+    width: 100%;
+    height: auto;
+
+    padding: 2% 2%;
+}
+.ContainerFeedbackCarruselSection{
+ 
+    height:25vw;
+    width: 100%;
+
+    padding: 0% 8%;
+}
+.ContainerCarruselReseñas{
+    
+    width: 100%;
+    height: 100%;
+}
+.FeedbackReseña{
+    color: white;
+    font-family: "round varela";
+    font-weight: normal;
+    font-size: 2vw;
+}
+.FeedbackAuthor{
+    color: white;
+    font-family: "dukecharming regular";
+    font-weight: 700;
+    font-size: 2.5vw;
+}
+@media screen and (max-width: 700px){ 
+    .ContainerFeedbackFondo{
+        padding: 2% 0%;
+    }
+    .ContainerFeedbackCarrusel{
+        padding: 0% 0%;
+    }
+    .ContainerFeedbackCarruselSection{
+        padding: 0% 12%;
+        height: 50vw;
+    }
+    .FeedbackTitulo{
+        font-size: 7.5vw;
+    }
+    .FeedbackReseña{
+        color: white;
+        font-family: "round varela";
+        font-size: 4vw;
+    }
+    .FeedbackAuthor{
+        color: white;
+        font-family: "dukecharming regular";
+        font-weight: 700;
+        font-size: 4vw;
+    }
+    .FeedbackCarrusel{
+        border: solid transparent;
+    }
+}
