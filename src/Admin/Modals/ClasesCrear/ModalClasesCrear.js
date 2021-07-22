@@ -11,8 +11,7 @@ function ModalClasesCrear(props) {
     const { addToast } = useToasts();
     const {obtenerClases} = useHome()
     const { showCrear, setShowCrear } = props;
-    const [date1, setDate1] = useState({date:""})
-    const [date2, setDate2] = useState({date:""})
+    const [superDates, setSuperDates] = useState([])
     const [Styles , setStyles]=useState()
     const [currentClase, setCurrentClase] = useState({
         title:"",
@@ -34,7 +33,6 @@ function ModalClasesCrear(props) {
     const handleChange = (e) => {
         setCurrentClase({...currentClase,[e.target.name]: e.target.value,})
         const max=e.target.maxLength
-        console.log(currentClase)
         if(0<(e.target.value).length && (e.target.value).length<e.target.maxLength){
             setStyles({outlineColor:"green"})
         }
@@ -45,13 +43,13 @@ function ModalClasesCrear(props) {
     var selectDate1 = document.querySelector("div:nth-child(2) > input:nth-child(9)")
     var selectDate2 = document.querySelector("div:nth-child(2) > input:nth-child(13)")
     const handleDate1 = (e) => {
-        setDate1({ date: e.target.value })
+        setSuperDates([...superDates, {date: e.target.value}])
     }
     const submitDate1 = () => {
         selectDate1.disabled = true;
     }
     const handleDate2 = (e) => {
-        setDate2({ date: e.target.value })
+        setSuperDates([...superDates, {date: e.target.value}])
     }
     const submitDate2 = () => {
         selectDate2.disabled = true;
@@ -65,16 +63,13 @@ function ModalClasesCrear(props) {
                 duration: currentClase.duration,
                 teacher: currentClase.teacher,
                 requeriments: currentClase.requeriments,
-                dates: [{
-                    date: date1.date
-                }, {
-                    date: date2.date || ""
-                }],
+                dates: superDates,
                 quota: currentClase.quota
             })
             .then((res) => {
                 console.log(res.data);
                 obtenerClases();
+                handleClose()
                 addToast("Clase creada", {
                     appearance: "success",
                     autoDismiss: true,

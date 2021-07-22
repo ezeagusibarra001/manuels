@@ -11,8 +11,6 @@ function Cursos(props) {
 
     dates.forEach(d=>{x.push(d)})
 
-    console.log("dawda",x[1])
-
     return (
 
         <div className="ContainerItemsCursos">

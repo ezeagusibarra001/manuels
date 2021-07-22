@@ -5,6 +5,7 @@ import Experiencia from "./Experiencia";
 import Video from "./Video";
 import Servicios from "./Servicios";
 import Marcas from "./Marcas";
+import Reseñas from "./Reseñas";
 
 
 function Home(props) {
@@ -16,6 +17,7 @@ function Home(props) {
            <Video/>
            <Servicios/>
            <Marcas/>
+           <Reseñas/>
         </Layout>
     )
     

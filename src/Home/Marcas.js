@@ -12,10 +12,6 @@ function Marcas(props) {
             <div className="ContainerMarcasTitulo">
                 <h1 className="MarcasTitulo"> MARCAS QUE CONFIARON EN MÍ </h1>
             </div>
-
-
-
-
             <div className="ContainerMarcasCarrusel">
 
                 <Carousel className="Carrusel">
