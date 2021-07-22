@@ -37,9 +37,7 @@ function ModalClasesEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                         <select aria-label="Default select example">
-                        {clases.map((clases)=>(
-                            <option value={clases.id}>{clases.title}</option>
-                        ))}
+                            {clases.map((clases)=>(<option value={clases.id}>{clases.title}</option>))}
                         </select>
                 </Modal.Body>
                 <Modal.Footer>
