@@ -12,3 +12,20 @@
 .modal-dialog{
    max-width: 75% !important;
 }
+/*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
+div>textarea{
+    width: 100%;  
+}
+.CCinputTitle{
+    height: auto;
+}
+.CCinputDescription{
+    height: 125px;
+}
+.CCinputForwho{
+    height: 125px; 
+}
+.CCinputDuration{
+    height: auto;
+    height: 80px;
+}
