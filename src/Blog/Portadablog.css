@@ -103,11 +103,25 @@
         position: absolute;
         right: 30%;
         top: 85%;
-        border: solid transparent 1px;
+        border: solid transparent 2px;
         border-radius: 20px;
         background-color: white;
         color:#07bb9c;
         font-size: 4.5vw;
         padding: 0% 2%;
+        font-weight: 600;
     }
+    .BlogButton:hover{
+        position: absolute;
+        right: 30%;
+        top: 85%;
+        border: solid white 2px;
+        border-radius: 20px;
+        background-color: #07bb9c;
+        color:white;
+        font-size: 4.5vw;
+        padding: 0% 2%;
+        font-weight: 600;
+    }
+    
 }

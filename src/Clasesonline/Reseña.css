@@ -123,7 +123,7 @@
 .ButtonReseñas{
     background-color: #ffd743;
     color: white;
-    border: solid transparent;
+    border: solid transparent 1px;
     border-radius: 5px;
     padding: 1% 6%;
     font-size: 2vw;
@@ -131,8 +131,8 @@
 .ButtonReseñas:hover{
     background-color: white;
     color: #ffd743;
-    border: solid #ffd743;
-    border-radius: 10px;
+    border: solid #ffd743 1px;
+    border-radius: 5px;
     padding: 1% 6%;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/

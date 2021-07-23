@@ -615,7 +615,7 @@
 .ButtonGrupales{
     background-color: #ffd743;
     color: white;
-    border: solid transparent;
+    border: solid transparent 1px;
     border-radius: 10px;
     padding: 1% 6%;
     font-size: 1.2vw;
@@ -623,8 +623,9 @@
 .ButtonGrupales:hover{
     background-color: white;
     color: #ffd743;
-    border: solid #ffd743;
+    border: solid #ffd743 1px;
     border-radius: 10px;
+    font-size: 1.2vw;
     padding: 1% 6%;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
@@ -711,10 +712,17 @@
     .ButtonGrupales{
         background-color: #ffd743;
         color: white;
-        border: solid transparent;
+        border: solid transparent 1px;
         border-radius: 10px;
         padding: 1% 6%;
-
+        font-size: 3.5vw;
+    }
+    .ButtonGrupales:hover{
+        background-color: white;
+        color: #ffd743;
+        border: solid #ffd743 1px;
+        border-radius: 10px;
+        padding: 1% 6%;
         font-size: 3.5vw;
     }
 }

@@ -1,0 +1,62 @@
+.ContainerPublicaciones{
+    border:  solid black;
+    height: auto;
+    width: 100%;
+
+    padding: 2% 2%;
+
+    background-color: #d4a9e4;
+}
+.ContainerPublicaciones>div{
+    border:  solid black;
+    height: auto;
+    width: 100%;
+}
+.ContainerPublicacionesTitulo{
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+}
+.PublicacionesTitulo{
+    color: white;
+    font-size: 5vw;
+    font-family: "dukecharming regular";
+}
+.SubContainerPublicaciones{
+    height: auto;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.SubContainerPublicaciones>div{
+    border: solid red;
+}
+.ContainerPublicacionesImg{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 5% 5%;
+}
+.PublicacionesImg{
+    width: 80%;
+    height: auto;
+}
+.ContainerPublicacionesTextos{
+    width: 100%;
+    height: auto;
+
+    padding: 5% 2%;
+}
+.PublicacionesSubTitulo{
+    font-size: 2vw;
+}
+.PublicacionesParrafos{
+    font-size: 1.5vw;
+}

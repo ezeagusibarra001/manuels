@@ -1,6 +1,7 @@
 import React  from "react"
 import Layout from "../Layout";
 import PortadaBlog from "./PortadaBlog";
+import Publicaciones from "./Publicaciones";
 
 
 function Blog(props) {
@@ -10,6 +11,7 @@ function Blog(props) {
 
        <Layout>
            <PortadaBlog />
+           <Publicaciones />
        </Layout>
     )
     

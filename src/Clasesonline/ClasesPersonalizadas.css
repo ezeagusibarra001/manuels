@@ -332,7 +332,7 @@
 .ButtonPersonalizadas{
     background-color: #ffd743;
     color: white;
-    border: solid transparent;
+    border: solid transparent 1px;
     border-radius: 10px;
     padding: 1% 6%;
 
@@ -341,7 +341,7 @@
 .ButtonPersonalizadas:hover{
     background-color: white;
     color: #ffd743;
-    border: solid #ffd743;
+    border: solid #ffd743 1px;
     border-radius: 10px;
     padding: 1% 6%;
 }
@@ -454,10 +454,17 @@
 .ButtonPersonalizadas{
     background-color: #ffd743;
     color: white;
-    border: solid transparent;
+    border: solid transparent 1px;
     border-radius: 10px;
     padding: 1% 6%;
-
     font-size: 3.5vw;
+}
+.ButtonPersonalizadas:hover{
+    background-color: white;
+        color: #ffd743;
+        border: solid #ffd743 1px;
+        border-radius: 10px;
+        padding: 1% 6%;
+        font-size: 3.5vw;
 }
 }
