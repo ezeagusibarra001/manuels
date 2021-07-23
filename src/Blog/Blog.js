@@ -1,5 +1,6 @@
 import React  from "react"
 import Layout from "../Layout";
+import PortadaBlog from "./PortadaBlog";
 
 
 function Blog(props) {
@@ -8,7 +9,7 @@ function Blog(props) {
     return(
 
        <Layout>
-           <div>BLOG</div>
+           <PortadaBlog />
        </Layout>
     )
     

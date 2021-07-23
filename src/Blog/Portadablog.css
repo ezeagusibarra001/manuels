@@ -1,0 +1,38 @@
+.ContenedorPortadaBlog{
+   
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.ContenedorImgBlog{
+    width: 100%;
+    height: auto;
+}
+.ImgBlog{
+    width: 100%;
+    height: auto;
+}
+.ContenedorTextos{
+    width: 100%;
+    height: auto;
+    background-color: #07bb9c;
+    padding: 6% 25% 2% 4%;
+}
+.SubContenedorTextos{
+    width: 100%;
+    height: auto;
+
+}
+.Blogtitulo{
+    color: white;
+    font-family: "varela round regular";
+    font-size: 6vw;
+}
+.Blogtexto{
+    color: white;
+    font-family: "varela round regular";
+    font-size: 2vw;
+}
