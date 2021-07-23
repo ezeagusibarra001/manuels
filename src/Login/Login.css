@@ -92,4 +92,16 @@
     background-color: white ;
     color: #a06ab4;
 }
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .LoginButton{
+        font-size: 3.5vw ;
+    }
+    .LoginInput1{ 
+        font-size: 4.5vw ;
+    }
+    .LoginInput2{
+        font-size: 4.5vw ;
+    }
+}
 

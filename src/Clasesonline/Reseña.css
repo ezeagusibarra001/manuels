@@ -135,3 +135,35 @@
     border-radius: 10px;
     padding: 1% 6%;
 }
+/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+
+@media screen and (max-width: 500px){
+    .ReseñaTitulo{
+        font-size: 12vw;
+    }
+    .ContainerReseñaTexto{
+        text-align: left;
+        line-height:normal;
+        padding: 0% 2.5%;
+    }
+    .ReseñaTexto1{
+        font-size: 6.5vw;
+    }
+    .ReseñaTexto2{
+        font-size: 6.5vw;
+    }
+
+    .Label{
+        font-size: 6vw;
+        height: auto;
+    }
+    .InputReseña1{
+        font-size: 5vw;
+        height: auto;
+    }.InputReseña2{
+        font-size: 5vw;
+    }
+    .ButtonReseñas{
+        font-size: 4.5vw;
+    }
+}

@@ -67,3 +67,34 @@
     border: solid #ffd743 2px;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
+
+@media screen and (max-width: 500px){
+    .ImgGift{
+        width: 20vw;
+        height: auto;
+    }
+    .GiftTexto1{
+        font-family: "dukecharming-regular";
+        font-weight: 800;
+        color: #a06ab4;
+        font-size: 12vw;
+    }
+    .GiftTexto2{
+        display: none;
+    }
+    .ButtonGift{
+        background-color: #ffd743;
+        border: solid 2px;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0% 4%;
+        height: auto;
+        font-size: 7vw;
+    }
+    .ButtonGift:hover{
+        background-color: white;
+        color: #ffd743;
+        border: solid #ffd743 2px;
+    }
+}

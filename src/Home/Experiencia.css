@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
     grid-template-rows: 1fr 1fr;
-
+    
     background-color: #a06ab4;
 
     padding: 4% 0%;
@@ -195,9 +195,32 @@
 
         font-size: 2.5vw;
     }
+}
+@media screen and (max-width: 500px){
+    .ContenedorExperienciaPadre{
+        padding: 4% 4%;
+    }
+    .ContenedorExperienciaSubPadre{
+        padding: 4% 4%;
+        gap: 0px;
+    }
+    .ExperienciaTexto1{
 
-  
-   
+        font-size: 10vw;
+    }
+
+    .ExperienciaTexto2{
+
+        font-size: 10vw;
+    }
+    .ExperienciaTexto3{
+
+        font-size: 4.5vw;
+    }
+    .ExperienciaTexto4{
+
+        font-size: 4.5vw;
+    }
 }
 
 

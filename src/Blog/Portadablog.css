@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    position: relative;
 }
 .ContenedorImgBlog{
     width: 100%;
@@ -19,20 +20,94 @@
     width: 100%;
     height: auto;
     background-color: #07bb9c;
-    padding: 6% 25% 2% 4%;
+    padding: 12% 30% 2% 10%;
 }
 .SubContenedorTextos{
     width: 100%;
     height: auto;
-
 }
 .Blogtitulo{
     color: white;
     font-family: "varela round regular";
-    font-size: 6vw;
+    font-size: 5vw;
 }
 .Blogtexto{
     color: white;
     font-family: "varela round regular";
-    font-size: 2vw;
+    font-size: 1.8vw;
+}
+.BlogButton{
+    position: absolute;
+    right: 38%;
+    top: 80%;
+    border: solid transparent 1px;
+    border-radius: 20px;
+    background-color: white;
+    color:#07bb9c;
+    font-size: 2.5vw;
+    padding: 0% 2%;
+}
+.BlogButton:hover{
+    position: absolute;
+    right: 38%;
+    top: 80%;
+    border: solid white 1px;
+    border-radius: 20px;
+    background-color: #07bb9c;
+    color:white;
+    font-size: 2.5vw;
+    padding: 0% 2%;
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .ContenedorPortadaBlog{
+   
+        width: 100%;
+        height: auto;
+    
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        position: relative;
+    }
+    .ContenedorImgBlog{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ImgBlog{
+        width: 60%;
+        height: auto;
+    }
+    .ContenedorTextos{
+        width: 100%;
+        height: auto;
+        background-color: #07bb9c;
+        padding: 5% 12% 2% 10%;
+    }
+    .SubContenedorTextos{
+        width: 100%;
+        height: 60vw;
+    }
+    .Blogtitulo{
+        color: white;
+        font-family: "varela round regular";
+        font-size: 12vw;
+    }
+    .Blogtexto{
+        color: white;
+        font-family: "varela round regular";
+        font-size: 5vw;
+    }
+    .BlogButton{
+        position: absolute;
+        right: 30%;
+        top: 85%;
+        border: solid transparent 1px;
+        border-radius: 20px;
+        background-color: white;
+        color:#07bb9c;
+        font-size: 4.5vw;
+        padding: 0% 2%;
+    }
 }

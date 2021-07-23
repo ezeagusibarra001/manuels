@@ -25,6 +25,7 @@ function PortadaBlog() {
                     </p>
                 </div>
             </div>
+            <button className="BlogButton">VER PUBLICACIONES</button>
         </div>
     )
     

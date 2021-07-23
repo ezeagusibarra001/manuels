@@ -57,6 +57,7 @@ function Reseñas() {
                                     <textarea type="text" className="InputReseña2" 
                                     name="coment"
                                     type="text" 
+                                    maxLength="260"
                                     value={reseñaform.coment} 
                                     onChange={handlechange}
                                     />
