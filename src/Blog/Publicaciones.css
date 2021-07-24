@@ -1,16 +1,16 @@
 .ContainerPublicaciones{
-    border:  solid black;
     height: auto;
     width: 100%;
 
-    padding: 2% 2%;
+    padding: 0% 0%;
 
     background-color: #d4a9e4;
+
+    border-top: solid white;
 }
-.ContainerPublicaciones>div{
-    border:  solid black;
-    height: auto;
-    width: 100%;
+.ContainerAux{
+    padding: 4% 1%;
+    border-top: solid white;
 }
 .ContainerPublicacionesTitulo{
     width: 100%;
@@ -20,7 +20,7 @@
 }
 .PublicacionesTitulo{
     color: white;
-    font-size: 5vw;
+    font-size: 6vw;
     font-family: "dukecharming regular";
 }
 .SubContainerPublicaciones{
@@ -28,35 +28,91 @@
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    gap: 10px;
+    padding: 2% 0%;
 }
-.SubContainerPublicaciones>div{
-    border: solid red;
-}
-.ContainerPublicacionesImg{
-    width: 100%;
+.ContainerPublicacionesImg1{
+    width: auto;
     height: auto;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 
-    padding: 5% 5%;
+    padding: 0% 0%;
 }
 .PublicacionesImg{
-    width: 80%;
+    width: 100%;
     height: auto;
 }
-.ContainerPublicacionesTextos{
+.ContainerPublicacionesTextos1{
     width: 100%;
     height: auto;
 
-    padding: 5% 2%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    padding: 0% 2%;
+}
+.ContainerPublicacionesTextos2{
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    padding: 0% 2%;
 }
 .PublicacionesSubTitulo{
     font-size: 2vw;
 }
 .PublicacionesParrafos{
-    font-size: 1.5vw;
+    font-size: 2vw;
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .ContainerPublicacionesImg1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .ContainerPublicacionesImg2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .PublicacionesImg{
+        width: 80%;
+        height: auto;
+    }
+    .ContainerPublicacionesTextos1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        padding: 5% 2%;
+    }
+    .ContainerPublicacionesTextos2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        padding: 5% 2%;
+    }
+    .PublicacionesTitulo{
+        font-size: 14vw;
+    }
+    .PublicacionesSubTitulo{
+        font-size: 5vw;
+    }
+    .PublicacionesParrafos{
+        font-size: 4vw;
+    }
 }
