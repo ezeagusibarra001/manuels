@@ -107,7 +107,7 @@ function ModalClasesCrear(props) {
                             name="description"
                             as="textarea"
                             placeholder="Descripcion de la clase"
-                            maxLength="210"
+                            maxLength="200"
                             style={Styles}
                             onChange={handleChange}
                             className="CCinputDescription"
@@ -117,7 +117,7 @@ function ModalClasesCrear(props) {
                             name="forWho"
                             as="textarea"
                             placeholder="¿Quienes pueden hacerlo?"
-                            maxLength="150"
+                            maxLength="120"
                             style={Styles}
                             onChange={handleChange}
                             className="CCinputForwho"

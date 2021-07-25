@@ -8,7 +8,7 @@ function Publicaciones(props) {
         {
             titulo:"REACT JS",
             img1:"./assets/marca1.png",
-            showimg:true,
+            showimg:false,
             subtitulo1:"Exploramiento y uso de la voz como metodologia psicoterapeutica",
             subtitulo2:"Exploramiento y uso de la voz como metodologia psicoterapeutica",
             parrafo1:"El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a su ancestro que se desplace más cercano y su bloque contenedor (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de top, right, bottom, y left. El desplazamiento no afecta la posición de ningún otro elmento.",

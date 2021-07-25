@@ -36,7 +36,7 @@ function Cursos(props) {
                 </div>
                 <div className="ContainerCursosTextitos">
                     <p className="CursosTextitos">
-                        4 encuentros de {data.duration}min
+                        {data.duration}
                     </p>
                 </div>
                 <div className="ContainerImgCursos">
