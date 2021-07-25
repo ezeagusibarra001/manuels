@@ -39,7 +39,7 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <textarea type="text" className="InputReseña1"
+                                    <input type="text" className="InputReseña1"
                                     name="name"
                                     type="text" 
                                     value={reseñaform.name}

@@ -108,7 +108,7 @@
 }
 .InputReseña1{
     font-size: 2vw;
-    width: 100%;
+    width: 70%;
     border: solid #a06ab4 1px;
     outline: solid #a06ab4 1px;
     color: #a06ab4;
@@ -160,6 +160,7 @@
     .InputReseña1{
         font-size: 5vw;
         height: auto;
+        width: 100%;
     }.InputReseña2{
         font-size: 5vw;
     }
