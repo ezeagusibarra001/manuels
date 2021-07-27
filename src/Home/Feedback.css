@@ -54,9 +54,8 @@
 }
 .FeedbackReseña{
     color: white;
-    font-family: "round varela";
-    font-weight: normal;
     font-size: 2vw;
+    font-weight: 400;
 }
 .FeedbackAuthor{
     color: white;
@@ -77,6 +76,7 @@
     }
     .FeedbackTitulo{
         font-size: 7.5vw;
+        text-align: center;
     }
     .FeedbackReseña{
         color: white;

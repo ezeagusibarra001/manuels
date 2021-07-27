@@ -202,7 +202,7 @@
     }
     .ContenedorExperienciaSubPadre{
         padding: 4% 4%;
-        gap: 0px;
+        gap: 0px 10px ;
     }
     .ExperienciaTexto1{
 

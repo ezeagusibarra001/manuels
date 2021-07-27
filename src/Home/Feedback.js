@@ -3,7 +3,7 @@ import "./Feedback.css"
 import Carousel from 'react-bootstrap/Carousel'
 
 function Feedback(props) {
-
+    const titulo="EXPERIENCIAS & OPINIONES"
     const feedbacks=[
         {
             reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz. Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!!",
@@ -17,10 +17,6 @@ function Feedback(props) {
             reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo. Super interesante y enriquecedor.",
             author:"Oubiña Maria Pilar"
         },
-        {
-            reseña:"Me encanta la pija...",
-            author:"Centu"
-        },
     ]
 
     return(
@@ -28,7 +24,7 @@ function Feedback(props) {
         <div className="ContainerFeedbackFondo">
             <div className="SubContainerFeedbackFondo">
                 <div className="ContainerFeedbackTitulo">
-                    <h1 className="FeedbackTitulo"> Mis Alumnos... </h1>
+                    <h1 className="FeedbackTitulo">{titulo}</h1>
                 </div>
                 <div className="ContainerFeedbackCarrusel">
                     <Carousel className="FeedbackCarrusel">

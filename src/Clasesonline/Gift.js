@@ -17,7 +17,7 @@ function Gift() {
                 <div className="ContainerGiftTextos">
                     <h1 className="GiftTexto1">Giftcards de Experiencias</h1>
                     <h6 className="GiftTexto2">
-                        ¿Sabes que podés reagalar un taller o clases personalizadas? 
+                        ¿Sabes que podés regalar un taller o clases personalizadas? 
                         Dejame tu contacto para más información
                     </h6>
                 </div>
