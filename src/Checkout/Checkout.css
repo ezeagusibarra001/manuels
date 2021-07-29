@@ -1,0 +1,262 @@
+/*-----------------------------------CHECKOUT-----------------------------------*/
+.Containercheckout{
+
+    width: 100%;
+    height: auto;
+
+    background-image: url("../assetsSrc/fondocheckout.png");
+    background-position: center;
+    background-size: contain;
+
+    padding: 5% 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerFormcheckout{
+
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    gap: 1.5vw;
+}
+.Checkouttitle{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    height: auto;
+    width: auto;
+    text-align: center;
+
+    padding: 1% 1%
+    ;
+    background-color: #a06ab4;
+    color: white;
+
+    border-radius: 10px;
+    font-size: 3.5vw;
+}
+.CheckoutSubtitleB{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    height: auto;
+    width: fit-content;
+
+    padding: 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+
+    text-align: left;
+    
+    border-radius: 10px;
+    font-size: 2vw;
+}
+.CheckoutSubtitleM{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    height: auto;
+    width: fit-content;
+
+    padding: 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+
+    text-align: left;
+    
+    border-radius: 10px;
+    font-size: 2vw;
+}
+.CheckoutB{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    width: 100%;
+    height: auto;
+        
+    text-align: left;
+    color: #a06ab4;
+
+    padding: 0% 1%;
+        
+    border: solid #a06ab4 0px;
+    border-radius: 5px;
+    background-color: white;
+        
+    font-size: 2.5vw ;  
+}
+.CheckoutinputM{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+
+    width: 100%;
+    height: auto;
+        
+    text-align: left;
+    color: #a06ab4;
+
+    padding: 0% 1%;
+        
+    border: solid #a06ab4 0px;
+    border-radius: 5px;
+    background-color: white;
+        
+    font-size: 2.5vw ;  
+}
+.Checkoutinput{
+
+    width: 100%;
+    height: auto;
+        
+    text-align: left;
+    color: #a06ab4;
+        
+    border: solid #a06ab4 4px;
+    outline-color: #a06ab4;
+    background-color: white;
+        
+    font-size: 2.5vw ;    
+}
+.CheckoutComprobante{
+
+    height: auto;
+    width: fit-content;
+
+    padding: 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+
+    text-align: left;
+    
+    border-radius: 10px;
+    font-size: 2vw;
+}
+.CheckoutinputComprobante{
+    width: 100%;
+    height: auto;
+        
+    text-align: left;
+    color: #a06ab4;
+        
+    border: solid #a06ab4 4px;
+    background-color: white;
+        
+    font-size: 2vw ; 
+}
+.CheckoutButton{
+    height: auto !important;
+    width: 90% !important;
+
+    border: solid transparent !important;
+    border-radius: 10px !important;
+    background-color: #a06ab4 !important;
+    color: white !important;
+
+    font-size: 2vw !important;
+}
+.CheckoutButton:hover{
+
+    border: solid #a06ab4;
+    border-radius: 10px;
+    color: #ffd743;
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .ContainerFormcheckout{
+
+        width: 100%;
+        height: auto;
+    
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+    
+        gap: 1.5vw;
+    }
+    .Checkouttitle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 5.5vw;
+    }
+    .Checkoutinput{
+
+        width: 100%;
+        height: auto;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 5vw ;    
+    }
+    .CheckoutSubtitleB{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 5vw;
+    }
+    .CheckoutSubtitleM{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        font-size: 5vw;
+    }
+    .CheckoutinputM{
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    
+        width: 100%;
+        height: auto;
+            
+        text-align: left;
+        color: #a06ab4;
+    
+        padding: 0% 1%;
+            
+        border: solid #a06ab4 0px;
+        border-radius: 5px;
+        background-color: white;
+            
+        font-size: 5.5vw ;  
+    }
+    .CheckoutB{
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        font-size: 5vw ;  
+    }
+    .CheckoutComprobante{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 4vw;
+    }
+    .CheckoutinputComprobante{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 4vw;
+    }
+    .CheckoutButton{
+        height: fit-content !important;
+        width: 100% !important;
+
+        font-size: 4.5vw !important;
+    }
+}
+

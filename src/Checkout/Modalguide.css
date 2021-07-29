@@ -1,0 +1,76 @@
+.ContainerHeader{
+    width: 100%;
+    height: auto;
+}
+.Guideimg{
+    width: 40%;
+    height: auto;
+}
+.GuideTitle{
+    width: fit-content;
+    height: auto;
+    padding: 1% 1%;
+    border-radius: 5px;
+    font-size: 3vw;
+    background-color: #a06ab4 ;
+    color: white;
+}
+.ContainerPasos{
+ 
+    padding: 2% 2%;
+    width: 100%;
+    height: auto;
+}
+.ContainerPaso{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+    gap: 20px 10px;
+}
+.ContainerGuideImg{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GuideIconos{
+    width: 40%;
+    height: auto;
+}
+.GuideTexto{
+    color: #a06ab4;
+    font-size: 2vw;
+    text-align: left;
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .ContainerGuideImg{
+        width: 100%;
+        height: auto;
+    
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .GuideIconos{
+        width: 50%;
+        height: auto;
+    }
+    .GuideTexto{
+        color: #a06ab4;
+        font-size: 3.5vw;
+        text-align: left;
+    }
+    .ContainerPaso{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto auto;
+        gap: 5px 0px;
+    }
+    .Guideimg{
+        width: 80%;
+        height: auto;
+    }
+}

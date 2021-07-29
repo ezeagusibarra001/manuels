@@ -11,7 +11,7 @@ function PortadaBlog() {
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
                 <img 
-                    src="./assets/logo1.png
+                    src="./assets/fondoblog.png
                     "
                     className="ImgBlog"
                 />
