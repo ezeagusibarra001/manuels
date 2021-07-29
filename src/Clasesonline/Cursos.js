@@ -1,7 +1,7 @@
 import moment from "moment";
 import React from "react"
 import "./Cursos.css"
-
+import {Link} from "react-router-dom"
 function Cursos(props) {
 
     const data = props.data
@@ -60,7 +60,7 @@ function Cursos(props) {
                 <h5 className="CursosTextos3">CUPOS LIMITADOS - FECHAS : {moment(x[0].date).format("DD/MM")} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div>  : moment(x[1].date).format("DD/MM")} </h5>
             </div>
             <div className="ContainerCursostexto4">
-                <h2 className="CursosTextos4"><button className="ButtonTextos4">QUIERO INSCRIBIRME  </button></h2>
+                <h2 className="CursosTextos4"><Link className="ButtonTextos4" to="/Checkout" >QUIERO INSCRIBIRME</Link></h2>
             </div>
         </div>
     )
