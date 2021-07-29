@@ -82,7 +82,7 @@ function Checkout(props) {
 
                 <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
                 <input className="CheckoutinputComprobante"
-                type="file" 
+                type="file"
                 />
                 <Button className="CheckoutButton" onClick={handleShow}> Confirmar </Button>
             </form>
