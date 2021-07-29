@@ -461,10 +461,182 @@
 }
 .ButtonPersonalizadas:hover{
     background-color: white;
-        color: #ffd743;
-        border: solid #ffd743 1px;
-        border-radius: 10px;
-        padding: 1% 6%;
-        font-size: 3.5vw;
+    color: #ffd743;
+    border: solid #ffd743 1px;
+    border-radius: 10px;
+    padding: 1% 6%;
+    font-size: 3.5vw;
+}
+@media screen and (max-width: 800px){
+    .ContainerSubPadreClasesPersonalizadas{
+      
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto;
+
+        gap: 0%;
+
+        padding: 5% 5%;
+    
+    }
+
+    .ContainerHijo1{
+       
+         grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        padding: 2% 10%;
+
+        gap:0px;
+
+    }
+    .ContainerHijo2{
+       
+        grid-column-start: 1;
+       grid-column-end: 2;
+       grid-row-start: 2;
+       grid-row-end: 3;
+
+       padding: 2% 10%;
+
+       gap:0px;
+
+   }
+.ContainerItem1Personalizadas{
+  
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.ContainerItem2Personalizadas{
+  
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.ContainerItem3Personalizadas{
+  
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.ContainerItem4Personalizadas{
+  
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.ContainerItem5Personalizadas{
+  
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    grid-template-rows: auto ;
+
+    gap:2%;
+}
+.TituloPersonalizadas{
+    font-size: 6.5vw;
+}
+.SubTituloPersonalizadas{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.TextoPersonalizadas1{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas2{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas3{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas4{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas5{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.ButtonPersonalizadas{
+    background-color: #ffd743;
+    color: white;
+    border: solid transparent 1px;
+    border-radius: 10px;
+    padding: 1% 6%;
+    font-size: 3.5vw;
+}
+.ButtonPersonalizadas:hover{
+    background-color: white;
+    color: #ffd743;
+    border: solid #ffd743 1px;
+    border-radius: 10px;
+    padding: 1% 6%;
+    font-size: 3.5vw;
+}
+}
+}
+
+@media screen and (max-width: 500px){
+
+.TituloPersonalizadas{
+    font-size: 6.5vw;
+}
+.SubTituloPersonalizadas{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.TextoPersonalizadas1{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas2{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas3{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas4{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.TextoPersonalizadas5{
+    font-weight: 600;
+    font-size: 3vw;
+}
+.ButtonPersonalizadas{
+    background-color: #ffd743;
+    color: white;
+    border: solid transparent 1px;
+    border-radius: 10px;
+    padding: 1% 6%;
+    font-size: 3.5vw;
+}
+.ButtonPersonalizadas:hover{
+    background-color: white;
+    color: #ffd743;
+    border: solid #ffd743 1px;
+    border-radius: 10px;
+    padding: 1% 6%;
+    font-size: 3.5vw;
+}
+.SubTituloPersonalizadas{
+    font-size: 3.5vw;
+    font-weight: 700;
 }
 }
