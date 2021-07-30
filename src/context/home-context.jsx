@@ -47,9 +47,11 @@ const [feedbacks, setFeedbacks]=useState( [
     },
 ])
 /*------------------------------------------------------------------------------------------------------------*/
+    //JWT
+    const [jwt, setJwt] = useState()
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases,login,setLogin,obtenerClases,feedbacks,setFeedbacks,
+        clases,login,setLogin,obtenerClases,jwt, setJwt , feedbacks , setFeedbacks,
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
