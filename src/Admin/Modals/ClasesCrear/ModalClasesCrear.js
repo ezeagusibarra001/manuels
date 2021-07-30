@@ -68,7 +68,9 @@ function ModalClasesCrear(props) {
       
       let axiosConfig = {
         headers: {
-            'Authorization': `Bearer ${jwt}`
+            'Authorization': `Bearer ${jwt}`,
+            "Access-Control-Allow-Origin": "*",
+            'Access-Control-Allow-Credentials':'true'
         }
       };
     const submit = async () => {
