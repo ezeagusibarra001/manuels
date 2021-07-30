@@ -75,7 +75,7 @@ function ModalClasesCrear(props) {
       };
     const submit = async () => {
         await clienteAxios
-            .post("/lessons", postData, axiosConfig)
+            .post("/lessons", postData)
             .then((res) => {
                 console.log(res.data);
                 console.log(axiosConfig)

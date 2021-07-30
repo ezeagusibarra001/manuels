@@ -22,6 +22,14 @@ function Login(props) {
         setCurrentLogin({ ...currentLogin, [e.target.name]: e.target.value, })
         console.log("login", currentLogin)
     }
+    const submit = () => {
+        addToast("Usuario logueado", {
+            appearance: "success",
+            autoDismiss: true,
+        });
+        setLogin(true)
+        history.push("/AdminClases")
+    }
     const handlesubmit = async () => {
         await clienteLogin
             .post("/private/authenticate", {
@@ -64,7 +72,7 @@ function Login(props) {
                             onChange={handlechange}
                         />
                         <div className="ContainerLoginButton">
-                            <button className="LoginButton" onClick={handlesubmit} >Login</button>
+                            <button className="LoginButton" onClick={submit} >Login</button>
                         </div>
                     </div>
                 </div>
