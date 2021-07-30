@@ -20,6 +20,7 @@ function ModalClasesCrear(props) {
         duration:"",
         teacher:"",
         requeriments:"",
+        link:"",
         dates: [{
             date: ""
         }, {
@@ -39,20 +40,13 @@ function ModalClasesCrear(props) {
         else{
             setStyles({outlineColor:"red"})
         }
+        console.log(currentClase)
     }
-    var selectDate1 = document.querySelector("div:nth-child(2) > input:nth-child(9)")
-    var selectDate2 = document.querySelector("div:nth-child(2) > input:nth-child(13)")
     const handleDate1 = (e) => {
         setSuperDates([...superDates, {date: e.target.value}])
     }
-    const submitDate1 = () => {
-        selectDate1.disabled = true;
-    }
     const handleDate2 = (e) => {
         setSuperDates([...superDates, {date: e.target.value}])
-    }
-    const submitDate2 = () => {
-        selectDate2.disabled = true;
     }
     var postData = {
         title: currentClase.title,
@@ -61,9 +55,9 @@ function ModalClasesCrear(props) {
         duration: currentClase.duration,
         teacher: currentClase.teacher,
         requeriments: currentClase.requeriments,
+        link: currentClase.link,
         dates: superDates,
         quota: currentClase.quota,
-        link: "www.google.com"
     };
       
       let axiosConfig = {
@@ -169,16 +163,24 @@ function ModalClasesCrear(props) {
                             className="CCinputRequisitos"
                         />
                         <br></br>
+                        <textarea
+                            name="link"
+                            as="textarea"
+                            placeholder="Link Mercado Pago:"
+                            maxLength="65"
+                            style={Styles}
+                            onChange={handleChange}
+                            className="CCinputRequisitos"
+                        />
+                        <br></br>
                         <Card.Title>Vacantes</Card.Title>
                         <Form.Control type="number" placeholder="Vacantes" onChange={handleChange} name="quota" />
                         <br></br>
                         <Card.Title>Primer fecha</Card.Title>
                         <Form.Control type="date" name="date1" onChange={handleDate1} />
-                        <Button variant="primary" onClick={submitDate1}>Elegir</Button>
                         <br></br>
                         <Card.Title>Segunda fecha</Card.Title>
                         <Form.Control type="date" name="date2" onChange={handleDate2} />
-                        <Button variant="primary" onClick={submitDate2}>Elegir</Button>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
