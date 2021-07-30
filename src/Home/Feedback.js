@@ -1,36 +1,11 @@
 import React from "react"
 import "./Feedback.css"
 import Carousel from 'react-bootstrap/Carousel'
+import {useHome} from '../context/home-context'
 
 function Feedback(props) {
     const titulo="EXPERIENCIAS & OPINIONES"
-    const feedbacks=[
-        {
-            reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz. Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!!",
-            author:"Petosa Ayala Franco",
-            validator:true,
-        },
-        {
-            reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo",
-            author:"Ibarra Ezeuiel Agustin",
-            validator:true,
-        },
-        {
-            reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo. Super interesante y enriquecedor.",
-            author:"Oubiña Maria Pilar",
-            validator:true,
-        },
-        {
-            reseña:"Me encanta la pija",
-            author:"Centu",
-            validator:false,
-        },
-        {
-            reseña:"Mi amor fue culpa de tiffer puedo jurarlo",
-            author:"Joaquin Jimenez Jaureche",
-            validator:true,
-        },
-    ]
+    const {feedbacks} = useHome()
 
     return(
 

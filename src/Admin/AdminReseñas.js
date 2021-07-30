@@ -2,9 +2,16 @@ import React, { useState } from "react"
 import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
+import Controllerreseñas from "./Modals/Reseñas/ControllerReseñas";
 import "./Admin.css"
 
 function AdminReseñas() {
+
+/*-----------------------------------------------------------------------------*/
+    const [showVerReseñas, setShowVerReseñas] = useState(false);
+    const handleShowVerReseñas = () => setShowVerReseñas(true);
+/*-----------------------------------------------------------------------------*/
 
     return (
 
@@ -20,9 +27,10 @@ function AdminReseñas() {
                 </div>
                 <div className="Manage">
                     <Nav className="flex-column">
-                        <Nav.Link><Link >Eliminar una reseña</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setShowVerReseñas(true)} >Ver Reseñas</Link></Nav.Link>
                     </Nav>
                 </div>
+                <Controllerreseñas setShowVerReseñas={setShowVerReseñas} showVerReseñas={showVerReseñas}/>
             </div>
 
         </Layout>
