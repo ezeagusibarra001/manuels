@@ -9,7 +9,7 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesCrear(props) {
     const { addToast } = useToasts();
-    const {obtenerClases} = useHome()
+    const {obtenerClases, jwt} = useHome()
     const { showCrear, setShowCrear } = props;
     const [superDates, setSuperDates] = useState([])
     const [Styles , setStyles]=useState()
@@ -54,20 +54,30 @@ function ModalClasesCrear(props) {
     const submitDate2 = () => {
         selectDate2.disabled = true;
     }
+    var postData = {
+        title: currentClase.title,
+        description: currentClase.description,
+        forWho: currentClase.forWho,
+        duration: currentClase.duration,
+        teacher: currentClase.teacher,
+        requeriments: currentClase.requeriments,
+        dates: superDates,
+        quota: currentClase.quota,
+        link: "www.google.com"
+    };
+      
+      let axiosConfig = {
+        headers: {
+            'Authorization': `Bearer ${jwt}`
+        }
+      };
     const submit = async () => {
         await clienteAxios
-            .post("/lessons", {
-                title: currentClase.title,
-                description: currentClase.description,
-                forWho: currentClase.forWho,
-                duration: currentClase.duration,
-                teacher: currentClase.teacher,
-                requeriments: currentClase.requeriments,
-                dates: superDates,
-                quota: currentClase.quota
-            })
+            .post("/lessons", postData, axiosConfig)
             .then((res) => {
                 console.log(res.data);
+                console.log(axiosConfig)
+                console.log(postData)
                 obtenerClases();
                 handleClose()
                 addToast("Clase creada", {
@@ -77,6 +87,8 @@ function ModalClasesCrear(props) {
             })
             .catch((err) => {
                 console.log("error post", err);
+                console.log(axiosConfig)
+                console.log(postData)
             });
     };
     return (

@@ -18,9 +18,11 @@ export function HomeProvider(props) {
     //ESTADO DEL LOGIN
     const [login, setLogin]=useState(false)
     console.log("Estado del login:",login)
+    //JWT
+    const [jwt, setJwt] = useState()
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases,login,setLogin,obtenerClases
+        clases,login,setLogin,obtenerClases,jwt, setJwt
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
