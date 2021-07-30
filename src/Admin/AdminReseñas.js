@@ -28,7 +28,6 @@ function AdminReseñas() {
                 <div className="Manage">
                     <Nav className="flex-column">
                         <Nav.Link><Link onClick={() => setShowVerReseñas(true)} >Ver Reseñas</Link></Nav.Link>
-                        <Nav.Link><Link >Eliminar una reseña</Link></Nav.Link>
                     </Nav>
                 </div>
                 <Controllerreseñas setShowVerReseñas={setShowVerReseñas} showVerReseñas={showVerReseñas}/>
