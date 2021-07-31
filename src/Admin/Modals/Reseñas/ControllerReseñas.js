@@ -18,9 +18,6 @@ function Controllerreseñas(props) {
     const setShowVerReseñas= props.setShowVerReseñas
     const handleCloseVerReseñas = () => setShowVerReseñas(false);
 /*-----------------------------------------------------------------------------*/
-
-    
-
     return(
 
         <div>
