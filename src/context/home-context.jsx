@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import clienteAxios from '../config/clienteAxios'
 const HomeContext = React.createContext();
 
@@ -16,42 +16,42 @@ export function HomeProvider(props) {
         });
     };
     //ESTADO DEL LOGIN
-    const [login, setLogin]=useState(false)
-    console.log("Estado del login:",login)
-/*---------------------------------------------------ARRAY RESEÑAS--------------------------------------------*/
-const [feedbacks, setFeedbacks]=useState( [
-    {
-        reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz. Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!!",
-        author:"Petosa Ayala Franco",
-        validator:true,
-    },
-    {
-        reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo",
-        author:"Ibarra Ezeuiel Agustin",
-        validator:true,
-    },
-    {
-        reseña:"Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo. Super interesante y enriquecedor.",
-        author:"Oubiña Maria Pilar",
-        validator:true,
-    },
-    {
-        reseña:"Me encanta la pija",
-        author:"Centu",
-        validator:false,
-    },
-    {
-        reseña:"Mi amor fue culpa de tiffer puedo jurarlo",
-        author:"Joaquin Jimenez Jaureche",
-        validator:true,
-    },
-])
-/*------------------------------------------------------------------------------------------------------------*/
+    const [login, setLogin] = useState(false)
+    console.log("Estado del login:", login)
+    /*---------------------------------------------------ARRAY RESEÑAS--------------------------------------------*/
+    const [feedbacks, setFeedbacks] = useState([
+        {
+            reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz. Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!!",
+            author: "Petosa Ayala Franco",
+            validator: true,
+        },
+        {
+            reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo",
+            author: "Ibarra Ezeuiel Agustin",
+            validator: true,
+        },
+        {
+            reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo. Super interesante y enriquecedor.",
+            author: "Oubiña Maria Pilar",
+            validator: true,
+        },
+        {
+            reseña: "Me encanta la pija",
+            author: "Centu",
+            validator: false,
+        },
+        {
+            reseña: "Mi amor fue culpa de tiffer puedo jurarlo",
+            author: "Joaquin Jimenez Jaureche",
+            validator: true,
+        },
+    ])
+    /*------------------------------------------------------------------------------------------------------------*/
     //JWT
     const [jwt, setJwt] = useState()
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases,login,setLogin,obtenerClases,jwt, setJwt , feedbacks , setFeedbacks,
+        clases, login, setLogin, obtenerClases, jwt, setJwt, feedbacks, setFeedbacks,
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
