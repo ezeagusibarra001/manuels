@@ -4,49 +4,49 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import clienteAxios from '../../../config/clienteAxios'
-import {useHome} from '../../../context/home-context'
+import { useHome } from '../../../context/home-context'
 import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesCrear(props) {
     const { addToast } = useToasts();
-    const {obtenerClases, jwt} = useHome()
+    const { obtenerClases, axiosConfig } = useHome()
     const { showCrear, setShowCrear } = props;
     const [superDates, setSuperDates] = useState([])
-    const [Styles , setStyles]=useState()
+    const [Styles, setStyles] = useState()
     const [currentClase, setCurrentClase] = useState({
-        title:"",
-        description:"",
-        forWho:"",
-        duration:"",
-        teacher:"",
-        requeriments:"",
-        link:"",
+        title: "",
+        description: "",
+        forWho: "",
+        duration: "",
+        teacher: "",
+        requeriments: "",
+        link: "",
         dates: [{
             date: ""
         }, {
             date: "" || ""
         }],
-        quota:""
+        quota: ""
     })
     const handleClose = () => {
         setShowCrear(false)
     }
     const handleChange = (e) => {
-        setCurrentClase({...currentClase,[e.target.name]: e.target.value,})
-        const max=e.target.maxLength
-        if(0<(e.target.value).length && (e.target.value).length<e.target.maxLength){
-            setStyles({outlineColor:"green"})
+        setCurrentClase({ ...currentClase, [e.target.name]: e.target.value, })
+        const max = e.target.maxLength
+        if (0 < (e.target.value).length && (e.target.value).length < e.target.maxLength) {
+            setStyles({ outlineColor: "green" })
         }
-        else{
-            setStyles({outlineColor:"red"})
+        else {
+            setStyles({ outlineColor: "red" })
         }
         console.log(currentClase)
     }
     const handleDate1 = (e) => {
-        setSuperDates([...superDates, {date: e.target.value}])
+        setSuperDates([...superDates, { date: e.target.value }])
     }
     const handleDate2 = (e) => {
-        setSuperDates([...superDates, {date: e.target.value}])
+        setSuperDates([...superDates, { date: e.target.value }])
     }
     var postData = {
         title: currentClase.title,
@@ -59,17 +59,11 @@ function ModalClasesCrear(props) {
         dates: superDates,
         quota: currentClase.quota,
     };
-      
-      let axiosConfig = {
-        headers: {
-            'Authorization': `Bearer ${jwt}`,
-            /*"Access-Control-Allow-Origin": "*",
-            'Access-Control-Allow-Credentials':'true'*/
-        }
-      };
+
+    
     const submit = async () => {
         await clienteAxios
-            .post("/lessons", postData)
+            .post("/lessons", postData, axiosConfig)
             .then((res) => {
                 console.log(res.data);
                 console.log(axiosConfig)
@@ -101,14 +95,14 @@ function ModalClasesCrear(props) {
                 </Modal.Header>
                 <Modal.Body className="row">
                     <div className="col-6">
-                        <textarea 
-                        type="text" 
-                        placeholder="Titulo" 
-                        maxLength="22"
-                        onChange={handleChange} 
-                        name="title" 
-                        style={Styles}
-                        className="CCinputTitle"
+                        <textarea
+                            type="text"
+                            placeholder="Titulo"
+                            maxLength="22"
+                            onChange={handleChange}
+                            name="title"
+                            style={Styles}
+                            className="CCinputTitle"
                         />
                         <br></br>
                         <textarea

@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import clienteAxios from '../../config/clienteAxios'
-import { useHome } from '../../context/home-context'
-import "../Admin.css"
+import clienteAxios from '../../../config/clienteAxios'
+import { useHome } from '../../../context/home-context'
+import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerClases, clases } = useHome()
+    const { obtenerClases, clases, axiosConfig } = useHome()
     const { showEliminar, setShowEliminar } = props;
     const handleClose = () => {
         setShowEliminar(false)
     }
     const handleEliminar = async (clases) => {
         await clienteAxios
-            .delete(`/lessons/${clases.idLesson}`)
+            .delete(`/lessons/${clases.idLesson}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
                 obtenerClases()

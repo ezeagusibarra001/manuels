@@ -54,9 +54,19 @@ export function HomeProvider(props) {
     /*------------------------------------------------------------------------------------------------------------*/
     //JWT
     const [jwt, setJwt] = useState()
+    //AXIOSJWT
+    let axiosConfig = {
+        headers: {
+            'Authorization': `Bearer ${jwt}`,
+            "Access-Control-Allow-Origin": "http://localhost:3000",
+            'Access-Control-Allow-Credentials': 'true',
+            /*   'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',*/
+            'Access-Control-Allow-Headers': 'Authorization'
+        }
+    };
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases, login, setLogin, obtenerClases, jwt, setJwt, feedbacks, setFeedbacks,
+        clases, login, setLogin, obtenerClases, jwt, setJwt, feedbacks, setFeedbacks,axiosConfig
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
