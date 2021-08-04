@@ -21,26 +21,31 @@ export function HomeProvider(props) {
     /*---------------------------------------------------ARRAY RESEÑAS--------------------------------------------*/
     const [feedbacks, setFeedbacks] = useState([
         {
+            id:1,
             reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz. Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!!",
             author: "Petosa Ayala Franco",
             validator: true,
         },
         {
+            id:2,
             reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo",
             author: "Ibarra Ezeuiel Agustin",
             validator: true,
         },
         {
+            id:3,
             reseña: "Desafie todos mis miedos , me supere a mi misma utilizando el poder de mi voz Gracias Manuels por haberme ayudado a alcanzar una mejor version de mi misma!!! Hoy me siento mas influencer que nunca.A seguir creciendo. Super interesante y enriquecedor.",
             author: "Oubiña Maria Pilar",
             validator: true,
         },
         {
+            id:4,
             reseña: "Me encanta la pija",
             author: "Centu",
             validator: false,
         },
         {
+            id:5,
             reseña: "Mi amor fue culpa de tiffer puedo jurarlo",
             author: "Joaquin Jimenez Jaureche",
             validator: true,

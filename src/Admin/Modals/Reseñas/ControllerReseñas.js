@@ -12,41 +12,38 @@ import Feedback from '../../../Home/Feedback'
 
 function Controllerreseñas(props) {
 
-    const {feedbacks} = useHome()
+    const {feedbacks, setFeedbacks} = useHome()
+    
+    const validation= ()=>{
+
+    }
 /*-----------------------------------------------------------------------------*/
     const showVerReseñas= props.showVerReseñas
     const setShowVerReseñas= props.setShowVerReseñas
     const handleCloseVerReseñas = () => setShowVerReseñas(false);
 /*-----------------------------------------------------------------------------*/
-
-    
-
     return(
-
-        <div>
-            
-        <Modal show={showVerReseñas} onHide={handleCloseVerReseñas}>
-            <Modal.Header closeButton />
-            {feedbacks.map((feedbacks) => (
-                <Modal.Body>
-                    <textarea 
-                    value={feedbacks.author}
-                    />
-                    <textarea 
-                    value={feedbacks.reseña}
-                    />
-                    <button>Aceptar</button>
-                    <button>Eliminar</button>
-                </Modal.Body>
-             ))}
-            <Modal.Footer>
-                <Button onClick={handleCloseVerReseñas}>Close</Button>
-                <Button  onClick={handleCloseVerReseñas}>Save Changes</Button>
-            </Modal.Footer>
-        </Modal>
-
+        <div> 
+            <Modal show={showVerReseñas} onHide={handleCloseVerReseñas}>
+                <Modal.Header closeButton />
+                {feedbacks.map((feedbacks) => (
+                    <Modal.Body>
+                        <textarea 
+                        value={feedbacks.author}
+                        />
+                        <textarea 
+                        value={feedbacks.reseña}
+                        />
+                        <button  onClick={validation}>Aceptar</button>
+                        <button>Eliminar</button>
+                    </Modal.Body>
+                ))}
+                <Modal.Footer>
+                    <Button onClick={handleCloseVerReseñas}>Close</Button>
+                    <Button  onClick={handleCloseVerReseñas}>Save Changes</Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     )
-    
 }
 export default Controllerreseñas;
