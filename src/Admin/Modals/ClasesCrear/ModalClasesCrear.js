@@ -63,13 +63,13 @@ function ModalClasesCrear(props) {
       let axiosConfig = {
         headers: {
             'Authorization': `Bearer ${jwt}`,
-            "Access-Control-Allow-Origin": "*",
-            'Access-Control-Allow-Credentials':'true'
+            /*"Access-Control-Allow-Origin": "*",
+            'Access-Control-Allow-Credentials':'true'*/
         }
       };
     const submit = async () => {
         await clienteAxios
-            .post("/lessons", postData, axiosConfig)
+            .post("/lessons", postData)
             .then((res) => {
                 console.log(res.data);
                 console.log(axiosConfig)
@@ -184,7 +184,7 @@ function ModalClasesCrear(props) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={(e)=>submit(e)}>Crear</Button>
+                    <Button variant="primary" onClick={submit}>Crear</Button>
                     <Button variant="primary" onClick={handleClose}>Cerrar</Button>
 
                 </Modal.Footer>
