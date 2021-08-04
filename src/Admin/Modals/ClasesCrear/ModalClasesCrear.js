@@ -66,8 +66,6 @@ function ModalClasesCrear(props) {
             .post("/lessons", postData, axiosConfig)
             .then((res) => {
                 console.log(res.data);
-                console.log(axiosConfig)
-                console.log(postData)
                 obtenerClases();
                 handleClose()
                 addToast("Clase creada", {

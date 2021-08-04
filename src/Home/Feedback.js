@@ -5,7 +5,7 @@ import {useHome} from '../context/home-context'
 
 function Feedback(props) {
     const titulo="EXPERIENCIAS & OPINIONES"
-    const {feedbacks} = useHome()
+    const {reviews} = useHome()
 
     return(
 
@@ -16,13 +16,13 @@ function Feedback(props) {
                 </div>
                 <div className="ContainerFeedbackCarrusel">
                     <Carousel className="FeedbackCarrusel">
-                        {feedbacks.filter((feedbacks) =>feedbacks.validator ===true).map(feedbacks=>
+                        {reviews.filter((reviews) =>reviews.validate === true).map(reviews=>
                             <Carousel.Item className="ContainerFeedbackCarruselSection">
                                 <div className="ContainerCarruselReseñas">
                                     <h3 className="FeedbackReseña">
-                                        "{feedbacks.reseña}"
+                                        "{reviews.commentary}"
                                     </h3>
-                                    <h1 className="FeedbackAuthor">-{feedbacks.author}</h1>
+                                    <h1 className="FeedbackAuthor">-{reviews.name}</h1>
                                 </div>
                             </Carousel.Item>
                         )}
