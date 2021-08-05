@@ -6,6 +6,8 @@ import Video from "./Video";
 import Servicios from "./Servicios";
 import Marcas from "./Marcas";
 import Feedback from "./Feedback";
+import Loading from "../Loading/Loading";
+
 
 
 function Home(props) {
@@ -18,6 +20,7 @@ function Home(props) {
            <Servicios />
            <Marcas />
            <Feedback/>
+           <Loading />
         </Layout>
     )
     
