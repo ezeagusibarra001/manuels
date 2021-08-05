@@ -26,6 +26,16 @@ export function HomeProvider(props) {
             console.log(res.data);
         });
     };
+    //IMAGENES API
+    const [imagenes, setImagenes] = useState([]);
+    useEffect(() => {
+        obtenerImagenes();
+    }, []);
+    const obtenerImagenes = async () => {
+        await clienteAxios.get("/images").then((res) => {
+            setImagenes(res.data);
+        });
+    };
     //ESTADO DEL LOGIN
     const [login, setLogin] = useState(false)
     console.log("Estado del login:", login)
@@ -42,9 +52,12 @@ export function HomeProvider(props) {
             'Access-Control-Allow-Headers': 'Authorization'
         }
     };
+    //CURRENT CHECKOUT CLASE
+    const [currentClase, setCurrentClase] = useState();
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases, login, setLogin, obtenerClases, jwt, setJwt,axiosConfig, reviews, obtenerReseñas
+        clases, login, setLogin, obtenerClases, jwt, setJwt,axiosConfig, reviews, obtenerReseñas,
+        currentClase, setCurrentClase, imagenes
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

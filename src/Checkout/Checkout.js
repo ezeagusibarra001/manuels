@@ -5,9 +5,11 @@ import Modalguide from "./Modalguide";
 import Button from 'react-bootstrap/Button'
 import "./Checkout.css"
 /*import { useHistory } from "react-router-dom"*/
+import {useHome} from '../context/home-context'
 
 
 function Checkout(props) {
+    const {currentClase} = useHome()
 /*-----------------------MODAL PARA CONFIRMAR INSCRIPCION--------------------- */
     const [show, setShow] = useState(false);
     const handleShow = () =>{
@@ -33,7 +35,7 @@ function Checkout(props) {
         setShow2(true)
     }, []);
 /*-----------------------------------------------------------------------*/
-    const Link="https://developer.mozilla.org/es/docs/Web/HTML/Element/select"
+   
     return(
         <Layout >
         <div className="Containercheckout">
@@ -77,7 +79,7 @@ function Checkout(props) {
                 <h1  className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
 
                 <h1 className="CheckoutSubtitleM">Mercado Pago:</h1>
-                <h1 className="CheckoutinputM"> Inscripción Vía <a target="_blank" href={Link} className="CheckoutLinkM"> Mercado Pago </a> </h1>
+                <h1 className="CheckoutinputM"> Inscripción Vía <a target="_blank" href={currentClase} className="CheckoutLinkM"> Mercado Pago </a> </h1>
                 
 
                 <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
