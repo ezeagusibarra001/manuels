@@ -21,6 +21,7 @@ function ModalClasesCrear(props) {
         teacher: "",
         requeriments: "",
         link: "",
+        link1: "",
         dates: [{
             date: ""
         }, {
@@ -56,6 +57,7 @@ function ModalClasesCrear(props) {
         teacher: currentClase.teacher,
         requeriments: currentClase.requeriments,
         link: currentClase.link,
+        link1: currentClase.link1,
         dates: superDates,
         quota: currentClase.quota,
     };
@@ -159,6 +161,16 @@ function ModalClasesCrear(props) {
                             name="link"
                             as="textarea"
                             placeholder="Link Mercado Pago:"
+                            maxLength="65"
+                            style={Styles}
+                            onChange={handleChange}
+                            className="CCinputRequisitos"
+                        />
+                        <br></br>
+                        <textarea
+                            name="link1"
+                            as="textarea"
+                            placeholder="Link Seña Pago:"
                             maxLength="65"
                             style={Styles}
                             onChange={handleChange}

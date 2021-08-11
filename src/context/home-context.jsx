@@ -15,6 +15,17 @@ export function HomeProvider(props) {
             console.log(res.data);
         });
     };
+    //BLOG API
+    const [blog, setBlog] = useState([]);
+    useEffect(() => {
+        obtenerBlogs();
+    }, []);
+    const obtenerBlogs = async () => {
+        await clienteAxios.get("/publications/").then((res) => {
+            setBlog(res.data);
+            console.log(res.data);
+        });
+    };
     //RESEÑAS API
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
@@ -57,7 +68,7 @@ export function HomeProvider(props) {
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt,axiosConfig, reviews, obtenerReseñas,
-        currentClase, setCurrentClase, imagenes
+        currentClase, setCurrentClase, imagenes,obtenerImagenes, blog, obtenerBlogs
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

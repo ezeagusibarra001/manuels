@@ -1,0 +1,42 @@
+return(
+    <div className="ContainerPublicaciones">
+        {blog.map((publicacion) =>(
+        <div className="ContainerAux">
+            <div className="ContainerPublicacionesTitulo">
+                <h1 className="PublicacionesTitulo">{publicacion.title}</h1>
+            </div>
+            <div className="SubContainerPublicaciones">
+                <div className="ContainerPublicacionesImg1">
+                {imagenes.map((i)=>{if(i.id_img === null){
+                    return "";
+                }else{
+                    return(<img src={`data:${i.type};base64,${i.bytes.getBytes}`}/>)
+                }})}
+                </div>
+                <div className="ContainerPublicacionesTextos1">
+                    <h2 className="PublicacionesSubTitulo">
+                        <b>Exploramiento y uso de la voz como metodologia psicoterapeutica</b>
+                    </h2>
+                    <p className="PublicacionesParrafos">
+                        {publicacion.subtitle}
+                    </p>
+                    <p className="PublicacionesParrafos">
+                        {publicacion.description}
+                    </p>
+                </div>
+                <div className="ContainerPublicacionesTextos2">
+                    <h2 className="PublicacionesSubTitulo">
+                        <b>Exploramiento y uso de la voz como metodologia psicoterapeutica</b>
+                    </h2>
+                    <p className="PublicacionesParrafos">
+                        {publicacion.subtitle2}
+                    </p>
+                    <p className="PublicacionesParrafos">
+                        {publicacion.description1}
+                    </p>
+                </div>
+            </div> 
+        </div>
+         ))}
+    </div>
+    )

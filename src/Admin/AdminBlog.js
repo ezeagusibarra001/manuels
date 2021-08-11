@@ -3,9 +3,11 @@ import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
 import "./Admin.css"
-
+import ModalBlogCrear from './Modals/BlogCrear/ModalBlogCrear'
+import ModalBlogEliminar from './Modals/BlogCrear/ModalBlogEliminar'
 function AdminBlog() {
-
+    const [showCrear, setShowCrear] = useState(false)
+    const [showEliminar, setShowEliminar] = useState(false)
     return (
 
         <Layout>
@@ -20,11 +22,19 @@ function AdminBlog() {
                 </div>
                 <div className="Manage">
                     <Nav className="flex-column">
-                        <Nav.Link><Link >Crear una publicacion</Link></Nav.Link>
-                        <Nav.Link><Link >Eliminar una publicacion</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setShowCrear(true)}>Crear una publicacion</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setShowEliminar(true)}>Eliminar una publicacion</Link></Nav.Link>
                     </Nav>
                 </div>
             </div>
+            <ModalBlogCrear
+                showCrear={showCrear}
+                setShowCrear={setShowCrear}
+            />
+            <ModalBlogEliminar
+                showEliminar={showEliminar}
+                setShowEliminar={setShowEliminar}
+            />
         </Layout>
     )
 

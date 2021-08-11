@@ -51,15 +51,18 @@ function Controllerreseñas(props) {
                 <Modal.Header closeButton />
                 {reviews.filter((reviews) =>reviews.validate === false).map((review) => (
                     <Modal.Body>
-                        <Card>
+                        <Card >
                             <label>{review.name}</label>
                             <label>{review.commentary}</label>
                             <Button
+                                className="col-6"
                                 variant="primary"
                                 onClick={() => handleEliminar(review)}
                             >Borrar</Button>
+                            <br></br>
                             <Button
-                                variant="primary"
+                            className="col-6"
+                                variant="outline-primary"
                                 onClick={() => handleModificar(review)}
                             >Aceptar</Button>
                         </Card>
@@ -67,7 +70,7 @@ function Controllerreseñas(props) {
                     </Modal.Body>
                 ))}
                 <Modal.Footer>
-                    <Button onClick={handleCloseVerReseñas}>Close</Button>
+                    <Button variant="outline-primary" onClick={handleCloseVerReseñas}>Close</Button>
                     <Button onClick={handleCloseVerReseñas}>Save Changes</Button>
                 </Modal.Footer>
             </Modal>
