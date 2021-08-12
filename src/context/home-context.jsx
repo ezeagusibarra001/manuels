@@ -26,6 +26,17 @@ export function HomeProvider(props) {
             console.log(res.data);
         });
     };
+    //ONE IMAGE API
+    const [oneImage, setOneImage] = useState([]);
+    useEffect(() => {
+        obtenerImg();
+    }, []);
+    const obtenerImg = async () => {
+        await clienteAxios.get("/images/icono1.png").then((res) => {
+            setOneImage(res.data);
+            console.log(res.data);
+        });
+    };
     //RESEÑAS API
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
@@ -68,7 +79,7 @@ export function HomeProvider(props) {
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt,axiosConfig, reviews, obtenerReseñas,
-        currentClase, setCurrentClase, imagenes,obtenerImagenes, blog, obtenerBlogs
+        currentClase, setCurrentClase, imagenes,obtenerImagenes, blog, obtenerBlogs, oneImage
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

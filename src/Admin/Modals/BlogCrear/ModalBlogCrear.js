@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
-import Card from 'react-bootstrap/Card'
+import ReturnCrear from './ReturnCrear'
+import axios from 'axios'
 import clienteAxios from '../../../config/clienteAxios'
 import { useHome } from '../../../context/home-context'
 import "../../Admin.css"
@@ -37,18 +35,27 @@ function ModalBlogCrear(props) {
             setStyles({ outlineColor: "red" })
         }
         console.log(currentBlog)
+    };
+    /*-------------------------------POST IMAGE----------------------------------------*/
+    const [file, setFile] = useState({
+        file: null
+    })
+
+    const handleFile = (e) => {
+        let file = e.target.files[0]
+        setFile({ file: file })
+        console.log(file)
     }
     var postData = {
-
-        "title": "ANGULAR JS",
-        "description": "El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a su ancestro que se desplace más cercano y su bloque contenedor (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de top, right, bottom, y left. El desplazamiento no afecta la posición de ningún otro elmento.",
-        "description1": "El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a su ancestro que se desplace más cercano y su bloque contenedor (ancestro en nivel de bloque más cercano) incluyendo elementos relacionados a tablas, basados en los valores de top, right, bottom, y left. El desplazamiento no afecta la posición de ningún otro elmento.",
-        "description2": "",
-        "description3": "",
-        "subtitle": "Exploramiento y uso de la voz como metodologia psicoterapeutica",
-        "subtitle2": "Exploramiento y uso de la voz como metodologia psicoterapeutica",
+        "title": currentBlog.title,
+        "description": currentBlog.description,
+        "description1": currentBlog.description1,
+        "description2": currentBlog.description2,
+        "description3": currentBlog.description3,
+        "subtitle": currentBlog.subtitle,
+        "subtitle2": currentBlog.subtitle2,
         "image": {
-            "idImage": 9
+            "idImage": 11
         }
     }
     const submit = async () => {
@@ -69,28 +76,30 @@ function ModalBlogCrear(props) {
                 console.log(postData)
             });
     };
+    const handleUpload = (e) => {
+        let image = file.file;
+        let formdata = new FormData();
+        formdata.append('image', image)
+        axios({
+            url: `http://localhost:8080/api/images`,
+            method: "POST",
+            data: formdata
+        }).then((res) => {
+            console.log(res.data)
+        }).catch((err) => {
+            console.log(err)
+        })
+    };
     return (
-        <div>
-
-            <Modal
-                show={showCrear}
-                onHide={handleClose}
-                backdrop="static"
-                keyboard={false}
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title id="modal-tittle">Crear clase</Modal.Title>
-                </Modal.Header>
-                <Modal.Body className="row">
-
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" onClick={submit}>Crear</Button>
-                    <Button variant="primary" onClick={handleClose}>Cerrar</Button>
-
-                </Modal.Footer>
-            </Modal>
-        </div>
+        <ReturnCrear
+            handleUpload={handleUpload}
+            showCrear={showCrear}
+            handleClose={handleClose}
+            handleChange={handleChange}
+            Styles={Styles}
+            handleFile={handleFile}
+            handleUpload={handleUpload}
+        />
     )
 }
 
