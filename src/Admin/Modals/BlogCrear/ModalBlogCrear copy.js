@@ -57,7 +57,11 @@ function ModalBlogCrear(props) {
                 "description3": currentBlog.description3,
                 "subtitle": currentBlog.subtitle,
                 "subtitle2": currentBlog.subtitle2,
-                "image": formdata
+                "image": {
+                    "name": file.file.name,
+                    "type": file.file.type,
+                    "bytes": blob.blob
+                }
             }, axiosConfig)
             .then((res) => {
                 console.log(res.data);

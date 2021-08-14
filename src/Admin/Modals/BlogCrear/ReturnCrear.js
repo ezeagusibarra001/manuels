@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 function ReturnCrear(props) {
-    const {showCrear, handleClose, handleChange, Styles, handleFile, handleUpload} = props;
+    const {showCrear, handleClose, handleChange, Styles, handleFile, submit} = props;
     return (
         <div>
 
@@ -99,7 +99,7 @@ function ReturnCrear(props) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={handleUpload}>Crear</Button>
+                    <Button variant="primary" onClick={submit}>Crear</Button>
                     <Button variant="primary" onClick={handleClose}>Cerrar</Button>
 
                 </Modal.Footer>
