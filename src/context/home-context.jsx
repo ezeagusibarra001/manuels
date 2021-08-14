@@ -61,9 +61,6 @@ export function HomeProvider(props) {
     //ESTADO DEL LOGIN
     const [login, setLogin] = useState(false)
     console.log("Estado del login:", login)
-    //ESTAO DEL LOADING
-    const [loading, setLoading]=useState(false)
-    /*---------------------------------------------------ARRAY RESEÑAS--------------------------------------------*/
     /*------------------------------------------------------------------------------------------------------------*/
     //JWT
     const [jwt, setJwt] = useState()
