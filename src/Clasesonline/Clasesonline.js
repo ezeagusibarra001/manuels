@@ -10,9 +10,10 @@ import Talleres from "./Talleres";
 import Gift from "./Gift";
 import Reseñas from "./Reseñas"
 import {useHome} from '../context/home-context'
+import Loading from "../Loading/Loading";
 
 function Clasesonline(props) {
-    const {clases} = useHome()
+    const {clases, loading} = useHome()
     const talleres=[
         {
             titulo:"Empresariales",
@@ -81,13 +82,24 @@ function Clasesonline(props) {
               <Portada />
               <ClasesPersonalizadas />
               <ClasesGrupales />
-              <div className="ContainerPadreCursos">
-                <div className="ContainerHijoCursos">
-                    <div className="SubContainerHijoCursos">
-                        {clases.map(data=><Cursos data={data}/>)}
+                {
+                    loading == false ?
+                    <>
+                    <div className="ContainerPadreCursos">
+                        <div className="ContainerHijoCursos">
+                            <div className="SubContainerHijoCursos">
+                                {clases.map(data=><Cursos data={data}/>)}
+                            </div>
+                        </div>
                     </div>
-                </div>
-              </div>
+                    </>
+                    :
+                    <>
+                    <div className="ContainerPadreCursos">
+                        <Loading/>
+                    </div>
+                    </>
+                }
               <div className="ConatinerPadreTalleres">
                 <div className="ContainerSubTalleres">
                     {talleres.map(talleres=><Talleres data={talleres} />)}
