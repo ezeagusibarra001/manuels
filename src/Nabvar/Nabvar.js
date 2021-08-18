@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React from "react"
 import NabvarDesktop from "./NabvarDesktop"
 import NabvarMobile from "./NabvarMobile"
 import {scroller} from "react-scroll";

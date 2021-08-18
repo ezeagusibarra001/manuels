@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import "./Modalguide.css"
@@ -15,7 +15,7 @@ function Modalguide(props) {
             <Modal show={show2} onHide={handleClose2}>
                 <Modal.Header closeButton>
                     <div className="ContainerHeader">
-                        <img
+                        <img alt="img"
                             src="../assets/logo2.png"
                             className="Guideimg"
                         />
@@ -26,7 +26,7 @@ function Modalguide(props) {
                     <div className="ContainerPasos">
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
-                                <img
+                                <img alt="img"
                                     src="../assets/iconoc9.png"
                                     className="GuideIconos"
                                 />
@@ -38,7 +38,7 @@ function Modalguide(props) {
                         </div>
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
-                                <img
+                                <img alt="img"
                                     src="../assets/iconoc9.png"
                                     className="GuideIconos"
                                 />
@@ -50,7 +50,7 @@ function Modalguide(props) {
                         </div>
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
-                                <img
+                                <img alt="img"
                                     src="../assets/iconoc9.png"
                                     className="GuideIconos"
                                 />
@@ -62,7 +62,7 @@ function Modalguide(props) {
                         </div>
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
-                                <img
+                                <img alt="img"
                                     src="../assets/iconoc9.png"
                                     className="GuideIconos"
                                 />
@@ -74,12 +74,13 @@ function Modalguide(props) {
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
                                 <img
+                                    alt="img"
                                     src="../assets/iconoc9.png"
                                     className="GuideIconos"
                                 />
                             </div>
                             <p className="GuideTexto">
-                                En caso de tener algún tipo de complicación <b> <a target="_blank" href="https://www.instagram.com/manuels.locucion/?hl=es-la">¡Contactame! </a> </b>
+                                En caso de tener algún tipo de complicación <b> <a target="_blank" rel="noreferrer" href="https://www.instagram.com/manuels.locucion/?hl=es-la">¡Contactame! </a> </b>
                             </p>
                         </div>
                     </div>

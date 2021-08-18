@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Layout from "../Layout";
 import "./Login.css"
 import { useHistory } from "react-router-dom"
@@ -7,7 +7,7 @@ import { useToasts } from "react-toast-notifications";
 import clienteLogin from '../config/clienteLogin'
 
 function Login(props) {
-
+    
     const { addToast } = useToasts();
     const history = useHistory()
     /* TRAIGO DEL CONTEXT EL ESTADO DEL LOGIN ( HOOK VARIABLE ) */
@@ -22,14 +22,14 @@ function Login(props) {
         setCurrentLogin({ ...currentLogin, [e.target.name]: e.target.value, })
         console.log("login", currentLogin)
     }
-    const submit = () => {
+    /*const submit = () => {
         addToast("Usuario logueado", {
             appearance: "success",
             autoDismiss: true,
         });
         setLogin(true)
         history.push("/AdminClases")
-    }
+    }*/
     const handlesubmit = async () => {
         await clienteLogin
             .post("/private/authenticate", {
@@ -51,8 +51,13 @@ function Login(props) {
             .catch((err) => {
                 console.log("error post", err);
                 console.log(currentLogin)
+                addToast("Acceso denegado", {
+                    appearance: "error",
+                    autoDismiss: true,
+                });
             });
     };
+   
     return (
         <Layout>
             <div className="ContainerPadreLogin">

@@ -61,7 +61,7 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" className="InputReseña1"
+                                    <input className="InputReseña1"
                                         name="name"
                                         type="text"
                                         value={reseñaform.name}
@@ -76,7 +76,8 @@ function Reseñas() {
                             </tr>
                             <tr>
                                 <td>
-                                    <textarea type="text" className="InputReseña2"
+                                    <textarea
+                                        className="InputReseña2"
                                         name="commentary"
                                         type="text"
                                         maxLength="260"

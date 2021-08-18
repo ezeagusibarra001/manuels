@@ -3,10 +3,10 @@ import "./ClasesPersonalizadas.css"
 
 function ClasesPersonalizadas() {
 
-    const Mensaje=()=>{
+    const Mensaje = () => {
         alert("GRACIAS!")
     }
-    return(
+    return (
 
         <div className="ContainerPadreClasesPersonalizadas">
             <div className="ContainerSubPadreClasesPersonalizadas">
@@ -17,15 +17,15 @@ function ClasesPersonalizadas() {
                     </div>
                     <div className="ContainerItem1Personalizadas">
                         <p className="TextoPersonalizadas1">
-                        La experiencia y autodescubrimiento de la voz y su versatilidad a través del juego. 
-                        El conocimiento de nuevas herramientas que ayudarán que la comunicación sea más eficaz. 
-                        Transitar, experimentar y animarse a lo desconocido para transmitir con más confianza y 
-                        claridad
+                            La experiencia y autodescubrimiento de la voz y su versatilidad a través del juego.
+                            El conocimiento de nuevas herramientas que ayudarán que la comunicación sea más eficaz.
+                            Transitar, experimentar y animarse a lo desconocido para transmitir con más confianza y
+                            claridad
                         </p>
                         <div className="ContainerIcono1Personalizadas">
-                            <img
-                            src="../assets/iconoc1.png"
-                            className="iconoc1"
+                            <img alt="img"
+                                src="../assets/iconoc1.png"
+                                className="iconoc1"
                             />
                         </div>
                     </div>
@@ -34,9 +34,9 @@ function ClasesPersonalizadas() {
                             Estas clases pueden tomarse de manera individual o de a dos personas
                         </p>
                         <div className="ContainerIcono2Personalizadas">
-                            <img
-                            src="../assets/iconoc2.png"
-                            className="iconoc2"
+                            <img alt="img"
+                                src="../assets/iconoc2.png"
+                                className="iconoc2"
                             />
                         </div>
                     </div>
@@ -44,36 +44,36 @@ function ClasesPersonalizadas() {
                 <div className="ContainerHijo2">
                     <div className="ContainerItem3Personalizadas">
                         <p className="TextoPersonalizadas3">
-                        CONTENIDOS: Respiración, articulación, oratoria,impro, lectura de diferentes formatos, 
-                        locución comercial, neutro, radio, conducción ante cámara, ente otros
+                            CONTENIDOS: Respiración, articulación, oratoria,impro, lectura de diferentes formatos,
+                            locución comercial, neutro, radio, conducción ante cámara, ente otros
                         </p>
                         <div className="ContainerIcono3Personalizadas">
-                            <img
-                            src="../assets/iconoc3.png"
-                            className="iconoc3"
+                            <img alt="img"
+                                src="../assets/iconoc3.png"
+                                className="iconoc3"
                             />
                         </div>
                     </div>
                     <div className="ContainerItem4Personalizadas">
                         <p className="TextoPersonalizadas4">
-                        1 hora, un encuentro semanal. No hay máximo de  clases, depende de los avances y de los 
-                        contenidos que elija transitar cada alumno
+                            1 hora, un encuentro semanal. No hay máximo de  clases, depende de los avances y de los
+                            contenidos que elija transitar cada alumno
                         </p>
                         <div className="ContainerIcono4Personalizadas">
-                            <img
-                            src="../assets/iconoc4.png"
-                            className="iconoc4"
+                            <img alt="img"
+                                src="../assets/iconoc4.png"
+                                className="iconoc4"
                             />
                         </div>
                     </div>
                     <div className="ContainerItem5Personalizadas">
                         <p className="TextoPersonalizadas5">
-                        Skype. De descarga gratuita
+                            Skype. De descarga gratuita
                         </p>
                         <div className="ContainerIcono5Personalizadas">
-                            <img
-                            src="../assets/iconoc5.png"
-                            className="iconoc5"
+                            <img alt="img"
+                                src="../assets/iconoc5.png"
+                                className="iconoc5"
                             />
                         </div>
                     </div>
@@ -81,11 +81,11 @@ function ClasesPersonalizadas() {
                         <button className="ButtonPersonalizadas" onClick={Mensaje}> <b>¡QUIERO SABER MÁS!</b> </button>
                     </div>
                 </div>
-                
+
 
             </div>
         </div>
     )
-    
+
 }
 export default ClasesPersonalizadas;

@@ -18,7 +18,7 @@ function Cursos(props) {
     }
 
     return (
-
+        
         <div className="ContainerItemsCursos">
             <div className="ContainerCursosTitulos">
                 <h1 className="CursosTitulos">{data.title}</h1>
@@ -38,7 +38,7 @@ function Cursos(props) {
             </div>
             <div className="ContainerIconosCursos">
                 <div className="ContainerImgCursos">
-                    <img className="ImgCursos" src="./assets/iconoc4.png" />
+                    <img  alt="img" className="ImgCursos" src="./assets/iconoc4.png" />
                 </div>
                 <div className="ContainerCursosTextitos">
                     <p className="CursosTextitos">
@@ -46,7 +46,7 @@ function Cursos(props) {
                     </p>
                 </div>
                 <div className="ContainerImgCursos">
-                    <img className="ImgCursos" src="./assets/iconoc2.png" />
+                    <img alt="img" className="ImgCursos" src="./assets/iconoc2.png" />
                 </div>
                 <div className="ContainerCursosTextitos">
                     <p className="CursosTextitos">
@@ -54,7 +54,7 @@ function Cursos(props) {
                     </p>
                 </div>
                 <div className="ContainerImgCursos">
-                    <img className="ImgCursos" src="./assets/iconoc5.png" />
+                    <img  alt="img" className="ImgCursos" src="./assets/iconoc5.png" />
                 </div>
                 <div className="ContainerCursosTextitos">
                     <p className="CursosTextitos">

@@ -1,7 +1,5 @@
 import React from "react";
 import "./DesktopServicios.css";
-import Card from "react-bootstrap/Card";
-import Carousel from "react-bootstrap/Carousel";
 
 function DesktopServicios() {
 
@@ -17,7 +15,7 @@ function DesktopServicios() {
 
           <div className="Card1Desktop">
             <div className="ContainerIconoDesktop"> 
-              <img className="IconoDesktop1" src="../assets/icono1.png"></img>
+              <img alt="img" className="IconoDesktop1" src="../assets/icono1.png"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card1">Locuciones comerciales castellano neutro y rioplatense</p>
@@ -35,7 +33,7 @@ function DesktopServicios() {
 
           <div className="Card2Desktop">
             <div className="ContainerIconoDesktop">
-              <img className="IconoDesktop2" src="../assets/icono2.png"></img>
+              <img alt="img" className="IconoDesktop2" src="../assets/icono2.png"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card2">Talleres grupales de locución , neutro ,oratoria , radio , podcast.</p>
@@ -58,7 +56,7 @@ function DesktopServicios() {
 
           <div className="Card3Desktop">
             <div className="ContainerIconoDesktop">
-              <img className="IconoDesktop3" src="../assets/icono3.png"></img>
+              <img alt="img" className="IconoDesktop3" src="../assets/icono3.png"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card3">Talleres para empresas: Locucion , Radioteatro , radio y Podcast </p>

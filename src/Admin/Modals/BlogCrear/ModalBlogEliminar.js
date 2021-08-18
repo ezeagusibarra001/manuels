@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import clienteAxios from '../../../config/clienteAxios'
@@ -17,6 +17,10 @@ function ModalBlogEliminar(props) {
             .delete(`/publications/${blog.idPublication}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
+                addToast("Blog Eiminado! :)", {
+                    appearance: "success",
+                    autoDismiss: true,
+                });
                 obtenerBlogs()
             })
             .catch((err) => {

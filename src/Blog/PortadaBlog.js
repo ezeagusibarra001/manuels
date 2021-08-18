@@ -10,7 +10,7 @@ function PortadaBlog() {
 
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
-                <img 
+                <img alt="img"
                     src="./assets/fondoblog.png
                     "
                     className="ImgBlog"

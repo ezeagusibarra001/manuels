@@ -2,10 +2,10 @@ import React from "react"
 import "./Feedback.css"
 import Carousel from 'react-bootstrap/Carousel'
 import {useHome} from '../context/home-context'
-
+import Loading from '../Loading/Loading'
 function Feedback(props) {
     const titulo="EXPERIENCIAS & OPINIONES"
-    const {reviews} = useHome()
+    const {reviews, loadingFed} = useHome()
 
     return(
 
@@ -14,6 +14,8 @@ function Feedback(props) {
                 <div className="ContainerFeedbackTitulo">
                     <h1 className="FeedbackTitulo">{titulo}</h1>
                 </div>
+                {loadingFed === false 
+                ? 
                 <div className="ContainerFeedbackCarrusel">
                     <Carousel className="FeedbackCarrusel">
                         {reviews.filter((reviews) =>reviews.validate === true).map(reviews=>
@@ -28,6 +30,10 @@ function Feedback(props) {
                         )}
                     </Carousel>
                 </div>
+                :
+                <Loading/>
+                }
+                
             </div>
         </div>
     )

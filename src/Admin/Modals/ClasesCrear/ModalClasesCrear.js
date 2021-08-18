@@ -34,7 +34,7 @@ function ModalClasesCrear(props) {
     }
     const handleChange = (e) => {
         setCurrentClase({ ...currentClase, [e.target.name]: e.target.value, })
-        const max = e.target.maxLength
+        //const max = e.target.maxLength
         if (0 < (e.target.value).length && (e.target.value).length < e.target.maxLength) {
             setStyles({ outlineColor: "green" })
         }

@@ -13,6 +13,10 @@ export function HomeProvider(props) {
         await clienteAxios.get("/lessons").then((res) => {
             setClases(res.data);
             console.log(res.data);
+        }).then(() => {
+            setLoading(false)
+        }).catch((error) => {
+            console.log(error)
         });
     };
     //BLOG API
@@ -24,6 +28,10 @@ export function HomeProvider(props) {
         await clienteAxios.get("/publications/").then((res) => {
             setBlog(res.data);
             console.log(res.data);
+        }).then(() => {
+            setLoadingBlog(false)
+        }).catch((error) => {
+            console.log(error)
         });
     };
     //ONE IMAGE API
@@ -46,6 +54,10 @@ export function HomeProvider(props) {
         await clienteAxios.get("/reviews").then((res) => {
             setReviews(res.data);
             console.log(res.data);
+        }).then(() => {
+            setLoadingFed(false)
+        }).catch((error) => {
+            console.log(error)
         });
     };
     //IMAGENES API
@@ -76,10 +88,16 @@ export function HomeProvider(props) {
     };
     //CURRENT CHECKOUT CLASE
     const [currentClase, setCurrentClase] = useState();
+    //LOADING CLASES
+    const [loading, setLoading] = useState(true)
+    //LOADING BLOG
+    const [loadingBlog, setLoadingBlog] = useState(true)
+    //LOADING FEEDBACK
+    const [loadingFed, setLoadingFed] = useState(true)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
-        clases, login, setLogin, obtenerClases, jwt, setJwt,axiosConfig, reviews, obtenerReseñas,
-        currentClase, setCurrentClase, imagenes,obtenerImagenes, blog, obtenerBlogs, oneImage
+        clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
+        currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

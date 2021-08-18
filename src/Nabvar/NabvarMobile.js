@@ -19,7 +19,7 @@ function NabvarMobile(props) {
         <div className="ContainerPadreNabvarMobile">
 
             <Navbar className="ContainerNabvarMobile" expand="lg">
-                <Navbar.Brand href="/" className="BrandMobile"> <img src="../assets/logo2.png" className="ImgMobile" /></Navbar.Brand>
+                <Navbar.Brand href="/" className="BrandMobile"> <img alt="img" src="../assets/logo2.png" className="ImgMobile" /></Navbar.Brand>
                 <div className="ContenedorButtonInstaNabvarMobile">
                     <Button className="ButtonInstaNabvarMobile">
                         <svg xmlns="http://www.w3.org/2000/svg" className="InstaIconoNabvarMobile" fill="white"   viewBox="0 0 16 16">
@@ -39,7 +39,7 @@ function NabvarMobile(props) {
                             <Link className="NabvarLink" to="/">Inicio</Link>
                             <Nav.Link href="#link" className="NabvarLink" onClick={ScrollExperiencia}>Sobre Mí</Nav.Link>
                             <Nav.Link href="#link" className="NabvarLink" onClick={ScrollServicios}>Servicios</Nav.Link>
-                            <Link className="NabvarLink" className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
+                            <Link className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
                             <Link className="NabvarLink" to="/Blog" >Blog</Link>
                         </Nav>
                     </Navbar.Collapse>

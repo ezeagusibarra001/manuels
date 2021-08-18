@@ -7,7 +7,7 @@ function Presentacion() {
 
         <div className="ContainerPresentacionFondo">
 
-            <img className="ImgPresentacion" src="./assets/portadahome.png"></img>
+            <img alt="img" className="ImgPresentacion" src="./assets/portadahome.png"></img>
 
         </div>
     )

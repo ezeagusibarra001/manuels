@@ -4,7 +4,7 @@ import CheckOutModal from "./CheckOutModal";
 import Modalguide from "./Modalguide";
 import Button from 'react-bootstrap/Button'
 import "./Checkout.css"
-import clienteAxios from '../config/clienteAxios'
+
 import { useHome } from '../context/home-context'
 import axios from 'axios'
 
@@ -12,9 +12,6 @@ function Checkout(props) {
     const { currentClase } = useHome()
     /*-----------------------MODAL PARA CONFIRMAR INSCRIPCION--------------------- */
     const [show, setShow] = useState(false);
-    const handleShow = () => {
-        setShow(true)
-    }
     const handleClose = () => {
         setShow(false);
     }
@@ -25,9 +22,6 @@ function Checkout(props) {
     /*-----------------------------------------------------------------------------*/
     /*-----------------------MODAL GUIDE-------------------------------------------*/
     const [show2, setShow2] = useState(false);
-    const handleShow2 = () => {
-        setShow2(true)
-    }
     const handleClose2 = () => {
         setShow2(false);
     }
@@ -105,7 +99,7 @@ function Checkout(props) {
                     <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
 
                     <h1 className="CheckoutSubtitleM">Mercado Pago:</h1>
-                    <h1 className="CheckoutinputM"> Inscripción Vía <a target="_blank" href={currentClase} className="CheckoutLinkM"> Mercado Pago </a> </h1>
+                    <h1 className="CheckoutinputM"> Inscripción Vía <a target="_blank" rel="noreferrer" href={currentClase} className="CheckoutLinkM"> Mercado Pago </a> </h1>
 
 
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>

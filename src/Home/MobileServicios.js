@@ -1,14 +1,13 @@
 import React from "react";
 import "./MobileServicios.css"
 import { Carousel } from "3d-react-carousal";
-import Button from "react-bootstrap/Button";
 
 function MobileServicios() {
   var slides = [
     
     <div className="ContainerCardServiciosMobile">
       <div className="ContainerImgServiciosMobile">
-        <img className="ImgServiciosMobile" src="../assets/icono1.png"/>
+        <img alt="img" className="ImgServiciosMobile" src="../assets/icono1.png"/>
       </div>
       <div className="ContainerTextoServiciosMobile1">
         <p className="Texto1ServiciosMobile1">Talleres para empresas: Locución,Radioteatro y Podcast</p>
@@ -20,7 +19,7 @@ function MobileServicios() {
 
     <div className="ContainerCardServiciosMobile">
       <div className="ContainerImgServiciosMobile">
-        <img className="ImgServiciosMobile" src="../assets/icono2.png"/>
+        <img alt="img" className="ImgServiciosMobile" src="../assets/icono2.png"/>
       </div>
       <div className="ContainerTextoServiciosMobile2">
         <p className="Texto1ServiciosMobile2">Locuciones comerciales castellano neutro y rioplatense </p>
@@ -32,7 +31,7 @@ function MobileServicios() {
 
     <div className="ContainerCardServiciosMobile">
     <div className="ContainerImgServiciosMobile">
-      <img className="ImgServiciosMobile" src="../assets/icono3.png"/>
+      <img alt="img" className="ImgServiciosMobile" src="../assets/icono3.png"/>
     </div>
     <div className="ContainerTextoServiciosMobile3">
       <p className="Texto1ServiciosMobile3">Talleres grupales de: Locución ,Neutro,Oratoria,Radio,Podcast </p>

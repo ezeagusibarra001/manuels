@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import "./Publicaciones.css"
 import { useHome } from '../context/home-context'
-import clienteAxios from '../config/clienteAxios'
-function Publicaciones(props) {
-    const { blog, oneImage } = useHome()
-
+function Publicaciones() {
+    const { blog} = useHome()
+      
     return (
         <div className="ContainerPublicaciones">
             {blog.map((publicacion) => (
@@ -15,7 +14,7 @@ function Publicaciones(props) {
                     <div className="SubContainerPublicaciones">
                         <div className="ContainerPublicacionesImg1">
                           {//oneImage.map((i) => (
-                                <img className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} />
+                                <img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} />
                           //  ))
                           }
                         </div>

@@ -15,7 +15,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem1Grupales">
                         <div className="ContainerIconoGrupales1">
-                            <img
+                            <img alt="img"
                             className="Icono1clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -26,7 +26,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem2Grupales">
                         <div className="ContainerIconoGrupales2">
-                            <img
+                            <img alt="img"
                             className="Icono2clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -37,7 +37,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem3Grupales">
                         <div className="ContainerIconoGrupales3">
-                            <img
+                            <img alt="img"
                             className="Icono3clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -48,7 +48,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem4Grupales">
                         <div className="ContainerIconoGrupales4">
-                            <img
+                            <img alt="img"
                             className="Icono4clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -59,7 +59,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem5Grupales">
                         <div className="ContainerIconoGrupales5">
-                            <img
+                            <img alt="img"
                             className="Icono5clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -70,7 +70,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem6Grupales">
                         <div className="ContainerIconoGrupales6">
-                            <img
+                            <img alt="img"
                             className="Icono6clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -81,7 +81,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem7Grupales">
                         <div className="ContainerIconoGrupales7">
-                            <img
+                            <img alt="img"
                             className="Icono7clasesGrupales"
                             src="./assets/iconoc9.png"
                             />
@@ -94,7 +94,7 @@ function ClasesGrupales() {
                 <div className="ContainerHijo2ClasesGrupales">
                     <div className="ContainerItem8Grupales">
                         <div className="ContainerIconoGrupales8">
-                            <img
+                            <img alt="img"
                             className="Icono8clasesGrupales"
                             src="./assets/iconoc6.png"
                             />
@@ -108,7 +108,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem9Grupales">
                         <div className="ContainerIconoGrupales9">
-                            <img
+                            <img alt="img"
                             className="Icono9clasesGrupales"
                             src="./assets/iconoc4.png"
                             />
@@ -121,7 +121,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem10Grupales">
                         <div className="ContainerIconoGrupales10">
-                            <img
+                            <img alt="img"
                             className="Icono10clasesGrupales"
                             src="./assets/iconoc7.png"
                             />
@@ -134,7 +134,7 @@ function ClasesGrupales() {
                     </div>
                     <div className="ContainerItem11Grupales">
                         <div className="ContainerIconoGrupales11">
-                            <img
+                            <img alt="img"
                             className="Icono11clasesGrupales"
                             src="./assets/iconoc8.png"
                             />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import clienteAxios from '../../../config/clienteAxios'
@@ -17,6 +17,10 @@ function ModalClasesEliminar(props) {
             .delete(`/lessons/${clases.idLesson}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
+                addToast("Reseña eliminada!", {
+                    appearance: "success",
+                    autoDismiss: true,
+                });
                 obtenerClases()
             })
             .catch((err) => {

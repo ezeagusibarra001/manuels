@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
-import Button from 'react-bootstrap/Button'
 import Controllerreseñas from "./Modals/Reseñas/ControllerReseñas";
 import "./Admin.css"
 
@@ -10,7 +9,6 @@ function AdminReseñas() {
 
 /*-----------------------------------------------------------------------------*/
     const [showVerReseñas, setShowVerReseñas] = useState(false);
-    const handleShowVerReseñas = () => setShowVerReseñas(true);
 /*-----------------------------------------------------------------------------*/
 
     return (

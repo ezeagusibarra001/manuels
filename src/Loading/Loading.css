@@ -1,0 +1,242 @@
+.Loading1{
+    background-color: #a06ab4 ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 100%;
+    
+
+    animation: opaccity 1s infinite;    /*Name___Duration___Timing___Delay*/
+    animation-duration: 1s;
+    animation-delay: 1s; 
+    margin-left: 10px;
+}
+
+@keyframes opaccity {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+
+
+.ContenedorLoading{
+    display: flex;
+}
+.Loading2{
+    border: solid rgba(0, 0, 0, 0.2);
+    border-left: solid #a06ab4;
+    width: 4vw;
+    height: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    animation: spin 1.5s ease infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.Loading3{
+    border: solid rgba(0, 0, 0, 0.2);
+    border-left: solid #a06ab4;
+    width: 4vw;
+    height: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    animation: spin 1.5s ease infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.ContainerLoading4{
+    height: 4px;
+    width: 100%;
+    padding: 0% 10%;
+    position: relative;
+}
+.Loading4{
+    background-color: #a06ab4;
+    height: 4px;
+    width: 20%;
+    animation: movement1 1.5s ease infinite;
+}
+@keyframes movement1 {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.ContainerLoading5{
+    height: 4px;
+    width: 100%;
+    padding: 0% 10%;
+    position: relative;
+}
+.Loading5{
+    background-color: #a06ab4;
+    height: 4px;
+    width: 20%;
+    position: absolute;
+    left: 10%;
+    animation: left-to-right 1s ease 0s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes left-to-right {
+    from{
+        left: 10%;
+    }
+    to{
+        left: 80%;
+    }
+}
+
+.ContainerLoading6{
+    height: 4px;
+    width: 100%;
+    padding: 0% 10%;
+    position: relative;
+}
+.Loading6{
+    background-color: #a06ab4;
+    height: 4px;
+    width: 20%;
+    animation: movement2 1.5s ease infinite alternate-reverse;
+}
+@keyframes movement2 {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.ContainerLoading7{
+    height: auto;
+    width: 100%;
+    padding: 10% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+   
+}
+.Loading7A{
+    background-color: #a06ab4 ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: hiddenA 1s ease infinite alternate-reverse;
+    opacity: 0%;
+}
+.Loading7B{
+    background-color: #a06ab4  ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: hiddenB 1s ease infinite alternate-reverse;
+    opacity: 0%;
+}
+.Loading7C{
+    background-color: #a06ab4 ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: hiddenC 1s ease infinite alternate-reverse;
+    opacity: 0%;
+}
+.Loading7D{
+    background-color: #a06ab4 ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: hiddenD 1s ease infinite alternate-reverse;
+    opacity: 0%;
+}
+.Loading7E{
+    background-color: #a06ab4 ;
+    border: solid transparent;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    animation: hiddenE 1s ease infinite alternate-reverse;
+    opacity: 0%;
+}
+@keyframes hiddenA {
+   0%{
+        opacity: 0%;
+   }
+   20%{
+       opacity: 100%;
+   }
+}
+@keyframes hiddenB {
+    20%{
+        opacity: 0%;
+   }
+   40%{
+       opacity: 100%;
+   }
+}
+@keyframes hiddenC {
+    40%{
+        opacity: 0%;
+    }
+    60%{
+        opacity: 100%;
+    }
+}
+@keyframes hiddenD {
+    60%{
+        opacity: 0%;
+    }
+    80%{
+        opacity: 100%;
+    }
+}
+@keyframes hiddenE {
+    80%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

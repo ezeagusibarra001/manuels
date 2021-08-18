@@ -21,6 +21,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg1">
                         <img
+                            alt="img"
                             className="Img1"
                             src="../assets/marca1.png"
                        
@@ -29,6 +30,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg2"> 
                         <img
+                            alt="img"
                             className="Img2"
                             src="../assets/marca2.png"
                          
@@ -37,6 +39,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg3">
                         <img
+                            alt="img"
                             className="Img3"
                             src="../assets/marca3.png"
                          
@@ -45,6 +48,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg4">
                         <img
+                            alt="img"
                             className="Img4"
                             src="../assets/marca4.png"
                          
@@ -59,6 +63,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg1">
                         <img
+                            alt="img"
                             className="Img1"
                             src="../assets/marca5.png"
                        
@@ -67,6 +72,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg2"> 
                         <img
+                            alt="img"
                             className="Img2"
                             src="../assets/marca6.png"
                          
@@ -75,6 +81,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg3">
                         <img
+                            alt="img"
                             className="Img3"
                             src="../assets/marca7.png"
                          
@@ -83,6 +90,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg4">
                         <img
+                            alt="img"
                             className="Img4"
                             src="../assets/marca8.png"
                          
@@ -97,6 +105,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg1">
                         <img
+                            alt="img"
                             className="Img1"
                             src="../assets/marca9.png"
                        
@@ -105,6 +114,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg2"> 
                         <img
+                            alt="img"
                             className="Img2"
                             src="../assets/marca10.png"
                          
@@ -113,6 +123,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg3">
                         <img
+                            alt="img"
                             className="Img3"
                             src="../assets/marca11.png"
                          
@@ -121,6 +132,7 @@ function Marcas(props) {
 
                         <div className="ContainerImg4">
                         <img
+                            alt="img"
                             className="Img4"
                             src="../assets/marca12.png"
                          

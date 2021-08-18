@@ -2,8 +2,9 @@ import React from "react"
 import "./NabvarDesktop.css"
 import Button from 'react-bootstrap/Button'
 import {Link, useHistory} from "react-router-dom"
-
+import { useToasts } from "react-toast-notifications";
 function NabvarAdmin(props) {
+    const { addToast } = useToasts();
     const {setLogin} = props;
     const history = useHistory()
     const admin = () => {
@@ -13,18 +14,23 @@ function NabvarAdmin(props) {
         localStorage.removeItem('jwtToken')
         setLogin(false)
         history.push("/")
+        addToast("LogOut exitoso", {
+            appearance: "success",
+            autoDismiss: true,
+        });
     }
     return(
         <div className="ContainerPadreNabvarDesktop">
             <div className="ContainerImgNabvarDesktop">
                 <img
+                alt="img"
                 src="../assets/logo2.png"
                 className="Img"
                 />
             </div>
             <div className="ContainerLinksNabvarDesktop">
                 <Link className="NabvarLink" to="/">Inicio</Link>
-                <Link className="NabvarLink" className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
+                <Link className="NabvarLink" to="/ClasesOnline">Clases Online</Link>
                 <Link className="NabvarLink" to="/Blog">Blog</Link>
                 <Button className="ButtonInstaNabvarDesktop" onClick={admin}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
