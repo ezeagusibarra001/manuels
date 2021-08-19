@@ -9,8 +9,10 @@ import AdminBlog from "./Admin/AdminBlog"
 import AdminReseñas from "./Admin/AdminReseñas"
 import AdminPagos from "./Admin/AdminPagos"
 import Checkout from "./Checkout/Checkout";
+import Form from "./Formulario/Form";
 import { HomeProvider } from './context/home-context'
 import { ToastProvider } from "react-toast-notifications";
+
 function App() {
 
   return (
@@ -32,6 +34,7 @@ function App() {
             <Route path="/AdminReseñas" component={AdminReseñas} exact />
             <Route path="/AdminPagos" component={AdminPagos} exact />
             <Route path="/Checkout" component={Checkout} exact />
+            <Route path="/form/:asunto" component={Form} exact />
           </BrowserRouter>
         </HomeProvider>
       </ToastProvider>

@@ -1,6 +1,7 @@
 import React from "react"
 import "./Publicaciones.css"
 import { useHome } from '../context/home-context'
+import moment from 'moment'
 function Publicaciones() {
     const { blog} = useHome()
       
@@ -13,14 +14,14 @@ function Publicaciones() {
                     </div>
                     <div className="SubContainerPublicaciones">
                         <div className="ContainerPublicacionesImg1">
-                          {//oneImage.map((i) => (
-                                <img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} />
-                          //  ))
+                          {publicacion.image === null 
+                          ?<div></div>  
+                          :<img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} />                    
                           }
                         </div>
                         <div className="ContainerPublicacionesTextos1">
                             <h2 className="PublicacionesSubTitulo">
-                                <b>{publicacion.subtitle}</b>
+                                <b>{moment(publicacion.date).format("DD/MM/YY")} - {publicacion.subtitle}</b>
                             </h2>
                             <p className="PublicacionesParrafos">
                                 {publicacion.description}

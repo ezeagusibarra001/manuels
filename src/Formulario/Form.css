@@ -1,0 +1,77 @@
+/*-------------------------------------------------FORM CONTAINER-------------------------------------------------------*/
+.ContainerForm{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0% 0% 5% 0%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    border: solid black;
+}
+/*-------------------------------------------------FORM TITULO----------------------------------------------------------*/
+.ContainerFormTitulo{
+    width: 100%;
+    height: 150px;
+    /*padding: 3% 0%;*/
+    background-color: #ffd743;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.FormTitulo{
+    color: #a06ab4;
+    font-size: 60px;
+    font-family: dukecharming regular;
+    font-weight: 900;
+}
+/*-------------------------------------------------FORM ICONO----------------------------------------------------------*/
+.ContainerFormIcono{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ffd743;
+    
+    position: absolute ;
+    right: 50%;
+    bottom: 15%;
+    
+}
+/*-------------------------------------------------FORMULARIO----------------------------------------------------------*/
+.ContainerFormulario{
+    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Formulario{
+    border: solid black;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+.LabelForm{
+    color: #a06ab4;
+    text-align: left;
+    margin: 0% 15%;
+    font-weight: 500;
+}
+.InputFormulario{
+    text-align: center;
+    padding: 1% 0%;
+    margin: 0% 15%;
+    border: solid #a06ab4 2px ;
+    outline-color: #a06ab4;
+}
+.textareaFormulario{
+    border: solid #a06ab4 2px;
+    margin: 0% 15%;
+    height: 10vw;
+    color: #a06ab4;
+    outline-color: #a06ab4;
+}

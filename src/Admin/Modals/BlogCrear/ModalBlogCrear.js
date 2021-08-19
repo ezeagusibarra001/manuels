@@ -19,7 +19,7 @@ function ModalBlogCrear(props) {
         "subtitle": "",
         "subtitle2": ""
     })
-    const [disabled, setDisabled] = useState(false)
+    const [disabled, setDisabled] = useState(true)
     const handleClose = () => {
         setShowCrear(false)
     }

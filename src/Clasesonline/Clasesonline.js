@@ -11,6 +11,7 @@ import Gift from "./Gift";
 import Reseñas from "./Reseñas"
 import {useHome} from '../context/home-context'
 import Loading from '../Loading/Loading'
+
 function Clasesonline(props) {
     const {clases, loading} = useHome()
     const talleres=[
@@ -31,7 +32,8 @@ function Clasesonline(props) {
             button:{
                 backgroundColor:"#ffd743",
                 color:"white",
-            }
+            },
+            link:"/Form/Empresariales"
         },
         {
             titulo:"Talleres disruptivos",
@@ -50,8 +52,8 @@ function Clasesonline(props) {
             button:{
                 backgroundColor:"#ffd743",
                 color:"#a06ab4",
-            }
-        
+            },
+            link:"/Form/Talleres_Disruptivos"
         },
         {
             titulo:"Asesorías Únicas",
@@ -70,7 +72,8 @@ function Clasesonline(props) {
             button:{
                 backgroundColor:"#ffd743",
                 color:"white",
-            }
+            },
+            link:"/Form/Asesorías_únicas"
         },
     ]
 
