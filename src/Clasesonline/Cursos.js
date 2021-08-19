@@ -13,7 +13,7 @@ function Cursos(props) {
     dates.forEach(d=>{x.push(d)})
 
     const select = () => {
-        setCurrentClase(data.link)
+        setCurrentClase(data)
         console.log(data.link)
     }
 

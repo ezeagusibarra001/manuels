@@ -12,6 +12,7 @@ function Checkout(props) {
     const { currentClase } = useHome()
     /*-----------------------MODAL PARA CONFIRMAR INSCRIPCION--------------------- */
     const [show, setShow] = useState(false);
+    const [check, setCheck] = useState(false)
     const handleClose = () => {
         setShow(false);
     }
@@ -28,7 +29,10 @@ function Checkout(props) {
     useEffect(() => {
         setShow2(true)
     }, []);
-
+    const checked = () => {
+        setCheck(!check)
+        console.log(check)
+    }
     /*-------------------------------POST IMAGE----------------------------------------*/
     const [file, setFile] = useState({
         file: null
@@ -99,8 +103,13 @@ function Checkout(props) {
                     <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
 
                     <h1 className="CheckoutSubtitleM">Mercado Pago:</h1>
-                    <h1 className="CheckoutinputM"> Inscripción Vía <a target="_blank" rel="noreferrer" href={currentClase} className="CheckoutLinkM"> Mercado Pago </a> </h1>
-
+                    <h1 className="CheckoutinputM"> Inscripción Vía {check === false ?
+                        <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
+                        : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkM"> Mercado Pago </a>} </h1>
+                    <div className="CheckoutinputCheck">
+                        <label className="CheckoutLabel">Abonar con seña</label>
+                        <input type="checkbox" className="check" onChange={checked}/>
+                    </div>
 
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
                     <input

@@ -118,6 +118,49 @@
         
     font-size: 2.5vw ;  
 }
+.CheckoutinputCheck{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 7;
+
+    width: 100%;
+    height: auto;
+        
+    text-align: left;
+    color: #a06ab4;
+
+    padding: 0% 1%;
+        
+    border: solid #a06ab4 0px;
+    border-radius: 5px;
+    background-color: white;
+        
+    font-size: 2.5vw ;  
+}
+.CheckoutLabel{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    height: auto;
+    width: fit-content;
+
+    padding: 2% 2% 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+    margin: 2%;
+    text-align: left;
+    
+    border-radius: 10px;
+    font-size: 2vw;
+}
+.check{
+    margin-left: 20px;
+}
 .Checkoutinput{
 
     width: 100%;
