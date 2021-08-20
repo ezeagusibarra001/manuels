@@ -55,7 +55,9 @@ function pagosNot(props) {
                                         ?<td className="false">{p.payment.toString().toUpperCase()}</td>
                                         :<td className="true">{p.payment.toString().toUpperCase()}</td>}
                                         <td onClick={() => voucherCheck(p.image)}><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
-                                        <td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
+                                        {p.payment.toString() === "false"
+                                        ?<td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
+                                        :<td></td>}
                                         <td onClick={() => baja(p.idPayment)}><img alt="img" src={`data:${imagenes[20].type};base64,${imagenes[20].bytes}`} />  </td>
                                     </tr>
                                     : <div></div>

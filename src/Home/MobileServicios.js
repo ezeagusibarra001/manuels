@@ -1,11 +1,13 @@
 import React from "react";
 import "./MobileServicios.css"
 import { Carousel } from "3d-react-carousal";
-
+import { useHistory } from "react-router-dom"
 function MobileServicios() {
+  const history = useHistory()
+
   var slides = [
     
-    <div className="ContainerCardServiciosMobile">
+    <div className="ContainerCardServiciosMobile" onClick={()=>window.location.href ="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}>
       <div className="ContainerImgServiciosMobile">
         <img alt="img" className="ImgServiciosMobile" src="../assets/icono1.png"/>
       </div>
@@ -17,7 +19,7 @@ function MobileServicios() {
       </div>
     </div>,
 
-    <div className="ContainerCardServiciosMobile">
+    <div className="ContainerCardServiciosMobile" onClick={()=>history.push("/ClasesOnline")}>
       <div className="ContainerImgServiciosMobile">
         <img alt="img" className="ImgServiciosMobile" src="../assets/icono2.png"/>
       </div>
@@ -29,7 +31,7 @@ function MobileServicios() {
       </div>
     </div>,
 
-    <div className="ContainerCardServiciosMobile">
+    <div className="ContainerCardServiciosMobile" onClick={()=>history.push("/ClasesOnline")}>
     <div className="ContainerImgServiciosMobile">
       <img alt="img" className="ImgServiciosMobile" src="../assets/icono3.png"/>
     </div>

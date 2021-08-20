@@ -1,9 +1,9 @@
 import React from "react";
 import "./DesktopServicios.css";
-
+import { useHistory } from "react-router-dom"
 function DesktopServicios() {
 
-
+  const history = useHistory()
   return (
       <div className="ContainerPadreServiciosDesktop">
 
@@ -23,7 +23,7 @@ function DesktopServicios() {
               <p className="Texto3Card1">Conducción de eventos: Radio , Podcast y TV </p>
             </div>
             <div className="ContainerButtonCardDesktop"> 
-              <button className="ButtonCardDesktop"><b>¡CONTACTATE!</b></button>
+              <button className="ButtonCardDesktop" onClick={()=>window.location.href ="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}><b>¡CONTACTATE!</b></button>
             </div>
 
           </div>
@@ -46,7 +46,7 @@ function DesktopServicios() {
               </p>
             </div>
             <div className="ContainerButtonCardDesktop"> 
-              <button className="ButtonCardDesktop"><b>VER MÁS</b></button>
+              <button className="ButtonCardDesktop" onClick={()=>history.push("/ClasesOnline")}><b>VER MÁS</b></button>
             </div>
 
           </div>
@@ -64,7 +64,7 @@ function DesktopServicios() {
               <p className="Texto3Card3"> Asesorias Únicas</p>
             </div>
             <div className="ContainerButtonCardDesktop"> 
-              <button className="ButtonCardDesktop"><b>VER MÁS</b></button>
+              <button className="ButtonCardDesktop" onClick={()=>history.push("/ClasesOnline")}><b>VER MÁS</b></button>
             </div>
 
           </div>
