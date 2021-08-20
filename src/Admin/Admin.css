@@ -12,6 +12,9 @@
 .modal-dialog{
    max-width: 75% !important;
 }
+.imagenCheckout{
+    width: 40px;
+}
 /*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
 div>textarea{
     width: 100%;  

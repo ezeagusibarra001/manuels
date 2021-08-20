@@ -6,25 +6,45 @@ import Table from 'react-bootstrap/Table'
 import "./Admin.css"
 import { useHome } from '../context/home-context'
 import clienteAxios from '../config/clienteAxios'
-
+import { useHistory } from "react-router-dom"
 
 function AdminPagos() {
-    const { axiosConfig } = useHome()
+    const history = useHistory()
+    const { axiosConfig, imagenes} = useHome()
     /*console.log("payments", payments)*/
     //PAYMENTS API
     const [payments, setPayments] = useState([]);
     useEffect(() => {
         obtenerPayments();
+        // eslint-disable-next-line
     }, []);
     const obtenerPayments = async () => {
         await clienteAxios.get("/payments", axiosConfig).then((res) => {
             setPayments(res.data);
             console.log("anda", res.data);
         }).catch((error) => {
-            alert(error)
+            console.log(error)
+              history.push("/")
+              window.location.reload(true)
         });
     };
-    console.log("payments", payments)
+    const alta = async (payment) => {
+        await clienteAxios
+            .put(`payments/accept/${payment}`, {}, axiosConfig)
+            .then((res) => {
+                console.log(res.data);
+                obtenerPayments()
+            })
+            .catch((err) => {
+                console.log("error put", err);
+                console.log(payment)
+                console.log(axiosConfig)
+
+            });
+    };
+    const baja = () => {
+        console.log("baja")
+    }
     return (
 
         <Layout>
@@ -47,6 +67,8 @@ function AdminPagos() {
                                 <th>Clase</th>
                                 <th>Estado</th>
                                 <th>Comprobante</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +79,9 @@ function AdminPagos() {
                                     <td>{p.lastname}</td>
                                     <td>{p.lesson.title}</td>
                                     <td>{p.payment.toString()}</td>
-                                    <td>{p.image.idImage}</td>
+                                    <td><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
+                                    <td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
+                                    <td onClick={() => baja()}><img alt="img" src={`data:${imagenes[20].type};base64,${imagenes[20].bytes}`} />  </td>
                                 </tr>
                             ))}
                         </tbody>

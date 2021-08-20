@@ -40,7 +40,8 @@ function Login(props) {
                 console.log(res.data.jwt);
                 let token = res.data.jwt
                 setJwt(res.data.jwt)
-                localStorage.setItem('jwtToken', token)
+                sessionStorage.setItem('jwtToken', token)
+                console.log(sessionStorage.getItem('jwtToken'))
                 addToast("Usuario logueado", {
                     appearance: "success",
                     autoDismiss: true,
