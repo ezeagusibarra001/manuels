@@ -79,7 +79,7 @@ export function HomeProvider(props) {
     //AXIOSJWT
     let axiosConfig = {
         headers: {
-            'Authorization': `Bearer ${jwt}`,
+            'Authorization': `Bearer ${sessionStorage.getItem('jwtToken')}`,
             "Access-Control-Allow-Origin": "http://localhost:3000",
             'Access-Control-Allow-Credentials': 'true',
             /*   'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',*/
