@@ -86,6 +86,7 @@ export function HomeProvider(props) {
             'Access-Control-Allow-Headers': 'Authorization'
         }
     };
+    
     //CURRENT CHECKOUT CLASE
     const [currentClase, setCurrentClase] = useState();
     //LOADING CLASES
@@ -97,7 +98,8 @@ export function HomeProvider(props) {
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
-        currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed
+        currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
+        
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

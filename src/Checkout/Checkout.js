@@ -4,12 +4,22 @@ import CheckOutModal from "./CheckOutModal";
 import Modalguide from "./Modalguide";
 import Button from 'react-bootstrap/Button'
 import "./Checkout.css"
-
+import InputGroup from 'react-bootstrap/InputGroup'
 import { useHome } from '../context/home-context'
-import axios from 'axios'
-
-function Checkout(props) {
-    const { currentClase } = useHome()
+import clienteAxios from '../config/clienteAxios'
+import { useHistory } from "react-router-dom"
+function Checkout() {
+    const history = useHistory()
+    const { currentClase, axiosConfig } = useHome()
+    const [currentPayment, setCurrentPayment] = useState({
+        name: "",
+        lastname: "",
+        mail: "",
+        phone: ""
+    })
+    const home = () => {
+        history.push("/")
+    }
     /*-----------------------MODAL PARA CONFIRMAR INSCRIPCION--------------------- */
     const [show, setShow] = useState(false);
     const [check, setCheck] = useState(false)
@@ -17,7 +27,6 @@ function Checkout(props) {
         setShow(false);
     }
     const handleSubmit = () => {
-        alert("FUNCIONA")
         setShow(false);
     }
     /*-----------------------------------------------------------------------------*/
@@ -33,6 +42,19 @@ function Checkout(props) {
         setCheck(!check)
         console.log(check)
     }
+    // eslint-disable-next-line
+    const [Styles, setStyles] = useState()
+    /*--------------------------CHANGE---------------------- */
+    const handleChange = (e) => {
+        setCurrentPayment({ ...currentPayment, [e.target.name]: e.target.value, })
+        //const max = e.target.maxLength
+        if (0 < (e.target.value).length && (e.target.value).length < e.target.maxLength) {
+            setStyles({ outlineColor: "green" })
+        }
+        else {
+            setStyles({ outlineColor: "red" })
+        }
+    }
     /*-------------------------------POST IMAGE----------------------------------------*/
     const [file, setFile] = useState({
         file: null
@@ -42,24 +64,32 @@ function Checkout(props) {
         let file = e.target.files[0]
         setFile({ file: file })
     }
-    const handleUpload = (e) => {
+    const submit = async () => {
         let image = file.file;
-
         let formdata = new FormData();
-
-        formdata.append('image', image)
-
-        axios({
-            url: `http://localhost:8080/api/images`,
-            method: "POST",
-            data: formdata
-        }).then((res) => {
-            console.log(res.data)
-        }).catch((err) => {
-            console.log(err)
-        })
+        if (image !== null) {
+            formdata.set('file', image)
+        }
+        formdata.set('name', currentPayment.name)
+        formdata.set('lastname', currentPayment.lastname)
+        formdata.set('email', currentPayment.email)
+        formdata.set('lesson', currentClase.idLesson)
+        await clienteAxios
+            .post("/payments", formdata, axiosConfig)
+            .then((res) => {
+                console.log(res.data);
+            })
+            .catch((err) => {
+                console.log("error post", err);
+            });
     };
 
+    var ch = document.querySelector("#root > div > div > div.Containercheckout > form > div > span")
+    setInterval(function () {
+        if (ch) {
+            ch.classList.add("checkBox")
+        }
+    }, 300);
     return (
         <Layout >
             <div className="Containercheckout">
@@ -69,28 +99,40 @@ function Checkout(props) {
                         className="Checkoutinput"
                         type="text"
                         name="name"
-                        placeholder="Nombre y Apellido"
+                        placeholder="Nombre"
+                        style={Styles}
+                        maxLength="15"
+                        onChange={handleChange}
                     />
 
                     <input
                         className="Checkoutinput"
                         type="text"
-                        name="dni"
-                        placeholder="DNI"
+                        name="lastname"
+                        placeholder="Apellido"
+                        style={Styles}
+                        maxLength="15"
+                        onChange={handleChange}
                     />
 
                     <input
                         className="Checkoutinput"
-                        type="text"
+                        type="number"
                         name="phone"
                         placeholder="Telefono"
+                        style={Styles}
+                        onChange={handleChange}
+                        maxLength="15"
                     />
 
                     <input
                         className="Checkoutinput"
                         type="e-mail"
-                        name="mail"
+                        name="email"
                         placeholder="E-mail"
+                        style={Styles}
+                        maxLength="30"
+                        onChange={handleChange}
                     />
 
                     <h1 className="Checkouttitle">Medios de Pago:</h1>
@@ -103,12 +145,14 @@ function Checkout(props) {
                     <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
 
                     <h1 className="CheckoutSubtitleM">Mercado Pago:</h1>
-                    <h1 className="CheckoutinputM"> Inscripción Vía {check === false ?
-                        <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
-                        : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkM"> Mercado Pago </a>} </h1>
+                    <h1 className="CheckoutinputM"> Inscripción Vía {currentClase === undefined
+                        ? <button onClick={home} className="CheckoutButton2">Link no disponible</button>
+                        : check === false ?
+                            <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
+                            : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkP"> Mercado Pago </a>} </h1>
                     <div className="CheckoutinputCheck">
-                        <label className="CheckoutLabel">Abonar con seña</label>
-                        <input type="checkbox" className="check" onChange={checked}/>
+                        <label className="CheckoutLabel">Para abonar con seña click aqui </label>
+                        <InputGroup.Checkbox className="" onChange={checked} />
                     </div>
 
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
@@ -119,7 +163,7 @@ function Checkout(props) {
                         onChange={(e) => handleFile(e)}
                     />
 
-                    <Button className="CheckoutButton" type="button" onClick={(e) => handleUpload(e)}> Confirmar </Button>
+                    <Button className="CheckoutButton" type="button" onClick={submit}> Confirmar </Button>
                 </form>
             </div>
             <CheckOutModal show={show} handleClose={handleClose} handleSubmit={handleSubmit} />

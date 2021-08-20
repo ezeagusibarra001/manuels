@@ -139,6 +139,14 @@
         
     font-size: 2.5vw ;  
 }
+.CheckoutLinkP{
+    color: #aa03e7;
+}
+.CheckoutButton2{
+    border:none;
+    background-color: transparent;
+    color: red;
+}
 .CheckoutLabel{
 
     grid-column-start: 1;
@@ -157,6 +165,13 @@
     
     border-radius: 10px;
     font-size: 2vw;
+}
+.checkBox{
+    height: auto;
+    margin-top: 17px;
+    background-color: transparent !important;
+    border: none !important;
+    float: right !important;
 }
 .check{
     margin-left: 20px;

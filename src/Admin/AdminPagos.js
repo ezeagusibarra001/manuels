@@ -1,12 +1,30 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
 import Table from 'react-bootstrap/Table'
 import "./Admin.css"
+import { useHome } from '../context/home-context'
+import clienteAxios from '../config/clienteAxios'
+
 
 function AdminPagos() {
-
+    const { axiosConfig } = useHome()
+    /*console.log("payments", payments)*/
+    //PAYMENTS API
+    const [payments, setPayments] = useState([]);
+    useEffect(() => {
+        obtenerPayments();
+    }, []);
+    const obtenerPayments = async () => {
+        await clienteAxios.get("/payments", axiosConfig).then((res) => {
+            setPayments(res.data);
+            console.log("anda", res.data);
+        }).catch((error) => {
+            alert(error)
+        });
+    };
+    console.log("payments", payments)
     return (
 
         <Layout>
@@ -23,30 +41,25 @@ function AdminPagos() {
                     <Table striped bordered hover size="sm">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
+                                <th>N° Orden</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Clase</th>
+                                <th>Estado</th>
+                                <th>Comprobante</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td colSpan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            {payments.map((p) => (
+                                <tr>
+                                    <td>{p.idPayment}</td>
+                                    <td>{p.name}</td>
+                                    <td>{p.lastname}</td>
+                                    <td>{p.lesson.title}</td>
+                                    <td>{p.payment.toString()}</td>
+                                    <td>{p.image.idImage}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </Table>
                 </div>
