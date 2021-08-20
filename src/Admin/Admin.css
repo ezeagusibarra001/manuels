@@ -15,6 +15,9 @@
 .imagenCheckout{
     width: 40px;
 }
+.voucher{
+    width: 400px;
+}
 /*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
 div>textarea{
     width: 100%;  

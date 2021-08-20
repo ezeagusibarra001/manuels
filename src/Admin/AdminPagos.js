@@ -7,11 +7,13 @@ import "./Admin.css"
 import { useHome } from '../context/home-context'
 import clienteAxios from '../config/clienteAxios'
 import { useHistory } from "react-router-dom"
-
+import ModalVoucher from './Modals/AdminPagos/ModalVoucher'
 function AdminPagos() {
     const history = useHistory()
     const { axiosConfig, imagenes} = useHome()
     /*console.log("payments", payments)*/
+    const [showVoucher, setShowVoucher] = useState(false)
+    const [currentVoucher, setCurrentVoucher] = useState()
     //PAYMENTS API
     const [payments, setPayments] = useState([]);
     useEffect(() => {
@@ -45,6 +47,12 @@ function AdminPagos() {
     const baja = () => {
         console.log("baja")
     }
+    const voucherCheck = (image) => {
+        setShowVoucher(true)
+        setCurrentVoucher(image)
+        console.log(image)
+    }
+    console.log("currentVoucher", currentVoucher)
     return (
 
         <Layout>
@@ -79,7 +87,7 @@ function AdminPagos() {
                                     <td>{p.lastname}</td>
                                     <td>{p.lesson.title}</td>
                                     <td>{p.payment.toString()}</td>
-                                    <td><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
+                                    <td onClick={()=>voucherCheck(p.image)}><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
                                     <td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
                                     <td onClick={() => baja()}><img alt="img" src={`data:${imagenes[20].type};base64,${imagenes[20].bytes}`} />  </td>
                                 </tr>
@@ -88,6 +96,11 @@ function AdminPagos() {
                     </Table>
                 </div>
             </div>
+            <ModalVoucher
+                showVoucher={showVoucher}
+                setShowVoucher={setShowVoucher}
+                currentVoucher={currentVoucher}
+            />
         </Layout>
     )
 
