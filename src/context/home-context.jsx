@@ -95,10 +95,13 @@ export function HomeProvider(props) {
     const [loadingBlog, setLoadingBlog] = useState(true)
     //LOADING FEEDBACK
     const [loadingFed, setLoadingFed] = useState(true)
+    //LOADING POST CHECKOUT
+    const [loadingCheckout, setLoadingCheckout] = useState(true)
     //DECLARO QUIEN ES EL CONTEXT
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
         currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
+        loadingCheckout, setLoadingCheckout
         
     };
     return <HomeContext.Provider value={value} {...props} />;

@@ -18,6 +18,14 @@
 .voucher{
     width: 400px;
 }
+.true{
+    color: green;
+    font-weight: bold;
+}
+.false{
+    color: red;
+    font-weight: bold;
+}
 /*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
 div>textarea{
     width: 100%;  

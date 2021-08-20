@@ -8,9 +8,13 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import { useHome } from '../context/home-context'
 import clienteAxios from '../config/clienteAxios'
 import { useHistory } from "react-router-dom"
+import { useToasts } from "react-toast-notifications";
+import ModalLoading from '../Checkout/ModalLoading'
 function Checkout() {
+    const { addToast } = useToasts();
     const history = useHistory()
-    const { currentClase, axiosConfig } = useHome()
+    const { currentClase } = useHome()
+    const [modalLoading, setModalLoading] = useState(false)
     const [currentPayment, setCurrentPayment] = useState({
         name: "",
         lastname: "",
@@ -65,6 +69,7 @@ function Checkout() {
         setFile({ file: file })
     }
     const submit = async () => {
+        setModalLoading(true)
         let image = file.file;
         let formdata = new FormData();
         if (image !== null) {
@@ -74,10 +79,16 @@ function Checkout() {
         formdata.set('lastname', currentPayment.lastname)
         formdata.set('email', currentPayment.email)
         formdata.set('lesson', currentClase.idLesson)
+        formdata.set('phone', currentClase.phone)
         await clienteAxios
-            .post("/payments", formdata, axiosConfig)
+            .post("/payments", formdata)
             .then((res) => {
                 console.log(res.data);
+                addToast("¡Gracias por tu reserva!", {
+                    appearance: "success",
+                    autoDismiss: true,
+                });
+                setModalLoading(false)
             })
             .catch((err) => {
                 console.log("error post", err);
@@ -168,6 +179,10 @@ function Checkout() {
             </div>
             <CheckOutModal show={show} handleClose={handleClose} handleSubmit={handleSubmit} />
             <Modalguide show2={show2} handleClose2={handleClose2} />
+            <ModalLoading
+                modalLoading={modalLoading}
+                setModalLoading={setModalLoading}
+            />
         </Layout>
     )
 
