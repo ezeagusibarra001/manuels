@@ -1,5 +1,5 @@
-/*-------------------------------------------------FORM CONTAINER-------------------------------------------------------*/
-.ContainerForm{
+/*-------------------------------------------------FORM CONTAINER------------------------------------------------*/
+.ContainerFormulario{
     position: relative;
     width: 100%;
     height: auto;
@@ -7,71 +7,160 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-    border: solid black;
 }
-/*-------------------------------------------------FORM TITULO----------------------------------------------------------*/
-.ContainerFormTitulo{
+/*-------------------------------------------------FORM TITULO---------------------------------------------------*/
+.ContainerActive{
     width: 100%;
-    height: 150px;
-    /*padding: 3% 0%;*/
+    height: auto;
     background-color: #ffd743;
 
+    padding: 2.5% 0%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.FormTitulo{
+.ContainerInactive{
+    height: auto;
+    background-color: #ffd743;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TituloActive{
     color: #a06ab4;
-    font-size: 60px;
+    font-size: 8vw;
     font-family: dukecharming regular;
     font-weight: 900;
+    animation: down 1s ease-in forwards;
 }
-/*-------------------------------------------------FORM ICONO----------------------------------------------------------*/
-.ContainerFormIcono{
+@keyframes down {
+    0%{
+        font-size: 2px;
+        opacity: 0%;
+    }
+    100%{
+        font-size: 8vw;
+        opacity: 100%;
+    }
+}
+.TituloInactive{
+    color: #a06ab4;
+    font-size: 8vw;
+    animation: up 0.5s ease-in forwards;
+}
+@keyframes up {
+    0%{
+        font-size: 8vw;
+        opacity: 100%;
+    }
+    100%{
+        font-size: 2px;
+        opacity: 0%;
+    }
+}
+/*-------------------------------------------------FORMULARIO ICONO----------------------------------------------------*/
+.ActiveUp{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #ffd743;
-    
-    position: absolute ;
-    right: 50%;
-    bottom: 15%;
-    
+    height: auto;
+    width: 100%;    
 }
-/*-------------------------------------------------FORMULARIO----------------------------------------------------------*/
-.ContainerFormulario{
-    border: solid black;
+.InactiveUp{
+    display: none;
+}
+.ActiveDown{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: auto;
+    width: 100%;    
+}
+.InactiveDown{
+    display: none;
+}
+.FormularioIcono{
+    height: 40px;
+    width: 60px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #ffd743;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.IconoForm{
+    animation: rotate1 0.5s ease-in forwards;
+}
+@keyframes rotate1{
+    0%{
+        transform: rotate(180deg); 
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.IconoForm:hover{
+    cursor: pointer;
+    animation: rotate2 0.5s ease-in forwards;
+}
+@keyframes rotate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg); 
+    }
+}
+/*------------------------------------------------FORMULARIO----------------------------------------------------*/
+.ContainerFormularioConsulta{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2.5% 0%;
 }
-.Formulario{
-    border: solid black;
+.FormularioConsulta{
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     gap: 20px;
+
+    padding: 0% 15%;
 }
-.LabelForm{
+.LabelFormulario{
     color: #a06ab4;
     text-align: left;
-    margin: 0% 15%;
+  
     font-weight: 500;
 }
 .InputFormulario{
-    text-align: center;
+    text-align: left;
     padding: 1% 0%;
-    margin: 0% 15%;
+ 
     border: solid #a06ab4 2px ;
     outline-color: #a06ab4;
 }
 .textareaFormulario{
     border: solid #a06ab4 2px;
-    margin: 0% 15%;
-    height: 10vw;
+ 
+    height: 125px;
     color: #a06ab4;
     outline-color: #a06ab4;
+}
+/*------------------------------------------------BUTTON------------------------------------------------------*/
+.ButtonFormularioConsulta{
+    height: auto;
+    width: 100%;
+    padding: 1% 0%;
+    font-size: 20px;
+    background-color: #ffd743;
+    color: white;
+    border: solid transparent 1px;
+}
+.ButtonFormularioConsulta:hover{
+    background-color: white;
+    color: #ffd743;
+    border: solid #ffd743 1px;
 }
