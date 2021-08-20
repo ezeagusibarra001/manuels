@@ -1,10 +1,11 @@
-import React,{useRef} from "react"
+import React,{useState , useRef} from "react"
 import Layout from "../Layout";
 import "./Form.css"
 
 function Form(props) {
-    const asunto = props.match.params.asunto //TOMO EL VALOR DE LA URL
 
+    const asunto = props.match.params.asunto //TOMO EL VALOR DE LA URL
+/*----------------------------------------------------------------------------------------------------------*/
     const Container = useRef(null) //LO SETEAMOS EN NULL EN EL COMIENZO
     const Titulo = useRef(null)    //LO SETEAMOS EN NULL EN EL COMIENZO
     const BtnUp = useRef(null)       //LO SETEAMOS EN NULL EN EL COMIENZO
@@ -22,6 +23,21 @@ function Form(props) {
         BtnUp.current.className     = "ActiveUp" 
         BtnDown.current.className   = "InactiveDown" 
     }
+/*----------------------------------------------------------------------------------------------------------*/
+const [form , setForm] = useState({
+    name:"",
+    email:"",
+    asunto:asunto,
+    consulta:"",
+})
+const hamdleConsulta=(e)=>{
+    setForm({ ...form, [e.target.name]: e.target.value, })
+    console.log(form.name)
+    console.log(form.email)
+    console.log(form.asunto)
+    console.log(form.consulta)
+}
+/*----------------------------------------------------------------------------------------------------------*/
     return(
         <Layout>
             <div className="ContainerFormulario">
@@ -46,26 +62,29 @@ function Form(props) {
                     <form className="FormularioConsulta">
                         <label className="LabelFormulario">NOMBRE</label>
                         <input 
+                        onChange={hamdleConsulta}
                         className="InputFormulario"
                         name="name" 
-                        value=""
+                        value={form.name}
                         />
                         <label className="LabelFormulario">MAIL</label>
                         <input 
+                        onChange={hamdleConsulta}
                         className="InputFormulario"
                         name="email" 
-                        value=""
+                        value={form.email}
                         />
                         <label className="LabelFormulario">ASUNTO</label>
                         <input
                         className="InputFormulario" 
                         name="question" 
-                        value={asunto}
+                        value={form.asunto}
                         />
                         <label className="LabelFormulario">MENSAJE/CONSULTA</label>
                         <textarea 
+                        onChange={hamdleConsulta}
                         className="textareaFormulario"
-                        name="question" 
+                        name="consulta" 
                         />
                         <button className="ButtonFormularioConsulta">Enviar</button>
                     </form>
