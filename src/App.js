@@ -16,7 +16,7 @@ import { ToastProvider } from "react-toast-notifications";
 import Loading from "./Loading/Loading";
 
 function App() {
-  const web_ready = false
+  const web_ready = true
   return (
     <div className="ContainerGod">
       {

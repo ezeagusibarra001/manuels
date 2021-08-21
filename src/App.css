@@ -19,7 +19,7 @@
   }
   100%{
     opacity: 0%;
-    
+    z-index: -1; /*ES UN DETALLE IMPORTANTE PORQUE SINO EL TELON NO DEJA INTERACTUAR CON LA PAGINA*/
   }
 }
 .ContainerLoadingApp{
