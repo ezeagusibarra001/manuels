@@ -11,7 +11,7 @@ import AdminReseñas from "./Admin/AdminReseñas"
 import AdminPagos from "./Admin/AdminPagos"
 import Checkout from "./Checkout/Checkout";
 import Form from "./Formulario/Form";
-import { HomeProvider, useHome } from './context/home-context'
+import { HomeProvider } from './context/home-context'
 import { ToastProvider } from "react-toast-notifications";
 import Loading from "./Loading/Loading";
 
@@ -41,7 +41,9 @@ function App() {
         </ToastProvider>
         </>
         :
-        <Loading/>
+        <div className="ContainerLoadingApp"> 
+          <Loading/>
+        </div>
       }
     </div>
   );
