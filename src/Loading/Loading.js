@@ -20,8 +20,7 @@ function Loading() {
             </div>
         )
     }
-
-    {/*
+    /*
         <div className="ContenedorLoading">
             <div className="Loading1"> </div>
             <div className="Loading1"> </div>
@@ -46,6 +45,6 @@ function Loading() {
 
         
         <br></br>
-    */}
+    */
 }
 export default Loading;

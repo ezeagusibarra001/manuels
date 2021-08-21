@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import "./App.css"
 import { BrowserRouter, Route } from "react-router-dom"
 import Home from "./Home/Home"
@@ -16,13 +16,13 @@ import { ToastProvider } from "react-toast-notifications";
 import Loading from "./Loading/Loading";
 
 function App() {
-  const web_ready = true
+  const [web_ready,setWeb_ready] = useState(false) /*NO SE PUEDE USAR EL CONTEXT LA LOGICA LA TENEMOS QUE TRAER DIRECTAMENTE DEL APP JS CUANDO HAGAMOS ALGUN GET */
   return (
     <div className="ContainerGod">
       {
         web_ready ?
         <>
-        <div className="FondoBlanco"/>
+        <div className="FondoBlanco"/> {/*LO USAMOS PARA EL EFECTO DEL FONDO BLANCO*/}
         <ToastProvider autoDismiss autoDismissTimeout={3000} placement="bottom-right">
           <HomeProvider>
             <BrowserRouter>
