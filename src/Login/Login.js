@@ -46,6 +46,7 @@ function Login(props) {
                     appearance: "success",
                     autoDismiss: true,
                 });
+                
                 setLogin(true)
                 history.push("/AdminClases")
             })

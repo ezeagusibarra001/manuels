@@ -73,7 +73,32 @@
     height: auto;
     width: 100%;
 }
+/*----------------------------------------------COMING SOON----------------------------------------------*/
+.ComingSoon{
+    background-color: white;
+    text-align: center;
+    font-family: "dukecharming regular";
+    font-weight: 700;
+    width: 100%;
+    height: auto;
+    padding: 4% 0%;
+    color: #a06ab4;
+    border-radius: 20px; 
 
+    animation-name:jump ;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes jump{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 
 @media screen and (max-width: 1000px){
