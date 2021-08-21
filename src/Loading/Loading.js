@@ -2,15 +2,25 @@ import React from "react"
 import "./Loading.css"
 
 function Loading() {
-    return(
-        <>
-         <div className="ContainerLoading7">
-            <div className="Loading7A"></div>
-            <div className="Loading7B"></div>
-            <div className="Loading7C"></div>
-            <div className="Loading7D"></div>
-            <div className="Loading7E"></div>
-        </div>
+    if(window.innerWidth>500){
+        return(
+             <div className="ContainerLoading7">
+                <div className="Loading7A"></div>
+                <div className="Loading7B"></div>
+                <div className="Loading7C"></div>
+                <div className="Loading7D"></div>
+                <div className="Loading7E"></div>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div className="ContainerLoading3">
+                <div className="Loading3"/>
+            </div>
+        )
+    }
+
     {/*
         <div className="ContenedorLoading">
             <div className="Loading1"> </div>
@@ -18,7 +28,6 @@ function Loading() {
             <div className="Loading1"> </div>
         </div>
         <div className="Loading2"> </div>
-        <div className="Loading3"> </div>
         <div className="ContainerLoading4">
             <div className="Loading4"></div>
         </div>
@@ -38,8 +47,5 @@ function Loading() {
         
         <br></br>
     */}
-        </>
-    )
-    
 }
 export default Loading;

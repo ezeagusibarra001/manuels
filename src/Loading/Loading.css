@@ -53,20 +53,23 @@
         transform: rotate(360deg);
     }
 }
-
+/*----------------------------------------EN USO-------------------------------------------------------*/
+.ContainerLoading3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .Loading3{
     border: solid rgba(0, 0, 0, 0.2);
     border-left: solid #a06ab4;
-    width: 4vw;
-    height: 4vw;
+    width: 100px;
+    height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-
-    animation: spin 1.5s ease infinite;
-    margin-left: 10px;
+    animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
@@ -77,7 +80,7 @@
         transform: rotate(360deg);
     }
 }
-
+/*-----------------------------------------------------------------------------------------------*/
 .ContainerLoading4{
     height: 4px;
     width: 100%;
@@ -144,7 +147,7 @@
         width: 100%;
     }
 }
-
+/*----------------------------------------EN USO-------------------------------------------------------*/
 .ContainerLoading7{
     height: auto;
     width: 100%;
@@ -240,3 +243,4 @@
         opacity: 100%;
     }
 }
+/*-----------------------------------------------------------------------------------------------*/
