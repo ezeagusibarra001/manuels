@@ -12,7 +12,7 @@ function Footer() {
             <div className="ContainerFooter">
 
                 <div className="ContainerImgFooter">
-                    <img alt="img" src="./assets/logo1.png" className="ImgFooter"></img>
+                    <img alt="img" src="../assets/logo1.png" className="ImgFooter"></img>
                 </div>
 
                 <div className="ContainerTextosPadre">

@@ -15,6 +15,7 @@ function Cursos(props) {
     const select = () => {
         setCurrentClase(data)
         console.log(data.link)
+        window.scrollTo(0,0)
     }
 
     return (

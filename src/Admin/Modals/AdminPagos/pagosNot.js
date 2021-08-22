@@ -52,8 +52,8 @@ function pagosNot(props) {
                                         <td>{p.lastname}</td>
                                         <td>{p.lesson.title}</td>
                                         {p.payment.toString() === "false"
-                                        ?<td className="false">{p.payment.toString().toUpperCase()}</td>
-                                        :<td className="true">{p.payment.toString().toUpperCase()}</td>}
+                                        ?<td className="false">NO APR.</td>
+                                        :<td className="true">APR</td>}
                                         <td onClick={() => voucherCheck(p.image)}><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
                                         {p.payment.toString() === "false"
                                         ?<td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
@@ -61,7 +61,7 @@ function pagosNot(props) {
                                         <td onClick={() => baja(p.idPayment)}><img alt="img" src={`data:${imagenes[20].type};base64,${imagenes[20].bytes}`} />  </td>
                                     </tr>
                                     : <div></div>
-                            ))}
+                            ))} 
                         </tbody>
                     </Table>
                 </div>

@@ -38,6 +38,7 @@ function Checkout() {
     const [show2, setShow2] = useState(false);
     const handleClose2 = () => {
         setShow2(false);
+        window.scrollTo(0,0)
     }
     useEffect(() => {
         setShow2(true)
