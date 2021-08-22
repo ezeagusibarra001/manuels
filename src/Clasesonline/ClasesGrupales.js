@@ -1,8 +1,9 @@
 import React from "react"
 import "./ClasesGrupales.css"
+import {useHistory} from "react-router-dom"
 
 function ClasesGrupales() {
-
+    const history = useHistory()
 
     return(
 
@@ -147,7 +148,7 @@ function ClasesGrupales() {
                         </div>
                     </div>
                     <div className="ContainerButtonGrupales">
-                        <button className="ButtonGrupales" > <b>¡QUIERO SABER MÁS!</b> </button>
+                        <button className="ButtonGrupales" onClick={()=>history.push("/Form/Clases_Grupales")} > <b>¡QUIERO SABER MÁS!</b> </button>
                     </div>
                 </div>
             </div>

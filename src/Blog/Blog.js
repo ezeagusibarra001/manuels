@@ -6,7 +6,6 @@ import {useHome} from '../context/home-context'
 import Loading from '../Loading/Loading'
 function Blog(props) {
     const {loadingBlog} = useHome()
-
     return (
 
         <Layout>
@@ -18,6 +17,5 @@ function Blog(props) {
             }
         </Layout>
     )
-
 }
 export default Blog;

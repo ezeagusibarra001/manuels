@@ -22,8 +22,8 @@ function DesktopServicios() {
               <p className="Texto2Card1">Grabaciones en homestudio propio</p>
               <p className="Texto3Card1">Conducción de eventos: Radio , Podcast y TV </p>
             </div>
-            <div className="ContainerButtonCardDesktop"> 
-              <button className="ButtonCardDesktop" onClick={()=>window.location.href ="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}><b>¡CONTACTATE!</b></button>
+            <div className="ContainerButtonCardDesktop">
+              <button className="ButtonCardDesktop" onClick={()=>window.location.href="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}><b>¡CONTACTATE!</b></button>
             </div>
 
           </div>

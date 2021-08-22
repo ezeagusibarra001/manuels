@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+.ContainerGod{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  position: relative; /*PROPIEDAD IMPORTANTE PARA LA ANIMACION SIT_AND_ENJOY */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.FondoBlanco{
+  position: absolute; /*PROPIEDAD IMPORTANTE PARA LA ANIMACION SIT_AND_ENJOY */
+  background-color: white;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  animation: sit_and_enjoy 5s  forwards;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes sit_and_enjoy {
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+    z-index: -1; /*ES UN DETALLE IMPORTANTE PORQUE SINO EL TELON NO DEJA INTERACTUAR CON LA PAGINA*/
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ContainerLoadingApp{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* TOMA EN ALTURA EL 100% DE LA ALTURA DEL DISPOSITIVO*/
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
