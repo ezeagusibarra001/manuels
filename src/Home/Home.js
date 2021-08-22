@@ -9,9 +9,10 @@ import Feedback from "./Feedback";
 
 
 function Home(props) {
+    const {cargo} = props;
     return(
 
-        <Layout>
+        <Layout onLoad={cargo}>
            <Presentacion />
            <Experiencia />
            <Video />

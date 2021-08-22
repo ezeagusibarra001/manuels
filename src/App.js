@@ -16,7 +16,8 @@ import { ToastProvider } from "react-toast-notifications";
 import Loading from "./Loading/Loading";
 
 function App() {
-  const [web_ready,setWeb_ready] = useState(false) /*NO SE PUEDE USAR EL CONTEXT LA LOGICA LA TENEMOS QUE TRAER DIRECTAMENTE DEL APP JS CUANDO HAGAMOS ALGUN GET */
+  // eslint-disable-next-line
+  const [web_ready,setWeb_ready] = useState(true) /*NO SE PUEDE USAR EL CONTEXT LA LOGICA LA TENEMOS QUE TRAER DIRECTAMENTE DEL APP JS CUANDO HAGAMOS ALGUN GET */
   return (
     <div className="ContainerGod">
       {

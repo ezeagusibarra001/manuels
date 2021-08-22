@@ -14,7 +14,7 @@ function ReturnCrear(props) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="modal-tittle">Crear clase</Modal.Title>
+                    <Modal.Title id="modal-tittle">Crear publicacion</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="row">
                     <div className="col-6">

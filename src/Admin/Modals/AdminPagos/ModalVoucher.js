@@ -19,7 +19,7 @@ function ModalVoucher(props) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="modal-tittle">Eliminar Clase</Modal.Title>
+                    <Modal.Title id="modal-tittle">Comprobante</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 {currentVoucher === undefined

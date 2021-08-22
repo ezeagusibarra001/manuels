@@ -37,7 +37,7 @@ function ModalBlogEliminar(props) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="modal-tittle">Eliminar Clase</Modal.Title>
+                    <Modal.Title id="modal-tittle">Eliminar publicacion</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
