@@ -101,7 +101,6 @@ export function HomeProvider(props) {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
         currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
         loadingCheckout, setLoadingCheckout
-        
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
