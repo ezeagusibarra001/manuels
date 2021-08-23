@@ -22,11 +22,13 @@ function NabvarDesktop(props) {
         <div className="ContainerPadreNabvarDesktop">
 
             <div className="ContainerImgNabvarDesktop">
+                <Link className="ContainerImgNabvarDesktopLink" to="/">
                 <img
                     alt="img"
                     src="../assets/logo2.png"
                     className="Img"
                 />
+                </Link> 
             </div>
 
             <div className="ContainerLinksNabvarDesktop">

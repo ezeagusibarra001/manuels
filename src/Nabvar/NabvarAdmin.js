@@ -10,6 +10,9 @@ function NabvarAdmin(props) {
     const admin = () => {
       history.push("/AdminClases")
     }
+    const home = () => {
+        history.push("/")
+      }
     const logOut = () => {
         localStorage.removeItem('jwtToken')
         setLogin(false)
@@ -22,11 +25,13 @@ function NabvarAdmin(props) {
     return(
         <div className="ContainerPadreNabvarDesktop">
             <div className="ContainerImgNabvarDesktop">
-                <img
-                alt="img"
-                src="../assets/logo2.png"
-                className="Img"
-                />
+                <Link>
+                    <img
+                    alt="img"
+                    src="../assets/logo2.png"
+                    className="Img"
+                    />
+                </Link>
             </div>
             <div className="ContainerLinksNabvarDesktop">
                 <Link className="NabvarLink" to="/">Inicio</Link>
