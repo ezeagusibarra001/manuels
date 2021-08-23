@@ -1,5 +1,4 @@
-import React,{useState} from "react"
-import "./App.css"
+import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import Home from "./Home/Home"
 import Clasesonline from './Clasesonline/Clasesonline';
@@ -11,19 +10,12 @@ import AdminReseñas from "./Admin/AdminReseñas"
 import AdminPagos from "./Admin/AdminPagos"
 import Checkout from "./Checkout/Checkout";
 import Form from "./Formulario/Form";
-import { HomeProvider } from './context/home-context'
+import { HomeProvider} from './context/home-context'
 import { ToastProvider } from "react-toast-notifications";
-import Loading from "./Loading/Loading";
 
 function App() {
   // eslint-disable-next-line
-  const [web_ready,setWeb_ready] = useState(true) /*NO SE PUEDE USAR EL CONTEXT LA LOGICA LA TENEMOS QUE TRAER DIRECTAMENTE DEL APP JS CUANDO HAGAMOS ALGUN GET */
   return (
-    <div className="ContainerGod">
-      {
-        web_ready ?
-        <>
-        <div className="FondoBlanco"/> {/*LO USAMOS PARA EL EFECTO DEL FONDO BLANCO*/}
         <ToastProvider autoDismiss autoDismissTimeout={3000} placement="bottom-right">
           <HomeProvider>
             <BrowserRouter>
@@ -40,13 +32,6 @@ function App() {
             </BrowserRouter>
           </HomeProvider>
         </ToastProvider>
-        </>
-        :
-        <div className="ContainerLoadingApp"> 
-          <Loading/>
-        </div>
-      }
-    </div>
   );
 }
 export default App;

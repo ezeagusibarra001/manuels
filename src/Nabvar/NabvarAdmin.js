@@ -10,9 +10,6 @@ function NabvarAdmin(props) {
     const admin = () => {
       history.push("/AdminClases")
     }
-    const home = () => {
-        history.push("/")
-      }
     const logOut = () => {
         localStorage.removeItem('jwtToken')
         setLogin(false)
