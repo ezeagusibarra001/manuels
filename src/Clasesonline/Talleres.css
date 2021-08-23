@@ -119,16 +119,9 @@
 .ButtonTalleres{
     border: solid transparent;
     border-radius: 10px;
-    padding: 1% 6%;
+    padding: 2% 10%;
     font-size: 20px;
 }
-
-.ButtonTalleres:hover{
- font-weight: 800;
- padding: 2% 6%;
-}
-
-
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 1000px){
     .ContainerMapTalleres{

@@ -27,7 +27,6 @@ function App() {
         <ToastProvider autoDismiss autoDismissTimeout={3000} placement="bottom-right">
           <HomeProvider>
             <BrowserRouter>
-
               <Route path="/" component={Home} exact />
               <Route path="/Clasesonline" component={Clasesonline} exact />
               <Route path="/Blog" component={Blog} exact />
