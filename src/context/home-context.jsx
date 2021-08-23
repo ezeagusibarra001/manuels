@@ -68,6 +68,7 @@ export function HomeProvider(props) {
     const obtenerImagenes = async () => {
         await clienteAxios.get("/images").then((res) => {
             setImagenes(res.data);
+            setWeb_ready(true)
         });
     };
     //ESTADO DEL LOGIN
