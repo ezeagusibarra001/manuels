@@ -1,12 +1,18 @@
 import React from "react"
+import { useHome } from "../context/home-context";
 import "./PortadaClases.css"
 
 function Portada(props) {
-
+    const {imagenes} = useHome()
     return(
 
         <div className="ContainerFondoPortada">
-            <img alt="img" className="ImgPortada" src="./assets/portadaclasesonline.png"></img>
+           {imagenes.filter((imagen) => imagen.name === "portadaclasesonline.png").map((imagen)=>(
+                <img alt="img"
+                    src={`data:${imagen.type};base64,${imagen.bytes}`}
+                    className="ImgBlog"
+                />
+            ))}
         </div>
     )
     

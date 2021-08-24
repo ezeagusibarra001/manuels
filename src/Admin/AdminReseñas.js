@@ -4,11 +4,12 @@ import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
 import Controllerreseñas from "./Modals/Reseñas/ControllerReseñas";
 import "./Admin.css"
-
+import ModalReseñasEliminar from './Modals/Reseñas/ModalReseñasEliminar'
 function AdminReseñas() {
 
 /*-----------------------------------------------------------------------------*/
     const [showVerReseñas, setShowVerReseñas] = useState(false);
+    const [showEliminarRev, setEliminarRev] = useState(false);
 /*-----------------------------------------------------------------------------*/
 
     return (
@@ -26,9 +27,12 @@ function AdminReseñas() {
                 <div className="Manage">
                     <Nav className="flex-column">
                         <Nav.Link><Link onClick={() => setShowVerReseñas(true)} >Ver Reseñas</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setEliminarRev(true)} >Eliminar Reseñas</Link></Nav.Link>
+
                     </Nav>
                 </div>
                 <Controllerreseñas setShowVerReseñas={setShowVerReseñas} showVerReseñas={showVerReseñas}/>
+                <ModalReseñasEliminar showEliminarRev={showEliminarRev} setEliminarRev={setEliminarRev}/>
             </div>
 
         </Layout>

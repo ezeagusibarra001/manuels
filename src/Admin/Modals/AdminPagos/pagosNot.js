@@ -39,6 +39,7 @@ function pagosNot(props) {
                                 <th>Clase</th>
                                 <th>Estado</th>
                                 <th>Comprobante</th>
+                                <th>Telefono</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -52,16 +53,31 @@ function pagosNot(props) {
                                         <td>{p.lastname}</td>
                                         <td>{p.lesson.title}</td>
                                         {p.payment.toString() === "false"
-                                        ?<td className="false">NO APR.</td>
-                                        :<td className="true">APR</td>}
+                                            ? <td className="false">NO APR.</td>
+                                            : <td className="true">APR</td>}
                                         <td onClick={() => voucherCheck(p.image)}><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
+                                        <td>{p.phone}</td>
                                         {p.payment.toString() === "false"
-                                        ?<td onClick={() => alta(p.idPayment)}><img alt="img" src={`data:${imagenes[19].type};base64,${imagenes[19].bytes}`} />  </td>
-                                        :<td></td>}
-                                        <td onClick={() => baja(p.idPayment)}><img alt="img" src={`data:${imagenes[20].type};base64,${imagenes[20].bytes}`} />  </td>
+                                            ? <td onClick={() => alta(p.idPayment)}>
+                                                {imagenes.filter((imagen) => imagen.name === "comprobado.png").map((imagen) => (
+                                                    <img alt="img"
+                                                        src={`data:${imagen.type};base64,${imagen.bytes}`}
+                                                        className="imagenCheckout"
+                                                    />
+                                                ))}
+                                            </td>
+                                            : <td></td>}
+                                        <td onClick={() => baja(p.idPayment)}>
+                                            {imagenes.filter((imagen) => imagen.name === "basura (1).png").map((imagen) => (
+                                                <img alt="img"
+                                                    className="imagenCheckout"
+                                                    src={`data:${imagen.type};base64,${imagen.bytes}`}
+                                                />
+                                            ))}
+                                        </td>
                                     </tr>
                                     : <div></div>
-                            ))} 
+                            ))}
                         </tbody>
                     </Table>
                 </div>

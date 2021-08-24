@@ -45,9 +45,11 @@ function ModalClasesCrear(props) {
     }
     const handleDate1 = (e) => {
         setSuperDates([...superDates, { date: e.target.value }])
+        console.log(superDates)
     }
     const handleDate2 = (e) => {
         setSuperDates([...superDates, { date: e.target.value }])
+        console.log(superDates)
     }
     var postData = {
         title: currentClase.title,
@@ -77,8 +79,11 @@ function ModalClasesCrear(props) {
             })
             .catch((err) => {
                 console.log("error post", err);
-                console.log(axiosConfig)
-                console.log(postData)
+                handleClose()
+                addToast(err, {
+                    appearance: "error",
+                    autoDismiss: true,
+                });
             });
     };
     return (
@@ -141,7 +146,7 @@ function ModalClasesCrear(props) {
                             name="teacher"
                             as="textarea"
                             placeholder="Dictado por:"
-                            maxLength="65"
+                            maxLength="55"
                             style={Styles}
                             onChange={handleChange}
                             className="CCinputTeacher"
@@ -161,7 +166,7 @@ function ModalClasesCrear(props) {
                             name="link"
                             as="textarea"
                             placeholder="Link Mercado Pago:"
-                            maxLength="65"
+                            maxLength="100"
                             style={Styles}
                             onChange={handleChange}
                             className="CCinputRequisitos"
@@ -171,7 +176,7 @@ function ModalClasesCrear(props) {
                             name="link1"
                             as="textarea"
                             placeholder="Link Seña Pago:"
-                            maxLength="65"
+                            maxLength="100"
                             style={Styles}
                             onChange={handleChange}
                             className="CCinputRequisitos"
@@ -188,7 +193,12 @@ function ModalClasesCrear(props) {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
+                    {currentClase.title === "" || currentClase.description === "" || superDates.length < 1
+                    ?
+                    <Button variant="primary" disabled onClick={submit}>Crear</Button>
+                    :
                     <Button variant="primary" onClick={submit}>Crear</Button>
+                    }
                     <Button variant="primary" onClick={handleClose}>Cerrar</Button>
 
                 </Modal.Footer>

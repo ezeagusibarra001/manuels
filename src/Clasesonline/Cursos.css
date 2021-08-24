@@ -187,6 +187,23 @@
 
     padding: 1% 2%;
 }
+.ContainerCursostexto5{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+
+    width: 100%;
+    height: auto;
+
+    background-color: rgb(167, 167, 167);
+
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+    padding: 1% 2%;
+}
 .CursosTextos4{
     color: white;
     text-align: center;
@@ -203,9 +220,22 @@
     width: 100%;
     height: auto;
 }
+.ButtonTextos5{
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    width: 100%;
+    height: auto;
+}
 .ButtonTextos4:hover{
     color: #ffd743;
     font-weight: 500;
+}
+.ButtonTextos5:hover{
+    color: white;
+    text-decoration:line-through;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px){
@@ -247,6 +277,9 @@
     .ButtonTextos4{
         font-size: 5vw;
     }
+    .ButtonTextos5{
+        font-size: 5vw;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -279,6 +312,9 @@
         font-size: 3.5vw;
     }
     .ButtonTextos4{
+        font-size: 5vw;
+    }
+    .ButtonTextos5{
         font-size: 5vw;
     }
 }

@@ -4,7 +4,7 @@ import CheckOutModal from "./CheckOutModal";
 import Modalguide from "./Modalguide";
 import Button from 'react-bootstrap/Button'
 import "./Checkout.css"
-import InputGroup from 'react-bootstrap/InputGroup'
+import Form from 'react-bootstrap/Form'
 import { useHome } from '../context/home-context'
 import clienteAxios from '../config/clienteAxios'
 import { useHistory } from "react-router-dom"
@@ -13,7 +13,7 @@ import ModalLoading from '../Checkout/ModalLoading'
 function Checkout() {
     const { addToast } = useToasts();
     const history = useHistory()
-    const { currentClase } = useHome()
+    const { currentClase, obtenerClases } = useHome()
     const [modalLoading, setModalLoading] = useState(false)
     const [currentPayment, setCurrentPayment] = useState({
         name: "",
@@ -79,8 +79,10 @@ function Checkout() {
         formdata.set('name', currentPayment.name)
         formdata.set('lastname', currentPayment.lastname)
         formdata.set('email', currentPayment.email)
-        formdata.set('lesson', currentClase.idLesson)
-        formdata.set('phone', currentClase.phone)
+        if(currentClase !== undefined){
+            formdata.set('lesson', currentClase.idLesson)
+        }
+        formdata.set('phone', currentPayment.phone)
         await clienteAxios
             .post("/payments", formdata)
             .then((res) => {
@@ -90,9 +92,17 @@ function Checkout() {
                     autoDismiss: true,
                 });
                 setModalLoading(false)
+                obtenerClases()
+                setTimeout(function(){ history.push("/ClasesOnline") }, 2000);
             })
             .catch((err) => {
                 console.log("error post", err);
+                addToast("Oh! Algo no salio como lo esperabamos.", {
+                    appearance: "error",
+                    autoDismiss: true,
+                });
+                setModalLoading(false)
+                setTimeout(function(){ history.push("/ClasesOnline") }, 2000);
             });
     };
 
@@ -163,8 +173,8 @@ function Checkout() {
                             <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
                             : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkP"> Mercado Pago </a>} </h1>
                     <div className="CheckoutinputCheck">
-                        <label className="CheckoutLabel">Para abonar con seña click aqui </label>
-                        <InputGroup.Checkbox className="" onChange={checked} />
+                        {/*<label className="CheckoutLabel">Para abonar con seña click aqui </label>*/}
+                        <Form.Check type="checkbox" onChange={checked} label="Para abonar con seña click aqui" className="checkBox CheckoutinputM"/>
                     </div>
 
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
