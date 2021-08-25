@@ -10,11 +10,13 @@ import clienteAxios from '../config/clienteAxios'
 import { useHistory } from "react-router-dom"
 import { useToasts } from "react-toast-notifications";
 import ModalLoading from '../Checkout/ModalLoading'
+import moment from "moment";
 function Checkout() {
     const { addToast } = useToasts();
     const history = useHistory()
     const { currentClase, obtenerClases } = useHome()
     const [modalLoading, setModalLoading] = useState(false)
+    const [fecha, setFecha] = useState({ date: "" })
     const [currentPayment, setCurrentPayment] = useState({
         name: "",
         lastname: "",
@@ -38,7 +40,7 @@ function Checkout() {
     const [show2, setShow2] = useState(false);
     const handleClose2 = () => {
         setShow2(false);
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }
     useEffect(() => {
         setShow2(true)
@@ -60,10 +62,19 @@ function Checkout() {
             setStyles({ outlineColor: "red" })
         }
     }
+    const handleDate = (e) => {
+        console.log(e)
+        setFecha({ date: e })
+    }
     /*-------------------------------POST IMAGE----------------------------------------*/
     const [file, setFile] = useState({
         file: null
     })
+    const x = [];
+    if (currentClase !== undefined) {
+        const dates = currentClase.dates;
+        dates.forEach(d => { x.push(d) })
+    }
 
     const handleFile = (e) => {
         let file = e.target.files[0]
@@ -79,8 +90,9 @@ function Checkout() {
         formdata.set('name', currentPayment.name)
         formdata.set('lastname', currentPayment.lastname)
         formdata.set('email', currentPayment.email)
-        if(currentClase !== undefined){
+        if (currentClase !== undefined) {
             formdata.set('lesson', currentClase.idLesson)
+            formdata.set('date', fecha.date)
         }
         formdata.set('phone', currentPayment.phone)
         await clienteAxios
@@ -93,7 +105,7 @@ function Checkout() {
                 });
                 setModalLoading(false)
                 obtenerClases()
-                setTimeout(function(){ history.push("/ClasesOnline") }, 2000);
+                setTimeout(function () { history.push("/ClasesOnline") }, 2000);
             })
             .catch((err) => {
                 console.log("error post", err);
@@ -102,7 +114,7 @@ function Checkout() {
                     autoDismiss: true,
                 });
                 setModalLoading(false)
-                setTimeout(function(){ history.push("/ClasesOnline") }, 2000);
+                setTimeout(function () { history.push("/ClasesOnline") }, 2000);
             });
     };
 
@@ -174,7 +186,12 @@ function Checkout() {
                             : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkP"> Mercado Pago </a>} </h1>
                     <div className="CheckoutinputCheck">
                         {/*<label className="CheckoutLabel">Para abonar con seña click aqui </label>*/}
-                        <Form.Check type="checkbox" onChange={checked} label="Para abonar con seña click aqui" className="checkBox CheckoutinputM"/>
+                        <Form.Check type="checkbox" onChange={checked} label="Para abonar con seña click aqui" className="checkBox CheckoutinputM" />
+                    </div>
+                    <div className="CheckoutinputCheck2">
+                        {!x[0] ? <div></div> :<input type="radio" name="date" onClick={() => handleDate(x[0].date)} />} <label className="CheckoutLabel2">{!x[0] ? <div></div> : moment(x[0].date).format("DD/MM")}</label>
+                        {!x[1] ? <div></div> : <input name="date" type="radio" onClick={() => handleDate(x[1].date)} />} {!x[1] ? <div></div> : <label className="CheckoutLabel2">{moment(x[1].date).format("DD/MM")}</label>}
+
                     </div>
 
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>

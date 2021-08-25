@@ -107,7 +107,21 @@
     background-color: white;
     font-size: 2.5vw;
 }
-
+.CheckoutinputCheck2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: #a06ab4;
+    padding: 0% 1%;
+    border: solid #a06ab4 0px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 2.5vw;
+}
 .CheckoutLinkP {
     color: #aa03e7;
 }
@@ -123,6 +137,22 @@
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
+    height: auto;
+    width: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+    margin: 2%;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 2vw;
+}
+
+.CheckoutLabel2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 8;
     height: auto;
     width: fit-content;
     padding: 2% 2% 2% 2%;

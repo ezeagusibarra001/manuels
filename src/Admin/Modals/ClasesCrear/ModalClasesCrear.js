@@ -27,7 +27,8 @@ function ModalClasesCrear(props) {
         }, {
             date: "" || ""
         }],
-        quota: ""
+        quota: "",
+        discountLink: ""
     })
     const handleClose = () => {
         setShowCrear(false)
@@ -62,6 +63,7 @@ function ModalClasesCrear(props) {
         link1: currentClase.link1,
         dates: superDates,
         quota: currentClase.quota,
+        discountLink: currentClase.discountLink
     };
 
     
@@ -176,6 +178,16 @@ function ModalClasesCrear(props) {
                             name="link1"
                             as="textarea"
                             placeholder="Link Seña Pago:"
+                            maxLength="100"
+                            style={Styles}
+                            onChange={handleChange}
+                            className="CCinputRequisitos"
+                        />
+                        <br></br>
+                        <textarea
+                            name="discountLink"
+                            as="textarea"
+                            placeholder="Link de Descuento:"
                             maxLength="100"
                             style={Styles}
                             onChange={handleChange}
