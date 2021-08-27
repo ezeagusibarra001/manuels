@@ -60,6 +60,22 @@ export function HomeProvider(props) {
             console.log(error)
         });
     };
+    //CODE API
+    const [code, setCode] = useState([]);
+    useEffect(() => {
+        obtenerCode();
+        // eslint-disable-next-line
+    }, []);
+    const obtenerCode = async () => {
+        await clienteAxios.get("/discounts", axiosConfig).then((res) => {
+            setCode(res.data);
+            console.log(res.data);
+        }).then((res) => {
+            console.log(res.data)
+        }).catch((error) => {
+            console.log(error)
+        });
+    };
     //IMAGENES API
     const [imagenes, setImagenes] = useState([]);
     useEffect(() => {
@@ -103,7 +119,7 @@ export function HomeProvider(props) {
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
         currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
-        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready
+        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready, code, obtenerCode
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

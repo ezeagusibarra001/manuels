@@ -91,7 +91,12 @@
     background-color: white;
     font-size: 2.5vw;
 }
-
+.walletPiola:hover{
+    color: white !important;
+    background-color: #a06ab4 !important;
+    border-radius: 2px !important;
+    padding: 2px;
+}
 .CheckoutinputCheck {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -122,14 +127,44 @@
     background-color: white;
     font-size: 2.5vw;
 }
+.CheckoutinputCheck3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 9;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    color: #a06ab4;
+    padding: 0% 1%;
+    border: solid #a06ab4 0px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 2.5vw;
+}
 .CheckoutLinkP {
     color: #aa03e7;
+    margin-left: 10px;
 }
-
+.CheckoutLinkP:hover {
+    color: #aa03e7;
+    margin-left: 10px;
+}
+.CheckoutLinkD {
+    color: #e7bd03;
+    margin-left: 10px;
+}
+.CheckoutLinkD:hover {
+    color: #e7bd03;
+    margin-left: 10px;
+}
 .CheckoutButton2 {
     border: none;
     background-color: transparent;
     color: red;
+}
+.CheckoutLinkM{
+    margin-left: 10px;
 }
 
 .CheckoutLabel {
@@ -182,7 +217,27 @@
     background-color: white;
     font-size: 2.5vw;
 }
-
+.CheckoutDiscount{
+    color: #a06ab4;
+    border: solid #a06ab4 4px;
+    outline-color: #a06ab4;
+    background-color: white;
+    font-size: 2.5vw;
+    margin-right: 20px;
+}
+.x{
+    /*margin-left: 20px !important;*/
+    color:#a06ab4;
+}
+.fix{
+    width: 30px !important;
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: transparent !important;
+}
+.fix:focus{
+    box-shadow: transparent !important;
+}
 .CheckoutComprobante {
     height: auto;
     width: fit-content;

@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import ModalVoucher from './ModalVoucher'
-
+import moment from "moment";
 function pagosNot(props) {
     const { payments, voucherCheck, alta, imagenes, baja, showVoucher, setShowVoucher, currentVoucher, setEstado, estado } = props;
     return (
@@ -18,6 +18,7 @@ function pagosNot(props) {
                         <Nav.Link><Link to="/AdminBlog" >Blog</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminReseñas" >Reseñas</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminPagos" >Pagos</Link></Nav.Link>
+                        <Nav.Link><Link to="/AdminCode" >Descuentos</Link></Nav.Link>
                     </Nav>
                 </div>
                 <Navbar bg="primary" variant="dark">
@@ -40,6 +41,8 @@ function pagosNot(props) {
                                 <th>Estado</th>
                                 <th>Comprobante</th>
                                 <th>Telefono</th>
+                                <th>F.Compra</th>
+                                <th>F.Elegida</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -57,6 +60,8 @@ function pagosNot(props) {
                                             : <td className="true">APR</td>}
                                         <td onClick={() => voucherCheck(p.image)}><img alt="img" className="imagenCheckout" src={`data:${p.image.type};base64,${p.image.bytes}`} /></td>
                                         <td>{p.phone}</td>
+                                        <td>{moment(p.date).format("DD/MM/YY")}</td>
+                                        <td>{moment(p.dateLesson).format("DD/MM/YY")}</td>
                                         {p.payment.toString() === "false"
                                             ? <td onClick={() => alta(p.idPayment)}>
                                                 {imagenes.filter((imagen) => imagen.name === "comprobado.png").map((imagen) => (

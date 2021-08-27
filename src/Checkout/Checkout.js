@@ -11,18 +11,21 @@ import { useHistory } from "react-router-dom"
 import { useToasts } from "react-toast-notifications";
 import ModalLoading from '../Checkout/ModalLoading'
 import moment from "moment";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 function Checkout() {
     const { addToast } = useToasts();
     const history = useHistory()
+    const [isTrue, setIsTrue] = useState(false)
     const { currentClase, obtenerClases } = useHome()
     const [modalLoading, setModalLoading] = useState(false)
-    const [fecha, setFecha] = useState({ date: "" })
     const [currentPayment, setCurrentPayment] = useState({
         name: "",
         lastname: "",
         mail: "",
         phone: ""
     })
+    const [discount, setDiscount] = useState({ code: "" })
     const home = () => {
         history.push("/")
     }
@@ -63,8 +66,9 @@ function Checkout() {
         }
     }
     const handleDate = (e) => {
-        console.log(e)
+        console.log(moment(e).format("YYYY/MM/DD"))
         setFecha({ date: e })
+
     }
     /*-------------------------------POST IMAGE----------------------------------------*/
     const [file, setFile] = useState({
@@ -75,7 +79,7 @@ function Checkout() {
         const dates = currentClase.dates;
         dates.forEach(d => { x.push(d) })
     }
-
+    const [fecha, setFecha] = useState({ date: "" })
     const handleFile = (e) => {
         let file = e.target.files[0]
         setFile({ file: file })
@@ -92,7 +96,8 @@ function Checkout() {
         formdata.set('email', currentPayment.email)
         if (currentClase !== undefined) {
             formdata.set('lesson', currentClase.idLesson)
-            formdata.set('date', fecha.date)
+            formdata.set('dateSelected', moment(fecha.date).format("YYYY/MM/DD"))
+
         }
         formdata.set('phone', currentPayment.phone)
         await clienteAxios
@@ -117,13 +122,48 @@ function Checkout() {
                 setTimeout(function () { history.push("/ClasesOnline") }, 2000);
             });
     };
-
+    const validation = () => {
+        addToast("Elija una fecha porfavor", {
+            appearance: "warning",
+            autoDismiss: true,
+        });
+    }
     var ch = document.querySelector("#root > div > div > div.Containercheckout > form > div > span")
     setInterval(function () {
         if (ch) {
             ch.classList.add("checkBox")
         }
+
     }, 300);
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            Ingrese su codigo de descuento y haga click para aplicarlo
+        </Tooltip>
+    );
+    const handleDiscount = (e) => {
+        setDiscount({ [e.target.name]: e.target.value })
+        //console.log(e.target.value)
+    }
+    const getDiscount = async () => {
+        await clienteAxios
+            .get(`/discounts/names/${discount.code}`)
+            .then((res) => {
+                console.log(res.data);
+                setIsTrue(true)
+                addToast("¡Promocion aplicada!", {
+                    appearance: "success",
+                    autoDismiss: true,
+                });
+            })
+            .catch((err) => {
+                console.log("error post", err);
+                setIsTrue(false)
+                addToast("Oh! Codigo Incorrecto", {
+                    appearance: "warning",
+                    autoDismiss: true,
+                });
+            });
+    }
     return (
         <Layout >
             <div className="Containercheckout">
@@ -179,21 +219,64 @@ function Checkout() {
                     <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
 
                     <h1 className="CheckoutSubtitleM">Mercado Pago:</h1>
-                    <h1 className="CheckoutinputM"> Inscripción Vía {currentClase === undefined
-                        ? <button onClick={home} className="CheckoutButton2">Link no disponible</button>
-                        : check === false ?
-                            <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
-                            : <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkP"> Mercado Pago </a>} </h1>
+                    <h1 className="CheckoutinputM"> Inscripción Vía
+                        {currentClase === undefined
+                            ?
+                            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Ha ocurrido un error. Haz click aqui y vuelve a intentarlo.</Tooltip>}>
+                                <span className="d-inline-block">
+                                    <button onClick={home} className="CheckoutButton2">Link no disponible</button>
+                                </span>
+                            </OverlayTrigger>
+                            : check === true ?
+                                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Link para abonar SOLO la seña parcial de la clase</Tooltip>}>
+                                    <span className="d-inline-block">
+                                        <a target="_blank" rel="noreferrer" href={currentClase.link1} className="CheckoutLinkP">  Mercado Pago </a>
+                                    </span>
+                                </OverlayTrigger>
+                                : isTrue === true
+                                    ?
+                                    <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Link para abonar con codigo promocional aplicado</Tooltip>}>
+                                        <span className="d-inline-block">
+                                            <a target="_blank" rel="noreferrer" href={currentClase.discountLink} className="CheckoutLinkD"> Mercado Pago </a>
+                                        </span>
+                                    </OverlayTrigger>
+                                    :
+                                    <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Link para abonar la clase en su totalidad</Tooltip>}>
+                                        <span className="d-inline-block">
+                                            <a target="_blank" rel="noreferrer" href={currentClase.link} className="CheckoutLinkM"> Mercado Pago </a>
+                                        </span>
+                                    </OverlayTrigger>
+                        } </h1>
                     <div className="CheckoutinputCheck">
                         {/*<label className="CheckoutLabel">Para abonar con seña click aqui </label>*/}
                         <Form.Check type="checkbox" onChange={checked} label="Para abonar con seña click aqui" className="checkBox CheckoutinputM" />
                     </div>
                     <div className="CheckoutinputCheck2">
-                        {!x[0] ? <div></div> :<input type="radio" name="date" onClick={() => handleDate(x[0].date)} />} <label className="CheckoutLabel2">{!x[0] ? <div></div> : moment(x[0].date).format("DD/MM")}</label>
+                        {!x[0] ? <div></div> : <input type="radio" id="n1" name="date" onClick={() => handleDate(x[0].date)} />} <label className="CheckoutLabel2">{!x[0] ? <div></div> : moment(x[0].date).format("DD/MM")}</label>
                         {!x[1] ? <div></div> : <input name="date" type="radio" onClick={() => handleDate(x[1].date)} />} {!x[1] ? <div></div> : <label className="CheckoutLabel2">{moment(x[1].date).format("DD/MM")}</label>}
-
                     </div>
-
+                    <div className="CheckoutinputCheck3">
+                        <input
+                            className="CheckoutDiscount"
+                            type="text"
+                            name="code"
+                            placeholder="Codigo de Descuento"
+                            maxLength="10"
+                            onChange={handleDiscount}
+                        />
+                        <svg onClick={getDiscount} xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wallet2 walletPiola" viewBox="0 0 16 16">
+                            <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                        </svg>
+                        <OverlayTrigger
+                            placement="right"
+                            delay={{ show: 250, hide: 400 }}
+                            overlay={renderTooltip}
+                        >
+                            <button className="fix"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill x" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                            </svg></button>
+                        </OverlayTrigger>
+                    </div>
                     <h1 className="CheckoutComprobante">ADJUNTAR COMPROBANTE :</h1>
                     <input
                         className="CheckoutinputComprobante"
@@ -201,8 +284,10 @@ function Checkout() {
                         name="file"
                         onChange={(e) => handleFile(e)}
                     />
+                    {fecha.date === ""
+                        ? <Button className="CheckoutButton" type="button" onClick={validation} > Confirmar </Button>
+                        : <Button className="CheckoutButton" type="button" onClick={submit}> Confirmar </Button>}
 
-                    <Button className="CheckoutButton" type="button" onClick={submit}> Confirmar </Button>
                 </form>
             </div>
             <CheckOutModal show={show} handleClose={handleClose} handleSubmit={handleSubmit} />

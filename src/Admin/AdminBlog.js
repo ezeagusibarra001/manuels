@@ -18,6 +18,8 @@ function AdminBlog() {
                         <Nav.Link><Link to="/AdminBlog" >Blog</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminReseñas" >Reseñas</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminPagos" >Pagos</Link></Nav.Link>
+                        <Nav.Link><Link to="/AdminCode" >Descuentos</Link></Nav.Link>
+
                     </Nav>
                 </div>
                 <div className="Manage">

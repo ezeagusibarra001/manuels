@@ -12,7 +12,7 @@ import Checkout from "./Checkout/Checkout";
 import Form from "./Formulario/Form";
 import { HomeProvider} from './context/home-context'
 import { ToastProvider } from "react-toast-notifications";
-
+import AdminCode from './Admin/AdminCode'
 function App() {
   // eslint-disable-next-line
   return (
@@ -24,6 +24,7 @@ function App() {
               <Route path="/Blog" component={Blog} exact />
               <Route path="/Login" component={Login} exact />
               <Route path="/AdminClases" component={AdminClases} exact />
+              <Route path="/AdminCode" component={AdminCode} exact />
               <Route path="/AdminBlog" component={AdminBlog} exact />
               <Route path="/AdminReseñas" component={AdminReseñas} exact />
               <Route path="/AdminPagos" component={AdminPagos} exact />

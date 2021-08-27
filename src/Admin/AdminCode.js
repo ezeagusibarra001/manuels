@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import Layout from "../Layout";
 import Nav from 'react-bootstrap/Nav'
 import { Link } from "react-router-dom"
-import Controllerreseñas from "./Modals/Reseñas/ControllerReseñas";
+import CrearDescuentos from "./Modals/Descuentos/CrearDescuentos";
 import "./Admin.css"
-import ModalReseñasEliminar from './Modals/Reseñas/ModalReseñasEliminar'
-function AdminReseñas() {
+import CodeEliminar from './Modals/Descuentos/CodeEliminar'
+function AdminCode() {
 
 /*-----------------------------------------------------------------------------*/
-    const [showVerReseñas, setShowVerReseñas] = useState(false);
+    const [showCode, setShowCode] = useState(false);
     const [showEliminarRev, setEliminarRev] = useState(false);
 /*-----------------------------------------------------------------------------*/
 
@@ -23,21 +23,22 @@ function AdminReseñas() {
                         <Nav.Link><Link to="/AdminReseñas" >Reseñas</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminPagos" >Pagos</Link></Nav.Link>
                         <Nav.Link><Link to="/AdminCode" >Descuentos</Link></Nav.Link>
+
                     </Nav>
                 </div>
                 <div className="Manage">
                     <Nav className="flex-column">
-                        <Nav.Link><Link onClick={() => setShowVerReseñas(true)} >Ver Reseñas</Link></Nav.Link>
-                        <Nav.Link><Link onClick={() => setEliminarRev(true)} >Eliminar Reseñas</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setShowCode(true)} >Crear Descuento</Link></Nav.Link>
+                        <Nav.Link><Link onClick={() => setEliminarRev(true)} >Eliminar Descuento</Link></Nav.Link>
 
                     </Nav>
                 </div>
-                <Controllerreseñas setShowVerReseñas={setShowVerReseñas} showVerReseñas={showVerReseñas}/>
-                <ModalReseñasEliminar showEliminarRev={showEliminarRev} setEliminarRev={setEliminarRev}/>
+                <CrearDescuentos showCode={showCode} setShowCode={setShowCode}/>
+                <CodeEliminar showEliminarRev={showEliminarRev} setEliminarRev={setEliminarRev}/>
             </div>
 
         </Layout>
     )
 
 }
-export default AdminReseñas;
+export default AdminCode;
