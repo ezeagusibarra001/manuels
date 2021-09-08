@@ -14,7 +14,7 @@ function CodeEliminar(props) {
     }
     const handleEliminar = async (id) => {
         await clienteAxios
-            .delete(`/discount/${id}`,axiosConfig)
+            .delete(`/discounts/${id}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
                 addToast("Reseña eliminada!", {
@@ -42,12 +42,12 @@ function CodeEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {code.map((code) => (
+                        {code.map((c) => (
                             <div>
-                                <li>{code.code}</li>
+                                <li>{c.code}</li>
                                 <Button
                                     variant="primary"
-                                    onClick={() => handleEliminar(code.idDiscounts)}
+                                    onClick={() => handleEliminar(c.idDiscounts)}
                                 >Borrar</Button>
                             </div>
                         ))}

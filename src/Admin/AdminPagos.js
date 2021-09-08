@@ -5,7 +5,7 @@ import clienteAxios from '../config/clienteAxios'
 import { useHistory } from "react-router-dom"
 import { useToasts } from "react-toast-notifications";
 import Pagos from "./Modals/AdminPagos/pagosNot";
-
+import Layout from '../Layout'
 function AdminPagos() {
     const { addToast } = useToasts();
     const history = useHistory()
@@ -72,20 +72,25 @@ function AdminPagos() {
         console.log(image)
     }
     console.log("currentVoucher", currentVoucher)
-    return (
-        <Pagos
-            payments={payments}
-            voucherCheck={voucherCheck}
-            alta={alta}
-            imagenes={imagenes}
-            baja={baja}
-            showVoucher={showVoucher}
-            setShowVoucher={setShowVoucher}
-            currentVoucher={currentVoucher}
-            estado={estado}
-            setEstado={setEstado}
-        />
-    )
+    if(window.innerWidth > 767){
+        return (
+            <Pagos
+                payments={payments}
+                voucherCheck={voucherCheck}
+                alta={alta}
+                imagenes={imagenes}
+                baja={baja}
+                showVoucher={showVoucher}
+                setShowVoucher={setShowVoucher}
+                currentVoucher={currentVoucher}
+                estado={estado}
+                setEstado={setEstado}
+            />
+        )
+    }else{
+       return <Layout><h1>This device is too small in order to use the admin pannel</h1></Layout>
+    }
+
 
 }
 export default AdminPagos;

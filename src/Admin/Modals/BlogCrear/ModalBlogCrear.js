@@ -118,6 +118,11 @@ function ModalBlogCrear(props) {
             })
             .catch((err) => {
                 console.log("error post", err);
+                handleClose()
+                addToast(err, {
+                    appearance: "error",
+                    autoDismiss: true,
+                });
             });
     };
 

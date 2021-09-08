@@ -11,34 +11,37 @@ function AdminCode() {
     const [showCode, setShowCode] = useState(false);
     const [showEliminarRev, setEliminarRev] = useState(false);
 /*-----------------------------------------------------------------------------*/
+    if(window.innerWidth > 767){
+        return (
 
-    return (
-
-        <Layout>
-            <div className="BigDiv">
-                <div className="SideBar">
-                    <Nav className="flex-column">
-                        <Nav.Link><Link to="/AdminClases" >Clases</Link></Nav.Link>
-                        <Nav.Link><Link to="/AdminBlog" >Blog</Link></Nav.Link>
-                        <Nav.Link><Link to="/AdminReseñas" >Reseñas</Link></Nav.Link>
-                        <Nav.Link><Link to="/AdminPagos" >Pagos</Link></Nav.Link>
-                        <Nav.Link><Link to="/AdminCode" >Descuentos</Link></Nav.Link>
-
-                    </Nav>
+            <Layout>
+                <div className="BigDiv">
+                    <div className="SideBar">
+                        <Nav className="flex-column">
+                            <Nav.Link><Link to="/AdminClases" >Clases</Link></Nav.Link>
+                            <Nav.Link><Link to="/AdminBlog" >Blog</Link></Nav.Link>
+                            <Nav.Link><Link to="/AdminReseñas" >Reseñas</Link></Nav.Link>
+                            <Nav.Link><Link to="/AdminPagos" >Pagos</Link></Nav.Link>
+                            <Nav.Link><Link to="/AdminCode" >Descuentos</Link></Nav.Link>
+    
+                        </Nav>
+                    </div>
+                    <div className="Manage">
+                        <Nav className="flex-column">
+                            <Nav.Link><Link onClick={() => setShowCode(true)} >Crear Descuento</Link></Nav.Link>
+                            <Nav.Link><Link onClick={() => setEliminarRev(true)} >Eliminar Descuento</Link></Nav.Link>
+    
+                        </Nav>
+                    </div>
+                    <CrearDescuentos showCode={showCode} setShowCode={setShowCode}/>
+                    <CodeEliminar showEliminarRev={showEliminarRev} setEliminarRev={setEliminarRev}/>
                 </div>
-                <div className="Manage">
-                    <Nav className="flex-column">
-                        <Nav.Link><Link onClick={() => setShowCode(true)} >Crear Descuento</Link></Nav.Link>
-                        <Nav.Link><Link onClick={() => setEliminarRev(true)} >Eliminar Descuento</Link></Nav.Link>
-
-                    </Nav>
-                </div>
-                <CrearDescuentos showCode={showCode} setShowCode={setShowCode}/>
-                <CodeEliminar showEliminarRev={showEliminarRev} setEliminarRev={setEliminarRev}/>
-            </div>
-
-        </Layout>
-    )
+    
+            </Layout>
+        )
+    }else{
+       return <Layout><h1>This device is too small in order to use the admin pannel</h1></Layout>
+    }
 
 }
 export default AdminCode;
