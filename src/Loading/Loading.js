@@ -1,22 +1,25 @@
 import React from "react"
 import "./Loading.css"
-
+import Spinner from 'react-bootstrap/Spinner'
+/*
+<div className="ContainerLoading7">
+    <div className="Loading7A"></div>
+    <div className="Loading7B"></div>
+    <div className="Loading7C"></div>
+    <div className="Loading7D"></div>
+    <div className="Loading7E"></div>
+</div>
+*/
 function Loading() {
-    if(window.innerWidth>500){
-        return(
-             <div className="ContainerLoading7">
-                <div className="Loading7A"></div>
-                <div className="Loading7B"></div>
-                <div className="Loading7C"></div>
-                <div className="Loading7D"></div>
-                <div className="Loading7E"></div>
-            </div>
+    if (window.innerWidth > 500) {
+        return (
+            <Spinner animation="border" /> 
         )
     }
-    else{
-        return(
+    else {
+        return (
             <div className="ContainerLoading3">
-                <div className="Loading3"/>
+                <div className="Loading3" />
             </div>
         )
     }
