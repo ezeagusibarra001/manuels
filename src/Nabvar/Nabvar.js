@@ -1,5 +1,6 @@
 import React from "react"
 import NabvarDesktop from "./NabvarDesktop"
+import NabvarMobile from "./NabvarMobile"
 import Mobile2 from "./Mobile2"
 import {scroller} from "react-scroll";
 import NabvarAdmin from "./NabvarAdmin";
