@@ -22,6 +22,14 @@ function Login(props) {
         setCurrentLogin({ ...currentLogin, [e.target.name]: e.target.value, })
         console.log("login", currentLogin)
     }
+    const onPress = (e) =>{
+       // console.log(e.key)
+        if(e.key === "Enter"){
+            //console.log("Enter")
+            handlesubmit()
+        }
+       // handlesubmit()
+    }
     /*const submit = () => {
         addToast("Usuario logueado", {
             appearance: "success",
@@ -70,6 +78,7 @@ function Login(props) {
                             type="text" placeholder="Usuario"
                             name="username"
                             onChange={handlechange}
+                            onKeyPress={(e)=>onPress(e)}
                         />
                         <input
                             className="LoginInput2"
@@ -77,6 +86,7 @@ function Login(props) {
                             name="password"
                             placeholder="Password"
                             onChange={handlechange}
+                            onKeyPress={(e)=>onPress(e)}
                         />
                         <div className="ContainerLoginButton">
                             <button className="LoginButton" onClick={handlesubmit} >Login</button>

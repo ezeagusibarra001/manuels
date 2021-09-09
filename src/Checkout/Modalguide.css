@@ -6,6 +6,13 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
 }
+.ContainerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10% 0%;
+  }
 .Guideimg{
     width: 100%;
     height: auto;
