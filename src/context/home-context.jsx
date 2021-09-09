@@ -3,6 +3,29 @@ import clienteAxios from '../config/clienteAxios'
 const HomeContext = React.createContext();
 
 export function HomeProvider(props) {
+     // WEB_READY
+     const [web_ready,setWeb_ready] = useState(false)
+    //IMAGENES API
+    const [imagenes, setImagenes] = useState([]);
+    useEffect(() => {
+        obtenerImagenes();
+    }, []);
+    const obtenerImagenes = async () => {
+        await clienteAxios.get("/images").then((res) => {
+            setImagenes(res.data);
+        });
+    };
+    //IMAGENES HOME
+    const [portadahome, setPortadahome] = useState([]);
+    useEffect(() => {
+        obtenerImagenesHome();
+    }, []);
+    const obtenerImagenesHome = async () => {
+        await clienteAxios.get("/images/portada.png").then((res) => {
+            setPortadahome(res.data);
+            setWeb_ready(true)
+        });
+    };
     //API
     //CLASES API
     const [clases, setClases] = useState([]);
@@ -76,17 +99,6 @@ export function HomeProvider(props) {
             console.log(error)
         });
     };
-    //IMAGENES API
-    const [imagenes, setImagenes] = useState([]);
-    useEffect(() => {
-        obtenerImagenes();
-    }, []);
-    const obtenerImagenes = async () => {
-        await clienteAxios.get("/images").then((res) => {
-            setImagenes(res.data);
-            setWeb_ready(true)
-        });
-    };
     //ESTADO DEL LOGIN
     const [login, setLogin] = useState(false)
     console.log("Estado del login:", login)
@@ -103,8 +115,7 @@ export function HomeProvider(props) {
             'Access-Control-Allow-Headers': 'Authorization'
         }
     };
-    // WEB_READY
-    const [web_ready,setWeb_ready] = useState(false)
+   
     //CURRENT CHECKOUT CLASE
     const [currentClase, setCurrentClase] = useState();
     //LOADING CLASES
@@ -119,7 +130,7 @@ export function HomeProvider(props) {
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
         currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
-        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready, code, obtenerCode
+        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready, code, obtenerCode, portadahome
     };
     return <HomeContext.Provider value={value} {...props} />;
 }

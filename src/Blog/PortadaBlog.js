@@ -10,7 +10,7 @@ function PortadaBlog() {
 
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
-            {imagenes.filter((imagen) => imagen.name === "fondoblog.png").map((imagen)=>(
+            {imagenes.filter((imagen) => imagen.name === "blog.png").map((imagen)=>(
                 <img alt="img"
                     src={`data:${imagen.type};base64,${imagen.bytes}`}
                     className="ImgBlog"

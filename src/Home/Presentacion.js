@@ -3,12 +3,12 @@ import "./Presentacion.css"
 import { useHome } from "../context/home-context";
 
 function Presentacion() {
-    const {imagenes} = useHome()
+    const {portadahome} = useHome()
 
     return(
 
         <div className="ContainerPresentacionFondo">
-             {imagenes.filter((imagen) => imagen.name === "portadahome.png").map((imagen)=>(
+             {portadahome.filter((imagen) => imagen.name === "portada.png").map((imagen)=>(
                 <img alt="img"
                     src={`data:${imagen.type};base64,${imagen.bytes}`}
                     className="ImgBlog"

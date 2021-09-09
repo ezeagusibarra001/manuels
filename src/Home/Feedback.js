@@ -18,7 +18,9 @@ function Feedback(props) {
                     ?
                     reviews[0].validate === false
                         ?
-                        <Loading />
+                        <div className="ContainerDiv">
+                            <Loading />
+                        </div>
                         :
                         <div className="ContainerFeedbackCarrusel">
                             <Carousel className="FeedbackCarrusel">
@@ -37,7 +39,6 @@ function Feedback(props) {
                     :
                     <div className="ContainerDiv">
                         <Loading />
-
                     </div>
                 }
 

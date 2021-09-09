@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /*height: 100vh; /* TOMA EN ALTURA EL 100% DE LA ALTURA DEL DISPOSITIVO*/
     width: 100%;
     padding: 10% 0%;
   }
