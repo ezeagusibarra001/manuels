@@ -1,7 +1,6 @@
 import React from "react"
 import NabvarDesktop from "./NabvarDesktop"
 import NabvarMobile from "./NabvarMobile"
-import Mobile2 from "./Mobile2"
 import {scroller} from "react-scroll";
 import NabvarAdmin from "./NabvarAdmin";
 import {useHome} from "../context/home-context";
@@ -30,7 +29,7 @@ function Nabvar(props) {
     }
 /*-----------------------------------------------------------------------------------------------------------------------------------------*/
     if(login===false){
-        if(window.innerWidth>800){
+        if(window.innerWidth>700){
 
             return(
                 <NabvarDesktop ScrollServicios={ScrollServicios} ScrollExperiencia={ScrollExperiencia} login={login}
@@ -39,7 +38,7 @@ function Nabvar(props) {
         }
         else{
             return(
-                <Mobile2 ScrollServicios={ScrollServicios} ScrollExperiencia={ScrollExperiencia}/>
+                <NabvarMobile ScrollServicios={ScrollServicios} ScrollExperiencia={ScrollExperiencia}/>
             )
         }
     }

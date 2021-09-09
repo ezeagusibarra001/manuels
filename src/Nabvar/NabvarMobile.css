@@ -1,150 +1,167 @@
-/*--------------------------------------CONTAINER NAVBAR--------------------------------------*/
-.ContainerNabvarMobile{
-
-    display: grid !important;
-    grid-template-columns: 2.5fr 1fr 1fr !important;
-    grid-template-rows: auto auto auto !important;
-
-    width: 100% !important;
-    margin: 0% 0% !important;
+.ContainerMobile{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
 }
-/*--------------------------------------LOGO MANUELS--------------------------------------*/
-.BrandMobile{
-
-    grid-column-start: 1;
-    grid-column-end: 4;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+.Brand{
+    width: 100%;
+    height: auto;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-
-.ImgMobile{
-
+.MobileImg{
+    width: 100%;
+    height: auto;
+}
+.ItemsContainer{
     height: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0px 15px;
 }
-/*--------------------------------------INSTAGRAM--------------------------------------*/
-.ContenedorButtonInstaNabvarMobile{
-
-    grid-column-start: 2 !important;
-    grid-column-end: 4 !important;
-    grid-row-start: 2 !important;
-    grid-row-end: 3 !important;
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    gap: 4%;
-
+.ButtonInstaNabvarMobile2{
+    border: solid  #a06ab4;
+    background-color:  #a06ab4;
+    border-radius: 60px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.ButtonInstaNabvarMobile{
-
-    border: solid  #a06ab4 !important;
-    background-color:  #a06ab4 !important;
-    border-radius: 60px !important;
-    height: 50px;
-    width: 50px;
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
+.IconoInstaNabvarMobile2{
+    height: 25px;
+    width: 25px;
 }
-
-.ButtonLoginNabvarMobile{
-
-    border: solid  #a06ab4 !important;
-    background-color:  #a06ab4 !important;
-    border-radius: 60px !important;
-    height: 50px;
-    width: 50px;
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
+.toggle-buttonContainer{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.InstaIconoNabvarMobile{
-
-    color: white !important;
-    height: 40px !important;
-    width: 40px !important;
+.toggle-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    height: 45px;
+    width: 45px;
+    z-index: 1;
 }
-/*--------------------------------------CONTENEDOR NAVLINK--------------------------------------*/
-.ColapsorMobile{
-    
-    grid-column-start: 1 !important;
-    grid-column-end: 3 !important;
-
-    grid-row-start: 3 !important;
-    grid-row-end: 4 !important;
-
+.toggle-button-desable{
+    display: none;
+}
+.bar{
+    height: 3px;
     width: 100%;
+    border: solid #a06ab4  1px;
+    background-color: #a06ab4;
+    z-index: 1;
 }
-.NabvarLink{
-    font-size: 20px;
+.ContainerLinks2{
+   display: none;
 }
-
-/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------------*/
-@media screen and (max-width: 550px){
-
-    .NabvarLink{
-        font-size: 15px;
+.ContainerLinks2-active{
+    grid-column: 1/3;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    height: 0px;
+    background-color: #a06ab4;
+    animation: show 0.5s linear forwards;
+}
+@keyframes show {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 350px;
     }
 }
-
-@media screen and (max-width: 500px){
-
-    .ContainerNabvarMobile{
-
-        display: grid !important;
-        grid-template-columns: 3fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-    
-    }
-    .ButtonInstaNabvarMobile{
-
-        height: 45px;
-        width: 45px;
-    
-    }
-
-    .ButtonLoginNabvarMobile{
-
-        height: 45px;
-        width: 45px;
-    
-    }
-
+.NabvarLink2{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-overflow: none;
+    animation: show3  linear forwards;
+    animation-delay: 0.3s;
 }
-
+.NabvarLink2:visited{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-overflow: none;
+    animation: show3  linear forwards;
+    animation-delay: 0.3s;
+}
+.ContainerLinks2-desactive{
+    grid-column: 1/3;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    height: 350px;
+    background-color: #a06ab4;
+    animation: show4 0.5s linear forwards;
+}
+@keyframes show4 {
+    0%{
+        height: 350px;
+    }
+    99%{
+        height: 0px;
+    }
+    100%{
+        padding: 0% 4%;
+        height: 0px;
+    }
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
 @media screen and (max-width: 450px){
-
-    .ContainerNabvarMobile{
-
-        display: grid !important;
-        grid-template-columns: 2fr 1fr 1fr !important;
-        grid-template-rows: auto auto auto !important;
+    .ContainerMobile{
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        padding: 15px 0px;
     }
-    
-}
-@media screen and (max-width: 400px){
-
-    .ContainerNabvarMobile{
-
-        display: grid !important;
-        grid-template-columns: 4fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-    
+    .Brand{
+        padding: 0px 30px;
     }
-
-    
+    .ButtonInstaNabvarMobile2{
+        height: 30px;
+        width: 30px;
+    }
+    .IconoInstaNabvarMobile2{
+        height: 20px;
+        width: 20px;
+    }
+    .ItemsContainer{
+       gap: 5px;
+       padding: 0px 5px;
+    }
+    .toggle-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        height: 20px;
+        width: 25px;
+        z-index: 1;
+    }
 }
-
-
