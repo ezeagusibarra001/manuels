@@ -1,7 +1,8 @@
 import React,{useRef} from "react"
 import "./NabvarMobile.css"
-import {Link} from "react-router-dom"
+import {Link,useHistory} from "react-router-dom"
 function NabvarMobile(props) {
+    const history = useHistory()
     const ScrollServicios   = props.ScrollServicios
     const ScrollExperiencia = props.ScrollExperiencia
 /*------------------------------------------------------------------------------------------------------------*/
@@ -21,7 +22,7 @@ function NabvarMobile(props) {
 /*------------------------------------------------------------------------------------------------------------*/
     return(
         <div className="ContainerMobile">
-            <div className="Brand"><img alt="img" className="MobileImg"src="../assets/logo2.png"/></div>
+            <div onClick={()=> history.push("/")} className="Brand"><img alt="img" className="MobileImg"src="../assets/logo2.png"/></div>
             <div className="ItemsContainer">
                 <a className="ButtonInstaNabvarMobile2" href="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link" target="_blank" rel="noreferrer" >
                     <svg xmlns="http://www.w3.org/2000/svg" className="IconoInstaNabvarMobile2"  fill="white"   viewBox="0 0 16 16">

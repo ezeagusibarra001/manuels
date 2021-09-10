@@ -1,229 +1,152 @@
 /*----------------------------------------------EXPERIENCIA----------------------------------------------*/
-.ContenedorExperienciaPadre{
-
-
-    height:auto;
+.ContenedorExperienciaPadre {
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 5% 10%;
-
 }
-
-.ContenedorExperienciaSubPadre{
-
-    
+.ContenedorExperienciaSubPadre {
     height: auto;
     width: 100%;
-
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
     grid-template-rows: 1fr 1fr;
-    
     background-color: #a06ab4;
-
     padding: 4% 0%;
 }
-.ContenedorExperienciaSubPadre>div{
-
-    height:auto;
+.ContenedorExperienciaSubPadre>div {
+    height: auto;
     width: 100%;
-
     color: white;
 }
-
-.ContenedorExperienciaTexto1{
-
+.ContenedorExperienciaTexto1 {
     grid-column-start: 2;
     grid-column-end: 3;
-
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
-
 }
-.ExperienciaTexto1{
-    font-family: "dukecharming regular";
+.ExperienciaTexto1 {
     font-size: 5vw;
-    font-weight: 800;
+    font-weight: 500;
 }
-
-
-.ContenedorExperienciaTexto2{
-
+.ContenedorExperienciaTexto2 {
     grid-column-start: 2;
     grid-column-end: 3;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    
 }
-.ExperienciaTexto2{
-    font-family: "dukecharming regular";
+.ExperienciaTexto2 {
+    font-weight: 500;
     font-size: 5vw;
-    font-weight: 800;
 }
-
-.ContenedorExperienciaTexto3{
-
+.ContenedorExperienciaTexto3 {
     grid-column-start: 3;
     grid-column-end: 4;
-
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    
 }
-.ExperienciaTexto3{
+.ExperienciaTexto3 {
     font-size: 2vw;
 }
-
-.ContenedorExperienciaTexto4{
-
+.ContenedorExperienciaTexto4 {
     grid-column-start: 3;
     grid-column-end: 4;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    
 }
-.ExperienciaTexto4{
+.ExperienciaTexto4 {
     font-size: 2vw;
 }
-
-
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-
-
-@media screen and (max-width: 800px){
-
-    .ContenedorExperienciaSubPadre{
-    
+@media screen and (max-width: 800px) {
+    .ContenedorExperienciaSubPadre {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
-        grid-gap:10px;
-
+        grid-gap: 10px;
         padding: 5% 6%;
     }
-
-    .ContenedorExperienciaTexto1{
-
+    .ContenedorExperienciaTexto1 {
         grid-column-start: 2;
         grid-column-end: 3;
-    
         grid-row-start: 1;
         grid-row-end: 2;
-    
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-    
     }
-
-    .ContenedorExperienciaTexto2{
-
+    .ContenedorExperienciaTexto2 {
         grid-column-start: 3;
         grid-column-end: 4;
-    
         grid-row-start: 1;
         grid-row-end: 2;
-    
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-    
     }
-
-    .ContenedorExperienciaTexto3{
-
+    .ContenedorExperienciaTexto3 {
         grid-column-start: 2;
         grid-column-end: 4;
-    
         grid-row-start: 2;
         grid-row-end: 3;
-    
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-    
     }
-    .ContenedorExperienciaTexto4{
-
+    .ContenedorExperienciaTexto4 {
         grid-column-start: 2;
         grid-column-end: 4;
-    
         grid-row-start: 3;
         grid-row-end: 4;
-    
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-    
     }
-
-    .ExperienciaTexto1{
-
+    .ExperienciaTexto1 {
         font-size: 6vw;
     }
-
-    .ExperienciaTexto2{
-
+    .ExperienciaTexto2 {
         font-size: 6vw;
     }
-    .ExperienciaTexto3{
-
+    .ExperienciaTexto3 {
         font-size: 2.5vw;
     }
-    .ExperienciaTexto4{
-
+    .ExperienciaTexto4 {
         font-size: 2.5vw;
     }
 }
-@media screen and (max-width: 500px){
-    .ContenedorExperienciaPadre{
+@media screen and (max-width: 500px) {
+    .ContenedorExperienciaPadre {
         padding: 4% 4%;
     }
-    .ContenedorExperienciaSubPadre{
+    .ContenedorExperienciaSubPadre {
         padding: 4% 4%;
-        gap: 0px 10px ;
+        gap: 0px 10px;
     }
-    .ExperienciaTexto1{
-
+    .ExperienciaTexto1 {
         font-size: 10vw;
     }
-
-    .ExperienciaTexto2{
-
+    .ExperienciaTexto2 {
         font-size: 10vw;
     }
-    .ExperienciaTexto3{
-
+    .ExperienciaTexto3 {
         font-size: 4.5vw;
     }
-    .ExperienciaTexto4{
-
+    .ExperienciaTexto4 {
         font-size: 4.5vw;
     }
 }
-
-
-
-
-
