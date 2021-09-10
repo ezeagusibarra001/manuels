@@ -32,7 +32,7 @@
 }
 .ExperienciaTexto1 {
     font-size: 5vw;
-    font-weight: 500;
+    font-weight: 400;
 }
 .ContenedorExperienciaTexto2 {
     grid-column-start: 2;
@@ -44,7 +44,6 @@
     justify-content: center;
 }
 .ExperienciaTexto2 {
-    font-weight: 500;
     font-size: 5vw;
 }
 .ContenedorExperienciaTexto3 {
