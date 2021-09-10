@@ -1,12 +1,15 @@
 import React from "react";
 import "./Talleres.css"
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 function Talleres(props) {
 
     const data = props.data
     const history = useHistory()
-
+    const x = (e) => {
+        window.scrollTo(0, 0)
+        history.push(e.link)
+    }
     return (
 
 
@@ -68,8 +71,8 @@ function Talleres(props) {
                     </div>
                 </div>
                 <div className="ContainerItemButtonTalleres">
-                    <button className="ButtonTalleres" style={data.button} onClick={()=>history.push(data.link)}>
-                    ¡Quiero Saber Más!
+                    <button className="ButtonTalleres" style={data.button} onClick={()=>x(data)}>
+                        ¡Quiero Saber Más!
                     </button>
                 </div>
             </div>

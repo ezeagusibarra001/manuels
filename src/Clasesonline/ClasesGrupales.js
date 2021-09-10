@@ -1,24 +1,28 @@
 import React from "react"
 import "./ClasesGrupales.css"
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 function ClasesGrupales() {
     const history = useHistory()
+    const x = () => {
+        window.scrollTo(0, 0)
+        history.push("/Form/Clases_Grupales")
+    }
 
-    return(
+    return (
 
         <div className="ContainerClasesGrupales">
             <div className="SubContainerClasesGrupales">
                 <div className="ContainerHijo1ClasesGrupales">
                     <div className="ContainerTitulosClasesGrupales">
                         <h1 className="TituloClasesGrupales">Clases Grupales</h1>
-                        <p  className="SubTituloClasesGrupales">Las Clases Grupales pueden ser de:</p>
+                        <p className="SubTituloClasesGrupales">Las Clases Grupales pueden ser de:</p>
                     </div>
                     <div className="ContainerItem1Grupales">
                         <div className="ContainerIconoGrupales1">
                             <img alt="img"
-                            className="Icono1clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono1clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem1Grupales">
@@ -28,8 +32,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem2Grupales">
                         <div className="ContainerIconoGrupales2">
                             <img alt="img"
-                            className="Icono2clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono2clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem2Grupales">
@@ -39,8 +43,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem3Grupales">
                         <div className="ContainerIconoGrupales3">
                             <img alt="img"
-                            className="Icono3clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono3clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem3Grupales">
@@ -50,8 +54,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem4Grupales">
                         <div className="ContainerIconoGrupales4">
                             <img alt="img"
-                            className="Icono4clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono4clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem4Grupales">
@@ -61,8 +65,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem5Grupales">
                         <div className="ContainerIconoGrupales5">
                             <img alt="img"
-                            className="Icono5clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono5clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem5Grupales">
@@ -72,8 +76,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem6Grupales">
                         <div className="ContainerIconoGrupales6">
                             <img alt="img"
-                            className="Icono6clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono6clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem6Grupales">
@@ -83,8 +87,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem7Grupales">
                         <div className="ContainerIconoGrupales7">
                             <img alt="img"
-                            className="Icono7clasesGrupales"
-                            src="./assets/iconoc9.png"
+                                className="Icono7clasesGrupales"
+                                src="./assets/iconoc9.png"
                             />
                         </div>
                         <div className="ContainerTextoItem7Grupales">
@@ -96,13 +100,13 @@ function ClasesGrupales() {
                     <div className="ContainerItem8Grupales">
                         <div className="ContainerIconoGrupales8">
                             <img alt="img"
-                            className="Icono8clasesGrupales"
-                            src="./assets/iconoc6.png"
+                                className="Icono8clasesGrupales"
+                                src="./assets/iconoc6.png"
                             />
                         </div>
                         <div className="ContainerTextoItem8Grupales">
                             <p className="TextoGrupales">
-                                Son talleres sincrónicos, virtuales por la plataforma Skype de grupos reducidos, 
+                                Son talleres sincrónicos, virtuales por la plataforma Skype de grupos reducidos,
                                 donde la práctica es el pilar fundamental de cada encuentro
                             </p>
                         </div>
@@ -110,8 +114,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem9Grupales">
                         <div className="ContainerIconoGrupales9">
                             <img alt="img"
-                            className="Icono9clasesGrupales"
-                            src="./assets/iconoc4.png"
+                                className="Icono9clasesGrupales"
+                                src="./assets/iconoc4.png"
                             />
                         </div>
                         <div className="ContainerTextoItem9Grupales">
@@ -123,8 +127,8 @@ function ClasesGrupales() {
                     <div className="ContainerItem10Grupales">
                         <div className="ContainerIconoGrupales10">
                             <img alt="img"
-                            className="Icono10clasesGrupales"
-                            src="./assets/iconoc7.png"
+                                className="Icono10clasesGrupales"
+                                src="./assets/iconoc7.png"
                             />
                         </div>
                         <div className="ContainerTextoItem10Grupales">
@@ -136,24 +140,24 @@ function ClasesGrupales() {
                     <div className="ContainerItem11Grupales">
                         <div className="ContainerIconoGrupales11">
                             <img alt="img"
-                            className="Icono11clasesGrupales"
-                            src="./assets/iconoc8.png"
+                                className="Icono11clasesGrupales"
+                                src="./assets/iconoc8.png"
                             />
                         </div>
                         <div className="ContainerTextoItem11Grupales">
                             <p className="TextoGrupales">
-                                Si queres ser el primero en enterarte de proximos talleres grupales o necesitas 
+                                Si queres ser el primero en enterarte de proximos talleres grupales o necesitas
                                 hacer una consulta
                             </p>
                         </div>
                     </div>
                     <div className="ContainerButtonGrupales">
-                        <button className="ButtonGrupales" onClick={()=>history.push("/Form/Clases_Grupales")} > <b>¡QUIERO SABER MÁS!</b> </button>
+                        <button className="ButtonGrupales" onClick={x} > <b>¡QUIERO SABER MÁS!</b> </button>
                     </div>
                 </div>
             </div>
         </div>
     )
-    
+
 }
 export default ClasesGrupales;

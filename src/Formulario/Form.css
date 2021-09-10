@@ -31,7 +31,6 @@
     font-size: 8vw;
     font-family: dukecharming regular;
     font-weight: 900;
-    animation: down 1s ease-in forwards;
 }
 @keyframes down {
     0%{
@@ -46,7 +45,6 @@
 .TituloInactive{
     color: #a06ab4;
     font-size: 8vw;
-    animation: up 0.5s ease-in forwards;
 }
 @keyframes up {
     0%{
@@ -75,9 +73,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-}
-.IconoForm{
-    animation: rotate1 0.5s ease-in forwards;
 }
 /*------------------------------------------------FORMULARIO----------------------------------------------------*/
 .ContainerFormularioConsulta{

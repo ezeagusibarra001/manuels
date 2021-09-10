@@ -1,9 +1,13 @@
 import React from "react"
 import "./ClasesPersonalizadas.css"
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 function ClasesPersonalizadas() {
     const history = useHistory()
+    const x = () => {
+        window.scrollTo(0, 0)
+        history.push("/Form/Clases_Personalizadas")
+    }
     return (
 
         <div className="ContainerPadreClasesPersonalizadas">
@@ -76,7 +80,7 @@ function ClasesPersonalizadas() {
                         </div>
                     </div>
                     <div className="ContainerButtonPersonalizadas">
-                        <button className="ButtonPersonalizadas" onClick={()=>history.push("/Form/Clases_Personalizadas")}> <b>¡QUIERO SABER MÁS!</b> </button>
+                        <button className="ButtonPersonalizadas" onClick={x}> <b>¡QUIERO SABER MÁS!</b> </button>
                     </div>
                 </div>
 

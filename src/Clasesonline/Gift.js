@@ -15,7 +15,7 @@ function Gift() {
                     </h6>
                 </div>
                 <div className="ContainerButtonGift">
-                    <a className="ButtonGift" href="https://api.whatsapp.com/send?phone=5491140759773&text=Hola Manuels! Quiero saber mas sobre las giftcards :)" target="_blank">
+                    <a className="ButtonGift" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5491140759773&text=Hola Manuels! Quiero saber mas sobre las giftcards :)" target="_blank">
                       ME INTERESA
                     </a>
                 </div>
