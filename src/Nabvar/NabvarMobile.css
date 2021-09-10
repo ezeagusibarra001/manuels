@@ -72,7 +72,6 @@
 }
 .ContainerLinks2-active{
     grid-column: 1/3;
-   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,6 +81,7 @@
     height: 0px;
     background-color: #a06ab4;
     animation: show 0.5s linear forwards;
+    padding: 10px 5px;
 }
 @keyframes show {
     0%{
@@ -109,7 +109,6 @@
 }
 .ContainerLinks2-desactive{
     grid-column: 1/3;
- 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -119,6 +118,7 @@
     height: 350px;
     background-color: #a06ab4;
     animation: show4 0.5s linear forwards;
+    padding: 10px 5px;
 }
 @keyframes show4 {
     0%{
@@ -128,7 +128,7 @@
         height: 0px;
     }
     100%{
-        padding: 0% 4%;
+        padding: 0px 5px;
         height: 0px;
     }
 }
