@@ -1,0 +1,60 @@
+.CarruselContainer{
+    width: 100%;
+    height: auto;
+    background-color: #ffd743;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+.TituloCarrusel{
+    color: white;
+}
+.Carrusel{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.SlidesContainer{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+.Slides{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CarruselImg{
+    height: auto;
+    width: 100vw;
+}
+.Controllers{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 4%;
+}
+.ControllerButton{
+    background-color: grey;
+    border: solid transparent;
+    opacity: 10%;
+    width: 30px;
+    height: 100%;
+}
+.ControllerButton:hover{
+    background-color: black;
+    opacity: 20%;
+}

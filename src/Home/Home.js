@@ -4,23 +4,18 @@ import Presentacion from "./Presentacion";
 import Experiencia from "./Experiencia";
 import Video from "./Video";
 import Servicios from "./Servicios";
-import Marcas from "./Marcas";
+import CarruselMarcas from "./CarruselMarcas";
 import Feedback from "./Feedback";
-
-
 function Home(props) {
-
     return(
-
         <Layout>
            <Presentacion />
            <Experiencia />
            <Video />
            <Servicios />
-           <Marcas />
+           <CarruselMarcas />
            <Feedback/>
         </Layout>
     )
-    
 }
 export default Home;
