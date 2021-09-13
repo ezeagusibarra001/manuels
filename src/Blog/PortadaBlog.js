@@ -1,21 +1,17 @@
 import React from "react"
-import { useHome } from "../context/home-context";
 import "./Portadablog.css"
 
 function PortadaBlog() {
-    const {imagenes} = useHome()
 
-    return(
+    return (
 
 
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
-            {imagenes.filter((imagen) => imagen.name === "blog.png").map((imagen)=>(
                 <img alt="img"
-                    src={`data:${imagen.type};base64,${imagen.bytes}`}
-                    className="ImgBlog"
+                    src="../assets/blog.png"
+                    className="ImgPresentacion"
                 />
-            ))}
             </div>
             <div className="ContenedorTextos">
                 <div className="SubContenedorTextos">
@@ -29,6 +25,6 @@ function PortadaBlog() {
             <button className="BlogButton">VER PUBLICACIONES</button>
         </div>
     )
-    
+
 }
 export default PortadaBlog;
