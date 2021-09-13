@@ -48,6 +48,7 @@ function CarruselMarcas(){
                    { Imagenes.map(Imagen =>
                     <div className="Slides">
                         <img 
+                            alt="img"
                             className="CarruselImg"
                             src={Imagen}
                         />
