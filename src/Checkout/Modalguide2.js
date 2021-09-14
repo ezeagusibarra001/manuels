@@ -20,7 +20,7 @@ function Modalguide2(props) {
                 <div className="ModalguideContainer2">
                     <div className="CardContainer" ref={Card}>
                         <div className="HeaderModal">
-                            <img className="ImgmodalGuide" src="../assets/logo2.png" />
+                            <img alt="img" className="ImgmodalGuide" src="../assets/logo2.png" />
                             <button className="ButtonCloseModal" onClick={CloseModal}>
                                 <h4 className="CloseButton">X</h4>
                             </button>
