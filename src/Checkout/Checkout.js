@@ -40,7 +40,7 @@ function Checkout() {
     }
     /*-----------------------------------------------------------------------------*/
     /*-----------------------MODAL GUIDE-------------------------------------------*/
-    const [showmodal, setShowmodal] = useState(false)
+    const [showmodal, setShowmodal] = useState(true)
     useEffect(() => {
         setShowmodal(true)
     }, []);

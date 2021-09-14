@@ -1,17 +1,24 @@
-import React from "react"
+import React,{useRef} from "react"
 import "./Modalguide.css"
 function Modalguide2(props) {
     const showmodal = props.showmodal
     const setShowmodal = props.setShowmodal
+    const Card = useRef(null)
     const CloseModal =()=>{
-        setShowmodal(false)
+        /*LE ASIGNAMOS UN MOVIMIENTO VERTICAL EN Y */
+        Card.current.style.transition = "500ms ease-out all"
+        Card.current.style.transform = "translateY(-100px)"
+        /*LE INDICAMOS QUE LLEVE LA VISIBILIDAD DEL MODAL A CERO*/
+        Card.current.style.opacity = "0%"
+        /*UNA VEZ QUE FINALIZO LA TRASITION SE SETEA EL HOOK PARA QUE SE DEJE DE RENDERIZAR*/
+        Card.current.addEventListener("transitionend",()=>{setShowmodal(false)})
     }
     return (
         <>
             {
                 showmodal &&
                 <div className="ModalguideContainer2">
-                    <div className="CardContainer">
+                    <div className="CardContainer" ref={Card}>
                         <div className="HeaderModal">
                             <img className="ImgmodalGuide" src="../assets/logo2.png" />
                             <button className="ButtonCloseModal" onClick={CloseModal}>

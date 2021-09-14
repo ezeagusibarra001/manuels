@@ -1,8 +1,6 @@
 .ContenedorPortadaBlog{
-   
     width: 100%;
     height: auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -35,28 +33,6 @@
     color: white;
     font-family: "varela round regular";
     font-size: 2.5vw;
-}
-.BlogButton{
-    position: absolute;
-    right: 38%;
-    top: 80%;
-    border: solid transparent 1px;
-    border-radius: 20px;
-    background-color: white;
-    color:#07bb9c;
-    font-size: 2.5vw;
-    padding: 0% 2%;
-}
-.BlogButton:hover{
-    position: absolute;
-    right: 38%;
-    top: 80%;
-    border: solid white 1px;
-    border-radius: 20px;
-    background-color: #07bb9c;
-    color:white;
-    font-size: 2.5vw;
-    padding: 0% 2%;
 }
 /*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
 @media screen and (max-width: 500px){
@@ -99,29 +75,4 @@
         font-family: "varela round regular";
         font-size: 5vw;
     }
-    .BlogButton{
-        position: absolute;
-        right: 30%;
-        top: 85%;
-        border: solid transparent 2px;
-        border-radius: 20px;
-        background-color: white;
-        color:#07bb9c;
-        font-size: 4.5vw;
-        padding: 0% 2%;
-        font-weight: 600;
-    }
-    .BlogButton:hover{
-        position: absolute;
-        right: 30%;
-        top: 85%;
-        border: solid white 2px;
-        border-radius: 20px;
-        background-color: #07bb9c;
-        color:white;
-        font-size: 4.5vw;
-        padding: 0% 2%;
-        font-weight: 600;
-    }
-    
 }
