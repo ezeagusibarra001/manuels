@@ -5,6 +5,9 @@ const HomeContext = React.createContext();
 export function HomeProvider(props) {
      // WEB_READY
      const [web_ready,setWeb_ready] = useState(false)
+     setTimeout(() => {
+        setWeb_ready(true)
+     }, 1000);
     //IMAGENES API
     const [imagenes, setImagenes] = useState([]);
     useEffect(() => {
@@ -16,16 +19,16 @@ export function HomeProvider(props) {
         });
     };
     //IMAGENES HOME
-    const [portadahome, setPortadahome] = useState([]);
+    /*const [portadahome, setPortadahome] = useState([]);
     useEffect(() => {
         obtenerImagenesHome();
     }, []);
     const obtenerImagenesHome = async () => {
         await clienteAxios.get("/images/portada.png").then((res) => {
             setPortadahome(res.data);
-            setWeb_ready(true)
+            //setWeb_ready(true)
         });
-    };
+    };*/
     //API
     //CLASES API
     const [clases, setClases] = useState([]);
@@ -130,7 +133,7 @@ export function HomeProvider(props) {
     const value = {
         clases, login, setLogin, obtenerClases, jwt, setJwt, axiosConfig, reviews, obtenerReseñas,
         currentClase, setCurrentClase, imagenes, obtenerImagenes, blog, obtenerBlogs, oneImage, loading, loadingBlog, loadingFed,
-        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready, code, obtenerCode, portadahome
+        loadingCheckout, setLoadingCheckout ,web_ready,setWeb_ready, code, obtenerCode
     };
     return <HomeContext.Provider value={value} {...props} />;
 }
