@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../Layout";
 import CheckOutModal from "./CheckOutModal";
-import Modalguide from "./Modalguide";
+import Modalguide2 from "./Modalguide2";
 import Button from 'react-bootstrap/Button'
 import "./Checkout.css"
 import Form from 'react-bootstrap/Form'
@@ -40,13 +40,9 @@ function Checkout() {
     }
     /*-----------------------------------------------------------------------------*/
     /*-----------------------MODAL GUIDE-------------------------------------------*/
-    const [show2, setShow2] = useState(false);
-    const handleClose2 = () => {
-        setShow2(false);
-        window.scrollTo(0, 0)
-    }
+    const [showmodal, setShowmodal] = useState(false)
     useEffect(() => {
-        setShow2(true)
+        setShowmodal(true)
     }, []);
     const checked = () => {
         setCheck(!check)
@@ -291,7 +287,7 @@ function Checkout() {
                 </form>
             </div>
             <CheckOutModal show={show} handleClose={handleClose} handleSubmit={handleSubmit} />
-            <Modalguide show2={show2} handleClose2={handleClose2} />
+            <Modalguide2 showmodal={showmodal} setShowmodal={setShowmodal}/>
             <ModalLoading
                 modalLoading={modalLoading}
                 setModalLoading={setModalLoading}

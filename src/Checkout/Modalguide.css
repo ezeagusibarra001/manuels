@@ -1,102 +1,119 @@
-.ContainerHeader{
+.ModalguideContainer2{
     width: 100%;
-    height: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-}
-.ContainerDiv{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: fixed;
+    top: 0px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 10% 0%;
-  }
-.Guideimg{
+    align-items: center;
+    padding: 0% 5%;
+}
+.CardContainer{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.HeaderModal{
     width: 100%;
     height: auto;
-}
-.GuideTitle{
-    width: fit-content;
-    height: fit-content;
-    padding: 1% 1%;
-    border-radius: 5px;
-    font-size: 3vw;
-    background-color: #a06ab4 ;
-    color: white;
-}
-.ContainerPasos{
- 
-    padding: 2% 2%;
-    width: 100%;
-    height: auto;
-}
-.ContainerPaso{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto auto;
-    gap: 20px 10px;
-}
-.ContainerGuideImg{
-    width: 100%;
-    height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.ImgmodalGuide{
+    width: 250px;
+    height: auto;
+}
+.ButtonCloseModal{
+    background-color:transparent ;
+    border: solid transparent;
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    font-weight: 600;
+    height: 45px;
+    width: 45px;
+}
+.CloseButton{
+    color: #a06ab4;
+}
+.CloseButton:hover{
+  cursor: pointer;
+}
+.BodyModal{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.ContainerPaso{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
 .GuideIconos{
-    width: 40%;
+    width: 30px;
     height: auto;
 }
 .GuideTexto{
-    color: #a06ab4;
-    font-size: 2vw;
-    text-align: left;
+    color: #a06ab4 ;
+    font-size: 20px;
 }
 /*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
-@media screen and (max-width: 500px){
-    .ContainerGuideImg{
+@media screen and (max-width: 800px){
+    .CardContainer{
         width: 100%;
-        height: auto;
-    
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        gap: 2.5px;
     }
     .GuideIconos{
-        width: 50%;
+        width: 25px;
         height: auto;
     }
     .GuideTexto{
-        color: #a06ab4;
-        font-size: 3.5vw;
-        text-align: left;
+        color: #a06ab4 ;
+        font-size: 15px;
     }
-    .ContainerPaso{
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: auto auto;
-        gap: 5px 0px;
-    }
-    .ContainerHeader{
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto;
-    }
-    .Guideimg{
-        width: 90%;
+}
+@media screen and (max-width: 500px){
+    .ImgmodalGuide{
+        width: 200px;
         height: auto;
     }
-    .GuideTitle{
-        width: 100%;
+}
+@media screen and (max-width: 400px){
+    .ImgmodalGuide{
+        width: 180px;
         height: auto;
-        padding: 1% 1%;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 5.5vw;
-        background-color: #a06ab4 ;
-        color: white;
+    }
+    .GuideIconos{
+        width: 24px;
+        height: auto;
+    }
+    .GuideTexto{
+        color: #a06ab4 ;
+        font-size: 14px;
+    }
+    .BodyModal{
+        gap: 5px;
+    }
+    .HeaderModal{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 }

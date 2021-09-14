@@ -58,6 +58,12 @@
 .ControllerButton:hover{
     opacity: 100%;
 }
+.Arrow{
+    color: white;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+}
 .Index{
     width: 100%;
     display: flex;
