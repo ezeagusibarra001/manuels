@@ -1,5 +1,4 @@
 .ContainerFeedbackFondo{
-  
     width: 100%;
     height: auto;
     padding: 2% 2%;
@@ -13,16 +12,14 @@
     padding: 10% 0%;
   }
 .SubContainerFeedbackFondo{
-    
     width: 100%;
     height: auto;
-
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+    gap: 10px;
 }
 .ContainerFeedbackTitulo{
-   
     width: 100%;
     height: auto;
     display: flex;
@@ -30,28 +27,22 @@
     align-items: center;
 }
 .FeedbackTitulo{
-    font-family: "dukecharming regular";
     font-weight: 500;
-    font-size: 5vw;
     color: white;
 }
 .ContainerFeedbackCarrusel{
-   
     padding: 0% 10%;
 }
 .FeedbackCarrusel{
     width: 100%;
     height: auto;
-
     padding: 2% 2%;
-
     box-shadow: 0 0 15px rgb(0,0,0) !important;
 }
 .ContainerFeedbackCarruselSection{
- 
+
     height:25vw;
     width: 100%;
-
     padding: 0% 8%;
 }
 .ContainerCarruselReseñas{
@@ -98,5 +89,15 @@
     }
     .FeedbackCarrusel{
         border: solid transparent;
+    }
+}
+@media (max-width:500px){
+    .FeedbackTitulo{
+        font-size: 25px;
+    }
+}
+@media (max-width:350px){
+    .FeedbackTitulo{
+        font-size: 20px;
     }
 }

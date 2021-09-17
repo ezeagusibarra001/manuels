@@ -46,23 +46,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 15px;
 }
-.ControllerButton{
+.ControllerButtonLeft{
     background-color: transparent;
     border: solid transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-left: solid white 4px;
+    border-top: solid white 4px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-45deg);
     opacity: 40%;
 }
-.ControllerButton:hover{
+.ControllerButtonLeft:hover{
     opacity: 100%;
 }
-.Arrow{
-    color: white;
-    height: 40px;
-    width: 40px;
-    z-index: 10;
+.ControllerButtonRight{
+    background-color: transparent;
+    border: solid transparent;
+    border-left: solid white 4px;
+    border-top: solid white 4px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(135deg);
+    opacity: 40%;
+}
+.ControllerButtonRight:hover{
+    opacity: 100%;
 }
 .Index{
     width: 100%;
@@ -74,7 +84,7 @@
 .Index-Bar{
     width: 100%;
     max-width: 40px;
-    height: 6px;
+    height: 2px;
     background-color: gray;
     opacity: 20%;
 }
