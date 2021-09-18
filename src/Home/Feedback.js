@@ -8,7 +8,6 @@ function Feedback(props) {
     const { reviews, loadingFed } = useHome()
     console.log(reviews.length);
     return (
-
         <div className="ContainerFeedbackFondo">
             <div className="SubContainerFeedbackFondo">
                 <div className="ContainerFeedbackTitulo">
@@ -41,10 +40,8 @@ function Feedback(props) {
                         <Loading />
                     </div>
                 }
-
             </div>
         </div>
     )
-
 }
 export default Feedback;

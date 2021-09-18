@@ -68,11 +68,6 @@ function CarruselMarcas(){
                     </button>
                 </div>
             </div>
-            <div className="Index">
-                {Imagenes.map( Imagen =>
-                    <span className="Index-Bar"></span>
-                )}
-            </div>
         </div>
     )
 }

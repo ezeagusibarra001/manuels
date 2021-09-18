@@ -1,26 +1,19 @@
 /*------------------------------------------------CONTAINERS---------------------------------------*/
 .ContainerPadreServiciosDesktop{
-
     width: 100%;
     height: auto;
-
     text-align: center;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-
     gap: 5%;
     padding: 5% 10%;
-
     background-image: url("../assetsSrc/fondoservicios.png");
     background-position: center;
     background-size: contain;
     background-repeat: repeat-x;
-
 }
 .ContainerPadreServiciosDesktop>div{
-
     color: #a06ab4;
     font-size: 1.5vw;
 }
@@ -31,145 +24,106 @@
 }
 /*------------------------------------------------TITULO SERVICIOS---------------------------------------*/
 .ContainerTituloServiciosDesktop{
-
     grid-column-start: 1;
     grid-column-end: 4;
-
     grid-row-start: 1;
     grid-row-end: 2;
-
     height: auto;
     width: 100%;
 }
-.TituloServiciosDesktop{
-    
-    font-family: "dukecharming regular";
-    font-weight: 900;
+.TituloServiciosDesktop{  
+    font-weight: 600;
     color: white;
 }
 /*------------------------------------------------CARD1---------------------------------------*/
 .ContainerCard1Desktop{
-
     height: auto;
     width: 100%;
-
     grid-column-start: 1;
     grid-column-end: 2;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
-
     background-color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .Card1Desktop{
-
     height: 34vw;
     width: 100%;
-
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 0%;
-
     padding: 10% 4%;
 }
 .IconoDesktop1{
-    
     width: 40%;
     height: auto;
 }
 /*------------------------------------------------CARD2---------------------------------------*/
 .ContainerCard2Desktop{
-
     height: auto;
     width: 100%;
-
     grid-column-start: 2;
     grid-column-end: 3;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
-
     background-color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .Card2Desktop{
-
     height: 34vw;
     width: 100%;
-    
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 1vw;
-
     padding: 10% 4%;
 
 }
 .IconoDesktop2{
-    
     width: 40%;
     height: auto;
 }
 /*------------------------------------------------CARD3---------------------------------------*/
 .ContainerCard3Desktop{
-
     height: auto;
     width: 100%;
-
     grid-column-start: 3;
     grid-column-end: 4;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     border-radius: 50px;
     box-shadow: 0 0 25px rgb(0,0,0) !important;
-
     background-color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .Card3Desktop{
-
     height: 34vw;
     width: 100%;
-    
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 1vw;
-
     padding: 10% 4%;
 }
 .IconoDesktop3{
-    
     width: 40%;
     height: auto;
 }
 /*------------------------------------------------BUTTON---------------------------------------*/
 .ContainerButtonCardDesktop{
-
     grid-row-start: 3;
     grid-row-end: 4;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -177,13 +131,10 @@
 .ButtonCardDesktop{
     background-color: #a06ab4;
     color: white;
-
     height: auto;
     width: 70%;
-
     border: solid transparent;
     border-radius: 40px;
-
     font-size: 1vw;
 }
 .ButtonCardDesktop:hover{

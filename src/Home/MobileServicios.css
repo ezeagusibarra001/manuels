@@ -1,7 +1,6 @@
 .ContainerGodServiciosMobile{
     width: 100%;
     height: fit-content;
-
     background-image: url("../assetsSrc/fondoservicios.png");
     background-position: top;
     background-size: contain;
@@ -10,84 +9,60 @@
 .ContainerPadreMobileServicios{
     height: auto;
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    
     gap: 2%;
-
     padding: 10% 0%;
-
 }
-
-
-
 /*------------------------------------------------TITULO SERVICIOS---------------------------------------*/
 .ContainerTituloServiciosMobile{
     grid-column-start: 1;
     grid-column-end: 2;
-
     grid-row-start: 1;
     grid-row-end: 2;
-
     height: auto;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 .TituloServiciosMobile{
-    font-family: "dukecharming regular";
-    font-weight: 900;
+    font-weight: 600;
     font-size: 35px;
     color: white;
 }
-
 /*------------------------------------------------CARRUSEL---------------------------------------*/
 .CaruselServiciosMobile{
-
     grid-column-start: 1;
     grid-column-end: 2;
-
     grid-row-start: 2;
     grid-row-end: 3;
-
     height: auto;
     width: 100%;
-
     display: flex !important;
     justify-content: center !important;
     align-items: flex-start !important;
-
 }
 .CaruselServiciosMobile{
     height: auto !important;
     width: 100% !important;
 }
 .ContainerCardServiciosMobile{
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr ;
-
     height: 450px;
     width: 70%;
-
     box-shadow: 0 0 15px rgb(0,0,0) !important;
     border-radius: 40px;
     background-color: white;
-
     padding: 8% 0%;
-
     text-align: center;
 }
-
 .ContainerImgServiciosMobile{
     height: auto;
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,8 +71,6 @@
     height: auto;
     width: 40%;
 }
-
-
 /*------------------------------------------------TEXTO1---------------------------------------*/
 .ContainerTextoServiciosMobile1{
 
@@ -111,7 +84,6 @@
 }
 /*------------------------------------------------TEXTO2---------------------------------------*/
 .ContainerTextoServiciosMobile2{
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr ;
@@ -131,9 +103,7 @@
     font-weight: 700;
     color: #a06ab4;
 }
-
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-
 @media screen and (max-width: 700px){
 .ContainerCardServiciosMobile{
     width: 80%;
