@@ -74,6 +74,28 @@
 .ControllerButtonRight:hover{
     opacity: 100%;
 }
+.IndexContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Index-Bar{
+    width: 100%;
+    max-width: 40px;
+    height: 2px;
+    background-color: gray;
+    opacity: 20%;
+}
+.Index-Bar-active{
+    width: 100%;
+    max-width: 40px;
+    height: 2px;
+    background-color: white;
+    opacity: 20%;
+}
+
 @media (max-width:500px){
     .TituloCarrusel{
         font-size: 25px;

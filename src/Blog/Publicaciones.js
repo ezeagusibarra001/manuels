@@ -1,10 +1,14 @@
-import React from "react"
+import React,{useState} from "react"
 import "./Publicaciones.css"
 import { useHome } from '../context/home-context'
 import moment from 'moment'
+import ModalBlog from "./ModalBlog"
 function Publicaciones() {
     const { blog} = useHome()
-      
+    const [modalBlog, setModalBlog]=useState(false)
+    const OpenModal =()=>{
+        setModalBlog(true)
+    }
     return (
         <div className="ContainerPublicaciones">
             {blog.map((publicacion) => (
@@ -16,7 +20,13 @@ function Publicaciones() {
                         <div className="ContainerPublicacionesImg1">
                           {publicacion.image === null 
                           ?<div></div>  
-                          :<img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} />                    
+                          :
+                            <>
+                            <img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} onClick={OpenModal}/>
+                            {modalBlog &&
+                                <ModalBlog modalBlog={modalBlog} setModalBlog={setModalBlog} data={publicacion.image.type} base64={publicacion.image.bytes}/>
+                            }
+                            </>               
                           }
                         </div>
                         <div className="ContainerPublicacionesTextos1">
@@ -46,6 +56,5 @@ function Publicaciones() {
             ))}
         </div>
     )
-
 }
 export default Publicaciones;

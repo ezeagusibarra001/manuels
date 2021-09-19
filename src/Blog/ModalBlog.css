@@ -1,0 +1,47 @@
+.ModalContainerBlog{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.ModalContainerImg{
+    background-color: white;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.ImgBlgoModal{
+    width: 60%;
+    height: auto;
+}
+.CloseButtonBlog{
+    color: #a06ab4;
+    position: absolute;
+    font-size: 40px;
+    top: 0px;
+    right: 10px;
+}
+.CloseButtonBlog:hover{
+    cursor: pointer;
+}
+/*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
+@media screen and (max-width: 500px){
+    .ModalContainerImg{
+        width: 95%;
+    }
+    .ImgBlgoModal{
+        width: 100%;
+        height: auto;
+    }
+    .CloseButtonBlog{
+        font-size: 25px;
+    }
+}
