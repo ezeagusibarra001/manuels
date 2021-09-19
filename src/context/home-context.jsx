@@ -5,9 +5,9 @@ const HomeContext = React.createContext();
 export function HomeProvider(props) {
      // WEB_READY
      const [web_ready,setWeb_ready] = useState(false)
-     setTimeout(() => {
+     /*setTimeout(() => {
         setWeb_ready(true)
-     }, 1000);
+     }, 2500);*/
     //IMAGENES API
     const [imagenes, setImagenes] = useState([]);
     useEffect(() => {

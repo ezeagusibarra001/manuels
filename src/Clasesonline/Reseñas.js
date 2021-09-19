@@ -28,14 +28,19 @@ function Reseñas() {
                     appearance: "success",
                     autoDismiss: true,
                 });
+                setreseñaform({name:"",commentary:""}) //PARA LIMPIAR EL FORMULARIO
             })
             .catch((err) => {
                 console.log("error post", err);
                 console.log(postData)
+                addToast("¡Gracias! Tu opinion nos importa.", {
+                    appearance: "danger",
+                    autoDismiss: true,
+                });
+                setreseñaform({name:"",commentary:""}) //PARA LIMPIAR EL FORMULARIO
             });
     };
     return (
-
         <div className="ContainerPadreReseña">
             <div className="ContainerSubPadreReseña1">
                 <div className="ContainerReseñaTitulo">
