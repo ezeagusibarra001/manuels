@@ -47,6 +47,8 @@ function CarruselMarcas(){
            SlidesContainer.current.style.transform = "translateX(0px)";
        },50);
    }
+   /*setInterval(foward,4000);*/
+ 
     return(
         <div className="CarruselContainer">
             <h1 className="TituloCarrusel">QUIENES CONFIARON EN MÍ</h1>
