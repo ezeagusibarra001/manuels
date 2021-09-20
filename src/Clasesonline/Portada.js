@@ -5,7 +5,7 @@ function Portada() {
     return(
         <div className="ContainerFondoPortada">
            <img alt="img"
-                    src="../assets/clasesonline.png"
+                    src="../assets/clasesonline.webp"
                     className="ImgPresentacion"
                 />
         </div>

@@ -9,7 +9,7 @@ function PortadaBlog() {
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
                 <img alt="img"
-                    src="../assets/blog.png"
+                    src="../assets/blog.webp"
                     className="ImgPresentacion"
                 />
             </div>

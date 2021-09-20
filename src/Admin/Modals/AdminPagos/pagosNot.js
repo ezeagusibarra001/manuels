@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 import ModalVoucher from './ModalVoucher'
 import moment from "moment";
 function pagosNot(props) {
-    const { payments, voucherCheck, alta, imagenes, baja, showVoucher, setShowVoucher, currentVoucher, setEstado, estado } = props;
+    const { payments, voucherCheck, alta, baja, showVoucher, setShowVoucher, currentVoucher, setEstado, estado } = props;
     return (
         <Layout>
             <div className="BigDiv">

@@ -15,7 +15,7 @@ function DesktopServicios() {
 
           <div className="Card1Desktop">
             <div className="ContainerIconoDesktop"> 
-              <img alt="img" className="IconoDesktop1" src="../assets/icono1.png"></img>
+              <img alt="img" className="IconoDesktop1" src="../assets/icono1.webp"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card1">Locuciones comerciales castellano neutro y rioplatense</p>
@@ -33,7 +33,7 @@ function DesktopServicios() {
 
           <div className="Card2Desktop">
             <div className="ContainerIconoDesktop">
-              <img alt="img" className="IconoDesktop2" src="../assets/icono2.png"></img>
+              <img alt="img" className="IconoDesktop2" src="../assets/icono2.webp"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card2">Talleres grupales de locución , neutro ,oratoria , radio , podcast.</p>
@@ -56,7 +56,7 @@ function DesktopServicios() {
 
           <div className="Card3Desktop">
             <div className="ContainerIconoDesktop">
-              <img alt="img" className="IconoDesktop3" src="../assets/icono3.png"></img>
+              <img alt="img" className="IconoDesktop3" src="../assets/icono3.webp"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card3">Talleres para empresas: Locucion , Radioteatro , radio y Podcast </p>

@@ -6,7 +6,7 @@ function Presentacion() {
     return(
         <div className="ContainerPresentacionFondo">
            <img alt="img"
-                    src="../assets/portada.png"
+                    src="../assets/portada.webp"
                     className="ImgPresentacion"
                 />
         </div>

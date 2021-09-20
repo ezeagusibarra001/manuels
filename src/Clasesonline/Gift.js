@@ -5,7 +5,7 @@ function Gift() {
         <div className="ContainerPadreGift">
             <div className="SubContainerGift">
                 <div className="ContainerImgGift">
-                    <img alt="img" className="ImgGift" src="./assets/iconoc7.png" />
+                    <img alt="img" className="ImgGift" src="./assets/iconoc7.webp" />
                 </div>
                 <div className="ContainerGiftTextos">
                     <h1 className="GiftTexto1">Giftcards de Experiencias</h1>

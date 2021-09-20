@@ -16,7 +16,7 @@ function Modalguide(props) {
                 <Modal.Header closeButton>
                     <div className="ContainerHeader">
                         <img alt="img"
-                            src="../assets/logo2.png"
+                            src="../assets/logo2.webp"
                             className="Guideimg"
                         />
                         <h1 className="GuideTitle">Pasos para inscribirse</h1>
@@ -27,7 +27,7 @@ function Modalguide(props) {
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                             </div>
@@ -39,7 +39,7 @@ function Modalguide(props) {
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                             </div>
@@ -51,7 +51,7 @@ function Modalguide(props) {
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                             </div>
@@ -63,7 +63,7 @@ function Modalguide(props) {
                         <div className="ContainerPaso">
                             <div className="ContainerGuideImg">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                             </div>
@@ -75,7 +75,7 @@ function Modalguide(props) {
                             <div className="ContainerGuideImg">
                                 <img
                                     alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                             </div>
