@@ -64,21 +64,17 @@ function pagosNot(props) {
                                         <td>{moment(p.dateLesson).format("DD/MM/YY")}</td>
                                         {p.payment.toString() === "false"
                                             ? <td onClick={() => alta(p.idPayment)}>
-                                                {imagenes.filter((imagen) => imagen.name === "comprobado.png").map((imagen) => (
-                                                    <img alt="img"
-                                                        src={`data:${imagen.type};base64,${imagen.bytes}`}
-                                                        className="imagenCheckout"
-                                                    />
-                                                ))}
+                                                <img alt="img"
+                                                    src="../assets/comprobado.png"
+                                                    className="imagenCheckout"
+                                                />
                                             </td>
                                             : <td></td>}
                                         <td onClick={() => baja(p.idPayment)}>
-                                            {imagenes.filter((imagen) => imagen.name === "basura (1).png").map((imagen) => (
-                                                <img alt="img"
-                                                    className="imagenCheckout"
-                                                    src={`data:${imagen.type};base64,${imagen.bytes}`}
-                                                />
-                                            ))}
+                                            <img alt="img"
+                                                src="../assets/basura.png"
+                                                className="imagenCheckout"
+                                            />
                                         </td>
                                     </tr>
                                     : <div></div>
