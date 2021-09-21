@@ -26,8 +26,8 @@ function AdminPagos() {
             console.log("anda", res.data);
         }).catch((error) => {
             console.log(error)
-           // history.push("/")
-           // window.location.reload(true)
+            history.push("/")
+            window.location.reload(true)
         });
     };
     const alta = async (payment) => {

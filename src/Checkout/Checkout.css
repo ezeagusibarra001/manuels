@@ -80,6 +80,66 @@
         margin:auto !important;
         padding-top: 50% !important;
     }
+    .CheckoutinputM {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        color: #a06ab4;
+        padding: 0% 1%;
+        border: solid #a06ab4 0px;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 2.5vw;
+    }
+    .CheckoutinputCheck {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 9;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        color: #a06ab4;
+        padding: 0% 1%;
+        border: solid #a06ab4 0px;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 2.5vw;
+    }
+    .CheckoutinputCheck2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 10;
+        grid-row-end: 10;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        color: #a06ab4;
+        padding: 0% 1%;
+        border: solid #a06ab4 0px;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 2.5vw;
+    }
+    .CheckoutinputCheck3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 11;
+        grid-row-end: 11;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        color: #a06ab4;
+        padding: 0% 1%;
+        border: solid #a06ab4 0px;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 2.5vw;
+    }
   }
 .CheckoutinputM {
     grid-column-start: 1;
@@ -105,8 +165,8 @@
 .CheckoutinputCheck {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 7;
     width: 100%;
     height: auto;
     text-align: left;
@@ -120,8 +180,8 @@
 .CheckoutinputCheck2 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 10;
-    grid-row-end: 10;
+    grid-row-start: 8;
+    grid-row-end: 8;
     width: 100%;
     height: auto;
     text-align: left;
@@ -135,8 +195,8 @@
 .CheckoutinputCheck3 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 11;
-    grid-row-end: 11;
+    grid-row-start: 9;
+    grid-row-end: 9;
     width: 100%;
     height: auto;
     text-align: left;
