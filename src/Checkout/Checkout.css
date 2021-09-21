@@ -75,6 +75,12 @@
     font-size: 2.5vw;
 }
 
+@media (max-width: 767px) {
+    .modal-dialog{
+        margin:auto !important;
+        padding-top: 50% !important;
+    }
+  }
 .CheckoutinputM {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -99,8 +105,8 @@
 .CheckoutinputCheck {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 7;
-    grid-row-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 9;
     width: 100%;
     height: auto;
     text-align: left;
@@ -114,8 +120,8 @@
 .CheckoutinputCheck2 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 8;
-    grid-row-end: 8;
+    grid-row-start: 10;
+    grid-row-end: 10;
     width: 100%;
     height: auto;
     text-align: left;
@@ -129,8 +135,8 @@
 .CheckoutinputCheck3 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 11;
     width: 100%;
     height: auto;
     text-align: left;
