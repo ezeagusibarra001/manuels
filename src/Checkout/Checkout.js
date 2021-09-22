@@ -163,7 +163,7 @@ function Checkout() {
     return (
         <Layout >
             <div className="Containercheckout">
-                <form className="ContainerFormcheckout" >
+                <form className="ContainerFormcheckout" onSubmit="return false;" >
                     <h1 className="Checkouttitle">Completar los siguientes datos:</h1>
                     <input
                         className="Checkoutinput"
