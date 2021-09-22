@@ -10,6 +10,7 @@ function CarruselMarcas(){
     var Index = 0
     useEffect(() => {
         IndexContainer.current.children[Index].style.backgroundColor="white"
+        // eslint-disable-next-line
     }, []);
     const foward=()=>{
         /*IDENTIFICAMOS AL PRIMER ELEMENTO DEL CARRUSEL */
