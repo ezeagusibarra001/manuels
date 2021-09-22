@@ -1,4 +1,5 @@
 import React from "react";
+import '../cssSteps/step1.css'
 
 function Step1() {
   return (
