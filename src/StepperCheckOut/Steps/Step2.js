@@ -1,5 +1,6 @@
 import React from "react";
 import "../cssSteps/step2.css";
+import Button from "react-bootstrap/Button";
 function Step2() {
   return (
     <div className="container">
@@ -23,6 +24,17 @@ function Step2() {
           <h1 className="CheckoutB">
             <a>Click Aqui </a>para señar la clase.
           </h1>
+          <h1 className="CheckoutSubtitleB">Codigo de Descuento</h1>
+          <input
+            className="CheckoutinputStep2"
+            type="text"
+            name="descuento"
+            placeholder="Descuento"
+            //style={Styles}
+            maxLength="15"
+            //onChange={handleChange}
+          />
+          <Button className="walletPiola">Aplicar Descuento</Button>
         </div>
       </div>
     </div>
