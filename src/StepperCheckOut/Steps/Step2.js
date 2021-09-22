@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 function Step2() {
   return (
     <div className="container">
-      <h1 className="row Checkouttitle">Medios de Pago:</h1>
+      <h1 className="row Checkouttitle">Medios de Pago</h1>
       <div className="row">
         <div className="col">
           <h1 className="CheckoutSubtitleB">
