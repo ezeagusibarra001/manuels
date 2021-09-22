@@ -22,14 +22,14 @@
     overflow: hidden;
 }
 .SlidesContainer{
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 .Slides{
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;

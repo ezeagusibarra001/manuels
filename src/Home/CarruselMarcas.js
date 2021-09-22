@@ -1,9 +1,14 @@
-import React,{useRef} from "react"
+import React,{useRef,useEffect} from "react"
 import "./CarruselMarcas.css"
 
 function CarruselMarcas(){
     const Imagenes =["../assets/Carrusel1.png","../assets/Carrusel2.png","../assets/Carrusel3.png"]
     const SlidesContainer = useRef(null)
+    const IndexContainer = useRef(null)
+    var Index = 0
+    useEffect(() => {
+        IndexContainer.current.children[Index].style.backgroundColor="white"
+    }, []);
     const foward=()=>{
         /*IDENTIFICAMOS AL PRIMER ELEMENTO DEL CARRUSEL */
         const PrimerElemento = SlidesContainer.current.firstChild
@@ -25,6 +30,29 @@ function CarruselMarcas(){
         }
         /*EL EVENT LISTENER CUANDO FINALIZE LA TRANSITION EJECUTA LAS DEMAS ACCIONES*/
         SlidesContainer.current.addEventListener("transitionend",Transition)
+        Index = Index +1
+        console.log("Index",Index)
+        const IndexElements = document.querySelectorAll(".Index-Bar")
+        if(Index>=0 && Index<=2){
+            IndexElements.forEach((cadaBarra , i) => {
+                let posicion = i
+                IndexElements[posicion].style.backgroundColor="gray"
+                if (Index === i) {
+                    IndexElements[Index].style.backgroundColor="white"
+                    console.log("Posiicion",i)
+                }
+            });
+        }else{
+            IndexElements.forEach((cadaBarra , i) => {
+                Index = 0
+                let posicion = i
+                IndexElements[posicion].style.backgroundColor="gray"
+                if (Index === i) {
+                    IndexElements[Index].style.backgroundColor="white"
+                    console.log("Posiicion",i)
+                }
+            });
+        }
     }
     const back   = () =>{
         /*DECLARAMOS UNA VARIABLE CON EL VALOR DEL WIDTH DE LA IMAGEN */
@@ -46,9 +74,32 @@ function CarruselMarcas(){
            SlidesContainer.current.style.transition = "500ms ease-out all"
            SlidesContainer.current.style.transform = "translateX(0px)";
        },50);
+
+       Index = Index -1
+        console.log("Index",Index)
+        const IndexElements = document.querySelectorAll(".Index-Bar")
+        if(Index>=0 && Index<=2){
+            IndexElements.forEach((cadaBarra , i) => {
+                let posicion = i
+                IndexElements[posicion].style.backgroundColor="gray"
+                if (Index === i) {
+                    IndexElements[Index].style.backgroundColor="white"
+                    console.log("Posiicion",i)
+                }
+            });
+        }else{
+            IndexElements.forEach((cadaBarra , i) => {
+                Index = 2
+                let posicion = i
+                IndexElements[posicion].style.backgroundColor="gray"
+                if (Index === i) {
+                    IndexElements[Index].style.backgroundColor="white"
+                    console.log("Posiicion",i)
+                }
+            });
+        }
    }
    /*setInterval(foward,4000);*/
- 
     return(
         <div className="CarruselContainer">
             <h1 className="TituloCarrusel">QUIENES CONFIARON EN MÍ</h1>
@@ -70,7 +121,7 @@ function CarruselMarcas(){
                     </button>
                 </div>
             </div>
-            <div className="IndexContainer">
+            <div className="IndexContainer" ref={IndexContainer}>
                 {Imagenes.map( indexBar => <span className="Index-Bar"></span>)}
             </div>
         </div>

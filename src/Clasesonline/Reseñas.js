@@ -98,6 +98,5 @@ function Reseñas() {
             </div>
         </div>
     )
-
 }
 export default Reseñas;

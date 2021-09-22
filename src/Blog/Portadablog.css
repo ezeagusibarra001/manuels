@@ -63,7 +63,7 @@
     }
     .SubContenedorTextos{
         width: 100%;
-        height: 60vw;
+        height: auto;
     }
     .Blogtitulo{
         color: white;

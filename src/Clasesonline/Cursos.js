@@ -7,19 +7,14 @@ function Cursos(props) {
     const { setCurrentClase } = useHome();
     const data = props.data
     const dates = data.dates;
-
     const x = [];
-
     dates.forEach(d => { x.push(d) })
-
     const select = () => {
         setCurrentClase(data)
         console.log(data.link)
         window.scrollTo(0, 0)
     }
-
     return (
-
         <div className="ContainerItemsCursos">
             <div className="ContainerCursosTitulos">
                 <h1 className="CursosTitulos">{data.title}</h1>
@@ -66,17 +61,14 @@ function Cursos(props) {
             <div className="ContainerCursosTextos3">
                 <h5 className="CursosTextos3">CUPOS LIMITADOS - FECHAS : {moment(x[0].date).format("DD/MM")} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div> : moment(x[1].date).format("DD/MM")} </h5>
             </div>
-
             {data.quota === 0
                 ?
                 <div className="ContainerCursostexto5"><h2 className="CursosTextos4"><Link className="ButtonTextos5" >SOLD OUT</Link></h2> </div>
                 :
                 <div className="ContainerCursostexto4"><h2 className="CursosTextos4"><Link className="ButtonTextos4" to="/Checkout" onClick={select} >QUIERO INSCRIBIRME</Link></h2> </div>
             }
-
         </div>
     )
-
 }
 
 export default Cursos;

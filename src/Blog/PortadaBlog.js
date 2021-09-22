@@ -1,11 +1,7 @@
 import React from "react"
 import "./Portadablog.css"
-
 function PortadaBlog() {
-
     return (
-
-
         <div className="ContenedorPortadaBlog">
             <div className="ContenedorImgBlog">
                 <img alt="img"
@@ -24,6 +20,5 @@ function PortadaBlog() {
             </div>
         </div>
     )
-
 }
 export default PortadaBlog;
