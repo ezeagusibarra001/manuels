@@ -28,7 +28,7 @@ function Modalguide2(props) {
                         <div className="BodyModal">
                             <div className="ContainerPaso">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                                 <p className="GuideTexto">
@@ -38,7 +38,7 @@ function Modalguide2(props) {
                             </div>
                             <div className="ContainerPaso">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                                 <p className="GuideTexto">
@@ -48,7 +48,7 @@ function Modalguide2(props) {
                             </div>
                             <div className="ContainerPaso">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                                 <p className="GuideTexto">
@@ -58,7 +58,7 @@ function Modalguide2(props) {
                             </div>
                             <div className="ContainerPaso">
                                 <img alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                                 <p className="GuideTexto">
@@ -68,7 +68,7 @@ function Modalguide2(props) {
                             <div className="ContainerPaso">
                                 <img
                                     alt="img"
-                                    src="../assets/iconoc9.png"
+                                    src="../assets/iconoc9.webp"
                                     className="GuideIconos"
                                 />
                                 <p className="GuideTexto">

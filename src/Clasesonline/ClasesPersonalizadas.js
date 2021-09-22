@@ -26,7 +26,7 @@ function ClasesPersonalizadas() {
                         </p>
                         <div className="ContainerIcono1Personalizadas">
                             <img alt="img"
-                                src="../assets/iconoc1.png"
+                                src="../assets/iconoc1.webp"
                                 className="iconoc1"
                             />
                         </div>
@@ -37,7 +37,7 @@ function ClasesPersonalizadas() {
                         </p>
                         <div className="ContainerIcono2Personalizadas">
                             <img alt="img"
-                                src="../assets/iconoc2.png"
+                                src="../assets/iconoc2.webp"
                                 className="iconoc2"
                             />
                         </div>
@@ -51,7 +51,7 @@ function ClasesPersonalizadas() {
                         </p>
                         <div className="ContainerIcono3Personalizadas">
                             <img alt="img"
-                                src="../assets/iconoc3.png"
+                                src="../assets/iconoc3.webp"
                                 className="iconoc3"
                             />
                         </div>
@@ -63,7 +63,7 @@ function ClasesPersonalizadas() {
                         </p>
                         <div className="ContainerIcono4Personalizadas">
                             <img alt="img"
-                                src="../assets/iconoc4.png"
+                                src="../assets/iconoc4.webp"
                                 className="iconoc4"
                             />
                         </div>
@@ -74,7 +74,7 @@ function ClasesPersonalizadas() {
                         </p>
                         <div className="ContainerIcono5Personalizadas">
                             <img alt="img"
-                                src="../assets/iconoc5.png"
+                                src="../assets/iconoc5.webp"
                                 className="iconoc5"
                             />
                         </div>

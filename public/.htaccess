@@ -1,16 +1,16 @@
-RewriteEngine On  
+RewriteEngine On 
+RewriteBase /
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ http://www.manuels.com.ar/$1 [R=301,L]
+
+
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]
-
 RewriteRule ^ /index.html [L]
 
-AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
-application/xhtml+xml text/javascript text/css application/x-javascript
-BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4.0[678] no-gzip
-BrowserMatch bMSIE !no-gzip !gzip-only-text/html
 
-FileETag MTime Size
-ExpiresActive on
-ExpiresDefault "access plus 86400 seconds"
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

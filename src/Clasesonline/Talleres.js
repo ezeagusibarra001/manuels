@@ -25,7 +25,7 @@ function Talleres(props) {
                         <img
                             alt="img"
                             className="ImgTalleres"
-                            src="./assets/iconoc1.png"
+                            src="./assets/iconoc1.webp"
                         />
                     </div>
                     <div>
@@ -37,7 +37,7 @@ function Talleres(props) {
                         <img
                             alt="img"
                             className="ImgTalleres"
-                            src="./assets/iconoc5.png"
+                            src="./assets/iconoc5.webp"
                         />
                     </div>
                     <div>
@@ -51,7 +51,7 @@ function Talleres(props) {
                         <img
                             alt="img"
                             className="ImgTalleres"
-                            src="./assets/iconoc2.png"
+                            src="./assets/iconoc2.webp"
                         />
                     </div>
                     <div>
@@ -63,7 +63,7 @@ function Talleres(props) {
                         <img
                             alt="img"
                             className="ImgTalleres"
-                            src="./assets/iconoc3.png"
+                            src="./assets/iconoc3.webp"
                         />
                     </div>
                     <div>

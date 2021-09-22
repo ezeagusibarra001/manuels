@@ -22,7 +22,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales1">
                             <img alt="img"
                                 className="Icono1clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem1Grupales">
@@ -33,7 +33,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales2">
                             <img alt="img"
                                 className="Icono2clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem2Grupales">
@@ -44,7 +44,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales3">
                             <img alt="img"
                                 className="Icono3clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem3Grupales">
@@ -55,7 +55,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales4">
                             <img alt="img"
                                 className="Icono4clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem4Grupales">
@@ -66,7 +66,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales5">
                             <img alt="img"
                                 className="Icono5clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem5Grupales">
@@ -77,7 +77,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales6">
                             <img alt="img"
                                 className="Icono6clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem6Grupales">
@@ -88,7 +88,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales7">
                             <img alt="img"
                                 className="Icono7clasesGrupales"
-                                src="./assets/iconoc9.png"
+                                src="./assets/iconoc9.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem7Grupales">
@@ -101,7 +101,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales8">
                             <img alt="img"
                                 className="Icono8clasesGrupales"
-                                src="./assets/iconoc6.png"
+                                src="./assets/iconoc6.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem8Grupales">
@@ -115,7 +115,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales9">
                             <img alt="img"
                                 className="Icono9clasesGrupales"
-                                src="./assets/iconoc4.png"
+                                src="./assets/iconoc4.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem9Grupales">
@@ -128,7 +128,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales10">
                             <img alt="img"
                                 className="Icono10clasesGrupales"
-                                src="./assets/iconoc7.png"
+                                src="./assets/iconoc7.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem10Grupales">
@@ -141,7 +141,7 @@ function ClasesGrupales() {
                         <div className="ContainerIconoGrupales11">
                             <img alt="img"
                                 className="Icono11clasesGrupales"
-                                src="./assets/iconoc8.png"
+                                src="./assets/iconoc8.webp"
                             />
                         </div>
                         <div className="ContainerTextoItem11Grupales">

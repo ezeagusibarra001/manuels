@@ -2,7 +2,7 @@ import React,{useRef,useEffect} from "react"
 import "./CarruselMarcas.css"
 
 function CarruselMarcas(){
-    const Imagenes =["../assets/Carrusel1.png","../assets/Carrusel2.png","../assets/Carrusel3.png"]
+    const Imagenes =["../assets/Carrusel1.webp","../assets/Carrusel2.webp","../assets/Carrusel3.webp"]
     const SlidesContainer = useRef(null)
     const IndexContainer = useRef(null)
     var Index = 0

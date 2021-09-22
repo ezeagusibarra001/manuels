@@ -9,7 +9,7 @@ function MobileServicios() {
     
     <div className="ContainerCardServiciosMobile" onClick={()=>window.location.href ="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}>
       <div className="ContainerImgServiciosMobile">
-        <img alt="img" className="ImgServiciosMobile" src="../assets/icono1.png"/>
+        <img alt="img" className="ImgServiciosMobile" src="../assets/icono1.webp"/>
       </div>
       <div className="ContainerTextoServiciosMobile1">
         <p className="Texto1ServiciosMobile1">Talleres para empresas: Locución,Radioteatro y Podcast</p>
@@ -21,7 +21,7 @@ function MobileServicios() {
 
     <div className="ContainerCardServiciosMobile" onClick={()=>history.push("/ClasesOnline")}>
       <div className="ContainerImgServiciosMobile">
-        <img alt="img" className="ImgServiciosMobile" src="../assets/icono2.png"/>
+        <img alt="img" className="ImgServiciosMobile" src="../assets/icono2.webp"/>
       </div>
       <div className="ContainerTextoServiciosMobile2">
         <p className="Texto1ServiciosMobile2">Locuciones comerciales castellano neutro y rioplatense </p>
@@ -33,7 +33,7 @@ function MobileServicios() {
 
     <div className="ContainerCardServiciosMobile" onClick={()=>history.push("/ClasesOnline")}>
     <div className="ContainerImgServiciosMobile">
-      <img alt="img" className="ImgServiciosMobile" src="../assets/icono3.png"/>
+      <img alt="img" className="ImgServiciosMobile" src="../assets/icono3.webp"/>
     </div>
     <div className="ContainerTextoServiciosMobile3">
       <p className="Texto1ServiciosMobile3">Talleres grupales de: Locución ,Neutro,Oratoria,Radio,Podcast </p>
