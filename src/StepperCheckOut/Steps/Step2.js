@@ -18,11 +18,11 @@ function Step2() {
           <h1 className="CheckoutSubtitleB">Mercado Pago</h1>
 
           <h1 className="CheckoutB">
-            <a>Click Aqui </a>para pagar la clase.
+            <a href="#">Click Aqui </a>para pagar la clase.
           </h1>
 
           <h1 className="CheckoutB">
-            <a>Click Aqui </a>para señar la clase.
+            <a href="#">Click Aqui </a>para señar la clase.
           </h1>
           <h1 className="CheckoutSubtitleB">Codigo de Descuento</h1>
           <input
