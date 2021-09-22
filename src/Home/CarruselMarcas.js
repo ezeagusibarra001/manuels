@@ -3,6 +3,8 @@ import "./CarruselMarcas.css"
 
 function CarruselMarcas(){
     const Imagenes =["../assets/Carrusel1.webp","../assets/Carrusel2.webp","../assets/Carrusel3.webp"]
+    const Large = Imagenes.length-1
+    console.log("Large:",Large)
     const SlidesContainer = useRef(null)
     const IndexContainer = useRef(null)
     var Index = 0
@@ -33,12 +35,14 @@ function CarruselMarcas(){
         Index = Index +1
         console.log("Index",Index)
         const IndexElements = document.querySelectorAll(".Index-Bar")
-        if(Index>=0 && Index<=2){
+        if(Index>=0 && Index<=Large){
             IndexElements.forEach((cadaBarra , i) => {
                 let posicion = i
                 IndexElements[posicion].style.backgroundColor="gray"
+                IndexElements[posicion].style.opacity="20%"
                 if (Index === i) {
                     IndexElements[Index].style.backgroundColor="white"
+                    IndexElements[Index].style.opacity="100%"
                     console.log("Posiicion",i)
                 }
             });
@@ -47,8 +51,10 @@ function CarruselMarcas(){
                 Index = 0
                 let posicion = i
                 IndexElements[posicion].style.backgroundColor="gray"
+                IndexElements[posicion].style.opacity="20%"
                 if (Index === i) {
                     IndexElements[Index].style.backgroundColor="white"
+                    IndexElements[Index].style.opacity="100%"
                     console.log("Posiicion",i)
                 }
             });
@@ -78,12 +84,14 @@ function CarruselMarcas(){
        Index = Index -1
         console.log("Index",Index)
         const IndexElements = document.querySelectorAll(".Index-Bar")
-        if(Index>=0 && Index<=2){
+        if(Index>=0 && Index<=Large){
             IndexElements.forEach((cadaBarra , i) => {
                 let posicion = i
                 IndexElements[posicion].style.backgroundColor="gray"
+                IndexElements[posicion].style.opacity="20%"
                 if (Index === i) {
                     IndexElements[Index].style.backgroundColor="white"
+                    IndexElements[Index].style.opacity="100%"
                     console.log("Posiicion",i)
                 }
             });
@@ -92,8 +100,10 @@ function CarruselMarcas(){
                 Index = 2
                 let posicion = i
                 IndexElements[posicion].style.backgroundColor="gray"
+                IndexElements[posicion].style.opacity="20%"
                 if (Index === i) {
                     IndexElements[Index].style.backgroundColor="white"
+                    IndexElements[Index].style.opacity="100%"
                     console.log("Posiicion",i)
                 }
             });
@@ -116,8 +126,14 @@ function CarruselMarcas(){
                 </div>
                 <div className="Controllers">
                     <button className="ControllerButtonLeft" onClick={back}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                        </svg>
                     </button>
                     <button className="ControllerButtonRight" onClick={foward}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                        </svg>
                     </button>
                 </div>
             </div>

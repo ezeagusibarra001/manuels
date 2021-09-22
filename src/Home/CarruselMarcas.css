@@ -46,17 +46,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
 }
 .ControllerButtonLeft{
     background-color: transparent;
     border: solid transparent;
-    border-left: solid white 4px;
-    border-top: solid white 4px;
-    height: 20px;
-    width: 20px;
-    transform: rotate(-45deg);
     opacity: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .ControllerButtonLeft:hover{
     opacity: 100%;
@@ -64,12 +61,10 @@
 .ControllerButtonRight{
     background-color: transparent;
     border: solid transparent;
-    border-left: solid white 4px;
-    border-top: solid white 4px;
-    height: 20px;
-    width: 20px;
-    transform: rotate(135deg);
     opacity: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .ControllerButtonRight:hover{
     opacity: 100%;
@@ -84,21 +79,16 @@
 .Index-Bar{
     width: 100%;
     max-width: 40px;
-    height: 2px;
+    height: 4px;
     background-color: gray;
     opacity: 20%;
 }
-.Index-Bar-active{
-    width: 100%;
-    max-width: 40px;
-    height: 2px;
-    background-color: white;
-    opacity: 20%;
-}
-
 @media (max-width:500px){
     .TituloCarrusel{
         font-size: 25px;
+    }
+    .Index-Bar{
+        height: 3px;
     }
 }
 @media (max-width:350px){
