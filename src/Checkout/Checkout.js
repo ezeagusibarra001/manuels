@@ -3,7 +3,6 @@ import Layout from "../Layout";
 import CheckOutModal from "./CheckOutModal";
 import Modalguide2 from "./Modalguide2";
 import Button from "react-bootstrap/Button";
-import "./Checkout.css";
 import Form from "react-bootstrap/Form";
 import { useHome } from "../context/home-context";
 import clienteAxios from "../config/clienteAxios";
