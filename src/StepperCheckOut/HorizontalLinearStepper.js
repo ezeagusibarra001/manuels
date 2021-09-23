@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Step1 from './Steps/Step1'
 import Step2 from './Steps/Step2'
 import Step3 from './Steps/Step3'
+import "./CheckStep.css";
 
 const steps = ['Datos personales', 'Realiza tu pago', 'Finaliza tu compra'];
 

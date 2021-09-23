@@ -3,7 +3,7 @@ import "../cssSteps/step1.css";
 
 function Step1() {
   return (
-    <div className="container">
+    <div className="container height">
       <h1 className="Checkouttitle">Completá los siguientes datos</h1>
 
       <div className="row">

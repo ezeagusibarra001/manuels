@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../cssSteps/step2.css";
 import Button from "react-bootstrap/Button";
 function Step2() {
+  const [stateDescuento, setStateDescuento] = useState(false);
   return (
-    <div className="container">
+    <div className="container height">
       <h1 className="row Checkouttitle">Medios de Pago</h1>
       <div className="row">
         <div className="col">
@@ -34,7 +35,19 @@ function Step2() {
             maxLength="15"
             //onChange={handleChange}
           />
-          <Button className="walletPiola">Aplicar Descuento</Button>
+          <Button
+            className="walletPiola"
+            onClick={() => setStateDescuento(true)}
+          >
+            Aplicar Descuento
+          </Button>
+          {stateDescuento === true ? (
+            <h1 className="CheckoutB">
+              <a href="#">Click Aqui </a>para pagar la clase.
+            </h1>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </div>

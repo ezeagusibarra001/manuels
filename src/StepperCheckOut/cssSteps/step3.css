@@ -1,0 +1,39 @@
+.Checkouttitle {
+    height: auto;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 1%;
+    background-color: #a06ab4;
+    color: white;
+    border-radius: 10px;
+    font-size: 3vw;
+}
+
+.CheckoutSubtitleB {
+    height: auto;
+    width: fit-content;
+    padding: 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 1.6vw;
+}
+
+.CheckoutButton {
+    height: auto !important;
+    width: 50%;
+    margin-left: 25% !important;
+    border: solid transparent !important;
+    border-radius: 10px !important;
+    background-color: #a06ab4 !important;
+    color: white !important;
+    font-size: 2vw !important;
+    margin-top: 11vh;
+}
+.height{
+    height: 40vh;
+}
