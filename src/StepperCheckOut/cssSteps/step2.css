@@ -56,3 +56,49 @@
 .height{
     height: 40vh;
 }
+/*----------------------------------------------mobile------------------------------------*/
+@media screen and (max-width: 767px){
+    .CheckoutSubtitleB {
+        font-size: 3vw !important;
+    }
+    .CheckoutinputStep2{
+        font-size: 2.5vw !important;
+    }
+    .CheckoutB{
+        font-size: 2.5vw !important;
+    }
+    .Checkouttitle {
+        font-size: 4vw !important;
+    }
+    .walletPiola{
+        font-size: 2.5vw !important;
+    }
+    .height{
+        height: 60vh !important;
+    }
+}
+@media screen and (max-width: 560){
+    .height{
+        height: 50vh !important;
+    }
+}
+@media screen and (max-width: 350px){
+    .CheckoutSubtitleB {
+        font-size: 4vw !important;
+    }
+    .CheckoutinputStep2{
+        font-size: 3.5vw !important;
+    }
+    .walletPiola{
+        font-size: 2.5vw !important;
+    }
+    .CheckoutB{
+        font-size: 3.5vw !important;
+    }
+    .Checkouttitle {
+        font-size: 5vw !important;
+    }
+    .height{
+        height: 50vh !important;
+    }
+}

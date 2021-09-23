@@ -7,7 +7,7 @@ function Step2() {
     <div className="container height">
       <h1 className="row Checkouttitle">Medios de Pago</h1>
       <div className="row">
-        <div className="col">
+        <div className="col-md-6">
           <h1 className="CheckoutSubtitleB">
             Transferencia Bancaria: B.GALICIA
           </h1>
@@ -15,7 +15,7 @@ function Step2() {
           <h1 className="CheckoutB">CUIL: 27346237320</h1>
           <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
         </div>
-        <div className="col">
+        <div className="col-md-6">
           <h1 className="CheckoutSubtitleB">Mercado Pago</h1>
 
           <h1 className="CheckoutB">

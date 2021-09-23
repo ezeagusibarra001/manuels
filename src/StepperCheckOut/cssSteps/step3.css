@@ -31,9 +31,83 @@
     border-radius: 10px !important;
     background-color: #a06ab4 !important;
     color: white !important;
-    font-size: 2vw !important;
+    font-size: 2vw ;
     margin-top: 11vh;
 }
 .height{
     height: 40vh;
+}
+.CheckoutinputComprobante{
+    color: white;
+    background: #a06ab4 ;
+    font-size: 1.5vw ;
+}
+.CheckoutLabel2{
+    color: white;
+    background: #a06ab4cc ;
+    border-radius: 10px;
+    padding: 2px;
+    margin-right: 5vw;
+    font-size: 2vw ;
+}
+/*----------------------------------------------mobile------------------------------------*/
+@media screen and (max-width: 767px){
+    .CheckoutSubtitleB {
+        font-size: 3vw !important;
+    }
+    .Checkouttitle {
+        font-size: 4vw !important;
+    }
+    .height{
+        height: 60vh !important;
+    }
+    .CheckoutinputComprobante{
+        font-size: 3vw;
+        color: white;
+        background: #a06ab4 ;
+    }
+    .CheckoutLabel2{
+        color: white;
+        background: #a06ab4cc ;
+        border-radius: 10px;
+        font-size: 4vw;
+        padding: 2px;
+    }
+    .CheckoutButton{
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 560){
+    .height{
+        height: 50vh !important;
+    }
+}
+@media screen and (max-width: 350px){
+    .CheckoutSubtitleB {
+        font-size: 4vw !important;
+    }
+    .CheckoutinputComprobante{
+        font-size: 3vw;
+    }
+    .Checkouttitle {
+        font-size: 5vw !important;
+    }
+    .CheckoutinputComprobante{
+        font-size: 3.5vw;
+        color: white;
+        background: #a06ab4 ;
+    }
+    .CheckoutLabel2{
+        color: white;
+        background: #a06ab4cc ;
+        border-radius: 10px;
+        padding: 2px;
+        font-size: 5vw;
+    }
+    .CheckoutButton{
+        font-size: 5vw !important;
+    }
+    .height{
+        height: 50vh !important;
+    }
 }

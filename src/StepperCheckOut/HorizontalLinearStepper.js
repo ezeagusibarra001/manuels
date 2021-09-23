@@ -9,6 +9,7 @@ import Step1 from './Steps/Step1'
 import Step2 from './Steps/Step2'
 import Step3 from './Steps/Step3'
 import "./CheckStep.css";
+import FinalStep from './Steps/FinalStep';
 
 const steps = ['Datos personales', 'Realiza tu pago', 'Finaliza tu compra'];
 
@@ -59,7 +60,7 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%' }} className="Containercheckout">
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
@@ -74,7 +75,7 @@ export default function HorizontalLinearStepper() {
           }
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+              <StepLabel {...labelProps} className="StepLabel">{label}</StepLabel>
             </Step>
           );
         })}
@@ -82,11 +83,11 @@ export default function HorizontalLinearStepper() {
       {activeStep === steps.length ? (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
-            ¡Gracias por tu reserva!
+            <FinalStep/>
           </Typography>  
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset}>Ir al Inicio</Button>
+            <Button onClick={handleReset} className="botonNext">Ir al Inicio</Button>
           </Box>
         </React.Fragment>
       ) : (
@@ -103,14 +104,30 @@ export default function HorizontalLinearStepper() {
             }
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Button
+            {
+              activeStep === 0
+              ?
+              <Button
               color="inherit"
               disabled={activeStep === 0}
               onClick={handleBack}
               sx={{ mr: 1 }}
+              className="botonNextDisabled"
             >
               Volver
             </Button>
+              :
+              <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
+              className="botonNext"
+            >
+              Volver
+            </Button>
+            }
+           
             <Box sx={{ flex: '1 1 auto' }} />
             {isStepOptional(activeStep) && (
               /*<Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
@@ -119,7 +136,7 @@ export default function HorizontalLinearStepper() {
               <div></div>
             )}
 
-            <Button onClick={handleNext}>
+            <Button onClick={handleNext} className="botonNext">
               {activeStep === steps.length - 1 ? 'Finalizar Compra' : 'Siguiente'}
             </Button>
           </Box>
