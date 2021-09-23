@@ -1,22 +1,34 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Step1 from './Steps/Step1'
-import Step2 from './Steps/Step2'
-import Step3 from './Steps/Step3'
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Step1 from "./Steps/Step1";
+import Step2 from "./Steps/Step2";
+import Step3 from "./Steps/Step3";
 import "./CheckStep.css";
-import FinalStep from './Steps/FinalStep';
+import FinalStep from "./Steps/FinalStep";
 
-const steps = ['Datos personales', 'Realiza tu pago', 'Finaliza tu compra'];
+const steps = ["Datos personales", "Realiza tu pago", "Finaliza tu compra"];
 
-export default function HorizontalLinearStepper() {
+export default function HorizontalLinearStepper(props) {
+  const { Styles, handleChange, submit, saveStep1 } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-
+  const finalizarCompra = () =>{
+    handleNext()
+    submit()
+  }
+  const siguiente = () =>{
+    handleNext()
+    submit()
+    saveStep1()
+  }
+  const volver = () => {
+    
+  }
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -60,22 +72,22 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <Box sx={{ width: '100%' }} className="Containercheckout">
+    <Box sx={{ width: "100%" }} className="Containercheckout">
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
           if (isStepOptional(index)) {
-            labelProps.optional = (
-              <Typography variant="caption"></Typography>
-            );
+            labelProps.optional = <Typography variant="caption"></Typography>;
           }
           if (isStepSkipped(index)) {
             stepProps.completed = false;
           }
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps} className="StepLabel">{label}</StepLabel>
+              <StepLabel {...labelProps} className="StepLabel">
+                {label}
+              </StepLabel>
             </Step>
           );
         })}
@@ -83,52 +95,52 @@ export default function HorizontalLinearStepper() {
       {activeStep === steps.length ? (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
-            <FinalStep/>
-          </Typography>  
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset} className="botonNext">Ir al Inicio</Button>
+            <FinalStep />
+          </Typography>
+          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            <Box sx={{ flex: "1 1 auto" }} />
+            <Button onClick={handleReset} className="botonNext">
+              Ir al Inicio
+            </Button>
           </Box>
         </React.Fragment>
       ) : (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
-            {
-            activeStep === 0
-            ? <Step1/>
-            : activeStep === 1
-            ? <Step2/>
-            : activeStep === 2
-            ? <Step3/>
-            : <div></div>
-            }
+            {activeStep === 0 ? (
+              <Step1 handleChange={handleChange} Styles={Styles} />
+            ) : activeStep === 1 ? (
+              <Step2 />
+            ) : activeStep === 2 ? (
+              <Step3 />
+            ) : (
+              <div></div>
+            )}
           </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            {
-              activeStep === 0
-              ?
+          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            {activeStep === 0 ? (
               <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
-              className="botonNextDisabled"
-            >
-              Volver
-            </Button>
-              :
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+                className="botonNextDisabled"
+              >
+                Volver
+              </Button>
+            ) : (
               <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
-              className="botonNext"
-            >
-              Volver
-            </Button>
-            }
-           
-            <Box sx={{ flex: '1 1 auto' }} />
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+                className="botonNext"
+              >
+                Volver
+              </Button>
+            )}
+
+            <Box sx={{ flex: "1 1 auto" }} />
             {isStepOptional(activeStep) && (
               /*<Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
                 Skip
@@ -136,9 +148,21 @@ export default function HorizontalLinearStepper() {
               <div></div>
             )}
 
-            <Button onClick={handleNext} className="botonNext">
-              {activeStep === steps.length - 1 ? 'Finalizar Compra' : 'Siguiente'}
-            </Button>
+            {activeStep === steps.length - 1 ? (
+              <Button
+                className="botonNext"
+                onClick={finalizarCompra}
+              >
+                Finalizar compra
+              </Button>
+            ) : (
+              <Button
+                className="botonNext"
+                onClick={siguiente}
+              >
+                Siguiente
+              </Button>
+            )}
           </Box>
         </React.Fragment>
       )}

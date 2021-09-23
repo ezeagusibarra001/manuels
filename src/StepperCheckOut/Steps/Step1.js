@@ -1,7 +1,9 @@
 import React from "react";
 import "../cssSteps/step1.css";
 
-function Step1() {
+function Step1(props) {
+  const {Styles, handleChange} = props;
+
   return (
     <div className="container height">
       <h1 className="Checkouttitle">Completá los siguientes datos</h1>
@@ -12,10 +14,11 @@ function Step1() {
             className="Checkoutinput"
             type="text"
             name="name"
+            value={sessionStorage.getItem('name')}
             placeholder="Nombre"
-            //style={Styles}
-            maxLength="15"
-            //onChange={handleChange}
+            style={Styles}
+            maxLength="20"
+            onChange={handleChange}
           />
 
           <input
@@ -23,9 +26,10 @@ function Step1() {
             type="text"
             name="lastname"
             placeholder="Apellido"
-            //style={Styles}
-            maxLength="15"
-            //onChange={handleChange}
+            value={sessionStorage.getItem('lastname')}
+            style={Styles}
+            maxLength="20"
+            onChange={handleChange}
           />
 
           <input
@@ -33,19 +37,21 @@ function Step1() {
             type="number"
             name="phone"
             placeholder="Telefono"
-            //style={Styles}
-            //onChange={handleChange}
+            value={sessionStorage.getItem('phone')}
+            style={Styles}
+            onChange={handleChange}
             maxLength="15"
           />
 
           <input
             className="Checkoutinput"
             type="e-mail"
-            name="email"
+            value={sessionStorage.getItem('mail')}
+            name="mail"
             placeholder="E-mail"
-            //style={Styles}
+            style={Styles}
             maxLength="50"
-            //onChange={handleChange}
+            onChange={handleChange}
           />
         </div>
       </div>
