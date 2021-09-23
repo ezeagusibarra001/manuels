@@ -15,12 +15,11 @@ const steps = ["Datos personales", "Realiza tu pago", "Finaliza tu compra"];
 
 export default function HorizontalLinearStepper(props) {
   const history = useHistory();
-  const { Styles, handleChange, submit, currentPayment, setFecha, setFile } = props;
+  const { Styles, handleChange, submit, currentPayment, setFecha, setFile, modalLoading, setModalLoading } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const finalizarCompra = () =>{
-    handleNext()
-    submit()
+    submit(handleNext)
   }
   const siguiente = () =>{
     handleNext()
@@ -110,7 +109,8 @@ export default function HorizontalLinearStepper(props) {
             ) : activeStep === 1 ? (
               <Step2 />
             ) : activeStep === 2 ? (
-              <Step3 setFecha={setFecha} setFile={setFile}/>
+              <Step3 setFecha={setFecha} setFile={setFile} modalLoading={modalLoading}
+              setModalLoading={setModalLoading}/>
             ) : (
               <div></div>
             )}

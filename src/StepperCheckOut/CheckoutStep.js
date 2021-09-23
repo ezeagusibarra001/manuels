@@ -29,7 +29,9 @@ function CheckoutStep() {
       setStyles({ outlineColor: "red" });
     }
   };
-  const submit = async() => {
+  const [modalLoading, setModalLoading] = useState(false);
+  const submit = async(handleNext) => {
+    setModalLoading(true)
     /*-----------------JUNTO TODO EN UN FORMDATA-----------------*/
     let image = file.file;
     let formdata = new FormData();
@@ -49,10 +51,12 @@ function CheckoutStep() {
       .post("/payments", formdata)
       .then((res) => {
         console.log(res.data);
+        setModalLoading(false)
+        handleNext()
       })
       .catch((err) => {
         console.log("error post", err);
-        
+        setModalLoading(false)
       });
   }
   return (
@@ -64,6 +68,8 @@ function CheckoutStep() {
       currentPayment={currentPayment}
       setFecha={setFecha}
       setFile={setFile}
+      modalLoading={modalLoading}
+      setModalLoading={setModalLoading}
       />
     </Layout>
   );

@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import "../cssSteps/step3.css";
 import { useHome } from "../../context/home-context";
 import moment from "moment";
+import ModalLoading from "../../Checkout/ModalLoading";
 function Step3(props) {
-  const {setFecha, setFile} = props;
+  
+  const {setFecha, setFile, modalLoading, setModalLoading} = props;
   const { currentClase } = useHome();
   const x = [];
   if (currentClase !== undefined) {
@@ -70,7 +72,10 @@ function Step3(props) {
           />
         </div>
       </div>
-
+      <ModalLoading
+        modalLoading={modalLoading}
+        setModalLoading={setModalLoading}
+      />
     </div>
   );
 }
