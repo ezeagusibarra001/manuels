@@ -10,11 +10,12 @@ import Step2 from "./Steps/Step2";
 import Step3 from "./Steps/Step3";
 import "./CheckStep.css";
 import FinalStep from "./Steps/FinalStep";
-
+import { useHistory } from "react-router-dom";
 const steps = ["Datos personales", "Realiza tu pago", "Finaliza tu compra"];
 
 export default function HorizontalLinearStepper(props) {
-  const { Styles, handleChange, submit, saveStep1 } = props;
+  const history = useHistory();
+  const { Styles, handleChange, submit, currentPayment, setFecha, setFile } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const finalizarCompra = () =>{
@@ -23,12 +24,8 @@ export default function HorizontalLinearStepper(props) {
   }
   const siguiente = () =>{
     handleNext()
-    submit()
-    saveStep1()
   }
-  const volver = () => {
-    
-  }
+ 
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -69,6 +66,7 @@ export default function HorizontalLinearStepper(props) {
 
   const handleReset = () => {
     setActiveStep(0);
+    history.push("/")
   };
 
   return (
@@ -108,11 +106,11 @@ export default function HorizontalLinearStepper(props) {
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             {activeStep === 0 ? (
-              <Step1 handleChange={handleChange} Styles={Styles} />
+              <Step1 handleChange={handleChange} Styles={Styles} currentPayment={currentPayment}/>
             ) : activeStep === 1 ? (
               <Step2 />
             ) : activeStep === 2 ? (
-              <Step3 />
+              <Step3 setFecha={setFecha} setFile={setFile}/>
             ) : (
               <div></div>
             )}

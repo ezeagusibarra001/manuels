@@ -2,7 +2,7 @@ import React from "react";
 import "../cssSteps/step1.css";
 
 function Step1(props) {
-  const {Styles, handleChange} = props;
+  const {Styles, handleChange, currentPayment} = props;
 
   return (
     <div className="container height">
@@ -14,7 +14,7 @@ function Step1(props) {
             className="Checkoutinput"
             type="text"
             name="name"
-            value={sessionStorage.getItem('name')}
+            value={currentPayment.name}
             placeholder="Nombre"
             style={Styles}
             maxLength="20"
@@ -26,7 +26,7 @@ function Step1(props) {
             type="text"
             name="lastname"
             placeholder="Apellido"
-            value={sessionStorage.getItem('lastname')}
+            value={currentPayment.lastname}
             style={Styles}
             maxLength="20"
             onChange={handleChange}
@@ -37,7 +37,7 @@ function Step1(props) {
             type="number"
             name="phone"
             placeholder="Telefono"
-            value={sessionStorage.getItem('phone')}
+            value={currentPayment.phone}
             style={Styles}
             onChange={handleChange}
             maxLength="15"
@@ -46,7 +46,7 @@ function Step1(props) {
           <input
             className="Checkoutinput"
             type="e-mail"
-            value={sessionStorage.getItem('mail')}
+            value={currentPayment.mail}
             name="mail"
             placeholder="E-mail"
             style={Styles}
