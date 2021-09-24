@@ -13,6 +13,7 @@ function AdminPagos() {
     /*console.log("payments", payments)*/
     const [showVoucher, setShowVoucher] = useState(false)
     const [estado, setEstado] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [currentVoucher, setCurrentVoucher] = useState()
     //PAYMENTS API
     const [payments, setPayments] = useState([]);
@@ -23,7 +24,7 @@ function AdminPagos() {
     const obtenerPayments = async () => {
         await clienteAxios.get("/payments", axiosConfig).then((res) => {
             setPayments(res.data);
-            console.log("anda", res.data);
+            setLoading(false)
         }).catch((error) => {
             console.log(error)
             history.push("/")
@@ -85,6 +86,8 @@ function AdminPagos() {
                 currentVoucher={currentVoucher}
                 estado={estado}
                 setEstado={setEstado}
+                loading={loading}
+                setLoading={setLoading}
             />
         )
     }else{

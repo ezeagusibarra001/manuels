@@ -45,7 +45,8 @@ function Step1(props) {
 
           <input
             className="Checkoutinput"
-            type="e-mail"
+            type="email"
+            id="emailInput"
             value={currentPayment.mail}
             name="mail"
             placeholder="E-mail"

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "../cssSteps/step2.css";
 import Button from "react-bootstrap/Button";
-import { useHome } from "../../context/home-context";
 import { useToasts } from "react-toast-notifications";
 import clienteAxios from "../../config/clienteAxios";
 function Step2() {
   const [stateDescuento, setStateDescuento] = useState(false);
-  const { currentClase } = useHome();
   const { addToast } = useToasts();
   const [discount, setDiscount] = useState({ code: "" });
   const handleDiscount = (e) => {
@@ -49,17 +47,17 @@ function Step2() {
           <h1 className="CheckoutSubtitleB">Mercado Pago</h1>
 
           <h1 className="CheckoutB">
-            <a target="_blank" rel="noreferrer" href={currentClase.link}>
-              Click Aqui{" "}
+            Para <strong className="pagar">PAGAR</strong> la clase
+            <a target="_blank" rel="noreferrer" href={sessionStorage.getItem("link")}>
+            {" "}Click Aqui.
             </a>
-            para <strong>PAGAR</strong> la clase.
           </h1>
 
           <h1 className="CheckoutB">
-            <a target="_blank" rel="noreferrer" href={currentClase.link1}>
-              Click Aqui{" "}
+            Para <strong>RESERVAR</strong> la clase
+            <a target="_blank" rel="noreferrer" href={sessionStorage.getItem("link1")}>
+            {" "}Click Aqui.
             </a>
-            para <strong>SEÑAR</strong> la clase.
           </h1>
           <h1 className="CheckoutSubtitleB">Codigo de Descuento</h1>
           <input
@@ -81,7 +79,7 @@ function Step2() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={currentClase.discountLink}
+                href={sessionStorage.getItem("discountLink")}
               >
                 Click Aqui{" "}
               </a>

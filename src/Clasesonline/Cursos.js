@@ -9,9 +9,11 @@ function Cursos(props) {
     const dates = data.dates;
     const x = [];
     dates.forEach(d => { x.push(d) })
-    const select = () => {
-        setCurrentClase(data)
-        console.log(data.link)
+    const select = (res) => {
+        sessionStorage.setItem("link", res.link)
+        sessionStorage.setItem("link1", res.link1)
+        sessionStorage.setItem("discountLink", res.discountLink)
+        setCurrentClase(res)
         window.scrollTo(0, 0)
     }
     return (
@@ -65,7 +67,7 @@ function Cursos(props) {
                 ?
                 <div className="ContainerCursostexto5"><h2 className="CursosTextos4"><Link className="ButtonTextos5" >SOLD OUT</Link></h2> </div>
                 :
-                <div className="ContainerCursostexto4"><h2 className="CursosTextos4"><Link className="ButtonTextos4" to="/Checkout" onClick={select} >QUIERO INSCRIBIRME</Link></h2> </div>
+                <div className="ContainerCursostexto4"><h2 className="CursosTextos4"><Link className="ButtonTextos4" to="/Checkout" onClick={()=>select(data)} >QUIERO INSCRIBIRME</Link></h2> </div>
             }
         </div>
     )

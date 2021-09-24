@@ -3,8 +3,11 @@ import "../cssSteps/step3.css";
 import { useHome } from "../../context/home-context";
 import moment from "moment";
 import ModalLoading from "../../Checkout/ModalLoading";
+import { useHistory } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 function Step3(props) {
-  
+  const history = useHistory();
+  const { addToast } = useToasts();
   const {setFecha, setFile, modalLoading, setModalLoading} = props;
   const { currentClase } = useHome();
   const x = [];
@@ -12,6 +15,12 @@ function Step3(props) {
     const dates = currentClase.dates;
     dates.forEach((d) => {
       x.push(d);
+    });
+  }else{
+    history.push("/ClasesOnline")
+    addToast("Porfavor intentelo de nuevo sin recargar la pagina.", {
+      appearance: "error",
+      autoDismiss: true,
     });
   }
   /*HANDLE DATEE */

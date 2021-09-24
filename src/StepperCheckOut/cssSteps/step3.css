@@ -63,7 +63,7 @@
         font-size: 4vw !important;
     }
     .height{
-        height: 60vh !important;
+        height: 45vh !important;
     }
     .CheckoutinputComprobante{
         font-size: 3vw;
@@ -79,11 +79,6 @@
     }
     .CheckoutButton{
         font-size: 4vw;
-    }
-}
-@media screen and (max-width: 560){
-    .height{
-        height: 50vh !important;
     }
 }
 @media screen and (max-width: 350px){
@@ -110,8 +105,5 @@
     }
     .CheckoutButton{
         font-size: 5vw !important;
-    }
-    .height{
-        height: 50vh !important;
     }
 }

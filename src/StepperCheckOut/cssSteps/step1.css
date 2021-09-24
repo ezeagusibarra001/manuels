@@ -36,7 +36,7 @@
         font-size: 4vw !important;
     }
     .height{
-        height: 50vh !important;
+        height: 45vh !important;
     }
 }
 @media screen and (max-width: 350px){
@@ -45,8 +45,5 @@
     }
     .Checkouttitle {
         font-size: 5vw !important;
-    }
-    .height{
-        height: 50vh !important;
     }
 }

@@ -43,3 +43,28 @@ div>textarea{
     height: auto;
     height: 80px;
 }
+.space{
+    margin: 50px;
+}
+.mano{
+    cursor: pointer;
+    background-color: #a06ab4;
+    border-radius: 10px;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px;
+}
+.mano:hover{
+    cursor: pointer;
+    background-color: #ffd209;
+    border-radius: 10px;
+    color: black !important;
+    font-weight: bold;
+    box-shadow: 10px 5px 25px #a06ab4;
+
+}
+.navegacion{
+    box-shadow: 10px 5px 25px black;
+    margin: 10px;
+
+}

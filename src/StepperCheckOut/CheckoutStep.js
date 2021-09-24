@@ -5,7 +5,9 @@ import moment from "moment";
 import { useHome } from "../context/home-context";
 import clienteAxios from "../config/clienteAxios";
 import { useToasts } from "react-toast-notifications";
+import { useHistory } from "react-router-dom";
 function CheckoutStep() {
+  const history = useHistory();
   const { addToast } = useToasts();
   const { currentClase } = useHome();
   const [currentPayment, setCurrentPayment] = useState({
@@ -58,7 +60,16 @@ function CheckoutStep() {
       })
       .catch((err) => {
         console.log("error post", err);
+        console.log(image.size)
         setModalLoading(false);
+        addToast("¡Oh! Algo salio mal..", {
+          appearance: "error",
+          autoDismiss: false,
+        });
+        addToast("Maximo tamaño permitido 1 MB", {
+          appearance: "info",
+          autoDismiss: false,
+        });
       });
   };
   const validationStep1 = (handleNext) => {
@@ -82,6 +93,11 @@ function CheckoutStep() {
         appearance: "warning",
         autoDismiss: true,
       });
+    }else if (document.querySelector("#emailInput").validationMessage !== ''){
+      addToast("Ingrese un mail valido", {
+        appearance: "warning",
+        autoDismiss: true,
+      });
     }else{
       handleNext()
     }
@@ -100,6 +116,13 @@ function CheckoutStep() {
     }else{
       submit(handleNext)
     }
+  }
+  if(currentClase === undefined){
+    history.push("/ClasesOnline")
+    addToast("Porfavor intentelo de nuevo sin recargar la pagina.", {
+      appearance: "error",
+      autoDismiss: true,
+    });
   }
   return (
     <Layout>
