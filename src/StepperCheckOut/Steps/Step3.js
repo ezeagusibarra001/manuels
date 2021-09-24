@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "../cssSteps/step3.css";
 import { useHome } from "../../context/home-context";
 import moment from "moment";

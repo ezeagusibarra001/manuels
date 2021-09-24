@@ -35,7 +35,7 @@
     margin-top: 11vh;
 }
 .height{
-    height: 40vh;
+    height: 50vh;
 }
 .CheckoutinputComprobante{
     color: white;
@@ -52,6 +52,10 @@
 }
 /*----------------------------------------------mobile------------------------------------*/
 @media screen and (max-width: 767px){
+    .modal-dialog{
+        margin:auto !important;
+        padding-top: 50% !important;
+    }
     .CheckoutSubtitleB {
         font-size: 3vw !important;
     }

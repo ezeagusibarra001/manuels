@@ -15,16 +15,33 @@ const steps = ["Datos personales", "Realiza tu pago", "Finaliza tu compra"];
 
 export default function HorizontalLinearStepper(props) {
   const history = useHistory();
-  const { Styles, handleChange, submit, currentPayment, setFecha, setFile, modalLoading, setModalLoading } = props;
+  const {
+    Styles,
+    handleChange,
+    currentPayment,
+    setFecha,
+    setFile,
+    modalLoading,
+    setModalLoading,
+    validationStep1,
+    validationStep3
+  } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-  const finalizarCompra = () =>{
-    submit(handleNext)
-  }
-  const siguiente = () =>{
-    handleNext()
-  }
- 
+  const finalizarCompra = () => {
+    if(activeStep === 2){
+      validationStep3(handleNext)
+    }
+  };
+  const siguiente = (activeStep) => {
+    if(activeStep === 0){
+      validationStep1(handleNext);
+    }
+    if(activeStep === 1){
+      handleNext()
+    }
+  };
+
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -48,7 +65,7 @@ export default function HorizontalLinearStepper(props) {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
+  /*const handleSkip = () => {
     if (!isStepOptional(activeStep)) {
       // You probably want to guard against something like this,
       // it should never occur unless someone's actively trying to break something.
@@ -61,11 +78,11 @@ export default function HorizontalLinearStepper(props) {
       newSkipped.add(activeStep);
       return newSkipped;
     });
-  };
+  };*/
 
   const handleReset = () => {
     setActiveStep(0);
-    history.push("/")
+    history.push("/");
   };
 
   return (
@@ -105,12 +122,20 @@ export default function HorizontalLinearStepper(props) {
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             {activeStep === 0 ? (
-              <Step1 handleChange={handleChange} Styles={Styles} currentPayment={currentPayment}/>
+              <Step1
+                handleChange={handleChange}
+                Styles={Styles}
+                currentPayment={currentPayment}
+              />
             ) : activeStep === 1 ? (
               <Step2 />
             ) : activeStep === 2 ? (
-              <Step3 setFecha={setFecha} setFile={setFile} modalLoading={modalLoading}
-              setModalLoading={setModalLoading}/>
+              <Step3
+                setFecha={setFecha}
+                setFile={setFile}
+                modalLoading={modalLoading}
+                setModalLoading={setModalLoading}
+              />
             ) : (
               <div></div>
             )}
@@ -147,17 +172,11 @@ export default function HorizontalLinearStepper(props) {
             )}
 
             {activeStep === steps.length - 1 ? (
-              <Button
-                className="botonNext"
-                onClick={finalizarCompra}
-              >
+              <Button className="botonNext" onClick={finalizarCompra}>
                 Finalizar compra
               </Button>
             ) : (
-              <Button
-                className="botonNext"
-                onClick={siguiente}
-              >
+              <Button className="botonNext" onClick={()=>siguiente(activeStep)}>
                 Siguiente
               </Button>
             )}

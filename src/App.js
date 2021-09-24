@@ -8,7 +8,7 @@ import AdminClases from "./Admin/AdminClases"
 import AdminBlog from "./Admin/AdminBlog"
 import AdminReseñas from "./Admin/AdminReseñas"
 import AdminPagos from "./Admin/AdminPagos"
-import Checkout from "./Checkout/Checkout";
+//import Checkout from "./Checkout/Checkout";
 import CheckoutStep from './StepperCheckOut/CheckoutStep'
 import Form from "./Formulario/Form";
 import { HomeProvider} from './context/home-context'
