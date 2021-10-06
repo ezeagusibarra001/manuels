@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../Layout";
 import HorizontalLinearStepper from "./HorizontalLinearStepper";
-import moment from "moment";
+import dayjs from 'dayjs'
 import { useHome } from "../context/home-context";
 import clienteAxios from "../config/clienteAxios";
 import { useToasts } from "react-toast-notifications";
@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 function CheckoutStep() {
   const history = useHistory();
   const { addToast } = useToasts();
-  const { currentClase } = useHome();
+  const { currentClase, setStateDescuento, formaPago, seña } = useHome();
   const [currentPayment, setCurrentPayment] = useState({
     name: "",
     lastname: "",
@@ -35,6 +35,7 @@ function CheckoutStep() {
   };
   const [modalLoading, setModalLoading] = useState(false);
   const submit = async (handleNext) => {
+    setStateDescuento(false)
     setModalLoading(true);
     /*-----------------JUNTO TODO EN UN FORMDATA-----------------*/
     let image = file.file;
@@ -47,7 +48,7 @@ function CheckoutStep() {
     formdata.set("email", currentPayment.email);
     if (currentClase !== undefined) {
       formdata.set("lesson", currentClase.idLesson);
-      formdata.set("dateSelected", moment(fecha.date).format("YYYY/MM/DD"));
+      formdata.set("dateSelected", dayjs(fecha.date).format('YYYY/MM/DD'));
     }
     formdata.set("phone", currentPayment.phone);
     /*-------------HAGO EL POST-----------*/
@@ -61,6 +62,7 @@ function CheckoutStep() {
       .catch((err) => {
         console.log("error post", err);
         console.log(image.size)
+        console.log(formdata.get("dateSelected"))
         setModalLoading(false);
         addToast("¡Oh! Algo salio mal..", {
           appearance: "error",
@@ -102,7 +104,7 @@ function CheckoutStep() {
       handleNext()
     }
   };
-  const validationStep3 = (handleNext) => {
+  const validationStep5 = (handleNext) => {
     if (fecha.date === "") {
       addToast("Elija una fecha porfavor", {
         appearance: "warning",
@@ -115,6 +117,26 @@ function CheckoutStep() {
       });
     }else{
       submit(handleNext)
+    }
+  }
+  const validationStep2 = (handleNext) => {
+    if (fecha.date === "") {
+      addToast("Elija una fecha porfavor", {
+        appearance: "warning",
+        autoDismiss: true,
+      });
+    }else if (formaPago === "") {
+      addToast("Elija un metodo de pago porfavor", {
+        appearance: "warning",
+        autoDismiss: true,
+      });
+    }else if (seña === "") {
+      addToast("Elija si seña o abona completo", {
+        appearance: "warning",
+        autoDismiss: true,
+      });
+    }else{
+      handleNext()
     }
   }
   if(currentClase === undefined){
@@ -132,11 +154,13 @@ function CheckoutStep() {
         submit={submit}
         currentPayment={currentPayment}
         setFecha={setFecha}
+        fecha={fecha}
         setFile={setFile}
         modalLoading={modalLoading}
         setModalLoading={setModalLoading}
         validationStep1={validationStep1}
-        validationStep3={validationStep3}
+        validationStep2={validationStep2}
+        validationStep5={validationStep5}
       />
     </Layout>
   );

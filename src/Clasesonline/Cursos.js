@@ -1,4 +1,4 @@
-import moment from "moment";
+import dayjs from 'dayjs'
 import React from "react"
 import "./Cursos.css"
 import { Link } from "react-router-dom"
@@ -19,7 +19,7 @@ function Cursos(props) {
     return (
         <div className="ContainerItemsCursos">
             <div className="ContainerCursosTitulos">
-                <h1 className="CursosTitulos">{data.title}</h1>
+                <h1 className="CursosTitulos">{data.title} - ${data.price}</h1>
             </div>
             <div className="ContainerCursosTextos1">
                 <p className="CursosTextos1">
@@ -61,7 +61,7 @@ function Cursos(props) {
                 </div>
             </div>
             <div className="ContainerCursosTextos3">
-                <h5 className="CursosTextos3">CUPOS LIMITADOS - FECHAS : {moment(x[0].date).format("DD/MM")} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div> : moment(x[1].date).format("DD/MM")} </h5>
+                <h5 className="CursosTextos3">CUPOS LIMITADOS - FECHAS : {dayjs(x[0].date).add(1, 'day').format('DD/MM')} {!x[1] ? <div></div> : "Y"} {!x[1] ? <div></div> : dayjs(x[1].date).add(1, 'day').format('DD/MM')} </h5>
             </div>
             {data.quota === 0
                 ?

@@ -17,7 +17,7 @@ function ModalClasesEliminar(props) {
             .delete(`/lessons/${clases.idLesson}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
-                addToast("Reseña eliminada!", {
+                addToast("Clase eliminada!", {
                     appearance: "success",
                     autoDismiss: true,
                 });

@@ -8,10 +8,30 @@ import Typography from "@mui/material/Typography";
 import Step1 from "./Steps/Step1";
 import Step2 from "./Steps/Step2";
 import Step3 from "./Steps/Step3";
+import Step4 from "./Steps/Step4";
+import Step5 from "./Steps/Step5";
 import "./CheckStep.css";
 import FinalStep from "./Steps/FinalStep";
 import { useHistory } from "react-router-dom";
-const steps = ["Datos personales", "Realiza tu pago", "Finaliza tu compra"];
+var steps;
+if(window.innerWidth > 767){
+  steps = [
+    "Datos personales",
+    "Personaliza tu pago",
+    "Realiza tu pago",
+    "Comproba tus datos",
+    "Finaliza tu compra",
+  ];
+}else{
+  steps = [
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+}
+
 
 export default function HorizontalLinearStepper(props) {
   const history = useHistory();
@@ -20,25 +40,30 @@ export default function HorizontalLinearStepper(props) {
     handleChange,
     currentPayment,
     setFecha,
+    fecha,
     setFile,
     modalLoading,
     setModalLoading,
     validationStep1,
-    validationStep3
+    validationStep2,
+    validationStep5,
   } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const finalizarCompra = () => {
-    if(activeStep === 2){
-      validationStep3(handleNext)
+    if (activeStep === 4) {
+      validationStep5(handleNext);
     }
   };
   const siguiente = (activeStep) => {
-    if(activeStep === 0){
+    if (activeStep === 0) {
       validationStep1(handleNext);
     }
-    if(activeStep === 1){
-      handleNext()
+    if (activeStep === 1) {
+      validationStep2(handleNext);
+    }
+    if (activeStep === 2 || activeStep === 3) {
+      handleNext();
     }
   };
 
@@ -128,9 +153,20 @@ export default function HorizontalLinearStepper(props) {
                 currentPayment={currentPayment}
               />
             ) : activeStep === 1 ? (
-              <Step2 />
+              <Step2 
+              setFecha={setFecha}
+              fecha={fecha}
+              />
             ) : activeStep === 2 ? (
-              <Step3
+              <Step3 />
+            ) : activeStep === 3 ? (
+              <Step4 
+              currentPayment={currentPayment}
+              fecha={fecha}
+
+              />
+            ) : activeStep === 4 ? (
+              <Step5
                 setFecha={setFecha}
                 setFile={setFile}
                 modalLoading={modalLoading}
@@ -176,7 +212,10 @@ export default function HorizontalLinearStepper(props) {
                 Finalizar compra
               </Button>
             ) : (
-              <Button className="botonNext" onClick={()=>siguiente(activeStep)}>
+              <Button
+                className="botonNext"
+                onClick={() => siguiente(activeStep)}
+              >
                 Siguiente
               </Button>
             )}

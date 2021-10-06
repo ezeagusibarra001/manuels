@@ -9,7 +9,7 @@ import clienteAxios from "../config/clienteAxios";
 import { useHistory } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
 import ModalLoading from "../Checkout/ModalLoading";
-import moment from "moment";
+import  dayjs from 'dayjs'
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 function Checkout() {
@@ -63,7 +63,6 @@ function Checkout() {
     }
   };
   const handleDate = (e) => {
-    console.log(moment(e).format("YYYY/MM/DD"));
     setFecha({ date: e });
   };
   /*-------------------------------POST IMAGE----------------------------------------*/
@@ -94,7 +93,7 @@ function Checkout() {
     formdata.set("email", currentPayment.email);
     if (currentClase !== undefined) {
       formdata.set("lesson", currentClase.idLesson);
-      formdata.set("dateSelected", moment(fecha.date).format("YYYY/MM/DD"));
+      formdata.set("dateSelected", dayjs(fecha.date).add(1, 'day').format('DD/MM'));
     }
     formdata.set("phone", currentPayment.phone);
     await clienteAxios
@@ -372,7 +371,7 @@ function Checkout() {
               />
             )}{" "}
             <label className="CheckoutLabel2">
-              {!x[0] ? <div></div> : moment(x[0].date).format("DD/MM")}
+              {!x[0] ? <div></div> : dayjs(x[0].date).add(1, 'day').format('DD/MM')}
             </label>
             {!x[1] ? (
               <div></div>
@@ -387,7 +386,7 @@ function Checkout() {
               <div></div>
             ) : (
               <label className="CheckoutLabel2">
-                {moment(x[1].date).format("DD/MM")}
+                {dayjs(x[1].date).add(1, 'day').format('DD/MM')}
               </label>
             )}
           </div>

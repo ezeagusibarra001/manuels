@@ -1,16 +1,49 @@
 import React, { useState } from "react";
-import "../cssSteps/step2.css";
-import Button from "react-bootstrap/Button";
+import "../cssSteps/step3.css";
+import { useHome } from "../../context/home-context";
+import dayjs from 'dayjs'
+import { useHistory } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
+import Button from "react-bootstrap/Button";
 import clienteAxios from "../../config/clienteAxios";
-function Step2() {
-  const [stateDescuento, setStateDescuento] = useState(false);
+import Form from "react-bootstrap/Form";
+function Step2(props) {
+  const history = useHistory();
   const { addToast } = useToasts();
+  const { setFecha, fecha } = props;
+  const {
+    currentClase,
+    stateDescuento,
+    setStateDescuento,
+    setFormaPago,
+    setSeña,
+    formaPago,
+    seña,
+  } = useHome();
   const [discount, setDiscount] = useState({ code: "" });
+
+  const x = [];
+  if (currentClase !== undefined) {
+    const dates = currentClase.dates;
+    dates.forEach((d) => {
+      x.push(d);
+    });
+  } else {
+    history.push("/ClasesOnline");
+    addToast("Porfavor intentelo de nuevo sin recargar la pagina.", {
+      appearance: "error",
+      autoDismiss: true,
+    });
+  }
+  /*HANDLE DATEE */
+  const handleDate = (e) => {
+    setFecha({ date: e });
+  };
   const handleDiscount = (e) => {
     setDiscount({ [e.target.name]: e.target.value });
     //console.log(e.target.value)
   };
+
   const getDiscount = async () => {
     await clienteAxios
       .get(`/discounts/names/${discount.code}`)
@@ -19,7 +52,7 @@ function Step2() {
         setStateDescuento(true);
         addToast("¡Promocion aplicada!", {
           appearance: "success",
-          autoDismiss: true,
+          autoDismiss: false,
         });
       })
       .catch((err) => {
@@ -31,34 +64,121 @@ function Step2() {
         });
       });
   };
+
   return (
     <div className="container height">
-      <h1 className="row Checkouttitle">Medios de Pago</h1>
+      <h1 className="row Checkouttitle">Personaliza tu pago</h1>
       <div className="row">
         <div className="col-md-6">
-          <h1 className="CheckoutSubtitleB">
-            Transferencia Bancaria: B.GALICIA
-          </h1>
-          <h1 className="CheckoutB">CBU: 0070306030004017201477</h1>
-          <h1 className="CheckoutB">CUIL: 27346237320</h1>
-          <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
+          <h1 className="CheckoutSubtitleB">Eleji la fecha de tu clase</h1>
+          <Form>
+            <div key="inline-radio-date" className="mb-3">
+              {!x[0] ? (
+                <div></div>
+              ) : fecha.date === x[0].date ? (
+                <Form.Check
+                  className="CheckoutLabel3"
+                  inline
+                  label={dayjs(x[0].date).add(1, 'day').format('DD/MM')}
+                  type="radio"
+                  name="date"
+                  onClick={() => handleDate(x[0].date)}
+                  id="inline-radio-1"
+                  checked
+                />
+              ) : (
+                <Form.Check
+                  className="CheckoutLabel3"
+                  inline
+                  label={dayjs(x[0].date).add(1, 'day').format('DD/MM')}
+                  type="radio"
+                  name="date"
+                  onClick={() => handleDate(x[0].date)}
+                  id="inline-radio-1"
+                />
+              )}
+              {!x[1] ? (
+                <div></div>
+              ) : fecha.date === x[1].date ? (
+                <Form.Check
+                  className="CheckoutLabel3"
+                  inline
+                  label={dayjs(x[1].date).add(1, 'day').format('DD/MM')}
+                  onClick={() => handleDate(x[1].date)}
+                  name="date"
+                  type="radio"
+                  id="inline-radio-2"
+                  checked
+                />
+              ) : (
+                <Form.Check
+                  className="CheckoutLabel3"
+                  inline
+                  label={dayjs(x[1].date).add(1, 'day').format('DD/MM')}
+                  onClick={() => handleDate(x[1].date)}
+                  name="date"
+                  type="radio"
+                  id="inline-radio-2"
+                />
+              )}
+            </div>
+          </Form>
+          <div>
+            <h1 className="CheckoutSubtitleB">¿Como prefiere pagar?</h1>
+
+            <Form>
+              {["radio"].map((type) => (
+                <div key={`inline-${type}-pay`} className="mb-3">
+                  {formaPago === "transferencia" ? (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Transferencia Bancaria"
+                      name="pay"
+                      type={type}
+                      id={`inline-${type}-1-pay`}
+                      onClick={() => setFormaPago("transferencia")}
+                      checked
+                    />
+                  ) : (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Transferencia Bancaria"
+                      name="pay"
+                      type={type}
+                      id={`inline-${type}-1-pay`}
+                      onClick={() => setFormaPago("transferencia")}
+                    />
+                  )}
+                  {formaPago === "mercado" ? (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Mercado Pago"
+                      onClick={() => setFormaPago("mercado")}
+                      name="pay"
+                      type={type}
+                      id={`inline-${type}-2-pay`}
+                      checked
+                    />
+                  ) : (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Mercado Pago"
+                      onClick={() => setFormaPago("mercado")}
+                      name="pay"
+                      type={type}
+                      id={`inline-${type}-2-pay`}
+                    />
+                  )}
+                </div>
+              ))}
+            </Form>
+          </div>
         </div>
         <div className="col-md-6">
-          <h1 className="CheckoutSubtitleB">Mercado Pago</h1>
-
-          <h1 className="CheckoutB">
-            Para <strong className="pagar">PAGAR</strong> la clase
-            <a target="_blank" rel="noreferrer" href={sessionStorage.getItem("link")}>
-            {" "}Click Aqui.
-            </a>
-          </h1>
-
-          <h1 className="CheckoutB">
-            Para <strong>RESERVAR</strong> la clase
-            <a target="_blank" rel="noreferrer" href={sessionStorage.getItem("link1")}>
-            {" "}Click Aqui.
-            </a>
-          </h1>
           <h1 className="CheckoutSubtitleB">Codigo de Descuento</h1>
           <input
             className="CheckoutinputStep2"
@@ -68,26 +188,63 @@ function Step2() {
             maxLength="10"
             onChange={handleDiscount}
           />
-          <Button
-            className="walletPiola"
-            onClick={getDiscount}
-          >
+          <Button className="walletPiola" onClick={getDiscount}>
             Aplicar Descuento
           </Button>
-          {stateDescuento === true ? (
-            <h1 className="CheckoutB">
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={sessionStorage.getItem("discountLink")}
-              >
-                Click Aqui{" "}
-              </a>
-              para <strong>PAGAR</strong> la clase bonificada.
-            </h1>
-          ) : (
-            <div></div>
-          )}
+          <br></br>
+          <div>
+            <h1 className="CheckoutSubtitleB2">¿Seña o pago completo?</h1>
+            <Form>
+              {["radio"].map((type) => (
+                <div key={`inline-${type}-seña`} className="mb-3">
+                  {seña === true ? (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Señar clase"
+                      name="seña"
+                      type={type}
+                      id={`inline-${type}-1-seña`}
+                      onClick={() => setSeña(true)}
+                      checked
+                    />
+                  ) : (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Señar clase"
+                      name="seña"
+                      type={type}
+                      id={`inline-${type}-1-seña`}
+                      onClick={() => setSeña(true)}
+                    />
+                  )}
+                  {seña === false ? (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Pago completo"
+                      onClick={() => setSeña(false)}
+                      name="seña"
+                      type={type}
+                      id={`inline-${type}-2-seña`}
+                      checked
+                    />
+                  ) : (
+                    <Form.Check
+                      className="CheckoutLabel3"
+                      inline
+                      label="Pago completo"
+                      onClick={() => setSeña(false)}
+                      name="seña"
+                      type={type}
+                      id={`inline-${type}-2-seña`}
+                    />
+                  )}
+                </div>
+              ))}
+            </Form>
+          </div>
         </div>
       </div>
     </div>

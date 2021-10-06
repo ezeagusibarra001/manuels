@@ -1,93 +1,61 @@
 import React from "react";
-import "../cssSteps/step3.css";
+import "../cssSteps/step2.css";
 import { useHome } from "../../context/home-context";
-import moment from "moment";
-import ModalLoading from "../../Checkout/ModalLoading";
-import { useHistory } from "react-router-dom";
-import { useToasts } from "react-toast-notifications";
-function Step3(props) {
-  const history = useHistory();
-  const { addToast } = useToasts();
-  const {setFecha, setFile, modalLoading, setModalLoading} = props;
-  const { currentClase } = useHome();
-  const x = [];
-  if (currentClase !== undefined) {
-    const dates = currentClase.dates;
-    dates.forEach((d) => {
-      x.push(d);
-    });
-  }else{
-    history.push("/ClasesOnline")
-    addToast("Porfavor intentelo de nuevo sin recargar la pagina.", {
-      appearance: "error",
-      autoDismiss: true,
-    });
-  }
-  /*HANDLE DATEE */
-  const handleDate = (e) => {
-    console.log(moment(e).format("YYYY/MM/DD"));
-    setFecha({ date: e });
-  };
-  /*handle fileee */
-  
-  const handleFile = (e) => {
-    let file = e.target.files[0];
-    setFile({ file: file });
-  };
+import "../cssSteps/step3.css";
+
+function Step3() {
+  const { currentClase, stateDescuento, formaPago, seña } = useHome();
+
   return (
     <div className="container height">
-      <h1 className="row Checkouttitle">Finaliza tu compra</h1>
+      <h1 className="row Checkouttitle">
+        Monto a pagar: $
+        {stateDescuento === true
+          ? currentClase.price * 0.8
+          :
+          seña === true
+          ?
+          currentClase.price * 0.2
+          :
+          currentClase.price}
+      </h1>
       <div className="row">
-        <div className="col-md-6">
-          <h1 className="CheckoutSubtitleB">Eleji la fecha de tu clase</h1>
-
-          {!x[0] ? (
-              <div></div>
-            ) : (
-              <input
-                type="radio"
-                name="date"
-                onClick={() => handleDate(x[0].date)}
-              />
-            )}{" "}
-            <label className="CheckoutLabel2">
-              {!x[0] ? <div></div> : moment(x[0].date).format("DD/MM")}
-            </label>
-            {!x[1] ? (
-              <div></div>
-            ) : (
-              <input
-              
-                name="date"
-                type="radio"
-                onClick={() => handleDate(x[1].date)}
-              />
-            )}{" "}
-            {!x[1] ? (
-              <div></div>
-            ) : (
-              <label className="CheckoutLabel2">
-                {moment(x[1].date).format("DD/MM")}
-              </label>
-            )}
-        </div>
-        <div className="col-md-6">
-        <h1 className="CheckoutSubtitleB">Adjunta el comprobante de pago</h1>
-        <input
-            className="CheckoutinputComprobante"
-            type="file"
-            name="file"
-            onChange={(e) => handleFile(e)}
-          />
-        </div>
+        {formaPago === "transferencia" ? (
+          <div className="col-md-6">
+            <h1 className="CheckoutSubtitleB">
+              Transferencia Bancaria: B.GALICIA
+            </h1>
+            <h1 className="CheckoutB">CBU: 0070306030004017201477</h1>
+            <h1 className="CheckoutB">CUIL: 27346237320</h1>
+            <h1 className="CheckoutB">ALIAS: LARGO.ALCE.PAMPA</h1>
+          </div>
+        ) : (
+          <div className="col-md-6">
+            <h1 className="CheckoutSubtitleB">Mercado Pago</h1>
+            <h1 className="CheckoutB">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={
+                  stateDescuento === true
+                    ? sessionStorage.getItem("discountLink")
+                    :
+                    seña === true
+                    ?
+                    sessionStorage.getItem("link1")
+                    :
+                    sessionStorage.getItem("link")
+                }
+              >
+                Click Aqui{" "}
+              </a>
+              para <strong className="pagar">PAGAR</strong> la clase.
+            </h1>
+          </div>
+        )}
       </div>
-      <ModalLoading
-        modalLoading={modalLoading}
-        setModalLoading={setModalLoading}
-      />
     </div>
   );
 }
 
 export default Step3;
-

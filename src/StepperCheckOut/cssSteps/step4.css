@@ -1,0 +1,17 @@
+.lista {
+  color: white;
+  background: #a06ab4 !important;
+  border: 1px solid white;
+}
+
+/*----------------------------------------------mobile------------------------------------*/
+@media screen and (max-width: 767px) {
+  .lista {
+    font-size: 4.5vw;
+  }
+  .scroll {
+    overflow-y: scroll !important;
+    height: 52vh !important;
+    background: #a06ab4 !important;
+  }
+}

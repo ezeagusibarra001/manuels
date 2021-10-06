@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import ModalVoucher from "./ModalVoucher";
-import moment from "moment";
+import dayjs from 'dayjs'
 import Loading from "../../../Loading/Loading";
 function pagosNot(props) {
   const {
@@ -97,8 +97,8 @@ function pagosNot(props) {
                         />
                       </td>
                       <td>{p.phone}</td>
-                      <td>{moment(p.date).format("DD/MM/YY")}</td>
-                      <td>{moment(p.dateLesson).format("DD/MM/YY")}</td>
+                      <td>{dayjs(p.date).add(1, 'day').format('DD/MM')}</td>
+                      <td>{dayjs(p.dateLesson).add(1, 'day').format('DD/MM')}</td>
                       {p.payment.toString() === "false" ? (
                         <td onClick={() => alta(p.idPayment)}>
                           <img

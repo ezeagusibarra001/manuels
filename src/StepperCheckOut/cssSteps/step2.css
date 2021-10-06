@@ -22,6 +22,17 @@
     border-radius: 10px;
     font-size: 1.6vw;
 }
+.CheckoutSubtitleB2 {
+    height: auto;
+    width: fit-content;
+    padding: 2% 2%;
+    background-color: #a06ab4;
+    color: white;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 1.6vw;
+    margin-top: 1rem !important;
+}
 .CheckoutB {
     width: 100%;
     height: auto;
@@ -64,6 +75,9 @@
     .CheckoutSubtitleB {
         font-size: 3vw !important;
     }
+    .CheckoutSubtitleB2 {
+        font-size: 3vw !important;
+    }
     .CheckoutinputStep2{
         font-size: 2.5vw !important;
     }
@@ -77,11 +91,14 @@
         font-size: 2.5vw !important;
     }
     .height{
-        height: 45vh !important;
+        height: 55vh !important;
     }
 }
 @media screen and (max-width: 350px){
     .CheckoutSubtitleB {
+        font-size: 4vw !important;
+    }
+    .CheckoutSubtitleB2 {
         font-size: 4vw !important;
     }
     .CheckoutinputStep2{

@@ -1,7 +1,7 @@
 import React,{useState} from "react"
 import "./Publicaciones.css"
 import { useHome } from '../context/home-context'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import ModalBlog from "./ModalBlog"
 function Publicaciones() {
     const { blog} = useHome()
@@ -31,7 +31,7 @@ function Publicaciones() {
                         </div>
                         <div className="ContainerPublicacionesTextos1">
                             <h2 className="PublicacionesSubTitulo">
-                                <b>{moment(publicacion.date).format("DD/MM/YY")} - {publicacion.subtitle}</b>
+                                <b>{dayjs(publicacion.date).add(1, 'day').format('DD/MM')} - {publicacion.subtitle}</b>
                             </h2>
                             <p className="PublicacionesParrafos">
                                 {publicacion.description}

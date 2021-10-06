@@ -17,7 +17,7 @@ function CodeEliminar(props) {
             .delete(`/discounts/${id}`,axiosConfig)
             .then((res) => {
                 console.log(res.data);
-                addToast("Reseña eliminada!", {
+                addToast("Descuento eliminado!", {
                     appearance: "success",
                     autoDismiss: true,
                 });
