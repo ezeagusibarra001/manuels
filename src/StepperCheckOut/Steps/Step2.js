@@ -13,7 +13,6 @@ function Step2(props) {
   const { setFecha, fecha } = props;
   const {
     currentClase,
-    stateDescuento,
     setStateDescuento,
     setFormaPago,
     setSeña,

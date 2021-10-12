@@ -9,31 +9,22 @@ import "../../Admin.css";
 import { useToasts } from "react-toast-notifications";
 function ModalClasesCrear(props) {
   const { addToast } = useToasts();
-  const { obtenerClases, axiosConfig } = useHome();
+  const { obtenerClases } = useHome();
   const { showCrear, setShowCrear } = props;
-  const [date1, setDate1] = useState("");
-  const [date2, setDate2] = useState("");
   const [Styles, setStyles] = useState();
   const [currentClase, setCurrentClase] = useState({
     title: "",
     description: "",
-    forWho: "",
+    forwho: "",
     duration: "",
     teacher: "",
-    requeriments: "",
+    requirements: "",
     link: "",
     link1: "",
-    dates: [
-      {
-        date: "",
-      },
-      {
-        date: "",
-      },
-    ],
-    quota: "",
-    discountLink: "",
-    price: "",
+    date: "",
+    quota: 10,
+    descountLink: "",
+    price: 1000,
   });
   const handleClose = () => {
     setShowCrear(false);
@@ -51,66 +42,27 @@ function ModalClasesCrear(props) {
     }
     console.log(currentClase);
   };
-  const handleDate1 = (e) => {
-    setDate1(e.target.value)
-    console.log(e.target.value);
+  var postData = {
+    title: currentClase.title,
+    description: currentClase.description,
+    forwho: currentClase.forwho,
+    duration: currentClase.duration,
+    teacher: currentClase.teacher,
+    requirements: currentClase.requirements,
+    link: currentClase.link,
+    link1: currentClase.link1,
+    date: currentClase.date,
+    quota: currentClase.quota,
+    descountLink: currentClase.descountLink,
+    price: currentClase.price,
   };
-  const handleDate2 = (e) => {
-    setDate2(e.target.value)
-    console.log(e.target.value);
-  };
-  var postData;
-  if(date2 === ""){
-     postData = {
-      title: currentClase.title,
-      description: currentClase.description,
-      forWho: currentClase.forWho,
-      duration: currentClase.duration,
-      teacher: currentClase.teacher,
-      requeriments: currentClase.requeriments,
-      link: currentClase.link,
-      link1: currentClase.link1,
-      dates: [
-        {
-          date: date1,
-        }
-      ],
-      quota: currentClase.quota,
-      discountLink: currentClase.discountLink,
-      price: currentClase.price,
-    };
-  }else{
-    postData = {
-      title: currentClase.title,
-      description: currentClase.description,
-      forWho: currentClase.forWho,
-      duration: currentClase.duration,
-      teacher: currentClase.teacher,
-      requeriments: currentClase.requeriments,
-      link: currentClase.link,
-      link1: currentClase.link1,
-      dates: [
-        {
-          date: date1,
-        },
-        {
-          date: date2,
-        },
-      ],
-      quota: currentClase.quota,
-      discountLink: currentClase.discountLink,
-      price: currentClase.price,
-    };
-  }
-
- 
 
   const submit = async () => {
     await clienteAxios
-      .post("/lessons", postData, axiosConfig)
+      .post("/lessons", postData)
       .then((res) => {
         console.log(res.data);
-        console.log("postData", postData)
+        console.log("postData", postData);
         obtenerClases();
         handleClose();
         addToast("Clase creada", {
@@ -161,7 +113,7 @@ function ModalClasesCrear(props) {
             />
             <br></br>
             <textarea
-              name="forWho"
+              name="forwho"
               as="textarea"
               placeholder="¿Quienes pueden hacerlo?"
               maxLength="120"
@@ -203,7 +155,7 @@ function ModalClasesCrear(props) {
             />
             <br></br>
             <textarea
-              name="requeriments"
+              name="requirements"
               as="textarea"
               placeholder="Requisitos:"
               maxLength="65"
@@ -233,7 +185,7 @@ function ModalClasesCrear(props) {
             />
             <br></br>
             <textarea
-              name="discountLink"
+              name="descountLink"
               as="textarea"
               placeholder="Link de Descuento:"
               maxLength="100"
@@ -251,15 +203,12 @@ function ModalClasesCrear(props) {
             />
             <br></br>
             <Card.Title>Primer fecha</Card.Title>
-            <Form.Control type="date" name="date1" onChange={handleDate1} />
+            <Form.Control type="date" name="date" onChange={handleChange} />
             <br></br>
-            <Card.Title>Segunda fecha</Card.Title>
-            <Form.Control type="date" name="date2" onChange={handleDate2} />
           </div>
         </Modal.Body>
         <Modal.Footer>
-          {currentClase.title === "" ||
-          currentClase.description === ""  ? (
+          {currentClase.title === "" || currentClase.description === "" ? (
             <Button variant="primary" disabled onClick={submit}>
               Crear
             </Button>

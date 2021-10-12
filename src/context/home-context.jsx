@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import clienteAxios from "../config/clienteAxios";
+import axios from "axios";
 const HomeContext = React.createContext();
 
 export function HomeProvider(props) {
@@ -36,17 +37,17 @@ export function HomeProvider(props) {
     obtenerClases();
   }, []);
   const obtenerClases = async () => {
-    await clienteAxios
-      .get("/lessons")
+    await axios
+      .get("http://localhost:3050/api/lessons")
       .then((res) => {
         setClases(res.data);
-        console.log(res.data);
+        console.log("clases",res.data);
       })
       .then(() => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("clases",error);
       });
   };
   //BLOG API

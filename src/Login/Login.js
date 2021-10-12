@@ -4,7 +4,7 @@ import "./Login.css"
 import { useHistory } from "react-router-dom"
 import { useHome } from "../context/home-context";
 import { useToasts } from "react-toast-notifications";
-import clienteLogin from '../config/clienteLogin'
+import clienteAxios from '../config/clienteAxios'
 
 function Login(props) {
     
@@ -14,8 +14,8 @@ function Login(props) {
     const {setJwt, setLogin } = useHome()
 
     const [currentLogin, setCurrentLogin] = useState({
-        username: "",
-        password: ""
+        user: "",
+        pass: ""
     })
 
     const handlechange = (e) => {
@@ -39,10 +39,10 @@ function Login(props) {
         history.push("/AdminClases")
     }*/
     const handlesubmit = async () => {
-        await clienteLogin
-            .post("/private/authenticate", {
-                username: currentLogin.username,
-                password: currentLogin.password
+        await clienteAxios
+            .post("/login", {
+                user: currentLogin.user,
+                pass: currentLogin.pass
             })
             .then((res) => {
                 console.log(res.data.jwt);
@@ -76,14 +76,14 @@ function Login(props) {
                         <input
                             className="LoginInput1"
                             type="text" placeholder="Usuario"
-                            name="username"
+                            name="user"
                             onChange={handlechange}
                             onKeyPress={(e)=>onPress(e)}
                         />
                         <input
                             className="LoginInput2"
                             type="password"
-                            name="password"
+                            name="pass"
                             placeholder="Password"
                             onChange={handlechange}
                             onKeyPress={(e)=>onPress(e)}

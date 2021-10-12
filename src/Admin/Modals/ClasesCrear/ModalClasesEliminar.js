@@ -7,14 +7,14 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerClases, clases, axiosConfig } = useHome()
+    const { obtenerClases, clases } = useHome()
     const { showEliminar, setShowEliminar } = props;
     const handleClose = () => {
         setShowEliminar(false)
     }
     const handleEliminar = async (clases) => {
         await clienteAxios
-            .delete(`/lessons/${clases.idLesson}`,axiosConfig)
+            .delete(`/lessons/${clases.idLesson}`)
             .then((res) => {
                 console.log(res.data);
                 addToast("Clase eliminada!", {
