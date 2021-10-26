@@ -10,7 +10,7 @@ export function HomeProvider(props) {
     setWeb_ready(true);
   }, 2500);
   //IMAGENES API
-  const [imagenes, setImagenes] = useState([]);
+  /*const [imagenes, setImagenes] = useState([]);
   useEffect(() => {
     obtenerImagenes();
   }, []);
@@ -18,7 +18,7 @@ export function HomeProvider(props) {
     await clienteAxios.get("/images").then((res) => {
       setImagenes(res.data);
     });
-  };
+  };*/
   //IMAGENES HOME
   /*const [portadahome, setPortadahome] = useState([]);
     useEffect(() => {
@@ -57,7 +57,7 @@ export function HomeProvider(props) {
   }, []);
   const obtenerBlogs = async () => {
     await clienteAxios
-      .get("/publications/")
+      .get("/publications")
       .then((res) => {
         setBlog(res.data);
         console.log(res.data);
@@ -68,17 +68,6 @@ export function HomeProvider(props) {
       .catch((error) => {
         console.log(error);
       });
-  };
-  //ONE IMAGE API
-  const [oneImage, setOneImage] = useState([]);
-  useEffect(() => {
-    obtenerImg();
-  }, []);
-  const obtenerImg = async () => {
-    await clienteAxios.get("/images/icono1.png").then((res) => {
-      setOneImage(res.data);
-      console.log(res.data);
-    });
   };
   //RESEÑAS API
   const [reviews, setReviews] = useState([]);
@@ -153,6 +142,7 @@ export function HomeProvider(props) {
   //SEÑA
   const [seña, setSeña] = useState("");
 
+  const [dominio, setDominio] = useState("https://backmanuels.herokuapp.com/")
   //DECLARO QUIEN ES EL CONTEXT
   const value = {
     clases,
@@ -166,11 +156,8 @@ export function HomeProvider(props) {
     obtenerReseñas,
     currentClase,
     setCurrentClase,
-    imagenes,
-    obtenerImagenes,
     blog,
     obtenerBlogs,
-    oneImage,
     loading,
     loadingBlog,
     loadingFed,
@@ -184,7 +171,7 @@ export function HomeProvider(props) {
     setStateDescuento,
     formaPago,
     setFormaPago,
-    seña, setSeña
+    seña, setSeña, dominio
   };
   return <HomeContext.Provider value={value} {...props} />;
 }

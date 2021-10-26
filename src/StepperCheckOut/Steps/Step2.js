@@ -21,13 +21,8 @@ function Step2(props) {
   } = useHome();
   const [discount, setDiscount] = useState({ code: "" });
 
-  const x = [];
-  if (currentClase !== undefined) {
-    const dates = currentClase.dates;
-    dates.forEach((d) => {
-      x.push(d);
-    });
-  } else {
+  
+  if (currentClase === undefined) {
     history.push("/ClasesOnline");
     addToast("Porfavor intentelo de nuevo sin recargar la pagina.", {
       appearance: "error",
@@ -70,58 +65,6 @@ function Step2(props) {
       <div className="row">
         <div className="col-md-6">
           <h1 className="CheckoutSubtitleB">Eleji la fecha de tu clase</h1>
-          <Form>
-            <div key="inline-radio-date" className="mb-3">
-              {!x[0] ? (
-                <div></div>
-              ) : fecha.date === x[0].date ? (
-                <Form.Check
-                  className="CheckoutLabel3"
-                  inline
-                  label={dayjs(x[0].date).add(1, 'day').format('DD/MM')}
-                  type="radio"
-                  name="date"
-                  onClick={() => handleDate(x[0].date)}
-                  id="inline-radio-1"
-                  checked
-                />
-              ) : (
-                <Form.Check
-                  className="CheckoutLabel3"
-                  inline
-                  label={dayjs(x[0].date).add(1, 'day').format('DD/MM')}
-                  type="radio"
-                  name="date"
-                  onClick={() => handleDate(x[0].date)}
-                  id="inline-radio-1"
-                />
-              )}
-              {!x[1] ? (
-                <div></div>
-              ) : fecha.date === x[1].date ? (
-                <Form.Check
-                  className="CheckoutLabel3"
-                  inline
-                  label={dayjs(x[1].date).add(1, 'day').format('DD/MM')}
-                  onClick={() => handleDate(x[1].date)}
-                  name="date"
-                  type="radio"
-                  id="inline-radio-2"
-                  checked
-                />
-              ) : (
-                <Form.Check
-                  className="CheckoutLabel3"
-                  inline
-                  label={dayjs(x[1].date).add(1, 'day').format('DD/MM')}
-                  onClick={() => handleDate(x[1].date)}
-                  name="date"
-                  type="radio"
-                  id="inline-radio-2"
-                />
-              )}
-            </div>
-          </Form>
           <div>
             <h1 className="CheckoutSubtitleB">¿Como prefiere pagar?</h1>
 

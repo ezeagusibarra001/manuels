@@ -6,7 +6,6 @@ import Loading from '../Loading/Loading'
 function Feedback(props) {
     const titulo = "EXPERIENCIAS & OPINIONES"
     const { reviews, loadingFed } = useHome()
-    console.log(reviews.length);
     return (
         <div className="ContainerFeedbackFondo">
             <div className="SubContainerFeedbackFondo">
@@ -15,7 +14,7 @@ function Feedback(props) {
                 </div>
                 {loadingFed === false && reviews.length > 0
                     ?
-                    reviews[0].validate === false
+                    reviews[0].state === 0
                         ?
                         <div className="ContainerDiv">
                             <Loading />
@@ -23,11 +22,11 @@ function Feedback(props) {
                         :
                         <div className="ContainerFeedbackCarrusel">
                             <Carousel className="FeedbackCarrusel">
-                                {reviews.filter((reviews) => reviews.validate === true).map(reviews =>
+                                {reviews.filter((reviews) => reviews.state === 1).map(reviews =>
                                     <Carousel.Item className="ContainerFeedbackCarruselSection">
                                         <div className="ContainerCarruselReseñas">
                                             <h3 className="FeedbackReseña">
-                                                "{reviews.commentary}"
+                                                "{reviews.description}"
                                             </h3>
                                             <h1 className="FeedbackAuthor">-{reviews.name}</h1>
                                         </div>

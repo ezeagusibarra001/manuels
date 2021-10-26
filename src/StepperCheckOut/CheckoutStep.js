@@ -41,10 +41,10 @@ function CheckoutStep() {
     let image = file.file;
     let formdata = new FormData();
     if (image !== null) {
-      formdata.set("file", image);
+      formdata.set("image", image);
     }
-    formdata.set("name", currentPayment.name);
-    formdata.set("lastname", currentPayment.lastname);
+    formdata.set("clientname", currentPayment.name);
+    formdata.set("clientlastname", currentPayment.lastname);
     formdata.set("email", currentPayment.email);
     if (currentClase !== undefined) {
       formdata.set("lesson", currentClase.idLesson);

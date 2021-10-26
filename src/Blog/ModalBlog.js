@@ -1,8 +1,7 @@
 import React,{useRef} from "react"
 import "./ModalBlog.css"
 function ModalBlog(props) {
-const data = props.data
-const base64 = props.base64
+const publicacion = props.publicacion
 const setModalBlog = props.setModalBlog
 const ModalContainerImg = useRef(null)
 const ModalContainer = useRef(null)
@@ -21,7 +20,7 @@ const CloseModal =()=>{
                 <img
                     className="ImgBlgoModal"
                     alt="Img"
-                    src={`data:${data};base64,${base64}`}
+                    src={publicacion}
                 />
                 <span className="CloseButtonBlog" onClick={CloseModal}>X</span>
             </div>

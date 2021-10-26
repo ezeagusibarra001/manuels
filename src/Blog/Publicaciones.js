@@ -4,11 +4,12 @@ import { useHome } from '../context/home-context'
 import dayjs from 'dayjs'
 import ModalBlog from "./ModalBlog"
 function Publicaciones() {
-    const { blog} = useHome()
+    const { blog, dominio} = useHome()
     const [modalBlog, setModalBlog]=useState(false)
     const OpenModal =()=>{
         setModalBlog(true)
     }
+
     return (
         <div className="ContainerPublicaciones">
             {blog.map((publicacion) => (
@@ -18,20 +19,20 @@ function Publicaciones() {
                     </div>
                     <div className="SubContainerPublicaciones">
                         <div className="ContainerPublicacionesImg1">
-                          {publicacion.image === null 
+                          {publicacion.blob === null 
                           ?<div></div>  
                           :
                             <>
-                            <img alt="img" className="PublicacionesImg" src={`data:${publicacion.image.type};base64,${publicacion.image.bytes}`} onClick={OpenModal}/>
+                            <img alt="img" className="PublicacionesImg" src={dominio+publicacion.idPublications+"-"+ publicacion.name} onClick={OpenModal}/>
                             {modalBlog &&
-                                <ModalBlog modalBlog={modalBlog} setModalBlog={setModalBlog} data={publicacion.image.type} base64={publicacion.image.bytes}/>
+                                <ModalBlog modalBlog={modalBlog} setModalBlog={setModalBlog} publicacion={publicacion.blob} />
                             }
                             </>               
                           }
                         </div>
                         <div className="ContainerPublicacionesTextos1">
                             <h2 className="PublicacionesSubTitulo">
-                                <b>{dayjs(publicacion.date).add(1, 'day').format('DD/MM')} - {publicacion.subtitle}</b>
+                                <b>{dayjs(publicacion.date).format('DD/MM')} - {publicacion.subtitle}</b>
                             </h2>
                             <p className="PublicacionesParrafos">
                                 {publicacion.description}

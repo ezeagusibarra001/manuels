@@ -7,14 +7,14 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalBlogEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerBlogs, blog, axiosConfig } = useHome()
+    const { obtenerBlogs, blog } = useHome()
     const { showEliminar, setShowEliminar } = props;
     const handleClose = () => {
         setShowEliminar(false)
     }
     const handleEliminar = async (blog) => {
         await clienteAxios
-            .delete(`/publications/${blog.idPublication}`,axiosConfig)
+            .delete(`/publications/${blog.idPublications}`)
             .then((res) => {
                 console.log(res.data);
                 addToast("Blog Eiminado! :)", {

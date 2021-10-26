@@ -4,19 +4,18 @@ import clienteAxios from '../config/clienteAxios'
 import { useHome } from '../context/home-context'
 import { useToasts } from "react-toast-notifications";
 function Reseñas() {
-    const [reseñaform, setreseñaform] = useState({ name: "", commentary: "", validate: false })
+    const [reseñaform, setreseñaform] = useState({ name: "", description: "", state: false })
     const { addToast } = useToasts();
     const { obtenerReseñas } = useHome()
     const handlechange = (event) => {
         const name = event.target.name
         const value = event.target.value
         setreseñaform({ ...reseñaform, [name]: value })
-        console.log(reseñaform.name, reseñaform.commentary, "Keep an eye")
+        console.log(reseñaform.name, reseñaform.description, "Keep an eye")
     }
     var postData = {
         "name": reseñaform.name,
-        "commentary": reseñaform.commentary,
-        "validate": false
+        "description": reseñaform.description,
     }
     const submit = async () => {
         await clienteAxios
@@ -28,7 +27,7 @@ function Reseñas() {
                     appearance: "success",
                     autoDismiss: true,
                 });
-                setreseñaform({name:"",commentary:""}) //PARA LIMPIAR EL FORMULARIO
+                setreseñaform({name:"",description:""}) //PARA LIMPIAR EL FORMULARIO
             })
             .catch((err) => {
                 console.log("error post", err);
@@ -37,7 +36,7 @@ function Reseñas() {
                     appearance: "danger",
                     autoDismiss: true,
                 });
-                setreseñaform({name:"",commentary:""}) //PARA LIMPIAR EL FORMULARIO
+                setreseñaform({name:"",description:""}) //PARA LIMPIAR EL FORMULARIO
             });
     };
     return (
@@ -83,10 +82,10 @@ function Reseñas() {
                                 <td>
                                     <textarea
                                         className="InputReseña2"
-                                        name="commentary"
+                                        name="description"
                                         type="text"
                                         maxLength="260"
-                                        value={reseñaform.commentary}
+                                        value={reseñaform.description}
                                         onChange={handlechange}
                                     />
                                 </td>

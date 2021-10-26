@@ -14,7 +14,7 @@ function ModalReseñasEliminar(props) {
     }
     const handleEliminar = async (id) => {
         await clienteAxios
-            .delete(`/reviews/${id}`,axiosConfig)
+            .delete(`/reviews/${id}`)
             .then((res) => {
                 console.log(res.data);
                 addToast("Reseña eliminada!", {
