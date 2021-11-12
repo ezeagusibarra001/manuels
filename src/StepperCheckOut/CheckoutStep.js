@@ -11,9 +11,9 @@ function CheckoutStep() {
   const { addToast } = useToasts();
   const { currentClase, setStateDescuento, formaPago, seña } = useHome();
   const [currentPayment, setCurrentPayment] = useState({
-    name: "",
-    lastname: "",
-    mail: "",
+    clientname: "",
+    clientlastname: "",
+    email: "",
     phone: "",
   });
   const [fecha, setFecha] = useState({ date: "" });

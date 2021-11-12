@@ -39,6 +39,7 @@ function Login(props) {
         history.push("/AdminClases")
     }*/
     const handlesubmit = async () => {
+        console.log(currentLogin)
         await clienteAxios
             .post("/login", {
                 user: currentLogin.user,

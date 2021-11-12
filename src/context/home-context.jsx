@@ -37,8 +37,8 @@ export function HomeProvider(props) {
     obtenerClases();
   }, []);
   const obtenerClases = async () => {
-    await axios
-      .get("http://localhost:3050/api/lessons")
+    await clienteAxios
+      .get("/lessons")
       .then((res) => {
         setClases(res.data);
         console.log("clases",res.data);
@@ -96,7 +96,7 @@ export function HomeProvider(props) {
   }, []);
   const obtenerCode = async () => {
     await clienteAxios
-      .get("/discounts", axiosConfig)
+      .get("/discounts")
       .then((res) => {
         setCode(res.data);
         console.log(res.data);

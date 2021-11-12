@@ -2,19 +2,24 @@ import React from "react";
 import "../cssSteps/step1.css";
 
 function Step1(props) {
-  const {Styles, handleChange, currentPayment} = props;
+  const { Styles, handleChange, currentPayment } = props;
 
   return (
     <div className="container height">
       <h1 className="Checkouttitle">Completá los siguientes datos</h1>
 
       <div className="row">
-        <div>
+        <form
+          class="gform"
+          method="POST"
+          data-email="ezeagusibarra@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbwqbzn6u6vTMDWGndc397V9jzmx5N87aIK_2jIF1w/exec"
+        >
           <input
             className="Checkoutinput"
             type="text"
-            name="name"
-            value={currentPayment.name}
+            name="clientname"
+            value={currentPayment.clientname}
             placeholder="Nombre"
             style={Styles}
             maxLength="20"
@@ -24,9 +29,9 @@ function Step1(props) {
           <input
             className="Checkoutinput"
             type="text"
-            name="lastname"
+            name="clientlastname"
             placeholder="Apellido"
-            value={currentPayment.lastname}
+            value={currentPayment.clientlastname}
             style={Styles}
             maxLength="20"
             onChange={handleChange}
@@ -47,14 +52,15 @@ function Step1(props) {
             className="Checkoutinput"
             type="email"
             id="emailInput"
-            value={currentPayment.mail}
-            name="mail"
+            value={currentPayment.email}
+            name="email"
             placeholder="E-mail"
             style={Styles}
             maxLength="50"
             onChange={handleChange}
           />
-        </div>
+          <button onClick="submit">Submit</button>
+        </form>
       </div>
     </div>
   );

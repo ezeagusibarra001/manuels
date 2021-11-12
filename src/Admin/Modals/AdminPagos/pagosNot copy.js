@@ -55,7 +55,11 @@ function pagosNot(props) {
         </Navbar>
         {loading === false ? (
           <div className="Manage">
-             <h1>Pagos aprobados</h1>
+            {estado === false ? (
+              <h1>Pagos NO aprobados</h1>
+            ) : (
+              <h1>Pagos aprobados</h1>
+            )}
             <Table striped bordered hover size="sm">
               <thead>
                 <tr>
@@ -73,7 +77,51 @@ function pagosNot(props) {
                 </tr>
               </thead>
               <tbody>
-                
+                {payments.map((p) =>
+                  p.payment.toString() === estado.toString() ? (
+                    <tr>
+                      <td>{p.idPayment}</td>
+                      <td>{p.clientname}</td>
+                      <td>{p.clientlastname}</td>
+                      <td>{p.lesson.title}</td>
+                      {p.payment.toString() === "false" ? (
+                        <td className="false">NO APR.</td>
+                      ) : (
+                        <td className="true">APR</td>
+                      )}
+                      <td onClick={() => voucherCheck(p.image)}>
+                        <img
+                          alt="img"
+                          className="imagenCheckout"
+                          src={`data:${p.image.type};base64,${p.image.bytes}`}
+                        />
+                      </td>
+                      <td>{p.phone}</td>
+                      <td>{dayjs(p.date).add(1, 'day').format('DD/MM')}</td>
+                      <td>{dayjs(p.dateLesson).add(1, 'day').format('DD/MM')}</td>
+                      {p.payment.toString() === "false" ? (
+                        <td onClick={() => alta(p.idPayment)}>
+                          <img
+                            alt="img"
+                            src="../assets/comprobado.png"
+                            className="imagenCheckout"
+                          />
+                        </td>
+                      ) : (
+                        <td></td>
+                      )}
+                      <td onClick={() => baja(p.idPayment)}>
+                        <img
+                          alt="img"
+                          src="../assets/basura.png"
+                          className="imagenCheckout"
+                        />
+                      </td>
+                    </tr>
+                  ) : (
+                    <div></div>
+                  )
+                )}
               </tbody>
             </Table>
           </div>

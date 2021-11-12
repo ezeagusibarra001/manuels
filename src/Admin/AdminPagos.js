@@ -22,13 +22,14 @@ function AdminPagos() {
         // eslint-disable-next-line
     }, []);
     const obtenerPayments = async () => {
-        await clienteAxios.get("/payments", axiosConfig).then((res) => {
+        await clienteAxios.get("/payments").then((res) => {
+            console.log(res.data)
             setPayments(res.data);
             setLoading(false)
         }).catch((error) => {
             console.log(error)
-            history.push("/")
-            window.location.reload(true)
+            //history.push("/")
+            //window.location.reload(true)
         });
     };
     const alta = async (payment) => {
