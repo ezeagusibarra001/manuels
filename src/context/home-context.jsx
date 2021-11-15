@@ -143,6 +143,9 @@ export function HomeProvider(props) {
   const [seña, setSeña] = useState("");
 
   const [dominio, setDominio] = useState("https://backmanuels.herokuapp.com/")
+  //const [dominio, setDominio] = useState("http://localhost:3050/")
+
+  //http://localhost:3050/
   //DECLARO QUIEN ES EL CONTEXT
   const value = {
     clases,
