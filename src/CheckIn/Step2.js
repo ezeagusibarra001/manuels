@@ -58,7 +58,7 @@ function Step2(props) {
       });
     }
   };
-  //PRUEBA
+  //PRUEBA PUT
   const putDescuentos = async () => {
     let currentCode = document.querySelector(".CheckInInputDesc").value;
     await clienteAxios
