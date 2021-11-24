@@ -6,9 +6,8 @@ function Step2(props) {
   const { addToast } = useToasts();
   const currentClase = props.currentClase;
   const setCurrentClase = props.setCurrentClase;
-  //var PayPrice=currentClase[0].price
-  const code = props.code;
-  const [DescAplicado, setDescAplicado] = useState(false);
+  const [DescAplicado, setDescAplicado]=useState(false);
+  const [payPrice,setPayPrice]=useState(currentClase[0].price);
   /*----------------------MERCADO PAGO----------------------*/
   const MP = () => {
     /*---------------TRASLADA---------------*/
@@ -28,36 +27,6 @@ function Step2(props) {
       }
     });
   };
-  const AplyDesc = (e) => {
-    let currentCode = document.querySelector(".CheckInInputDesc").value;
-    console.log("CurrentDesc:", e.target.value);
-    let DescValidation = code.some((x) => x.code === currentCode);
-    console.log("DescValidation", DescValidation);
-    if (DescValidation) {
-      setDescAplicado(true);
-      setCurrentClase({
-        ...(currentClase[0].price =
-          currentClase[0].price - currentClase[0].price * 0.2),
-      });
-      addToast(`Código aplicado, transferir: $${currentClase[0].price}`, {
-        appearance: "success",
-        autoDismiss: true,
-      });
-      console.log("PRECIO A PAGAR:", currentClase[0].price);
-      console.log("currentClase:", currentClase[0]);
-      const DescButton = document.querySelectorAll(".DescButton");
-      DescButton.forEach((cadaButton, i) => {
-        DescButton[i].style.backgroundColor = "#ffd743";
-        DescButton[i].style.color = "#a06ab4";
-        DescButton[i].style.border = "solid transparent";
-      });
-    } else {
-      addToast("Código no valido", {
-        appearance: "warning",
-        autoDismiss: true,
-      });
-    }
-  };
   //PRUEBA PUT
   const putDescuentos = async () => {
     let currentCode = document.querySelector(".CheckInInputDesc").value;
@@ -66,16 +35,22 @@ function Step2(props) {
         .then((res) => {
             console.log(res.data);
             if(res.data.res === "existe"){
-                alert("existe")
-            }else{
-                alert("no")
-            }
+              setDescAplicado(true)
+              const DescButton = document.querySelectorAll(".DescButton")[0];
+              DescButton.style.backgroundColor = "#ffd743";
+              DescButton.style.color = "#a06ab4";
+              DescButton.style.border = "solid transparent";
+              setPayPrice(payPrice-payPrice*0.20)
+              addToast(`¡Código aplicado!`,{appearance: "success",autoDismiss: true,});
+              const ButtonLink = document.querySelectorAll(".ButtonLink")[0];
+              ButtonLink.style.display="none"
+            }else{addToast("Código no valido",{appearance: "warning",autoDismiss: true,});}
         })
         .catch((err) => {
             console.log("error put", err);
             console.log(currentCode)
         });
-};
+  };
   /*----------------------TRANSFERENCIA BANCARIA----------------------*/
   const TB = () => {
     /*---------------TRASLADA---------------*/
@@ -137,7 +112,7 @@ function Step2(props) {
           </div>
           <div className="SlideMP">
             <p className="TextAbonar">
-              {"Transferir:$" + currentClase[0].price}
+              {"Transferir:$" + payPrice}
             </p>
             <p className="TextDesc">Si tenes un código ¡aplicalo!</p>
             <div className="DescContainer">
