@@ -1,0 +1,497 @@
+.CheckInComponent{
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+    background-image: url("../assetsSrc/fondocheckout.png");
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 2.5% 0px;
+    position: relative;
+}
+.ProgressBar{
+    width: 100%;
+    height: auto;
+    min-height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Begining{
+    height: 20px;
+    width: 20px;
+    background-color: #a06ab4;
+    border-radius: 50%;
+}
+.IconProgressDone{fill: #a06ab4;}
+.ProgressStep1{
+    height: 2px;
+    width: 100%;
+    max-width: 200px;
+    background-color: gray;
+    position: relative;
+}
+.Bar1{height: 2px;position: absolute;}
+.Bar2{height: 2px;position: absolute;}
+.Bar3{height: 2px;position: absolute;}
+.uno{
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+.dos{
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+.tres{
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+.ProgressStep2{
+    height: 2px;
+    max-width: 200px;
+    width: 100%;
+    background-color: gray;
+    position: relative;
+}
+.ProgressStep3{
+    height: 2px;
+    max-width: 200px;
+    width: 100%;
+    background-color: gray;
+    position: relative;
+}
+.ContainerStep1{
+    width: 100%;
+    display: flex;
+   justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Step1Title{
+    color: white;
+    background-color: #a06ab4;
+    width: 100%;
+    font-size: 25px;
+    padding: 6px 10px;
+}
+.CheckInForm{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0px 10px;
+}
+.CheckInInput{
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    overflow: none;
+    border: solid #a06ab4 1px;
+    outline-color:  #a06ab4;
+    color: #a06ab4;
+    font-size: 20px;
+}
+.ContainerStep2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Step2Title{
+    color: white;
+    width: 100%;
+    background-color: #a06ab4;
+    padding: 6px 10px;
+    font-size: 25px;
+}
+.ContainerOptions{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.ButtonOption{
+    border: solid transparent;
+    color: white;
+    width: 100%;
+    background-color: #a06ab4;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.ButtonOption:hover{
+    border: solid #a06ab4 1px;
+    color: #a06ab4;
+    width: 100%;
+    background-color: white;
+}
+.CarruselCheckIn{
+   width: 100%;
+   max-width: 600px;
+   height: auto;
+   overflow: hidden;
+}
+.SliderContainer{
+    width: 300%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-33.33%);
+    background-color: #a06ab4;
+}
+.SlideMedio{
+    height: auto;
+    width: 100%;
+    background-color: #a06ab4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SlideMedio>h1{
+    font-size: 25px;
+}
+.SlideTB{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 5px;
+}
+.TextComprobante{
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #a06ab4;
+    text-align: center;
+}
+.ContainerFecha{
+   text-align: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #a06ab4;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+.Fecha{
+    color: #a06ab4;}
+.TableTB{
+    font-size: 20px;
+    font-weight: 600;
+}
+.TextTable{
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+.TableTB >tr >td{
+    padding: 5px 10px;
+}
+.SlideMP{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0px;
+}
+.TextDesc{
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+.TextAbonar{
+    height: auto;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+.DescContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.CheckInInputDesc{
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    border: solid #a06ab4 1px;
+    outline-color:  #a06ab4;
+    color: #a06ab4;
+    font-size: 20px;
+    text-align: center;
+}
+.DescButton{
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+    border: solid #a06ab4 1px;
+    outline-color:  #a06ab4;
+    color: #a06ab4;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 15px;
+}
+.DescButton:hover{
+    border: solid white 1px;
+    color: white;
+    background-color: #a06ab4;
+}
+.TextLinks{
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+.LinksContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.ButtonLink{
+    text-decoration: none;
+    color: #a06ab4;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: white;
+    min-width: 150px;
+    text-align: center;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+.ButtonLink:hover{
+    border: solid white 1px;
+    color: white;
+    background-color: #a06ab4;
+    border-radius: 20px;
+}
+.ContainerStep3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Step3Title{
+    color: white;
+    width: 100%;
+    background-color: #a06ab4;
+    padding: 6px 10px;
+    font-size: 25px;
+}
+.CheckComprobante{
+    background-color: #a06ab4;
+    border: solid #a06ab4 6px;
+    color: white;
+    width: auto;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.ButtonConfirm{
+    height: auto;
+    width: 100%;
+    max-width: 250px;
+    border: solid #a06ab4 1px;
+    outline-color:  #a06ab4;
+    color: #a06ab4;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 15px;
+}
+.ContainerButtonSteps{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 10px;
+}
+.AtrásButton{
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    background-color:#a06ab4 ;
+    color: white;
+    border: solid #a06ab4 1px;
+}
+.SigueinteButton{
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    background-color:#a06ab4 ;
+    color: white;
+    border: solid #a06ab4 1px;
+}
+.AtrásButton:hover{
+    background-color:white ;
+    color: #a06ab4;
+}
+.SigueinteButton:hover{
+    background-color:white ;
+    color: #a06ab4;
+}
+.ButtonDesabled{
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    background-color:#a06ab4 ;
+    color: white;
+    border: solid #a06ab4 1px;
+    opacity: 60%;
+}
+.ChechDatosContainer{height: auto; width: 100%;max-width: 600px; background-color: #a06ab4;padding: 10px 10px;}
+.ChechDatosContainer>h4{color: white;}
+.WelcomeContainer{
+    height: auto; 
+    min-height: 350px;
+    width: 100%;
+    max-width: 600px; 
+    background-color: #a06ab4;
+    padding: 10px 10px;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+.WelcomeTittle{color:white;text-align:center;font-size:30px;width: 100%;}
+.ItemsW{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.pW{font-size: 20px;color: white;}
+.aW{color: white;}
+.aW:hover{color: white;}
+.ScrollContent{
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    overflow: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ScrollContent::-webkit-scrollbar{width: 5px;background-color: #a06ab4;}
+.ScrollContent::-webkit-scrollbar-thumb{background-color:white;border-radius:10px;}
+.ScrollContent>h4{
+    width: 100%;
+    text-align: center;
+}
+.WelcomeContainer>p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 20px;
+}
+.WelcomeIconos{
+    height: auto;
+    width: 20px;
+}
+@media screen and (max-width: 700px) {
+    .ProgressStep1{max-width: 100px;}
+    .ProgressStep2{max-width: 100px;}
+    .ProgressStep3{max-width: 100px;}
+}
+@media screen and (max-width: 400px) {
+    .ProgressStep1{max-width: 50px;}
+    .ProgressStep2{max-width: 50px;}
+    .ProgressStep3{max-width: 50px;}
+}
+@media screen and (max-width: 500px) {
+    .CheckInComponent{height: 450px;max-height: 450px;}
+    .Step1Title{font-size: 15px;text-align: center;}
+    .Step2Title{font-size: 15px;text-align: center;}
+    .Step3Title{font-size: 15px;text-align: center;}
+    .ContainerStep3{gap: 8px;}
+    .CheckInForm{gap: 25px;}
+    .CheckInInput{font-size: 15px;  max-width: 350px; ;}
+    .CarruselCheckIn{width: 90%;}
+    .SlideMP{gap: 5px;}
+    .ButtonOption{font-size: 12px;}
+    .ContainerOptions{max-width: 250px;}
+    .TextFecha{font-size: 15px;max-width:250px;}
+    .ContainerFecha{font-size: 12px;max-width: 250px;}
+    .TableTB{font-size: 15px;width: 100%;}
+    .TextTable{font-size: 15px;width: 100%;}
+    .TextDesc{font-size: 15px;}
+    .CheckInInputDesc{max-width:150px;font-size: 12px;}
+    .DescButton{font-size: 12px;border-radius: 10px;}
+    .TextLinks{font-size: 15px;}
+    .ButtonLink{font-size: 12px;min-width: 100px;}
+    .TextComprobante{font-size: 15px;}
+    .ButtonConfirm{max-width: 180px;font-size: 12px;}
+    .CheckComprobante{width:100%;max-width:180px;font-size: 10px;}
+    .ScrollContent{max-height: 170px;font-size: 14px;}
+    .SigueinteButton{max-width: 100px;font-size: 12px;}
+    .AtrásButton{max-width: 100px;font-size: 12px;}
+    .ButtonDesabled{max-width: 100px;font-size: 12px;}
+    .WelcomeContainer{min-height: 250px;top: 20%;gap: 10px;}
+    .WelcomeTittle{color:white;text-align:center;font-size:20px;width:100%;}
+    /*.ItemsW{NOT NECESSARY}*/
+    .pW{font-size:15px;color: white;}
+    .aW{color: white;}
+    .aW:hover{color: white;}
+}
+@media screen and (max-width: 300px) {.CarruselCheckIn{width: 100%;}}

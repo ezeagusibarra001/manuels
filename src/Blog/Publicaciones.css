@@ -16,7 +16,7 @@
 }
 .PublicacionesTitulo{
     color: white;
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: "dukecharming regular";
 }
 .SubContainerPublicaciones{
@@ -37,7 +37,8 @@
     padding: 0% 0%;
 }
 .PublicacionesImg{
-    width: 80%;
+    width: 100%;
+    max-width: 250px;
     height: auto;
 }
 .PublicacionesImg:hover{
@@ -46,40 +47,30 @@
 .ContainerPublicacionesTextos1{
     width: 100%;
     height: auto;
-
     grid-column-start: 2;
     grid-column-end: 3;
-
     padding: 0% 0%;
 }
 .ContainerPublicacionesTextos2{
     width: 100%;
     height: auto;
-
     grid-column-start: 1;
     grid-column-end: 3;
-
     padding: 0% 0%;
 }
 .PublicacionesSubTitulo{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 .PublicacionesParrafos{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 /*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .ContainerPublicacionesImg1{
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-    }
-    .ContainerPublicacionesImg2{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
     }
     .PublicacionesImg{
         width: 60%;

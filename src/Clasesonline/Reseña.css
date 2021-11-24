@@ -1,82 +1,41 @@
 .ContainerPadreReseña{
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    font-family:"varela round";
+    gap: 15px;
 }
 /*-----------------------------------------SUB CONTAINER 1 (RESEÑA) -----------------------------------------*/
 .ContainerSubPadreReseña1{
     width: 100%;
     height: auto;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     box-shadow: 0 0 5px rgb(0,0,0) !important;
     background-color: #ffd743;
-    padding: 2% 0%;
-}
-.ContainerReseñaTitulo{
-    height: auto;
-    width: 100%;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    text-align: center;
+    padding: 40px 25px;
 }
 .ReseñaTitulo{
-    font-size: 6vw;
-    font-family: "dukecharming regular";
-    font-weight: 600;
-    color: white;
-}
-.ContainerReseñaTexto{
-    height: auto;
-    width: 100%;
-    
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3; 
-
-    padding: 1% 0%;
     text-align: center;
-    line-height: 1.2vw;
-}
-.ReseñaTexto1{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    font-size: 2.5vw;
-    font-family: "varela round regular";
+    font-size: 45px;
+    font-weight: 500;
     color: white;
+    width: 100%;
 }
-.ReseñaTexto2{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;  
-
-    font-size: 2.5vw;
-    font-family: "varela round regular";
+.ReseñaTexto{
+    text-align: left;
+    font-size: 25px;
     color: white;
+    font-weight: 500;
+    width: 100%;
+    max-width: 600px;
 }
 /*-----------------------------------------SUB CONTAINER 2 (FORMULARIO)-----------------------------------------*/
 .ContainerSubPadreReseña2{
@@ -84,38 +43,33 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     width: 100%;
     height: auto;
-
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    gap: 1vw;
-    padding: 2% 10%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 25px;
 }
 .ContainerReseñaForm{
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.ReseñaForm{
-    width: 100%;
-    height: auto;
-}
-.Label{
-    font-size: 3.5vw;
-    color: #a06ab4;
-}
+.ReseñaForm{width:100%;height:auto;max-width: 850px;}
+.Label{font-size:30px;color: #a06ab4;}
 .InputReseña1{
-    font-size: 2vw;
-    width: 70%;
+    height: 40px;
+    width: 100%;
     border: solid #a06ab4 1px;
     outline: solid #a06ab4 1px;
     color: #a06ab4;
 }.InputReseña2{
-    font-size: 2vw;
     width: 100%;
-    height: 15vw;
+    height: 150px;
     border: solid #a06ab4 1px;
     outline: solid #a06ab4 1px;
     color: #a06ab4;
@@ -125,46 +79,22 @@
     color: white;
     border: solid transparent 1px;
     border-radius: 5px;
-    padding: 1% 6%;
-    font-size: 2vw;
+    padding: 5px 0px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 850px;
 }
 .ButtonReseñas:hover{
     background-color: white;
     color: #ffd743;
     border: solid #ffd743 1px;
     border-radius: 5px;
-    padding: 1% 6%;
 }
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-
 @media screen and (max-width: 500px){
-    .ReseñaTitulo{
-        font-size: 12vw;
-    }
-    .ContainerReseñaTexto{
-        text-align: left;
-        line-height:normal;
-        padding: 0% 2.5%;
-    }
-    .ReseñaTexto1{
-        font-size: 6.5vw;
-    }
-    .ReseñaTexto2{
-        font-size: 6.5vw;
-    }
-
-    .Label{
-        font-size: 6vw;
-        height: auto;
-    }
-    .InputReseña1{
-        font-size: 5vw;
-        height: auto;
-        width: 100%;
-    }.InputReseña2{
-        font-size: 5vw;
-    }
-    .ButtonReseñas{
-        font-size: 4.5vw;
-    }
+    .ReseñaTitulo{font-size: 40px;}
+    .ReseñaTexto{font-size: 20px;}
+    .Label{font-size:25px;}
+    .InputReseña1{font-size: 25px;}
+    .InputReseña2{font-size: 25px;}
 }

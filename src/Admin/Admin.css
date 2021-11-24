@@ -14,6 +14,9 @@
 }
 .imagenCheckout{
     width: 40px;
+    height: auto;
+    cursor: pointer;
+    border: solid transparent 1px;
 }
 .voucher{
     width: 400px;
@@ -25,6 +28,14 @@
 .false{
     color: red;
     font-weight: bold;
+}
+.mano{
+    color: black !important;
+    cursor: pointer;
+    -webkit-user-select: none;/* Chrome  y Safari */ 
+    -moz-user-select: none;/* Firefox */
+    -ms-user-select: none;/* IE 10+ */ 
+    user-select: none;
 }
 /*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
 div>textarea{
@@ -42,29 +53,4 @@ div>textarea{
 .CCinputDuration{
     height: auto;
     height: 80px;
-}
-.space{
-    margin: 50px;
-}
-.mano{
-    cursor: pointer;
-    background-color: #a06ab4;
-    border-radius: 10px;
-    color: white !important;
-    font-weight: bold;
-    padding: 10px;
-}
-.mano:hover{
-    cursor: pointer;
-    background-color: #ffd209;
-    border-radius: 10px;
-    color: black !important;
-    font-weight: bold;
-    box-shadow: 10px 5px 25px #a06ab4;
-
-}
-.navegacion{
-    box-shadow: 10px 5px 25px black;
-    margin: 10px;
-
 }

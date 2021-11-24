@@ -5,21 +5,14 @@ import { useHistory } from "react-router-dom"
 import { useHome } from "../context/home-context";
 import { useToasts } from "react-toast-notifications";
 import clienteAxios from '../config/clienteAxios'
-
 function Login(props) {
-    
     const { addToast } = useToasts();
     const history = useHistory()
     /* TRAIGO DEL CONTEXT EL ESTADO DEL LOGIN ( HOOK VARIABLE ) */
-    const {setJwt, setLogin } = useHome()
-
-    const [currentLogin, setCurrentLogin] = useState({
-        user: "",
-        pass: ""
-    })
-
+    const {setJwt} = useHome()
+    const [currentLogin, setCurrentLogin]=useState({user:"",pass:""})
     const handlechange = (e) => {
-        setCurrentLogin({ ...currentLogin, [e.target.name]: e.target.value, })
+        setCurrentLogin({ ...currentLogin,[e.target.name]: e.target.value,})
         console.log("login", currentLogin)
     }
     const onPress = (e) =>{
@@ -55,8 +48,7 @@ function Login(props) {
                     appearance: "success",
                     autoDismiss: true,
                 });
-                
-                setLogin(true)
+                localStorage.setItem("login",true)
                 history.push("/AdminClases")
             })
             .catch((err) => {
@@ -68,7 +60,6 @@ function Login(props) {
                 });
             });
     };
-   
     return (
         <Layout>
             <div className="ContainerPadreLogin">
@@ -97,6 +88,5 @@ function Login(props) {
             </div>
         </Layout>
     )
-
 }
 export default Login;

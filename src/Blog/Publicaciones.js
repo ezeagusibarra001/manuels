@@ -4,12 +4,18 @@ import { useHome } from '../context/home-context'
 import dayjs from 'dayjs'
 import ModalBlog from "./ModalBlog"
 function Publicaciones() {
-    const { blog, dominio} = useHome()
+    const { blog,dominio} = useHome()
     const [modalBlog, setModalBlog]=useState(false)
-    const OpenModal =()=>{
+    const [imgBlog, setImgBlog]=useState()
+    const OpenModal =(e)=>{
+        var imgB = document.createElement("img");
+        imgB = e.target
+        //img.src = e.target.src;
+        //img.alt = e.target.alt;
+        setImgBlog(imgB)
         setModalBlog(true)
+        console.log(imgBlog)
     }
-
     return (
         <div className="ContainerPublicaciones">
             {blog.map((publicacion) => (
@@ -19,20 +25,17 @@ function Publicaciones() {
                     </div>
                     <div className="SubContainerPublicaciones">
                         <div className="ContainerPublicacionesImg1">
-                          {publicacion.blob === null 
+                          {publicacion.image === null 
                           ?<div></div>  
                           :
                             <>
                             <img alt="img" className="PublicacionesImg" src={dominio+publicacion.idPublications+"-"+ publicacion.name} onClick={OpenModal}/>
-                            {modalBlog &&
-                                <ModalBlog modalBlog={modalBlog} setModalBlog={setModalBlog} publicacion={publicacion.blob} />
-                            }
                             </>               
                           }
                         </div>
                         <div className="ContainerPublicacionesTextos1">
                             <h2 className="PublicacionesSubTitulo">
-                                <b>{dayjs(publicacion.date).format('DD/MM')} - {publicacion.subtitle}</b>
+                                <b>{dayjs(publicacion.date).format("DD/MM/YY")} - {publicacion.subtitle}</b>
                             </h2>
                             <p className="PublicacionesParrafos">
                                 {publicacion.description}
@@ -55,7 +58,12 @@ function Publicaciones() {
                     </div>
                 </div>
             ))}
+            {    
+                modalBlog &&
+                <ModalBlog modalBlog={modalBlog} setModalBlog={setModalBlog} imgBlog={imgBlog}/>
+            }
         </div>
     )
 }
 export default Publicaciones;
+    

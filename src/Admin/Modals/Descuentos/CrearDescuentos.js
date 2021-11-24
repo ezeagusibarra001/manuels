@@ -9,7 +9,7 @@ import { useToasts } from "react-toast-notifications";
 
 function CrearDescuentos(props) {
     const { addToast } = useToasts();
-    const {axiosConfig, obtenerCode} = useHome()
+    const {obtenerCode} = useHome()
     const {showCode, setShowCode} = props;
     const [Styles, setStyles] = useState()
     const [currentCod, setCurrentCod] = useState({code:""})
@@ -27,9 +27,9 @@ function CrearDescuentos(props) {
         }
         console.log(e.target.value)
     }
-    const submit = async (id) => {
+    const submit = async () => {
         await clienteAxios
-            .post(`/discounts`,{code:currentCod.code},axiosConfig)
+            .post(`/discounts`,{code:currentCod.code})
             .then((res) => {
                 console.log(res.data);
                 addToast("Codigo Creado!", {

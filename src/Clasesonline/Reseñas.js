@@ -4,7 +4,7 @@ import clienteAxios from '../config/clienteAxios'
 import { useHome } from '../context/home-context'
 import { useToasts } from "react-toast-notifications";
 function Reseñas() {
-    const [reseñaform, setreseñaform] = useState({ name: "", description: "", state: false })
+    const [reseñaform, setreseñaform] = useState({ name: "", description: "", state: 0 })
     const { addToast } = useToasts();
     const { obtenerReseñas } = useHome()
     const handlechange = (event) => {
@@ -16,6 +16,7 @@ function Reseñas() {
     var postData = {
         "name": reseñaform.name,
         "description": reseñaform.description,
+        "state": 0,
     }
     const submit = async () => {
         await clienteAxios
@@ -32,7 +33,7 @@ function Reseñas() {
             .catch((err) => {
                 console.log("error post", err);
                 console.log(postData)
-                addToast("¡Gracias! Tu opinion nos importa.", {
+                addToast("Ocurrio un error :(", {
                     appearance: "danger",
                     autoDismiss: true,
                 });
@@ -42,17 +43,11 @@ function Reseñas() {
     return (
         <div className="ContainerPadreReseña">
             <div className="ContainerSubPadreReseña1">
-                <div className="ContainerReseñaTitulo">
-                    <h1 className="ReseñaTitulo">RESEÑAS</h1>
-                </div>
-                <div className="ContainerReseñaTexto">
-                    <p className="ReseñaTexto1">
-                        Si ya hiciste un curso conmigo o tomaste clases clases personalizadas
-                    </p>
-                    <p className="ReseñaTexto2">
-                        podes dejar tu comentario acá para que todes se animen
-                    </p>
-                </div>
+                <h1 className="ReseñaTitulo">RESEÑAS</h1>
+                <p className="ReseñaTexto">
+                    Si ya hiciste un curso conmigo 
+                    podes dejar tu comentario acá para que todes se animen
+                </p>
             </div>
             <div className="ContainerSubPadreReseña2">
                 <div className="ContainerReseñaForm">

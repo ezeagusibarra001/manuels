@@ -7,17 +7,17 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function CodeEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerCode, code, axiosConfig } = useHome()
+    const { obtenerCode,code} = useHome()
     const { showEliminarRev, setEliminarRev} = props;
     const handleClose = () => {
         setEliminarRev(false)
     }
     const handleEliminar = async (id) => {
         await clienteAxios
-            .delete(`/discounts/${id}`,axiosConfig)
+            .delete(`/discounts/${id}`)
             .then((res) => {
                 console.log(res.data);
-                addToast("Descuento eliminado!", {
+                addToast("Reseña eliminada!", {
                     appearance: "success",
                     autoDismiss: true,
                 });
@@ -30,7 +30,6 @@ function CodeEliminar(props) {
     };
     return (
         <div>
-
             <Modal
                 show={showEliminarRev}
                 onHide={handleClose}
@@ -42,15 +41,23 @@ function CodeEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {code.map((c) => (
-                            <div>
-                                <li>{c.code}</li>
-                                <Button
-                                    variant="primary"
-                                    onClick={() => handleEliminar(c.idDiscounts)}
-                                >Borrar</Button>
-                            </div>
-                        ))}
+                        {
+                            code.length==0
+                            ?
+                            <h5>No hay códigos creados</h5>
+                            :
+                            <>
+                            {code.map((c) => (
+                                <div>
+                                    <li>{c.code}</li>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => handleEliminar(c.idDiscounts)}
+                                    >Borrar</Button>
+                                </div>
+                            ))}
+                            </>
+                        }
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
@@ -61,5 +68,4 @@ function CodeEliminar(props) {
         </div>
     )
 }
-
 export default CodeEliminar;

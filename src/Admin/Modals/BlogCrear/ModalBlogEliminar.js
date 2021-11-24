@@ -7,7 +7,7 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalBlogEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerBlogs, blog } = useHome()
+    const { obtenerBlogs, blog, axiosConfig } = useHome()
     const { showEliminar, setShowEliminar } = props;
     const handleClose = () => {
         setShowEliminar(false)
@@ -41,15 +41,23 @@ function ModalBlogEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {blog.map((blog) => (
-                            <div>
-                                <li>{blog.title}</li>
-                                <Button
-                                    variant="primary"
-                                    onClick={() => handleEliminar(blog)}
-                                >Borrar</Button>
-                            </div>
-                        ))}
+                        {
+                            blog.length==0
+                            ?
+                            <h5>No hay publicaciones :)</h5>
+                            :
+                            <>
+                            {blog.map((blog) => (
+                                <div>
+                                    <li>{blog.title}</li>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => handleEliminar(blog)}
+                                    >Borrar</Button>
+                                </div>
+                            ))}
+                            </>
+                        }
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>

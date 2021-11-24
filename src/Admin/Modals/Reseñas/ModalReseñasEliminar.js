@@ -7,30 +7,29 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalReseñasEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerReseñas, reviews, axiosConfig } = useHome()
-    const { showEliminarRev, setEliminarRev} = props;
+    const {obtenerReseñas,reviews} = useHome()
+    const {showEliminarRev, setEliminarRev} = props;
     const handleClose = () => {
         setEliminarRev(false)
     }
-    const handleEliminar = async (id) => {
+    const handleEliminar = async (review) => {
         await clienteAxios
-            .delete(`/reviews/${id}`)
-            .then((res) => {
-                console.log(res.data);
-                addToast("Reseña eliminada!", {
-                    appearance: "success",
-                    autoDismiss: true,
-                });
-                obtenerReseñas()
-            })
-            .catch((err) => {
-                console.log("error delete", err);
-                console.log(reviews)
+        .delete(`/reviews/${review.idReview}`)
+        .then((res) => {
+            console.log(res.data);
+            addToast("Reseña eliminada!", {
+                appearance: "success",
+                autoDismiss: true,
             });
+            obtenerReseñas()
+        })
+        .catch((err) => {
+            console.log("error delete", err);
+            console.log(reviews)
+        });
     };
     return (
         <div>
-
             <Modal
                 show={showEliminarRev}
                 onHide={handleClose}
@@ -38,20 +37,27 @@ function ModalReseñasEliminar(props) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="modal-tittle">Eliminar Clase</Modal.Title>
+                    <Modal.Title id="modal-tittle">Eliminar Reseña</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {reviews.map((reviews) => (
-                            <div>
-                                <li>{reviews.name}</li>
-                                <p>{reviews.commentary}</p>
-                                <Button
-                                    variant="primary"
-                                    onClick={() => handleEliminar(reviews.idReview)}
-                                >Borrar</Button>
-                            </div>
-                        ))}
+                        {
+                            reviews===undefined
+                            ?<h5>No hay reseñas :)</h5>
+                            :
+                            <>
+                            {reviews.map(review=>(
+                                <div>
+                                    <li>{review.name}</li>
+                                    <p>{review.description}</p>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => handleEliminar(review)}
+                                    >Borrar</Button>
+                                </div>
+                            ))}
+                            </>
+                        }
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
@@ -62,5 +68,4 @@ function ModalReseñasEliminar(props) {
         </div>
     )
 }
-
 export default ModalReseñasEliminar;

@@ -4,213 +4,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    padding: 2% 12%;
+    flex-direction: column;
+    padding: 2% 0%;
 }
-
 .ContainerFooter{
-
     height: auto;
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: 1fr 2.5fr auto auto;
-    grid-template-rows: auto auto;
-    gap:2px;
-}
-/*------------------------------------------LOGO MANUELS------------------------------------------*/
-.ContainerImgFooter{
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
-
+    width: 90%;
+    max-width: 650px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
+    gap: 5px;
+}
+.TextoFooter{
+    width: 100%;
+    max-width: 450px;
+    color: #a06ab4;
+    font-size: 12px;
 }
 .ImgFooter{
     height: auto;
-    width: 80%;
-    display: block;
+    width: 120px;
 }
-/*------------------------------------------TEXTO------------------------------------------*/
-.ContainerTextosPadre{
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto ;
-    gap: 0%;
-
-    padding: 0% 5%;
-}
-.ContainerTextosHijoFooter{
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    grid-row-start: 1;
-    grid-row-end: 2;
-   
-}
-.ContainerTextosHijoFooter>p{
-    color: #a06ab4;
-    font-family: "varela round regular";
-    font-size: 1.4vw;
-    text-align: left;
-
-    height: auto;
-    width: auto;
-}
-/*------------------------------------------INSTAGRAM------------------------------------------*/
 .ContainerInstagramFooter{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
+    height: 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-   
+    gap: 10px;
 }
 .ButtonInstaFooter{
-    border: solid  #a06ab4 !important;
-    background-color:  #a06ab4 !important;
-    border-radius: 50px !important;
-  
-    height: 60px !important;
-    width: 60px !important;
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #a06ab4;
+    border: solid  #a06ab4;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
 }
-
-/*------------------------------------------LEYENDA ¡SEGUIME!------------------------------------------*/
-.ContainerLeyandaInstaFooter{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.LeyandaInstaFooter{color: #a06ab4;font-family: "dukecharming regular";font-weight: 900;}
+.PibitextoFooter{color: #a06ab4; font-size: 12px;}
+.PibicreditosFooter{color: #a06ab4; font-size: 12px;}
+@media screen and (max-width: 500px) {
+    .ImgFooter{width: 60px;}
+    .TextoFooter{max-width: 200px;font-size: 6px;}
+    .ContainerFooter{ width: 95%;max-width: 400px;}
+    .LeyandaInstaFooter{font-size: 6px;}
+    .PibitextoFooter{font-size: 6px;}
+    .PibicreditosFooter{font-size: 6px;}
+    .ButtonInstaFooter{height: 28px;width: 28px;}
 }
-.LeyandaInstaFooter{
-    color: #a06ab4;
-    font-family: "dukecharming regular";
-    font-weight: 900;
-    font-size: 1.4vw;
-}
-/*------------------------------------------PIBI CREDITOS------------------------------------------*/
-.ContainerPibicreditosFooter{
-
-    height: auto;
-    text-align: center;
-
-    grid-column-start: 1;
-    grid-column-end: 5;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.PibitextoFooter{
-    color: #a06ab4;
-    font-size: 1.2vw;
-}
-.PibicreditosFooter{
-    color: #a06ab4;
-}
-
-
-
-/*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
-@media screen and (max-width: 1000px){
-    .ButtonInstaFooter{
-        padding: 10% 10% !important;
-        height: 50px !important;
-        width: 50px !important;
-    }
-}
-@media screen and (max-width: 900px){
-    .ButtonInstaFooter{
-        border: solid  #a06ab4 !important;
-        background-color:  #a06ab4 !important;
-        border-radius: 60px !important;
-
-        padding: 10% 10% !important;
-        height: 40px !important;
-        width: 40px !important;
-    }
-    .ContainerFondoFooter{
-
-        padding: 2% 8%;
-    }
-    
-}
-@media screen and (max-width: 800px){
-    .ButtonInstaFooter{
-        border: solid  #a06ab4 !important;
-        background-color:  #a06ab4 !important;
-        border-radius: 60px !important;
-
-        padding: 10% 10% !important;
-        height: 35px !important;
-        width: 35px !important;
-    }
-}
-@media screen and (max-width: 700px){
-    .ButtonInstaFooter{
-        border: solid  #a06ab4 !important;
-        background-color:  #a06ab4 !important;
-        border-radius: 60px !important;
-
-        padding: 10% 10% !important;
-        height: 30px !important;
-        width: 30px !important;
-    }
-}
-@media screen and (max-width: 600px){
-    .ButtonInstaFooter{
-        border: solid  #a06ab4 !important;
-        background-color:  #a06ab4 !important;
-        border-radius: 60px !important;
-
-        height: 35px !important;
-        width: 35px !important;
-    }
-    .ContainerLeyandaInstaFooter{
-        display: none;
-    }
-    .ContainerTextosPadre{
-        padding: 2% 2%;
-    }
-    .ContainerTextosHijoFooter>p{
-        font-size: 1.8vw;
-    }
-}
-@media screen and (max-width: 500px){
-    .ButtonInstaFooter{
-        border: solid  #a06ab4 !important;
-        background-color:  #a06ab4 !important;
-        border-radius: 60px !important;
-
-        height: 30px !important;
-        width: 30px !important;
-    }
-}
-

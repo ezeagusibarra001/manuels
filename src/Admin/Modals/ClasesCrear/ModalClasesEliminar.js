@@ -7,14 +7,14 @@ import "../../Admin.css"
 import { useToasts } from "react-toast-notifications";
 function ModalClasesEliminar(props) {
     const { addToast } = useToasts();
-    const { obtenerClases, clases } = useHome()
+    const { obtenerClases,clases} = useHome()
     const { showEliminar, setShowEliminar } = props;
     const handleClose = () => {
         setShowEliminar(false)
     }
-    const handleEliminar = async (clases) => {
+    const handleEliminar=async(clase)=>{
         await clienteAxios
-            .delete(`/lessons/${clases.idLesson}`)
+            .delete(`/lessons/${clase.idLesson}`)
             .then((res) => {
                 console.log(res.data);
                 addToast("Clase eliminada!", {
@@ -29,7 +29,6 @@ function ModalClasesEliminar(props) {
     };
     return (
         <div>
-
             <Modal
                 show={showEliminar}
                 onHide={handleClose}
@@ -41,15 +40,25 @@ function ModalClasesEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {clases.map((clase) => (
-                            <div>
-                                <li>{clase.title}</li>
-                                <Button
-                                    variant="primary"
-                                    onClick={() => handleEliminar(clase)}
-                                >Borrar</Button>
-                            </div>
-                        ))}
+                        {
+                            clases.length==0
+                            ?
+                            <>
+                            <h5>No hay clases :)</h5>
+                            </>
+                            :
+                            <>
+                            {clases.map((clase) => (
+                                <div>
+                                    <li>{clase.title}</li>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => handleEliminar(clase)}
+                                    >Borrar</Button>
+                                </div>
+                            ))}
+                            </>
+                        }
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>
@@ -60,5 +69,4 @@ function ModalClasesEliminar(props) {
         </div>
     )
 }
-
 export default ModalClasesEliminar;

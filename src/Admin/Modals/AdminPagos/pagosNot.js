@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../../Layout";
+import "../../../Admin/Admin.css";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import Table from "react-bootstrap/Table";
@@ -20,6 +21,7 @@ function pagosNot(props) {
     setEstado,
     estado,
     loading,
+    dominio,
   } = props;
   return (
     <Layout>
@@ -45,17 +47,21 @@ function pagosNot(props) {
         </div>
         <Navbar bg="" className="navegacion" variant="dark">
           <Container>
-            <Navbar.Brand className="mano" onClick={() => setEstado(false)}>
+            <Navbar.Brand className="mano" onClick={() => setEstado("0")}>
               Pagos NO Aprobados
             </Navbar.Brand>
-            <Navbar.Brand className="mano" onClick={() => setEstado(true)}>
+            <Navbar.Brand className="mano" onClick={() => setEstado("1")}>
               Pagos Aprobados
             </Navbar.Brand>
           </Container>
         </Navbar>
         {loading === false ? (
           <div className="Manage">
-             <h1>Pagos aprobados</h1>
+            {estado === "0" ? (
+              <h1>Pagos NO aprobados</h1>
+            ) : (
+              <h1>Pagos aprobados</h1>
+            )}
             <Table striped bordered hover size="sm">
               <thead>
                 <tr>
@@ -66,14 +72,57 @@ function pagosNot(props) {
                   <th>Estado</th>
                   <th>Comprobante</th>
                   <th>Telefono</th>
-                  <th>F.Compra</th>
+                  {/*<th>F.Compra</th>*/}
                   <th>F.Elegida</th>
                   <th></th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                
+                {payments.map((p) =>
+                  p.estado=== estado ? (
+                    <tr>
+                      <td>{p.idPayment}</td>
+                      <td>{p.clientname}</td>
+                      <td>{p.clientlastname}</td>
+                      <td>{p.lesson}</td>
+                      {p.estado === "0" ? (
+                        <td className="false">NO APR.</td>
+                      ) : (
+                        <td className="true">APR</td>
+                      )}
+                      <td>
+                        <img
+                          alt="img"
+                          className="imagenCheckout"
+                          src={dominio+p.idPayment+"-"+p.name}
+                          onClick={voucherCheck}
+                        />
+                      </td>
+                      <td>{p.phone}</td>
+                      {/*<td>{dayjs(p.date).format('DD/MM')}</td>*/}
+                      <td>{dayjs(p.dateSelected).format('MM/DD')}</td>
+                      {p.estado === "0" ? (
+                        <td onClick={() => alta(p)}>
+                          <img
+                            alt="img"
+                            src="../assets/comprobado.png"
+                            className="imagenCheckout"
+                          />
+                        </td>
+                      ) : (
+                        <td></td>
+                      )}
+                      <td onClick={() => baja(p)}>
+                        <img
+                          alt="img"
+                          src="../assets/basura.png"
+                          className="imagenCheckout"
+                        />
+                      </td>
+                    </tr>
+                  ) : <></>)
+                }
               </tbody>
             </Table>
           </div>
@@ -93,3 +142,4 @@ function pagosNot(props) {
 }
 
 export default pagosNot;
+

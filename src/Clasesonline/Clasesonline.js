@@ -1,5 +1,4 @@
 import React from "react"
-import "./Cursos.css"
 import "./Talleres.css"
 import Layout from "../Layout";
 import Portada from "./Portada";
@@ -9,11 +8,7 @@ import Cursos from "./Cursos";
 import Talleres from "./Talleres";
 import Gift from "./Gift";
 import Reseñas from "./Reseñas"
-import {useHome} from '../context/home-context'
-import Loading from '../Loading/Loading'
-
 function Clasesonline(props) {
-    const {clases, loading} = useHome()
     const talleres=[
         {
             titulo:"Empresariales",
@@ -76,25 +71,13 @@ function Clasesonline(props) {
             link:"/Form/Asesorías_únicas"
         },
     ]
-
     return(
-
         <div>
             <Layout>
               <Portada />
               <ClasesPersonalizadas />
               <ClasesGrupales />
-              <div className="ContainerPadreCursos">
-                <div className="ContainerHijoCursos">
-                        {loading === true 
-                        ? <Loading/>
-                        : 
-                        <div className="SubContainerHijoCursos">
-                        {clases.map(data=><Cursos data={data}/>)}
-                        </div>
-                        }
-                </div>
-              </div>
+              <Cursos/>
               <div className="ConatinerPadreTalleres">
                 <div className="ContainerSubTalleres">
                     {talleres.map(talleres=><Talleres data={talleres} />)}
@@ -105,6 +88,5 @@ function Clasesonline(props) {
             </Layout>
         </div>
     )
-    
 }
 export default Clasesonline;

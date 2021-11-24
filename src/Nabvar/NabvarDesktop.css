@@ -27,8 +27,8 @@
 .ButtonInstaNabvarDesktop{
     background-color:  #a06ab4;
     border-radius: 50%;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,16 +36,16 @@
 }
 .InstaIconoNabvarDesktop{
     color: white;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
 }
 /*--------------------------------------LOGIN--------------------------------------*/
 .ButtonLoginNabvarDesktop{
     background-color:  #a06ab4;
     border: solid #a06ab4;
     border-radius: 50%;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +62,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 14px;
 }
 .NabvarLink{
     color: #a06ab4; 

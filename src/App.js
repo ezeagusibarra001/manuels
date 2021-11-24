@@ -8,14 +8,12 @@ import AdminClases from "./Admin/AdminClases"
 import AdminBlog from "./Admin/AdminBlog"
 import AdminReseñas from "./Admin/AdminReseñas"
 import AdminPagos from "./Admin/AdminPagos"
-//import Checkout from "./Checkout/Checkout";
-import CheckoutStep from './StepperCheckOut/CheckoutStep'
+import CheckIn from "./CheckIn/CheckIn";
 import Form from "./Formulario/Form";
 import { HomeProvider} from './context/home-context'
 import { ToastProvider } from "react-toast-notifications";
 import AdminCode from './Admin/AdminCode'
 function App() {
-  // eslint-disable-next-line
   return (
         <ToastProvider autoDismiss autoDismissTimeout={3000} placement="bottom-right">
           <HomeProvider>
@@ -29,7 +27,7 @@ function App() {
               <Route path="/AdminBlog" component={AdminBlog} exact />
               <Route path="/AdminReseñas" component={AdminReseñas} exact />
               <Route path="/AdminPagos" component={AdminPagos} exact />
-              <Route path="/Checkout" component={CheckoutStep} exact />
+              <Route path="/Checkout/:idLesson" component={CheckIn} exact />
               <Route path="/form/:asunto" component={Form} exact />
             </BrowserRouter>
           </HomeProvider>

@@ -10,6 +10,7 @@ function CarruselMarcas(){
     var Index = 0
     useEffect(() => {
         IndexContainer.current.children[Index].style.backgroundColor="white"
+        IndexContainer.current.children[Index].style.opacity="100%"
         // eslint-disable-next-line
     }, []);
     const foward=()=>{
@@ -30,36 +31,37 @@ function CarruselMarcas(){
             SlidesContainer.current.style.transform = `translateX(0px)`
             /*ESTAMOS REMOVINEDO EL LISTENER PARA QUE ESTE NO SE VUELVA A EJECUTAR FUERA DE CONTROL*/
             SlidesContainer.current.removeEventListener("transitionend",Transition)
+            /*LA LOGICA PARA EL INDEX DEL CARRUSEL*/
+            Index = Index +1
+            console.log("Index",Index)
+            const IndexElements = document.querySelectorAll(".Index-Bar")
+            if(Index>=0 && Index<=Large){
+                IndexElements.forEach((cadaBarra , i) => {
+                    let posicion = i
+                    IndexElements[posicion].style.backgroundColor="gray"
+                    IndexElements[posicion].style.opacity="20%"
+                    if (Index === i) {
+                        IndexElements[Index].style.backgroundColor="white"
+                        IndexElements[Index].style.opacity="100%"
+                        console.log("Posiicion",i)
+                    }
+                });
+            }else{
+                IndexElements.forEach((cadaBarra , i) => {
+                    Index = 0
+                    let posicion = i
+                    IndexElements[posicion].style.backgroundColor="gray"
+                    IndexElements[posicion].style.opacity="20%"
+                    if (Index === i) {
+                        IndexElements[Index].style.backgroundColor="white"
+                        IndexElements[Index].style.opacity="100%"
+                        console.log("Posiicion",i)
+                    }
+                });
+            }
         }
         /*EL EVENT LISTENER CUANDO FINALIZE LA TRANSITION EJECUTA LAS DEMAS ACCIONES*/
         SlidesContainer.current.addEventListener("transitionend",Transition)
-        Index = Index +1
-        console.log("Index",Index)
-        const IndexElements = document.querySelectorAll(".Index-Bar")
-        if(Index>=0 && Index<=Large){
-            IndexElements.forEach((cadaBarra , i) => {
-                let posicion = i
-                IndexElements[posicion].style.backgroundColor="gray"
-                IndexElements[posicion].style.opacity="20%"
-                if (Index === i) {
-                    IndexElements[Index].style.backgroundColor="white"
-                    IndexElements[Index].style.opacity="100%"
-                    console.log("Posiicion",i)
-                }
-            });
-        }else{
-            IndexElements.forEach((cadaBarra , i) => {
-                Index = 0
-                let posicion = i
-                IndexElements[posicion].style.backgroundColor="gray"
-                IndexElements[posicion].style.opacity="20%"
-                if (Index === i) {
-                    IndexElements[Index].style.backgroundColor="white"
-                    IndexElements[Index].style.opacity="100%"
-                    console.log("Posiicion",i)
-                }
-            });
-        }
     }
     const back   = () =>{
         /*DECLARAMOS UNA VARIABLE CON EL VALOR DEL WIDTH DE LA IMAGEN */
@@ -81,7 +83,6 @@ function CarruselMarcas(){
            SlidesContainer.current.style.transition = "500ms ease-out all"
            SlidesContainer.current.style.transform = "translateX(0px)";
        },50);
-
        Index = Index -1
         console.log("Index",Index)
         const IndexElements = document.querySelectorAll(".Index-Bar")
@@ -97,7 +98,7 @@ function CarruselMarcas(){
                 }
             });
         }else{
-            IndexElements.forEach((cadaBarra , i) => {
+            IndexElements.forEach((cadaBarra,i) =>{
                 Index = 2
                 let posicion = i
                 IndexElements[posicion].style.backgroundColor="gray"

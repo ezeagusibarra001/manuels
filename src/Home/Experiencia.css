@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 /*----------------------------------------------EXPERIENCIA----------------------------------------------*/
 .ContenedorExperienciaPadre {
     height: auto;
@@ -30,10 +31,7 @@
     align-items: flex-end;
     justify-content: center;
 }
-.ExperienciaTexto1 {
-    font-size: 5vw;
-    font-weight: 400;
-}
+.ExperienciaTexto1 {font-size: 5vw;font-weight: 400;font-family: "varela round"}
 .ContenedorExperienciaTexto2 {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -43,9 +41,7 @@
     align-items: flex-start;
     justify-content: center;
 }
-.ExperienciaTexto2 {
-    font-size: 5vw;
-}
+.ExperienciaTexto2 {font-size: 5vw;font-family: "varela round";}
 .ContenedorExperienciaTexto3 {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -55,9 +51,7 @@
     align-items: flex-end;
     justify-content: center;
 }
-.ExperienciaTexto3 {
-    font-size: 2vw;
-}
+.ExperienciaTexto3 {font-size: 2vw;font-family:"varela round"}
 .ContenedorExperienciaTexto4 {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -67,9 +61,7 @@
     align-items: flex-start;
     justify-content: center;
 }
-.ExperienciaTexto4 {
-    font-size: 2vw;
-}
+.ExperienciaTexto4 {font-size: 2vw;font-family: "varela round"}
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px) {
     .ContenedorExperienciaSubPadre {
@@ -129,23 +121,10 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .ContenedorExperienciaPadre {
-        padding: 4% 4%;
-    }
-    .ContenedorExperienciaSubPadre {
-        padding: 4% 4%;
-        gap: 0px 10px;
-    }
-    .ExperienciaTexto1 {
-        font-size: 10vw;
-    }
-    .ExperienciaTexto2 {
-        font-size: 10vw;
-    }
-    .ExperienciaTexto3 {
-        font-size: 4.5vw;
-    }
-    .ExperienciaTexto4 {
-        font-size: 4.5vw;
-    }
+    .ContenedorExperienciaPadre {padding: 4% 4%;}
+    .ContenedorExperienciaSubPadre {padding: 4% 4%;gap: 0px 10px;}
+    .ExperienciaTexto1 {font-size: 9vw;}
+    .ExperienciaTexto2 {font-size: 9vw;}
+    .ExperienciaTexto3 {font-size: 4.5vw;}
+    .ExperienciaTexto4 {font-size: 4.5vw;}
 }

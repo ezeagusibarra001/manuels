@@ -1,17 +1,14 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-
 import "../../Admin.css"
 function ModalVoucher(props) {
     const { showVoucher, setShowVoucher, currentVoucher } = props;
     const handleClose = () => {
         setShowVoucher(false)
     }
-
     return (
         <div>
-
             <Modal
                 show={showVoucher}
                 onHide={handleClose}
@@ -24,15 +21,13 @@ function ModalVoucher(props) {
                 <Modal.Body>
                 {currentVoucher === undefined
                 ?<div></div>
-                : <img alt="img" className="voucher" src={`data:${currentVoucher.type};base64,${currentVoucher.bytes}`} />}
+                : <img alt={currentVoucher.alt} className="voucher" src={currentVoucher.src} />}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={handleClose}>Cerrar</Button>
-
                 </Modal.Footer>
             </Modal>
         </div>
     )
 }
-
 export default ModalVoucher;

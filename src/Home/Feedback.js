@@ -6,20 +6,16 @@ import Loading from '../Loading/Loading'
 function Feedback(props) {
     const titulo = "EXPERIENCIAS & OPINIONES"
     const { reviews, loadingFed } = useHome()
+    console.log("CANTIDAD DE RESEÑAS:",reviews.length);
+    console.log("RESEÑAS:",reviews);
     return (
         <div className="ContainerFeedbackFondo">
             <div className="SubContainerFeedbackFondo">
                 <div className="ContainerFeedbackTitulo">
                     <h1 className="FeedbackTitulo">{titulo}</h1>
                 </div>
-                {loadingFed === false && reviews.length > 0
+                {  reviews.length > 0 
                     ?
-                    reviews[0].state === 0
-                        ?
-                        <div className="ContainerDiv">
-                            <Loading />
-                        </div>
-                        :
                         <div className="ContainerFeedbackCarrusel">
                             <Carousel className="FeedbackCarrusel">
                                 {reviews.filter((reviews) => reviews.state === 1).map(reviews =>

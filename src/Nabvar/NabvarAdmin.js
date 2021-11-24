@@ -4,14 +4,13 @@ import { Link, useHistory } from "react-router-dom"
 import { useToasts } from "react-toast-notifications";
 function NabvarAdmin(props) {
     const { addToast } = useToasts();
-    const { setLogin } = props;
     const history = useHistory()
     const admin = () => {
         history.push("/AdminClases")
     }
     const logOut = () => {
         localStorage.removeItem('jwtToken')
-        setLogin(false)
+        localStorage.removeItem("login") //ELIMINA LA VARIABLE QUE SE GUARDO EN EL STORAGE DEL NAVEGADOR
         history.push("/")
         addToast("LogOut exitoso", {
             appearance: "success",

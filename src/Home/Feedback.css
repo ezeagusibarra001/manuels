@@ -29,6 +29,7 @@
 .FeedbackTitulo{
     font-weight: 500;
     color: white;
+    font-family:"varela round";
 }
 .ContainerFeedbackCarrusel{
     padding: 0% 10%;
@@ -40,13 +41,11 @@
     box-shadow: 0 0 15px rgb(0,0,0) !important;
 }
 .ContainerFeedbackCarruselSection{
-
     height:25vw;
     width: 100%;
     padding: 0% 8%;
 }
 .ContainerCarruselReseñas{
-    
     width: 100%;
     height: 100%;
 }
@@ -54,6 +53,7 @@
     color: white;
     font-size: 2vw;
     font-weight: 400;
+    font-family:"varela round";
 }
 .FeedbackAuthor{
     color: white;

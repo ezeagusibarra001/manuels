@@ -7,41 +7,44 @@
     left: 0px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;  
 }
 .ModalContainerImg{
-    background-color: white;
-    width: 80%;
-    height: fit-content;
+    background-color: transparent;
+    width:  100%;
+    max-width: 550px;
+    min-width: 450px;
+    height: auto;
+    max-height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 .ImgBlgoModal{
-    width: 60%;
+    width: 100%;
     height: auto;
+    max-height: calc(100vh - 50px);
 }
 .CloseButtonBlog{
-    color: #a06ab4;
+    color: white;
     position: absolute;
-    font-size: 40px;
-    top: 0px;
-    right: 10px;
+    font-size: 20px;
+    top: 2.5px;
+    right: 2.5px;
+    background-color: #a06ab4;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
 }
 .CloseButtonBlog:hover{
     cursor: pointer;
 }
 /*----------------------------------------------RESPONSIVE DESING BY FRANCO----------------------------------------*/
-@media screen and (max-width: 500px){
-    .ModalContainerImg{
-        width: 95%;
-    }
-    .ImgBlgoModal{
-        width: 100%;
-        height: auto;
-    }
-    .CloseButtonBlog{
-        font-size: 25px;
-    }
+@media screen and (max-width: 600px){
+    .ModalContainerImg{max-width: 350px;min-width: 200px;}
+}
+@media screen and (max-width: 350px){
+    .ModalContainerImg{max-width: 250px;min-width: 200px;}
 }

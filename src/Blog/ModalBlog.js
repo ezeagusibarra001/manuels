@@ -1,10 +1,12 @@
 import React,{useRef} from "react"
 import "./ModalBlog.css"
+
 function ModalBlog(props) {
-const publicacion = props.publicacion
+const imgBlog=props.imgBlog
 const setModalBlog = props.setModalBlog
 const ModalContainerImg = useRef(null)
 const ModalContainer = useRef(null)
+
 const CloseModal =()=>{
     ModalContainer.current.style.transition="400ms ease-out all"
     ModalContainer.current.style.opacity="0%"
@@ -20,7 +22,7 @@ const CloseModal =()=>{
                 <img
                     className="ImgBlgoModal"
                     alt="Img"
-                    src={publicacion}
+                    src={imgBlog.src}
                 />
                 <span className="CloseButtonBlog" onClick={CloseModal}>X</span>
             </div>

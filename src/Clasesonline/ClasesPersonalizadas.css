@@ -2,59 +2,47 @@
 .ContainerPadreClasesPersonalizadas{
     width: 100%;
     height: auto;
-
     padding: 5% 6%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #d4a9e4;
+    background-color: hsl(284, 52%, 78%);
+    font-family:"varela round";
 }
 /*-----------------------------------------CONTAINER SUB-PADRE-----------------------------------------*/
 .ContainerSubPadreClasesPersonalizadas{
     width: 100%;
     height: auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
     background-color: white;
-
     box-shadow: 0 0 25px rgb(0,0,0) !important;
 }
 /*-----------------------------------------CONTAINER HIJO1-----------------------------------------*/
 .ContainerHijo1{
     height: 100%;
     width: 100%;
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-
     padding: 5% 10%;
 }
-.ContainerHijo1>div{
-    color: #a06ab4;
-}
+.ContainerHijo1>div{color: #a06ab4;}
 /*-----------------------------------------TITULOS-----------------------------------------*/
 .ContainerTituloPersonalizadas{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: center;
 }
 .TituloPersonalizadas{
-    font-family: "dukecharming regular";
-    font-weight: 800;
+    font-weight: 500;
     font-size: 3vw;
 }
 .SubTituloPersonalizadas{
@@ -67,11 +55,9 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .TextoPersonalizadas1{
@@ -79,12 +65,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left;
-
     width: 100%;
     height: auto;
-
     font-weight: 600;
     font-size: 1.2vw;
 }
@@ -93,10 +76,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -105,21 +86,17 @@
     width: 100%;
     height: auto;
 }
-
 /*-----------------------------------------ITEM2-----------------------------------------*/
 .ContainerItem2Personalizadas{
     width: 100%;
     height: auto;
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .TextoPersonalizadas2{
@@ -127,12 +104,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left;
-
-     width: 100%;
+    width: 100%;
     height: auto;
-
     font-weight: 600;
     font-size: 1.2vw;
 }
@@ -141,10 +115,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -157,36 +129,27 @@
 .ContainerHijo2{
     height: 100%;
     width: 100%;
-
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-
     padding: 5% 10%;
-
 }
-.ContainerHijo2>div{
-    color: #a06ab4;
-}
+.ContainerHijo2>div{color: #a06ab4;}
 /*-----------------------------------------ITEM3-----------------------------------------*/
 .ContainerItem3Personalizadas{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto ;
-
     height: auto;
     width: 100%;
-
     gap:2%;
 }
 .TextoPersonalizadas3{
@@ -194,12 +157,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left;
-
     width: 100%;
     height: auto;
-
     font-weight: 600;
     font-size: 1.2vw;
 }
@@ -208,10 +168,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -226,14 +184,11 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto ;
-
     height: auto;
     width: 100%;
-
     gap:2%;
 }
 .TextoPersonalizadas4{
@@ -241,12 +196,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left;
-
     width: 100%;
     height: auto;
-
     font-weight: 600;
     font-size: 1.2vw;
 }
@@ -255,10 +207,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -273,14 +223,11 @@
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto ;
-
     height: auto;
     width: 100%;
-
     gap:2%;
 }
 .TextoPersonalizadas5{
@@ -288,12 +235,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left;
-
     width: 100%;
     height: auto;
-
     font-weight: 600;
     font-size: 1.2vw;
 }
@@ -302,10 +246,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -321,10 +263,8 @@
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-
     height: auto;
     width: 100%;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -335,7 +275,6 @@
     border: solid transparent 1px;
     border-radius: 10px;
     padding: 1% 6%;
-
     font-size: 1.2vw;
 }
 .ButtonPersonalizadas:hover{
@@ -345,83 +284,59 @@
     border-radius: 10px;
     padding: 1% 6%;
 }
-
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px){
     .ContainerSubPadreClasesPersonalizadas{
-      
         display: grid;
         grid-template-columns: auto ;
         grid-template-rows: auto auto;
-
         gap: 0%;
-
         padding: 5% 5%;
-    
     }
-
     .ContainerHijo1{
-       
-         grid-column-start: 1;
+        grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-
         padding: 2% 10%;
-
         gap:0px;
-
     }
     .ContainerHijo2{
-       
-        grid-column-start: 1;
+       grid-column-start: 1;
        grid-column-end: 2;
        grid-row-start: 2;
        grid-row-end: 3;
-
        padding: 2% 10%;
-
        gap:0px;
-
    }
 .ContainerItem1Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem2Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem3Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem4Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem5Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .TituloPersonalizadas{
@@ -469,79 +384,56 @@
 }
 @media screen and (max-width: 800px){
     .ContainerSubPadreClasesPersonalizadas{
-      
         display: grid;
         grid-template-columns: auto ;
         grid-template-rows: auto auto;
-
         gap: 0%;
-
         padding: 5% 5%;
-    
     }
-
     .ContainerHijo1{
-       
-         grid-column-start: 1;
+        grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-
         padding: 2% 10%;
-
         gap:0px;
-
     }
     .ContainerHijo2{
-       
-        grid-column-start: 1;
+       grid-column-start: 1;
        grid-column-end: 2;
        grid-row-start: 2;
        grid-row-end: 3;
-
        padding: 2% 10%;
-
        gap:0px;
-
    }
 .ContainerItem1Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem2Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem3Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem4Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .ContainerItem5Personalizadas{
-  
     display: grid;
     grid-template-columns: 0.08fr 1fr;
     grid-template-rows: auto ;
-
     gap:2%;
 }
 .TituloPersonalizadas{
@@ -591,7 +483,6 @@
 }
 
 @media screen and (max-width: 500px){
-
 .TituloPersonalizadas{
     font-size: 6.5vw;
 }

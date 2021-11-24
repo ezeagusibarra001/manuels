@@ -7,5 +7,3 @@ const clienteLogin = axios.create({
 });
 
 export default clienteLogin;
-
-

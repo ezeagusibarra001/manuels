@@ -2,41 +2,32 @@
 .ContainerClasesGrupales{
     width: 100%;
     height: auto;
-
     padding: 5% 6%;
-
     background-color: #d4a9e4;
+    font-family:"varela round";
 }
 /*-----------------------------------------SUB-CONTAINER-----------------------------------------*/
 .SubContainerClasesGrupales{
     height: 100%;
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
     background-color: white;
-
     box-shadow: 0 0 25px rgb(0,0,0) !important;
 }
 /*-----------------------------------------CONTAINER HIJO1-----------------------------------------*/
 .ContainerHijo1ClasesGrupales{
-
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     height: auto;
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto auto auto;
-
     padding: 5% 10%;
-
     gap: 0.5%;
 }
 /*-----------------------------------------TITULO-----------------------------------------*/
@@ -45,12 +36,10 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     text-align: left ;
 }
 .TituloClasesGrupales{
-    font-family: "dukecharming regular";
-    font-weight: 800;
+    font-weight: 500;
     color: #a06ab4;
     font-size: 3vw;
 }
@@ -65,11 +54,9 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales1{
@@ -77,10 +64,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -94,10 +79,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -112,11 +95,9 @@
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales2{
@@ -124,10 +105,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -141,10 +120,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -159,11 +136,9 @@
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales3{
@@ -171,10 +146,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -188,10 +161,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -206,11 +177,9 @@
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales4{
@@ -218,10 +187,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -235,10 +202,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -253,11 +218,9 @@
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales5{
@@ -265,10 +228,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -282,10 +243,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -300,11 +259,9 @@
     grid-column-end: 2;
     grid-row-start: 7;
     grid-row-end: 8;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales6{
@@ -312,10 +269,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -329,10 +284,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -347,11 +300,9 @@
     grid-column-end: 2;
     grid-row-start: 8;
     grid-row-end: 9;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales7{
@@ -359,10 +310,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -377,10 +326,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: center;
@@ -395,12 +342,9 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     height: auto;
     width: 100%;
-    
     padding: 5% 10%;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -411,11 +355,9 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales8{
@@ -423,10 +365,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -440,10 +380,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -459,11 +397,9 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales9{
@@ -471,10 +407,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -488,10 +422,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -507,11 +439,9 @@
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales10{
@@ -519,10 +449,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -536,10 +464,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -555,11 +481,9 @@
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-
     display: grid;
     grid-template-columns: 0.10fr 1fr;
     grid-template-rows: auto;
-
     gap: 4%;
 }
 .ContainerIconoGrupales11{
@@ -567,10 +491,8 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -584,10 +506,8 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
     width: 100%;
     height: auto;
-
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -599,15 +519,12 @@
 }
 /*-----------------------------------------BUTTONS-----------------------------------------*/
 .ContainerButtonGrupales{
-    
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
-
     height: auto;
     width: 100%;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -628,6 +545,10 @@
     font-size: 1.2vw;
     padding: 1% 6%;
 }
+.TextoGrupales{
+    font-family: "varela round";
+    font-weight: 600;
+}
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px){
     .SubContainerClasesGrupales{
@@ -640,11 +561,9 @@
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2; 
-
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
-
         padding: 2% 5%;
     }
     .ContainerHijo2ClasesGrupales{
@@ -652,35 +571,19 @@
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3; 
-
         gap: 10px;
     }
-    .ContainerItem1Grupales{
-       display: none;
-    }
-    .ContainerItem2Grupales{
-        display: none;
-    }
-    .ContainerItem3Grupales{
-        display: none;
-    }
-    .ContainerItem4Grupales{
-        display: none;
-    }
-    .ContainerItem5Grupales{
-        display: none;
-    }
-    .ContainerItem6Grupales{
-        display: none;
-    }
-    .ContainerItem7Grupales{
-        display: none;
-    }
+    .ContainerItem1Grupales{display: none;}
+    .ContainerItem2Grupales{display: none;}
+    .ContainerItem3Grupales{display: none;}
+    .ContainerItem4Grupales{display: none;}
+    .ContainerItem5Grupales{display: none;}
+    .ContainerItem6Grupales{display: none;}
+    .ContainerItem7Grupales{display: none;}
     .ContainerTitulosClasesGrupales{
        text-align: center;
     }
     .TituloClasesGrupales{
-        font-family: "dukecharming regular";
         font-weight: 800;
         color: #a06ab4;
         text-align: left;
@@ -690,22 +593,26 @@
         display: none;
     }
     .ContainerTextoItem8Grupales>p{
-        font-weight: 500;
+        font-family: "varela round";
+        font-weight: 600;
         color: #a06ab4;
         font-size: 3vw;
     }
     .ContainerTextoItem9Grupales>p{
-        font-weight: 500;
+        font-family: "varela round";
+        font-weight: 600;
         color: #a06ab4;
         font-size: 3vw;
     }
     .ContainerTextoItem10Grupales>p{
-        font-weight: 500;
+        font-family: "varela round";
+        font-weight: 600;
         color: #a06ab4;
         font-size: 3vw;
     }
     .ContainerTextoItem11Grupales>p{
-        font-weight: 500;
+        font-family: "varela round";
+        font-weight: 600;
         color: #a06ab4;
         font-size: 3vw;
     }
@@ -725,5 +632,9 @@
         padding: 1% 6%;
         font-size: 3.5vw;
     }
+    /*.TextoGrupales{
+        font-family: "varela round";
+        font-weight: 600;
+    }*/
 }
 

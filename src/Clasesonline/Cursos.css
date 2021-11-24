@@ -1,14 +1,16 @@
 .ContainerPadreCursos{
-
     height: auto;
     width: 100%;
+    background-color:#d4a9e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    background-color: #d4a9e4;
 }
 .ContainerHijoCursos{
     width: 100%;
     height: auto;
-
     display: grid;
     grid-template-columns: auto ;
     grid-template-rows: auto ;
@@ -16,50 +18,34 @@
 .SubContainerHijoCursos{
     width: 100%;
     height: auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: auto ;
-
     padding: 8% 6%;
-
     gap: 40px;
 }
 .ContainerItemsCursos{
     width: 100%;
     height: auto;
-    
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto auto auto;
-
-    box-shadow: 0 0 25px rgb(0,0,0) !important;
-
-    border: white;
+    box-shadow: 0 0 25px rgb(0,0,0);
     border-radius: 30px;
     gap: 0px;
 }
-/*
-.ContainerItemsCursos>div{
-    border: solid black;
-} */
 .ContainerCursosTitulos{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #ffd743;
-
     width: 100%;
-    height: auto;
-    
+    height: 70px;
     padding: 1% 2%;
-
     border-radius: 30px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -67,7 +53,6 @@
 .CursosTitulos{
     font-family: "dukecharming regular";
     font-weight: 600;
-    font-size: 3.5vw;
     color: white;
 }
 .ContainerCursosTextos1{
@@ -75,12 +60,9 @@
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-
     width: 100%;
-    height: auto;
-
+    height: 125px;
     padding: 1% 2%;
-
     background-color: white ;
 }
 .CursosTextos1{
@@ -92,46 +74,33 @@
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-
     width: 100%;
     height: auto;
-
     padding: 1% 2%;
-
     background-color: white ;
 }
-.CursosSubTitulos{
-    color: #a06ab4;
-    font-size: 2vw;
-}
+.CursosSubTitulos{color: #a06ab4;}
 .ContainerCursosTextos2{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-
     width: 100%;
-    height: auto;
-
+    height: 70px;
     padding: 1% 2%;
-
     background-color: white ;
 }
-.CursosTextos2{
-    color: #a06ab4;
-    font-size: 1.5vw;
-}
+.CursosTextos2{color: #a06ab4;}
 .ContainerIconosCursos{
     width: 100%;
-    height: auto;
+    height: 90px;
     display: grid;
     grid-template-columns: 0.25fr 1fr 0.25fr 1fr 0.25fr 1fr;
     grid-template-rows: auto;
-
+    justify-content: center;
+    align-items: flex-start;
     gap:2%;
-
     padding: 1% 2%;
-
     background-color: white ;
 }
 .ContainerCursosTextitos{
@@ -159,32 +128,25 @@
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
-
     width: 100%;
-    height: auto;
-
+    height: 50px;
     background-color: white ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.CursosTextos3{
-    color: #ffd743;
-    text-align: center;
-    font-size: 2vw;
-}
+.CursosTextos3{color:#ffd743;font-size: 20px;}
 .ContainerCursostexto4{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 7;
     grid-row-end: 8;
-
     width: 100%;
-    height: auto;
-
+    height: 50px;;
     background-color: #a06ab4;
-
     border-radius: 30px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-
     padding: 1% 2%;
 }
 .ContainerCursostexto5{
@@ -192,33 +154,25 @@
     grid-column-end: 2;
     grid-row-start: 7;
     grid-row-end: 8;
-
     width: 100%;
     height: auto;
-
     background-color: rgb(167, 167, 167);
-
     border-radius: 30px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-
     padding: 1% 2%;
 }
 .CursosTextos4{
     color: white;
     text-align: center;
-    
     width: 100%;
-    height: auto;
 }
 .ButtonTextos4{
     background-color: transparent;
     border: none;
     color: white;
     text-align: center;
-    font-size: 2vw;
     width: 100%;
-    height: auto;
 }
 .ButtonTextos5{
     background-color: transparent;
@@ -240,83 +194,38 @@
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px){
     .ContainerHijoCursos{
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: auto ;
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
     }
-    .SubContainerHijoCursos{
-        width: 100%;
-        height: auto;
-    
-        display: grid;
-        grid-template-columns: 1fr;
+    .SubContainerHijoCursos{ 
+        grid-template-columns: auto;
         grid-template-rows: auto;
-    
-        padding: 8% 10%;
-        
-        gap: 25px;
+        justify-content: center;
+        align-items: center;
     }
-    .CursosTitulos{
-        font-size: 6.5vw;
-    }
-    .CursosTextos1{
-        font-size: 3.5vw;
-    }
-    .CursosSubTitulos{
-        font-size: 4vw;
-    }
-    .CursosTextos2{
-        font-size: 3vw;
-    }
-    .CursosTextitos{
-        font-size: 1.6vw;
-    }
-    .CursosTextos3{
-        font-size: 3.5vw;
-    }
-    .ButtonTextos4{
-        font-size: 5vw;
-    }
-    .ButtonTextos5{
-        font-size: 5vw;
-    }
+    .ContainerItemsCursos{max-width:450px;}
+    .ContainerCursosTextos1{height: auto;min-height:50px;}
+    .CursosTextos1{font-size:15px;}
+    .ContainerCursosTextos2{height: auto;min-height:50px;}
+    .CursosTextos2{font-size:15px;}
+    .ContainerCursosTextos3{height: auto;min-height:50px;}
+    .CursosTextos3{font-size:18px;}
+    .ContainerIconosCursos{height: auto;min-height: 50px;align-items: flex-start;}
+    .CursosTextitos{font-size: 8px;}
 }
-
 @media screen and (max-width: 450px){
-    .SubContainerHijoCursos{
-        width: 100%;
-        height: auto;
-    
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    
-        padding: 8% 10%;
-    }
-    .CursosTitulos{
-        font-size: 7.5vw;
-    }
-    .CursosTextos1{
-        font-size: 3.5vw;
-    }
-    .CursosSubTitulos{
-        font-size: 4vw;
-    }
-    .CursosTextos2{
-        font-size: 3.5vw;
-    }
-    .CursosTextitos{
-        font-size: 2vw;
-    }
-    .CursosTextos3{
-        font-size: 3.5vw;
-    }
-    .ButtonTextos4{
-        font-size: 5vw;
-    }
-    .ButtonTextos5{
-        font-size: 5vw;
-    }
+    .ContainerItemsCursos{max-width:350px;}
+    .CursosTitulos{font-size:25px;}
+    .CursosSubTitulos{font-size: 20px;}
+    .ContainerCursosTextos1{height: auto;min-height:40px;}
+    .CursosTextos1{font-size:14px;}
+    .ContainerCursosTextos2{height: auto;min-height:40px;}
+    .CursosTextos2{font-size:14px;}
+    .ContainerCursosTextos3{height: auto;min-height:40px;}
+    .CursosTextos3{font-size:14px;}
+    .ContainerIconosCursos{height: auto;min-height: 40px;}
+    .CursosTextitos{font-size: 6px;}
+    .ButtonTextos4{font-size: 20px;}
 }
 
 
