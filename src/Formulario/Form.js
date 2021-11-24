@@ -61,7 +61,7 @@ function Form(props) {
           </div>
         </div>
         <div className="ContainerFormularioConsulta">
-          <div className="FormularioConsulta">
+          <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec" className="FormularioConsulta">
             <label className="LabelFormulario">NOMBRE</label>
             <input
               onChange={handleConsulta}
@@ -88,10 +88,10 @@ function Form(props) {
               className="textareaFormulario"
               name="message"
             />
-            <button className="ButtonFormularioConsulta" onClick={handleEnviar}>
+            <button className="ButtonFormularioConsulta" onClick="submit">
               Enviar
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </Layout>

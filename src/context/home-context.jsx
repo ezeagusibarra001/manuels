@@ -2,6 +2,13 @@ import React,{useState,useEffect} from "react";
 import clienteAxios from '../config/clienteAxios'
 const HomeContext = React.createContext();
 export function HomeProvider(props) {
+    //HELP DE MAIL
+    /*useEffect(() => {
+        console.log("help mail")
+        if(window.location.href === "https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec"){
+            window.location.href = "http://localhost:3000"
+        }
+    },300)*/
      // WEB_READY
      const [web_ready,setWeb_ready] = useState(false)
     setTimeout(() => {
