@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../Layout";
 import "./Form.css";
-import clienteAxios from "../config/clienteAxios";
+import axios from "axios";
 import { useToasts } from "react-toast-notifications";
 import { useHistory } from "react-router-dom";
 function Form(props) {
@@ -18,25 +18,24 @@ function Form(props) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleEnviar = async () => {
-    await clienteAxios
-      .post("/reviews/querys", form)
-      .then((res) => {
-        console.log(res.data);
-        addToast("¡Gracias por tu consulta!", {
-          appearance: "success",
-          autoDismiss: true,
-        });
-        setTimeout(() => {
-          history.push("/");
-        }, 2000);
+  const handleEnviarMail =  async() => {
+    var formdata = new FormData();
+    formdata.set('name', form.name)
+    formdata.set('email', form.email)
+    formdata.set('subject', form.subject)
+    formdata.set('message', form.message)
+  
+    await axios
+      .post("https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec", formdata)
+      .then(() => {
+        console.log("");
       })
       .catch((err) => {
         console.log("error post", err);
-        addToast("Algo ha salido mal :(", {
-          appearance: "error",
+        addToast("¡Mail enviado!", {
+          appearance: "success",
           autoDismiss: true,
-        });
+      });
       });
   };
   /*----------------------------------------------------------------------------------------------------------*/
@@ -61,7 +60,7 @@ function Form(props) {
           </div>
         </div>
         <div className="ContainerFormularioConsulta">
-          <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec" className="FormularioConsulta">
+          <div /*class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec"*/ className="FormularioConsulta">
             <label className="LabelFormulario">NOMBRE</label>
             <input
               onChange={handleConsulta}
@@ -87,11 +86,12 @@ function Form(props) {
               onChange={handleConsulta}
               className="textareaFormulario"
               name="message"
+              value={form.message}
             />
-            <button className="ButtonFormularioConsulta" onClick="submit">
+            <button className="ButtonFormularioConsulta" onClick={handleEnviarMail} /*onClick="submit"*/>
               Enviar
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </Layout>
