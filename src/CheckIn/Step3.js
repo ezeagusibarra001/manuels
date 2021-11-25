@@ -30,12 +30,8 @@ function Step3(props) {
     formdataPayments.set("clientlastname", CheckForm.lastname);
     formdataPayments.set("email", CheckForm.mail);
     formdataPayments.set("lesson", currentClase[0].title);
-    formdataPayments.set(
-      "dateSelected",
-      dayjs(currentClase[0].date).format("DD/MM/YY")
-    );
+    formdataPayments.set("dateSelected",dayjs(currentClase[0].date).format("DD/MM/YY"));
     formdataPayments.set("phone", CheckForm.phone);
-
     await axios
       .post(
         "https://script.google.com/macros/s/AKfycbygzZi7uaAUEFC7HxxEiO9S7ZXeX7oKfgGvqS0S/exec",
@@ -49,6 +45,8 @@ function Step3(props) {
       });
   };
   const HandleSubmit = async () => {
+    var btnLc=document.querySelector(".ButtonConfirm")
+    btnLc.classList.add("LoadingCheck")
     let image = file.file;
     let formdata = new FormData();
     formdata.set("image", image);
@@ -57,12 +55,8 @@ function Step3(props) {
     formdata.set("email", CheckForm.mail);
     formdata.set("lesson", currentClase[0].title); //TRAE UN ARRAY DE UN SOLO OBJETO
     //formdata.set("price", currentClase[0].price);     //TRAE UN ARRAY DE UN SOLO OBJETO
-    formdata.set(
-      "dateSelected",
-      dayjs(currentClase[0].date).format("DD/MM/YY")
-    );
+    formdata.set("dateSelected",dayjs(currentClase[0].date).format("DD/MM/YY"));
     formdata.set("phone", CheckForm.phone);
-    console.log("INSCRIPCIÓN DATA:", formdata);
     if (image !== null) {
       await clienteAxios
         .post("/payments", formdata)
@@ -74,6 +68,7 @@ function Step3(props) {
             appearance: "success",
             autoDismiss: true,
           });
+          btnLc.classList.remove("LoadingCheck")
           obtenerClases();
           let bar3 = document.querySelector(".Bar3");
           bar3.style.transition = "1s ease-in-out";
@@ -87,6 +82,7 @@ function Step3(props) {
           });
         })
         .catch((err) => {
+          btnLc.classList.remove("LoadingCheck")
           console.log("error post", err);
           addToast("Oh! Algo no salio como lo esperabamos.", {
             appearance: "error",
@@ -97,6 +93,7 @@ function Step3(props) {
           }, 2000);
         });
     } else {
+      btnLc.classList.remove("LoadingCheck")
       addToast("Debes adjuntar el comprobante de pago", {
         appearance: "warning",
         autoDismiss: true,
