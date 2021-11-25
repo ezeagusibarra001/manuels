@@ -11,3 +11,4 @@ RewriteBase /
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ http://www.manuels.com.ar/$1 [R=301,L]
 
+

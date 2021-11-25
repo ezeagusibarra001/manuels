@@ -1,56 +1,63 @@
-.SideBar{
-    width: 25%;
-    float: left;
+.SideBar {
+  width: 25%;
+  float: left;
 }
-.Manage{
-    width: 75%;
-    float: right;
+.Manage {
+  width: 75%;
+  float: right;
 }
-.BigDiv{
-    height: 52vh;
+.BigDiv {
+  height: 52vh;
 }
-.modal-dialog{
-   max-width: 75% !important;
+.modal-dialog {
+  max-width: 75% !important;
 }
-.imagenCheckout{
-    width: 40px;
-    height: auto;
-    cursor: pointer;
-    border: solid transparent 1px;
+.imagenCheckout {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  border: solid transparent 1px;
 }
-.voucher{
-    width: 400px;
+.voucher {
+  width: 400px;
 }
-.true{
-    color: green;
-    font-weight: bold;
+.true {
+  color: green;
+  font-weight: bold;
 }
-.false{
-    color: red;
-    font-weight: bold;
+.false {
+  color: red;
+  font-weight: bold;
 }
-.mano{
-    color: black !important;
-    cursor: pointer;
-    -webkit-user-select: none;/* Chrome  y Safari */ 
-    -moz-user-select: none;/* Firefox */
-    -ms-user-select: none;/* IE 10+ */ 
-    user-select: none;
+.mano {
+  background: purple;
+  border-radius: 20px;
+  padding: 10px !important;
+  color: white !important;
+  cursor: pointer;
+  -webkit-user-select: none; /* Chrome  y Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.mano-active{
+    background: whitesmoke;
+    color: purple;
 }
 /*---------------------------------------MODAL CLASES CREAR------------------------------------------------------*/
-div>textarea{
-    width: 100%;  
+div > textarea {
+  width: 100%;
 }
-.CCinputTitle{
-    height: auto;
+.CCinputTitle {
+  height: auto;
 }
-.CCinputDescription{
-    height: 125px;
+.CCinputDescription {
+  height: 125px;
 }
-.CCinputForwho{
-    height: 125px; 
+.CCinputForwho {
+  height: 125px;
 }
-.CCinputDuration{
-    height: auto;
-    height: 80px;
+.CCinputDuration {
+  height: auto;
+  height: 80px;
 }
