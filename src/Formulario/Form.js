@@ -27,15 +27,15 @@ function Form(props) {
   
     await axios
       .post("https://script.google.com/macros/s/AKfycbxcxQLxjtmKz3jQEZ-zeqrXxYMdcbSzoH5yaiHgvQ/exec", formdata)
-      .then(() => {
-        console.log("");
-      })
-      .catch((err) => {
-        console.log("error post", err);
+      .then((res) => {
+        console.log(res.data);
         addToast("¡Mail enviado!", {
           appearance: "success",
           autoDismiss: true,
       });
+      })
+      .catch((err) => {
+        console.log("error post", err);
       });
   };
   /*----------------------------------------------------------------------------------------------------------*/
