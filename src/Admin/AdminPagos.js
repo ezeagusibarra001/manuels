@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react"
 import "./Admin.css"
 import { useHome } from '../context/home-context'
 import clienteAxios from '../config/clienteAxios'
-import { useHistory } from "react-router-dom"
 import { useToasts } from "react-toast-notifications";
 import Pagos from "./Modals/AdminPagos/pagosNot";
 import Layout from '../Layout'
 function AdminPagos() {
     const { addToast } = useToasts();
-    const history = useHistory()
     const { dominio, imagenes} = useHome()
     /*console.log("payments", payments)*/
     const [showVoucher, setShowVoucher] = useState(false)

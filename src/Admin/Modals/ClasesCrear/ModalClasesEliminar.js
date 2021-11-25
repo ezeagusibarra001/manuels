@@ -40,7 +40,7 @@ function ModalClasesEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {
+                        {// eslint-disable-next-line 
                             clases.length==0
                             ?
                             <>

@@ -5,7 +5,7 @@ import { useHome } from '../context/home-context'
 import Loading from '../Loading/Loading'
 function Feedback(props) {
     const titulo = "EXPERIENCIAS & OPINIONES"
-    const { reviews, loadingFed } = useHome()
+    const { reviews } = useHome()
     console.log("CANTIDAD DE RESEÑAS:",reviews.length);
     console.log("RESEÑAS:",reviews);
     return (

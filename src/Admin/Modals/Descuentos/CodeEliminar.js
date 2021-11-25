@@ -41,7 +41,7 @@ function CodeEliminar(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <ul aria-label="Default select example">
-                        {
+                        {// eslint-disable-next-line 
                             code.length==0
                             ?
                             <h5>No hay códigos creados</h5>

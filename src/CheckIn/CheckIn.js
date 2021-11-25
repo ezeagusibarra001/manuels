@@ -40,6 +40,7 @@ function CheckIn(props){
             console.log("STEP1 FORM FILLED:",step1FormFilled)
             const emailValidation=()=>{
                 let emailInput=document.querySelectorAll(".CheckInInput")[3]
+                // eslint-disable-next-line 
                 let RegExpEmail=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
                 let email=emailInput.value
                 console.log(emailInput)

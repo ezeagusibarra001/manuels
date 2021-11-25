@@ -49,7 +49,8 @@ function Controllerreseñas(props) {
         <div>
             <Modal show={showVerReseñas} onHide={handleCloseVerReseñas}>
                 <Modal.Header closeButton />
-                {reviews.every(review=>review.state==1) //CUANDO TODOS LOS ELEMNTOS DEL ARRAY CUMPLEN LA CONDICCIÓN DEVUELVE UN TRUE/FALSE
+
+                {reviews.every(review=>review.state===1) //CUANDO TODOS LOS ELEMNTOS DEL ARRAY CUMPLEN LA CONDICCIÓN DEVUELVE UN TRUE/FALSE
                 ?
                 <>
                     <Modal.Body>

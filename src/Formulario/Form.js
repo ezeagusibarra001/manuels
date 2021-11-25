@@ -3,9 +3,7 @@ import Layout from "../Layout";
 import "./Form.css";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
-import { useHistory } from "react-router-dom";
 function Form(props) {
-  const history = useHistory();
   const { addToast } = useToasts();
   const asunto = props.match.params.asunto; //TOMO EL VALOR DE LA URL
   const [form, setForm] = useState({

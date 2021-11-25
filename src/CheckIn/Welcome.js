@@ -10,7 +10,7 @@ function Welcome(props){
             </div>
             <div className="ItemsW">
                 <img alt="img" src="../assets/iconoc9.webp" className="WelcomeIconos"/>
-                <p className="pW">Para mas información<a className="aW" href="https://www.instagram.com/manuels.locucion/?hl=es-la" target="_blank"> ¡contactame!</a></p>
+                <p className="pW">Para mas información<a className="aW" href="https://www.instagram.com/manuels.locucion/?hl=es-la" target="_blank" rel="noreferrer"> ¡contactame!</a></p>
             </div>
             <div className="ItemsW">
                 <img alt="img" src="../assets/iconoc9.webp" className="WelcomeIconos"/>

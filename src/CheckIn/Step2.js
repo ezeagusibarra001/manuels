@@ -5,7 +5,6 @@ import clienteAxios from '../config/clienteAxios'
 function Step2(props) {
   const { addToast } = useToasts();
   const currentClase = props.currentClase;
-  const setCurrentClase = props.setCurrentClase;
   const [DescAplicado, setDescAplicado]=useState(false);
   const [payPrice,setPayPrice]=useState(currentClase[0].price);
   /*----------------------MERCADO PAGO----------------------*/
