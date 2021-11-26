@@ -20,14 +20,7 @@ function LoadingC(){
             <div className="LoadingCard">
                 <div className="SkeletonTitle"></div>
                 <div className="SkeletonContainer">
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
-                    <span className="Skeleton"></span>
+                    
                 </div>
                 <div className="ButtonLoadingC">Quiero Inscribirme</div>
             </div>

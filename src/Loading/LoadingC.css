@@ -22,12 +22,19 @@
     height: auto;
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
-    padding-right: 10px;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+}
+.SkeletonContainer::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    border: solid rgba(0, 0, 0, 0.2) 2px;
+    border-left: solid #a06ab4 2px ;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+    position: absolute;
 }
 .SkeletonTitle{
     color: white;
@@ -41,48 +48,11 @@
     padding-right:5px;
     padding-left: 5px;
 }
-.Skeleton{
-    background-color: rgb(173, 131, 173);
-    animation: skeleton 1s linear infinite alternate-reverse;
-}
-.Skeleton:nth-child(1){
-    height: 50px;
-    width: 100%;
-}
-.Skeleton:nth-child(2){
-    height: 30px;
-    width: 100%;
-    max-width: 300px;
-}
-.Skeleton:nth-child(3){
-    height: 30px;
-    width: 100%;
-    max-width: 300px;
-}
-.Skeleton:nth-child(4){
-    height: 10px;
-    width: 100%;
-}
-.Skeleton:nth-child(5){
-    height: 20px;
-    width: 100%;
-}
-.Skeleton:nth-child(6){
-    height: 25px;
-    width: 100%;
-    max-width: 150px;
-}
-.Skeleton:nth-child(7){
-    height: 5px;
-    width: 100%;
-}
-.Skeleton:nth-child(8){
-    height: 5px;
-    width: 100%;
-}
-@keyframes skeleton {
-    from{opacity: 100%;}
-    to{opacity: 60%;}
+
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 .ButtonLoadingC{
     background-color: #a06ab4;
@@ -96,13 +66,4 @@
 .ButtonLoadingC:hover{color:#ffd743;cursor: pointer;}
 /*----------------------------@MEDIA SCREEN (RESPONSIVE DESING by Franco)----------------------------*/
 @media screen and (max-width: 800px){.LoadingC{flex-direction: column;gap:20px;padding-top: 20px;}}
-@media screen and (max-width: 400px){.LoadingCard{height:300px; max-width:250px;}
-.Skeleton:nth-child(1){height: 30px;}
-.Skeleton:nth-child(2){height: 20px;}
-.Skeleton:nth-child(3){height: 20px;}
-.Skeleton:nth-child(4){height: 5px;}
-.Skeleton:nth-child(5){height: 10px;}
-.Skeleton:nth-child(6){height: 15px;}
-.Skeleton:nth-child(7){height: 5px;}
-.Skeleton:nth-child(8){height: 5px;}
-}
+@media screen and (max-width: 500px){.LoadingCard{height:300px; max-width:250px;}}

@@ -44,9 +44,12 @@ function Step3(props) {
         console.log("error post mail", err);
       });
   };
-  const HandleSubmit = async () => {
-    var btnLc=document.querySelector(".ButtonConfirm")
+  const HandleSubmit = async (e) => {
+    /*----LOGICA PARA EL LOADING DEL BUTTON----*/
+    var btnLc=document.getElementById("ButtonConfirm")
     btnLc.classList.add("LoadingCheck")
+    btnLc.classList.add("Desabled")
+    /*-----------------------------------------*/
     let image = file.file;
     let formdata = new FormData();
     formdata.set("image", image);
@@ -57,7 +60,7 @@ function Step3(props) {
     //formdata.set("price", currentClase[0].price);     //TRAE UN ARRAY DE UN SOLO OBJETO
     formdata.set("dateSelected",dayjs(currentClase[0].date).format("DD/MM/YY"));
     formdata.set("phone", CheckForm.phone);
-    if (image !== null) {
+    if (image!==null) {
       await clienteAxios
         .post("/payments", formdata)
         .then(async () => {
@@ -69,6 +72,7 @@ function Step3(props) {
             autoDismiss: true,
           });
           btnLc.classList.remove("LoadingCheck")
+          btnLc.classList.remove("Desabled")
           obtenerClases();
           let bar3 = document.querySelector(".Bar3");
           bar3.style.transition = "1s ease-in-out";
@@ -83,6 +87,7 @@ function Step3(props) {
         })
         .catch((err) => {
           btnLc.classList.remove("LoadingCheck")
+          btnLc.classList.remove("Desabled")
           console.log("error post", err);
           addToast("Oh! Algo no salio como lo esperabamos.", {
             appearance: "error",
@@ -94,6 +99,7 @@ function Step3(props) {
         });
     } else {
       btnLc.classList.remove("LoadingCheck")
+      btnLc.classList.add("Desabled")
       addToast("Debes adjuntar el comprobante de pago", {
         appearance: "warning",
         autoDismiss: true,
@@ -178,7 +184,7 @@ function Step3(props) {
         name="file"
         onChange={(e) => handleFile(e)}
       />
-      <button className="ButtonConfirm" onClick={HandleSubmit}>
+      <button className="ButtonConfirm" id="ButtonConfirm" onClick={HandleSubmit}>
         Confirmar inscripción
       </button>
     </div>

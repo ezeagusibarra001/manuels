@@ -352,6 +352,7 @@
     align-items: center;
     position: relative;
 }
+.Desabled{pointer-events: none;}
 .LoadingCheck::after{
     content:"";
     height: 20px;
@@ -515,5 +516,6 @@
     .pW{font-size:15px;color: white;}
     .aW{color: white;}
     .aW:hover{color: white;}
+    .LoadingCheck::after{height: 15px;width: 15px;border: solid rgba(0, 0, 0, 0.2) 1px;border-left: solid #938399 1px;right:5%;}
 }
 @media screen and (max-width: 300px) {.CarruselCheckIn{width: 100%;}}
