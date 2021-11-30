@@ -57,7 +57,7 @@ function Step3(props) {
     formdata.set("clientlastname", CheckForm.lastname);
     formdata.set("email", CheckForm.mail);
     formdata.set("lesson", currentClase[0].title); //TRAE UN ARRAY DE UN SOLO OBJETO
-    //formdata.set("price", currentClase[0].price);     //TRAE UN ARRAY DE UN SOLO OBJETO
+    formdata.set("price", currentClase[0].price);     //TRAE UN ARRAY DE UN SOLO OBJETO
     formdata.set("dateSelected",dayjs(currentClase[0].date).format("DD/MM/YY"));
     formdata.set("phone", CheckForm.phone);
     if (image!==null) {
