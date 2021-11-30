@@ -15,6 +15,7 @@ function CheckIn(props){
     const [Icon1,setIcon1]=useState(false)
     const [Icon2,setIcon2]=useState(false)
     const [Icon3,setIcon3]=useState(false)
+    const [DescAplicado, setDescAplicado]=useState(false);
     const [dateSelected, setDateSelected]=useState({date:""})
     const { currentClase,setCurrentClase,obtenerClases,CheckForm,setCheckForm,code} = useHome();
     const idLesson=props.match.params.idLesson //TOMO EL VALOR DE LA URL
@@ -148,8 +149,8 @@ function CheckIn(props){
                     }
                 </div>
                 { step===1 && <Step1   setCheckForm={setCheckForm} CheckForm={CheckForm}                                                                                                                                              />}
-                { step===2 && <Step2   currentClase={currentClase} setCurrentClase={setCurrentClase}       code={code}                                                                                                                />}
-                { step===3 && <Step3   currentClase={currentClase} CheckForm={CheckForm} obtenerClases={obtenerClases} step={step} setStep={setStep} setIcon3={setIcon3} dateSelected={dateSelected} setDateSelected={setDateSelected}/>}
+                { step===2 && <Step2   currentClase={currentClase} setCurrentClase={setCurrentClase} code={code} DescAplicado={DescAplicado} setDescAplicado={setDescAplicado}                                                                                                           />}
+                { step===3 && <Step3   currentClase={currentClase} CheckForm={CheckForm} obtenerClases={obtenerClases} step={step} setStep={setStep} setIcon3={setIcon3} dateSelected={dateSelected} setDateSelected={setDateSelected} DescAplicado={DescAplicado} setDescAplicado={setDescAplicado}  />}
                 { step===4 && <Welcome currentClase={currentClase} CheckForm={CheckForm} dateSelected={dateSelected}                                                                                                                  />}
                 <div className="ContainerButtonSteps">
                     {

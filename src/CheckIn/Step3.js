@@ -11,7 +11,7 @@ function Step3(props) {
   const setIcon3 = props.setIcon3;
   const step = props.step;
   const setStep = props.setStep;
-
+  const {DescAplicado, setDescAplicado} = props;
   /*------------TRAIGO LA INFORMACIÓN DE LA CLASE A LA QUE SE ESTAN ANOTANDO------------*/
   const currentClase = props.currentClase;
   /*------------TRAIGO LA INFORMACIÓN DEL FORM PARA INSCRIBIRSE------------*/
@@ -173,7 +173,12 @@ function Step3(props) {
               src="../assets/iconoc9.webp"
               className="WelcomeIconos"
             />
-            Monto Transferido: <b>${currentClase[0].price}</b>{" "}
+            Monto Transferido: <b>$
+              {
+                DescAplicado === true
+                ? currentClase[0].price*0.80
+                :currentClase[0].price
+              }</b>{" "}
           </p>
         </div>
       </div>
