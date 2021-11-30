@@ -16,7 +16,7 @@ function DesktopServicios() {
             <div className="ContainerTextosDesktop"> 
               <p className="Texto1Card1">Locuciones comerciales castellano neutro y rioplatense</p>
               <p className="Texto2Card1">Grabaciones en homestudio propio</p>
-              <p className="Texto3Card1">Conducción de eventos: Radio , Podcast y TV </p>
+              <p className="Texto3Card1">Conducción de eventos: Radio, Podcast y TV </p>
             </div>
             <div className="ContainerButtonCardDesktop">
               <button className="ButtonCardDesktop" onClick={()=>window.location.href="https://www.instagram.com/manuels.locucion/?utm_medium=copy_link"}><b>¡CONTACTATE!</b></button>
@@ -29,13 +29,10 @@ function DesktopServicios() {
               <img alt="img" className="IconoDesktop2" src="../assets/icono2.webp"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
-              <p className="Texto1Card2">Talleres grupales de locución , neutro ,oratoria , radio , podcast.</p>
+              <p className="Texto1Card2">Talleres grupales de locución, neutro, oratoria, radio, podcast.</p>
               <p className="Texto2Card2"> Clases personalizadas de:</p>
               <p className="Texto3Card2">
-                Locución,
-                Oratoria,
-                Radio,
-                Neutro y Podcast
+                Locución, Oratoria, Radio, Neutro y Podcast
               </p>
             </div>
             <div className="ContainerButtonCardDesktop"> 
@@ -49,8 +46,8 @@ function DesktopServicios() {
               <img alt="img" className="IconoDesktop3" src="../assets/icono3.webp"></img>
             </div>
             <div className="ContainerTextosDesktop"> 
-              <p className="Texto1Card3">Talleres para empresas: Locucion , Radioteatro , radio y Podcast </p>
-              <p className="Texto2Card3"> work shop para empresas: Locución , Oratoria , Neutro.</p>
+              <p className="Texto1Card3">Talleres para empresas: Locucion, Radioteatro, radio y Podcast </p>
+              <p className="Texto2Card3"> work shop para empresas: Locución, Oratoria, Neutro.</p>
               <p className="Texto3Card3"> Asesorias Únicas</p>
             </div>
             <div className="ContainerButtonCardDesktop"> 

@@ -14,7 +14,7 @@ function PortadaBlog() {
                     <h1 className="Blogtitulo">Mi blog</h1>
                     <p className="Blogtexto">
                         Un espacio lleno de contenidos los cuales harán que tu comunicación oral
-                        sea efectiva , correcta y espontanea
+                        sea efectiva, correcta y espontanea
                     </p>
                 </div>
             </div>

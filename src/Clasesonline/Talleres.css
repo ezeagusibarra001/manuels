@@ -27,6 +27,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
 }
+.TituloTalleres{font-family: "dukecharming regular" !important;}
 .TallerTexto{font-size: 20px;}
 /*-----------------------------------------CONTAINER HIJO1-----------------------------------------*/
 .ContainerTalleresHijo1{

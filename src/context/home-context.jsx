@@ -71,7 +71,7 @@ export function HomeProvider(props) {
     await clienteAxios
       .get("/publications")
       .then((res) => {
-        setBlog(res.data);
+        setBlog(res.data.reverse()); //INVIERTO EL ORDEN DEL ARRAY METODO REVERSE()
         console.log("BLOG:", res.data);
       })
       .then(() => {
