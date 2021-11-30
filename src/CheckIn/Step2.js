@@ -134,7 +134,7 @@ function Step2(props) {
             <div className="LinksContainer">
               <a
                 className="ButtonLink"
-                href={currentClase.link1}
+                href={currentClase[0].link1}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -144,7 +144,7 @@ function Step2(props) {
               {DescAplicado ? (
                 <a
                   className="ButtonLink"
-                  href={currentClase.discountLink}
+                  href={currentClase[0].descountLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -154,7 +154,7 @@ function Step2(props) {
               ) : (
                 <a
                   className="ButtonLink"
-                  href={currentClase.link}
+                  href={currentClase[0].link}
                   target="_blank"
                   rel="noreferrer"
                 >
