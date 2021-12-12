@@ -6,13 +6,13 @@ function Step2(props) {
   const { addToast } = useToasts();
   const currentClase = props.currentClase;
   const {DescAplicado, setDescAplicado} = props;
-  const [payPrice,setPayPrice]=useState(currentClase[0].price);
+  //const [payPrice,setPayPrice]=useState(currentClase[0].price);
   /*----------------------MERCADO PAGO----------------------*/
   const MP = () => {
     /*---------------TRASLADA---------------*/
     const Slider = document.querySelector(".SliderContainer");
     Slider.style.transition = "2s ease-in-out";
-    Slider.style.transform = "translateX(-66.66%)";
+    Slider.style.transform = "translateX(-50%)";
     /*---------------MARCA EL BUTTON---------------*/
     const Buttons = document.querySelectorAll(".ButtonOption");
     console.log("Buttons:", Buttons);
@@ -39,7 +39,7 @@ function Step2(props) {
               DescButton.style.backgroundColor = "#ffd743";
               DescButton.style.color = "#a06ab4";
               DescButton.style.border = "solid transparent";
-              setPayPrice(payPrice-payPrice*0.20)
+              //setPayPrice(payPrice-payPrice*0.20)
               addToast(`¡Código aplicado!`,{appearance: "success",autoDismiss: true,});
               const ButtonLink = document.querySelectorAll(".ButtonLink")[0];
               ButtonLink.style.display="none"
@@ -69,6 +69,24 @@ function Step2(props) {
       }
     });
   };
+  const PP = () => {
+    /*---------------TRASLADA---------------*/
+    const Slider = document.querySelector(".SliderContainer");
+    Slider.style.transition = "2s ease-in-out";
+    Slider.style.transform = "translateX(-75%)";
+    /*---------------MARCA EL BUTTON---------------*/
+    const Buttons = document.querySelectorAll(".ButtonOption");
+    console.log("Buttons:", Buttons);
+    Buttons.forEach((cadaButton, i) => {
+      Buttons[i].style.backgroundColor = "#a06ab4";
+      Buttons[i].style.color = "white";
+      if (i === 2) {
+        console.log("PP");
+        Buttons[i].style.backgroundColor = "white";
+        Buttons[i].style.color = "#a06ab4";
+      }
+    });
+  };
   return (
     <div className="ContainerStep2">
       <h2 className="Step2Title">Paso 2°: Elija un método de pago</h2>
@@ -79,12 +97,15 @@ function Step2(props) {
         <button className="ButtonOption" onClick={MP}>
           Mercado Pago{" "}
         </button>
+        <button className="ButtonOption" onClick={PP}>
+          PayPal{" "}
+        </button>
       </div>
       <div className="CarruselCheckIn">
         <div className="SliderContainer">
           <div className="SlideTB">
             <p className="TextAbonar">
-              {"Transferir:$" + currentClase[0].price}
+              {"Transferir:$" + {/*currentClase[0].price*/}}
             </p>
             <table className="TableTB">
               <tr>
@@ -111,7 +132,7 @@ function Step2(props) {
           </div>
           <div className="SlideMP">
             <p className="TextAbonar">
-              {"Transferir:$" + payPrice}
+              {"Transferir:$" + 20}
             </p>
             <p className="TextDesc">Si tenes un código ¡aplicalo!</p>
             <div className="DescContainer">
@@ -134,7 +155,7 @@ function Step2(props) {
             <div className="LinksContainer">
               <a
                 className="ButtonLink"
-                href={currentClase[0].link1}
+                //href={currentClase[0].link1}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -144,7 +165,7 @@ function Step2(props) {
               {DescAplicado ? (
                 <a
                   className="ButtonLink"
-                  href={currentClase[0].descountLink}
+                  //href={currentClase[0].descountLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -154,7 +175,7 @@ function Step2(props) {
               ) : (
                 <a
                   className="ButtonLink"
-                  href={currentClase[0].link}
+                  //href={currentClase[0].link}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -163,6 +184,19 @@ function Step2(props) {
                 </a>
               )}
             </div>
+          </div>
+          <div className="SlidePaypal">
+            <h4>Método de Pago: Paypal</h4>
+            <h3>Transferir:{/*{currentClase[0].price}*/}</h3>
+            <a
+              className="ButtonLink"
+              //href={currentClase[0].descountLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Pagar{" "}
+            </a>
           </div>
         </div>
       </div>

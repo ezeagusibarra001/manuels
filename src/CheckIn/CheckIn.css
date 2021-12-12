@@ -159,12 +159,12 @@
    overflow: hidden;
 }
 .SliderContainer{
-    width: 300%;
+    width: 400%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
     background-color: #a06ab4;
 }
 .SlideMedio{
@@ -232,6 +232,16 @@
     flex-direction: column;
     gap: 10px;
     padding: 15px 0px;
+}
+.SlidePaypal{
+    height: auto;
+    width: 100%;
+    background-color: #a06ab4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .TextDesc{
     color: white;
