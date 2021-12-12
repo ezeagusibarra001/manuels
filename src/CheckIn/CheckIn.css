@@ -164,7 +164,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-50%);
+    transform: translateX(-25%);
     background-color: #a06ab4;
 }
 .SlideMedio{
@@ -375,12 +375,8 @@
     animation: spin 0.5s linear infinite;
 }
 @keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 .ContainerButtonSteps{
     height: auto;
@@ -503,7 +499,7 @@
     .CarruselCheckIn{width: 90%;}
     .SlideMP{gap: 5px;}
     .ButtonOption{font-size: 12px;}
-    .ContainerOptions{max-width: 250px;}
+    .ContainerOptions{max-width: 400px;}
     .TextFecha{font-size: 15px;max-width:250px;}
     .ContainerFecha{font-size: 12px;max-width: 250px;}
     .TableTB{font-size: 15px;width: 100%;}

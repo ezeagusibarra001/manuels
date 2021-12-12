@@ -39,7 +39,7 @@ function Step2(props) {
               DescButton.style.backgroundColor = "#ffd743";
               DescButton.style.color = "#a06ab4";
               DescButton.style.border = "solid transparent";
-              //setPayPrice(payPrice-payPrice*0.20)
+              //setPayPrice(payPrice-payPrice*0.10)
               addToast(`¡Código aplicado!`,{appearance: "success",autoDismiss: true,});
               const ButtonLink = document.querySelectorAll(".ButtonLink")[0];
               ButtonLink.style.display="none"
