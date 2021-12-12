@@ -92,13 +92,13 @@ function Step2(props) {
       <h2 className="Step2Title">Paso 2°: Elija un método de pago</h2>
       <div className="ContainerOptions">
         <button className="ButtonOption" onClick={TB}>
-          Transf.Bancaria{" "}
+          Transf.Bancaria
         </button>
         <button className="ButtonOption" onClick={MP}>
-          Mercado Pago{" "}
+          Mercado Pago
         </button>
         <button className="ButtonOption" onClick={PP}>
-          PayPal{" "}
+          PayPal
         </button>
       </div>
       <div className="CarruselCheckIn">
@@ -159,8 +159,7 @@ function Step2(props) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {" "}
-                Reserva{" "}
+                Reserva
               </a>
               {DescAplicado ? (
                 <a
@@ -169,8 +168,7 @@ function Step2(props) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
-                  Completa{" "}
+                  Completa
                 </a>
               ) : (
                 <a
@@ -179,8 +177,7 @@ function Step2(props) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
-                  Completa{" "}
+                  Completa
                 </a>
               )}
             </div>
@@ -194,8 +191,7 @@ function Step2(props) {
               target="_blank"
               rel="noreferrer"
             >
-              {" "}
-              Pagar{" "}
+              Pagar
             </a>
           </div>
         </div>
