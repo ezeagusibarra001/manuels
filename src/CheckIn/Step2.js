@@ -186,8 +186,8 @@ function Step2(props) {
             </div>
           </div>
           <div className="SlidePaypal">
-            <h4>Método de Pago: Paypal</h4>
-            <h3>Transferir:{/*{currentClase[0].price}*/}</h3>
+            <h5>¿Desea pagar por Paypal?</h5>
+            <h4>Transferir:{/*{currentClase[0].price}*/}</h4>
             <a
               className="ButtonLink"
               //href={currentClase[0].descountLink}
