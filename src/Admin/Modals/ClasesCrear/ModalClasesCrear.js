@@ -25,6 +25,8 @@ function ModalClasesCrear(props) {
     quota: 10,
     descountLink: "",
     price: 1000,
+    dolar: 1000,
+    linkDolar: "",
   });
   const handleClose = () => {
     setShowCrear(false);
@@ -55,6 +57,8 @@ function ModalClasesCrear(props) {
     quota: currentClase.quota,
     descountLink: currentClase.descountLink,
     price: currentClase.price,
+    dolar: currentClase.dolar,
+    linkDolar: currentClase.linkDolar,
   };
 
   const submit = async () => {
@@ -135,13 +139,24 @@ function ModalClasesCrear(props) {
             <br></br>
 
             <Card.Title>Precio</Card.Title>
-            <Form.Control
-              type="number"
-              placeholder="Precio"
-              onChange={handleChange}
-              name="price"
-              maxLength="4"
-            />
+            <div className="flotante">
+              <Form.Control
+                className="medio"
+                type="number"
+                placeholder="Pesos"
+                onChange={handleChange}
+                name="price"
+                maxLength="4"
+              />
+              <Form.Control
+                className="medio"
+                type="number"
+                placeholder="Dolar"
+                onChange={handleChange}
+                name="dolar"
+                maxLength="4"
+              />
+            </div>
           </div>
           <div className="col-6">
             <textarea
@@ -188,6 +203,16 @@ function ModalClasesCrear(props) {
               name="descountLink"
               as="textarea"
               placeholder="Link de Descuento:"
+              maxLength="100"
+              style={Styles}
+              onChange={handleChange}
+              className="CCinputRequisitos"
+            />
+            <br></br>
+            <textarea
+              name="linkDolar"
+              as="textarea"
+              placeholder="Link de Paypal:"
               maxLength="100"
               style={Styles}
               onChange={handleChange}

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CheckIn.css";
 import { useToasts } from "react-toast-notifications";
-import clienteAxios from '../config/clienteAxios'
+import clienteAxios from "../config/clienteAxios";
 function Step2(props) {
   const { addToast } = useToasts();
   const currentClase = props.currentClase;
-  const {DescAplicado, setDescAplicado} = props;
+  const { DescAplicado, setDescAplicado } = props;
   //const [payPrice,setPayPrice]=useState(currentClase[0].price);
   /*----------------------MERCADO PAGO----------------------*/
   const MP = () => {
@@ -30,25 +30,33 @@ function Step2(props) {
   const putDescuentos = async () => {
     let currentCode = document.querySelector(".CheckInInputDesc").value;
     await clienteAxios
-        .put("/discounts",{code:currentCode})
-        .then((res) => {
-            console.log(res.data);
-            if(res.data.res === "existe"){
-              setDescAplicado(true)
-              const DescButton = document.querySelectorAll(".DescButton")[0];
-              DescButton.style.backgroundColor = "#ffd743";
-              DescButton.style.color = "#a06ab4";
-              DescButton.style.border = "solid transparent";
-              //setPayPrice(payPrice-payPrice*0.10)
-              addToast(`¡Código aplicado!`,{appearance: "success",autoDismiss: true,});
-              const ButtonLink = document.querySelectorAll(".ButtonLink")[0];
-              ButtonLink.style.display="none"
-            }else{addToast("Código no valido",{appearance: "warning",autoDismiss: true,});}
-        })
-        .catch((err) => {
-            console.log("error put", err);
-            console.log(currentCode)
-        });
+      .put("/discounts", { code: currentCode })
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.res === "existe") {
+          setDescAplicado(true);
+          const DescButton = document.querySelectorAll(".DescButton")[0];
+          DescButton.style.backgroundColor = "#ffd743";
+          DescButton.style.color = "#a06ab4";
+          DescButton.style.border = "solid transparent";
+          //setPayPrice(payPrice-payPrice*0.10)
+          addToast(`¡Código aplicado!`, {
+            appearance: "success",
+            autoDismiss: true,
+          });
+          const ButtonLink = document.querySelectorAll(".ButtonLink")[0];
+          ButtonLink.style.display = "none";
+        } else {
+          addToast("Código no valido", {
+            appearance: "warning",
+            autoDismiss: true,
+          });
+        }
+      })
+      .catch((err) => {
+        console.log("error put", err);
+        console.log(currentCode);
+      });
   };
   /*----------------------TRANSFERENCIA BANCARIA----------------------*/
   const TB = () => {
@@ -105,7 +113,7 @@ function Step2(props) {
         <div className="SliderContainer">
           <div className="SlideTB">
             <p className="TextAbonar">
-              {"Transferir:$" + {/*currentClase[0].price*/}}
+              {"Transferir:$" + currentClase[0].price}
             </p>
             <table className="TableTB">
               <tr>
@@ -113,8 +121,8 @@ function Step2(props) {
                 <td>B.GALICIA</td>
               </tr>
               <tr>
-                <td>CTA:</td>
-                <td>4017201-4 306-7</td>
+                <td>ALIAS:</td>
+                <td>LARGO.ALCE.PALMA</td>
               </tr>
               <tr>
                 <td>CBU:</td>
@@ -131,9 +139,15 @@ function Step2(props) {
             <h1>Abiertas</h1>
           </div>
           <div className="SlideMP">
-            <p className="TextAbonar">
-              {"Transferir:$" + 20}
-            </p>
+            {DescAplicado === true ? (
+              <p className="TextAbonar">
+                {"Transferir:$" + currentClase[0].price*0.9}
+              </p>
+            ) : (
+              <p className="TextAbonar">
+                {"Transferir:$" + currentClase[0].price}
+              </p>
+            )}
             <p className="TextDesc">Si tenes un código ¡aplicalo!</p>
             <div className="DescContainer">
               <input
@@ -155,7 +169,7 @@ function Step2(props) {
             <div className="LinksContainer">
               <a
                 className="ButtonLink"
-                //href={currentClase[0].link1}
+                href={currentClase[0].link1}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -164,7 +178,7 @@ function Step2(props) {
               {DescAplicado ? (
                 <a
                   className="ButtonLink"
-                  //href={currentClase[0].descountLink}
+                  href={currentClase[0].descountLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -173,7 +187,7 @@ function Step2(props) {
               ) : (
                 <a
                   className="ButtonLink"
-                  //href={currentClase[0].link}
+                  href={currentClase[0].link}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -184,10 +198,10 @@ function Step2(props) {
           </div>
           <div className="SlidePaypal">
             <h5>¿Desea pagar por Paypal?</h5>
-            <h4>Transferir:{/*{currentClase[0].price}*/}</h4>
+            <h4>Transferir:{currentClase[0].dolar}</h4>
             <a
               className="ButtonLink"
-              //href={currentClase[0].descountLink}
+              href={currentClase[0].linkDolar}
               target="_blank"
               rel="noreferrer"
             >

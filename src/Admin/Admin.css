@@ -29,6 +29,12 @@
   color: red;
   font-weight: bold;
 }
+.medio{
+  width: 50% !important;
+}
+.flotante{
+  display: flex;
+}
 .mano {
   background: purple;
   border-radius: 20px;

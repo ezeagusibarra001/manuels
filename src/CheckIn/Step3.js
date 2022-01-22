@@ -176,7 +176,7 @@ function Step3(props) {
             Monto Transferido: <b>$
               {
                 DescAplicado === true
-                ? currentClase[0].price*0.80
+                ? currentClase[0].price*0.90
                 :currentClase[0].price
               }</b>{" "}
           </p>

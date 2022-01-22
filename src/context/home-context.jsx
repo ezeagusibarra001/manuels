@@ -175,7 +175,7 @@ export function HomeProvider(props) {
   //LOADING POST CHECKOUT
   const [loadingCheckout, setLoadingCheckout] = useState(true);
   // FLOJO DE PAPELES
-  const [dominio, setDominio] = useState("https://backmanuels.herokuapp.com/");
+  const [dominio, setDominio] = useState("https://peaceful-river-53446.herokuapp.com/");
   //DECLARO QUIEN ES EL CONTEXT
   const value = {
     clases,
