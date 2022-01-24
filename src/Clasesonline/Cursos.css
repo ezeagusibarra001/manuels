@@ -215,7 +215,7 @@
 }
 @media screen and (max-width: 450px){
     .ContainerItemsCursos{max-width:350px;}
-    .CursosTitulos{font-size:25px;}
+    .CursosTitulos{font-size:16px;}
     .CursosSubTitulos{font-size: 20px;}
     .ContainerCursosTextos1{height: auto;min-height:40px;}
     .CursosTextos1{font-size:14px;}

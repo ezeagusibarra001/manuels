@@ -20,7 +20,7 @@ function Cursos(props) {
                         {clases.map(clase=>
                             <div className="ContainerItemsCursos">
                             <div className="ContainerCursosTitulos">
-                                <h2 className="CursosTitulos">{clase.title} - {currencyFormat(clase.price)}{/*-U$D{clase.dolar}*/}</h2>
+                                <h4 className="CursosTitulos">{clase.title} - {currencyFormat(clase.price)}{/*-U$D{clase.dolar}*/}</h4>
                             </div>
                             <div className="ContainerCursosTextos1">
                                 <p className="CursosTextos1">
