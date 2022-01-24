@@ -7,6 +7,9 @@ import {useHome} from '../context/home-context'
 import LoadingC from "../Loading/LoadingC";
 function Cursos(props) {
     const {clases,loading} = useHome()
+    function currencyFormat(num) {
+        return 'AR$' + num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+     }
     if(loading){
         return (<LoadingC/>)
     }else{
@@ -17,7 +20,7 @@ function Cursos(props) {
                         {clases.map(clase=>
                             <div className="ContainerItemsCursos">
                             <div className="ContainerCursosTitulos">
-                                <h2 className="CursosTitulos">{clase.title}-${clase.price}</h2>
+                                <h2 className="CursosTitulos">{clase.title} - {currencyFormat(clase.price)}{/*-U$D{clase.dolar}*/}</h2>
                             </div>
                             <div className="ContainerCursosTextos1">
                                 <p className="CursosTextos1">

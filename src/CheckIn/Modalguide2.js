@@ -43,7 +43,7 @@ function Modalguide2(props) {
                                 />
                                 <p className="GuideTexto">
                                     Elegí que metódo de pago se adapta mejor a vos
-                                    (Transferencia Bancaria o Mercado Pago).
+                                    (Transferencia Bancaria, Mercado Pago o Paypal).
                                 </p>
                             </div>
                             <div className="ContainerPaso">

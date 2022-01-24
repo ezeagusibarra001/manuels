@@ -122,7 +122,7 @@ function Step2(props) {
               </tr>
               <tr>
                 <td>ALIAS:</td>
-                <td>LARGO.ALCE.PALMA</td>
+                <td>MANUELS.LOCUCION</td>
               </tr>
               <tr>
                 <td>CBU:</td>
@@ -198,7 +198,7 @@ function Step2(props) {
           </div>
           <div className="SlidePaypal">
             <h5>¿Desea pagar por Paypal?</h5>
-            <h4>Transferir:{currentClase[0].dolar}</h4>
+            <h4>Transferir: U$D {currentClase[0].dolar}</h4>
             <a
               className="ButtonLink"
               href={currentClase[0].linkDolar}
